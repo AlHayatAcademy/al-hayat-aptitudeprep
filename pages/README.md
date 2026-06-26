@@ -35,6 +35,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `parent-guide.html`
 - `admissions-timeline.html`
 - `download-center.html`
+- `question-review.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`

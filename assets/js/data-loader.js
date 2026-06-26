@@ -43,7 +43,8 @@
     teacherToolkit: "teacher-toolkit.json",
     parentGuide: "parent-guide.json",
     admissionsTimelines: "admissions-timelines.json",
-    downloadCenter: "download-center.json"
+    downloadCenter: "download-center.json",
+    questionReview: "question-review.json"
   };
 
   async function loadJSON(file) {

@@ -67,6 +67,7 @@
       "parent-guide": renderParentGuide,
       "admissions-timeline": renderAdmissionsTimeline,
       "download-center": renderDownloadCenter,
+      "question-review": renderQuestionReview,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -123,6 +124,7 @@
             ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
             ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"],
             ["Download Center", "Print packs and checklists", "download-center.html"],
+            ["Question Review", "Wrong-answer patterns", "question-review.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -174,6 +176,7 @@
           ${navLink("Parents", "parent-guide.html")}
           ${navLink("Timeline", "admissions-timeline.html")}
           ${navLink("Downloads", "download-center.html")}
+          ${navLink("Review", "question-review.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -215,6 +218,7 @@
         ${actionCard("Parent Guide", "Understand progress and next steps.", "parent-guide.html")}
         ${actionCard("Timeline", "Plan preparation by admission season.", "admissions-timeline.html")}
         ${actionCard("Downloads", "Open printable packs and checklists.", "download-center.html")}
+        ${actionCard("Question Review", "Study wrong-answer patterns.", "question-review.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -963,6 +967,41 @@
     wireSimpleCardFilter("#downloadCategory", "#downloadSearch", "[data-download-card]");
   }
 
+  function renderQuestionReview(data) {
+    const categories = [...new Set(data.questionReview.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Question Review", "Wrong-Answer Patterns And Revision Links", "Review why mistakes happen, then move directly to practice, strategies, flashcards or the error log.")}
+      <section class="stat-grid">
+        ${statCard(data.questionReview.length, "Review Guides")}
+        ${statCard(new Set(data.questionReview.map((item) => item.skillId)).size, "Skills Covered")}
+        ${statCard(data.questionReview.reduce((sum, item) => sum + item.questionIds.length, 0), "Linked Questions")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="reviewCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="reviewSearch" type="search" placeholder="Search vocab, formula, reading, reasoning...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Review Rule</h2>
+        <p>Do not only check the correct option. Identify the pattern behind the wrong answer, write it in the error log, then revise the related lesson or strategy.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("error-log.html")}">Open Error Log</a>
+          <a class="btn secondary small" href="${url("results-report.html")}">Open Results Report</a>
+        </div>
+      </section>
+      <section class="card-grid">
+        ${data.questionReview.map((item) => questionReviewCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#reviewCategory", "#reviewSearch", "[data-question-review]");
+  }
+
   function renderStudyPlans(data) {
     app.innerHTML = `
       ${pageHero("Study Plans", "Roadmaps For Focused Preparation", "Keep test-wise weekly or monthly plans in JSON and connect them to practice and mocks.")}
@@ -1696,6 +1735,26 @@
         <div class="button-row">
           <a class="btn primary small" href="${url(item.linkedPage)}">Open Source</a>
           <button class="btn secondary small" type="button" onclick="window.print()">Print Page</button>
+        </div>
+      </article>
+    `;
+  }
+
+  function questionReviewCard(item, data) {
+    const skill = findName(data.skills, item.skillId);
+    const topic = findName(data.topics, item.topicId);
+    const prompt = data.errorLogPrompts.find((entry) => entry.id === item.errorLogPromptId);
+    return `
+      <article class="feature-card review-card" data-question-review data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(skill)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p class="connected-line">Topic: ${escapeHTML(topic)}</p>
+        <p><strong>Wrong-answer pattern:</strong> ${escapeHTML(item.wrongAnswerPattern)}</p>
+        <p><strong>Review method:</strong> ${escapeHTML(item.reviewMethod)}</p>
+        <p>Linked questions: ${escapeHTML(item.questionIds.join(", "))}</p>
+        <p class="connected-line">Error-log prompt: ${escapeHTML(prompt?.title || item.errorLogPromptId)}</p>
+        <div class="button-row">
+          ${item.revisionLinks.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link)}">Revision ${index + 1}</a>`).join("")}
         </div>
       </article>
     `;

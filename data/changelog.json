@@ -94,5 +94,11 @@
     "version": "V16",
     "date": "2026-06-26",
     "summary": "Added download and print center for printable worksheets, class packs, parent handouts, timelines and checklists."
+  },
+  {
+    "id": "change-v17",
+    "version": "V17",
+    "date": "2026-06-26",
+    "summary": "Added question review hub with wrong-answer patterns, review methods, linked questions and revision routes."
   }
 ]

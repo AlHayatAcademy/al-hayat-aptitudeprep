@@ -1,0 +1,50 @@
+[
+  {
+    "id": "review-vocab-context",
+    "title": "Vocabulary Context Review",
+    "category": "Verbal Review",
+    "skillId": "vocabulary",
+    "topicId": "synonyms-in-context",
+    "questionIds": ["q-vocab-001", "q-vocab-002"],
+    "wrongAnswerPattern": "The student chooses a familiar word without checking the sentence context.",
+    "reviewMethod": "Underline the context clue, predict the meaning first, then compare options.",
+    "revisionLinks": ["vocabulary-bank.html", "flashcards.html", "practice.html?skill=vocabulary"],
+    "errorLogPromptId": "error-vocab-001"
+  },
+  {
+    "id": "review-quant-formula",
+    "title": "Quant Formula Review",
+    "category": "Quantitative Review",
+    "skillId": "quantitative-reasoning",
+    "topicId": "percentages",
+    "questionIds": ["q-quant-001", "q-quant-002"],
+    "wrongAnswerPattern": "The student remembers a formula but uses the wrong base value or skips units.",
+    "reviewMethod": "Write original value, change, final value and formula before selecting the option.",
+    "revisionLinks": ["formula-bank.html", "lessons.html", "practice.html?skill=quantitative-reasoning"],
+    "errorLogPromptId": "error-formula-001"
+  },
+  {
+    "id": "review-reading-main-idea",
+    "title": "Reading Main Idea Review",
+    "category": "Reading Review",
+    "skillId": "reading-comprehension",
+    "topicId": "main-idea",
+    "questionIds": ["q-reading-001"],
+    "wrongAnswerPattern": "The student selects a minor detail instead of the central message.",
+    "reviewMethod": "Ask what the whole passage is mainly proving, not what one sentence mentions.",
+    "revisionLinks": ["strategies.html", "practice.html?skill=reading-comprehension", "error-log.html"],
+    "errorLogPromptId": "error-speed-001"
+  },
+  {
+    "id": "review-reasoning-assumption",
+    "title": "Reasoning Assumption Review",
+    "category": "Reasoning Review",
+    "skillId": "logical-reasoning",
+    "topicId": "assumptions",
+    "questionIds": ["q-logical-001"],
+    "wrongAnswerPattern": "The student chooses an attractive option that is true but not required by the argument.",
+    "reviewMethod": "Separate evidence and conclusion, then ask what hidden bridge must be true.",
+    "revisionLinks": ["lessons.html", "strategies.html", "practice.html?skill=logical-reasoning"],
+    "errorLogPromptId": "error-elimination-001"
+  }
+]

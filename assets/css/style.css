@@ -622,6 +622,10 @@ main {
   border-top: 4px solid var(--blue);
 }
 
+.review-card {
+  border-top: 4px solid var(--teal);
+}
+
 @media print {
   .site-header,
   .site-footer,

@@ -83,8 +83,16 @@
     "id": "roadmap-v17",
     "phase": "V17",
     "title": "Expanded Question Review",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Improve question review with explanation filters, wrong-answer patterns and revision links.",
-    "nextActions": ["Create review data", "Improve practice review", "Connect error log and results report"]
+    "nextActions": ["Use review hub", "Expand linked questions", "Add more patterns"]
+  },
+  {
+    "id": "roadmap-v18",
+    "phase": "V18",
+    "title": "Test Route Landing Pages",
+    "status": "Next",
+    "focus": "Add dedicated route pages for major tests with lessons, practice, mocks, notes and timelines.",
+    "nextActions": ["Create route data", "Add route page", "Connect tests and timelines"]
   }
 ]

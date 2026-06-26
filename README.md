@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 16 static website for GitHub Pages.
+Version 17 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -20,6 +20,7 @@ Version 16 static website for GitHub Pages.
 - Parent Guide page with progress, trial-class, routine and resource guidance.
 - Admissions Timeline page with phased preparation plans for major test seasons.
 - Download Center page for printable packs, worksheets, handouts and checklists.
+- Question Review page for wrong-answer patterns, review methods and revision links.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -41,6 +42,7 @@ Version 16 static website for GitHub Pages.
 - Parent-facing guidance connected to results report, trial class and WhatsApp support.
 - Timeline planner connected to study plans, diagnostics, mocks and trial class.
 - Download center connected to worksheets, teacher toolkit, parent guide and timelines.
+- Question review connected to practice, error log, strategies, flashcards and results report.
 
 ## How To Use
 
@@ -92,5 +94,6 @@ http://localhost:8080/
 - Add parent guidance cards in `data/parent-guide.json`.
 - Add admission timelines in `data/admissions-timelines.json`.
 - Add download/print records in `data/download-center.json`.
+- Add question-review guides in `data/question-review.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/</loc></url>
+  <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/index.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/tests.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/skills.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/subjects.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/practice.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/mock-tests.html</loc></url>
+  <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/progress.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/resources.html</loc></url>
+  <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/study-plans.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/compare.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/glossary.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/choose-test.html</loc></url>
@@ -33,6 +36,7 @@
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/parent-guide.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/admissions-timeline.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/download-center.html</loc></url>
+  <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/question-review.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/book-trial-class.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/reviews.html</loc></url>
   <url><loc>https://alhayatacademy.github.io/al-hayat-aptitudeprep/media.html</loc></url>

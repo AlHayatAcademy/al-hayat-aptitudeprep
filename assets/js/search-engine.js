@@ -74,7 +74,8 @@
       ...(data.teacherToolkit || []).map((item) => record("Teacher Toolkit", item.title, `${item.classType} ${item.agenda.join(" ")} ${item.teacherNotes} ${item.homework} ${item.skillIds.join(" ")}`, "teacher-toolkit.html")),
       ...(data.parentGuide || []).map((item) => record("Parent Guide", item.title, `${item.category} ${item.concern} ${item.guidance} ${item.recommendedAction}`, "parent-guide.html")),
       ...(data.admissionsTimelines || []).map((item) => record("Admissions Timeline", item.title, `${item.season} ${item.urgency} ${item.targetTestIds.join(" ")} ${item.milestones.map((milestone) => `${milestone.phase} ${milestone.task}`).join(" ")}`, "admissions-timeline.html")),
-      ...(data.downloadCenter || []).map((item) => record("Download", item.title, `${item.category} ${item.audience} ${item.format} ${item.includes.join(" ")} ${item.printNote}`, "download-center.html"))
+      ...(data.downloadCenter || []).map((item) => record("Download", item.title, `${item.category} ${item.audience} ${item.format} ${item.includes.join(" ")} ${item.printNote}`, "download-center.html")),
+      ...(data.questionReview || []).map((item) => record("Question Review", item.title, `${item.category} ${item.wrongAnswerPattern} ${item.reviewMethod} ${item.questionIds.join(" ")} ${item.revisionLinks.join(" ")}`, "question-review.html"))
     ];
   }
 
