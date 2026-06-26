@@ -80,6 +80,7 @@
       "student-notes": renderStudentNotes,
       "revision-queue": renderRevisionQueue,
       "weekly-summary": renderWeeklySummary,
+      "parent-weekly-report": renderParentWeeklyReport,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -152,6 +153,7 @@
             ["Student Notes", "Save topic and review notes", "student-notes.html"],
             ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
             ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"],
+            ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -216,6 +218,7 @@
           ${navLink("Notes", "student-notes.html")}
           ${navLink("Revision", "revision-queue.html")}
           ${navLink("Weekly", "weekly-summary.html")}
+          ${navLink("Parent Report", "parent-weekly-report.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -270,6 +273,7 @@
         ${actionCard("Student Notes", "Save topic, task and review notes.", "student-notes.html")}
         ${actionCard("Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html")}
         ${actionCard("Weekly Summary", "Review progress across the week.", "weekly-summary.html")}
+        ${actionCard("Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -957,6 +961,7 @@
           <a class="btn primary small" href="${url("dashboard.html")}">Dashboard</a>
           <a class="btn secondary small" href="${url("revision-queue.html")}">Revision Queue</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Route Tasks</a>
+          <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
         </div>
       </section>
       <section class="card-grid">
@@ -982,6 +987,56 @@
           ${reportSignal("Then", signals.secondAction)}
           ${reportSignal("Before Next Mock", signals.thirdAction)}
         </aside>
+      </section>
+    `;
+  }
+
+  function renderParentWeeklyReport(data) {
+    const signals = getWeeklySignals(data);
+    const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
+    const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const shareText = buildParentReportText(signals, selectedRoute);
+    app.innerHTML = `
+      ${pageHero("Parent Weekly Report", "Shareable Progress Summary", "A parent-facing summary of practice, mocks, route tasks, revision, notes and next actions.")}
+      <section class="stat-grid">
+        ${statCard(signals.practiceAttempts, "Practice Attempts")}
+        ${statCard(`${signals.practiceAccuracy}%`, "Accuracy")}
+        ${statCard(signals.latestMock, "Latest Mock")}
+        ${statCard(`${signals.routeTaskDone}/${signals.routeTaskTotal}`, "Tasks")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+        ${statCard(signals.notesCount, "Notes")}
+      </section>
+      <section class="content-band">
+        <p class="eyebrow">${escapeHTML(selectedRoute?.title || "Selected Route")}</p>
+        <h2>Weekly Parent Summary</h2>
+        <p>${escapeHTML(signals.summary)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(shareText)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+          <button class="btn secondary small" type="button" data-copy-link="${escapeHTML(shareText)}">Copy Report</button>
+          <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
+        </div>
+        <p id="copyStatus" class="hint" aria-live="polite"></p>
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Report Details</h2>
+          <table>
+            <thead><tr><th>Area</th><th>Parent View</th></tr></thead>
+            <tbody>
+              ${data.parentWeeklyReport.map((item) => parentReportRow(item, signals)).join("")}
+            </tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Recommended Support</h2>
+          ${reportSignal("Encourage", signals.firstAction)}
+          ${reportSignal("Monitor", signals.secondAction)}
+          ${reportSignal("Ask Student", signals.thirdAction)}
+        </aside>
+      </section>
+      <section class="content-band">
+        <h2>WhatsApp Preview</h2>
+        <pre class="code-sample"><code>${escapeHTML(shareText)}</code></pre>
       </section>
     `;
   }
@@ -1510,6 +1565,7 @@
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
           <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
+          <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
         </div>
       </section>
       <section class="split-layout dashboard-current">
@@ -1559,6 +1615,7 @@
           <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
           <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
           <a class="text-link" href="${url("weekly-summary.html")}">Open Weekly Summary</a>
+          <a class="text-link" href="${url("parent-weekly-report.html")}">Open Parent Report</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2647,6 +2704,33 @@
         <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
       </article>
     `;
+  }
+
+  function parentReportRow(item, signals) {
+    const valueMap = {
+      practice: `${signals.practiceAttempts} attempts at ${signals.practiceAccuracy}% accuracy`,
+      mocks: signals.latestMockText,
+      tasks: `${signals.routeTaskDone}/${signals.routeTaskTotal} route tasks completed`,
+      revision: `${signals.revisionDone}/${signals.revisionTotal} revision items reviewed`,
+      notes: `${signals.notesCount} saved student notes`,
+      diagnostic: signals.diagnosticText
+    };
+    return `<tr><td>${escapeHTML(item.label)}</td><td>${escapeHTML(valueMap[item.signal] || item.parentMeaning)}</td></tr>`;
+  }
+
+  function buildParentReportText(signals, route) {
+    return [
+      "Al-Hayat AptitudePrep Weekly Report",
+      `Route: ${route?.title || "Selected route"}`,
+      `Practice: ${signals.practiceAttempts} attempts, ${signals.practiceAccuracy}% accuracy`,
+      `Latest mock: ${signals.latestMockText}`,
+      `Route tasks: ${signals.routeTaskDone}/${signals.routeTaskTotal}`,
+      `Revision queue: ${signals.revisionDone}/${signals.revisionTotal}`,
+      `Student notes: ${signals.notesCount}`,
+      `Next action 1: ${signals.firstAction}`,
+      `Next action 2: ${signals.secondAction}`,
+      `Next action 3: ${signals.thirdAction}`
+    ].join("\n");
   }
 
   function testPageCard(item, data) {

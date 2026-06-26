@@ -203,8 +203,16 @@
     "id": "roadmap-v32",
     "phase": "V32",
     "title": "Parent Weekly Report",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a parent-facing weekly report summary with WhatsApp share text.",
-    "nextActions": ["Create parent report page", "Summarise weekly signals", "Add WhatsApp share action"]
+    "nextActions": ["Share report with parents", "Review support actions", "Add more parent guidance rows"]
+  },
+  {
+    "id": "roadmap-v33",
+    "phase": "V33",
+    "title": "Teacher Weekly Report",
+    "status": "Next",
+    "focus": "Add a teacher-facing weekly report for class follow-up and remedial planning.",
+    "nextActions": ["Create teacher report page", "Summarise weak areas", "Connect teacher toolkit"]
   }
 ]

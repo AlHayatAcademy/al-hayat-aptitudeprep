@@ -1,0 +1,38 @@
+[
+  {
+    "id": "parent-practice",
+    "label": "Practice Effort",
+    "signal": "practice",
+    "parentMeaning": "Shows whether the student is practising enough and whether accuracy is improving."
+  },
+  {
+    "id": "parent-mocks",
+    "label": "Mock Test Signal",
+    "signal": "mocks",
+    "parentMeaning": "Shows how the student performs under timed test conditions."
+  },
+  {
+    "id": "parent-tasks",
+    "label": "Study Routine",
+    "signal": "tasks",
+    "parentMeaning": "Shows whether the daily route tasks are being completed."
+  },
+  {
+    "id": "parent-revision",
+    "label": "Revision Control",
+    "signal": "revision",
+    "parentMeaning": "Shows whether weak areas are being reviewed after practice."
+  },
+  {
+    "id": "parent-notes",
+    "label": "Reflection Notes",
+    "signal": "notes",
+    "parentMeaning": "Shows whether the student is writing corrections and learning from mistakes."
+  },
+  {
+    "id": "parent-diagnostic",
+    "label": "Diagnostic Status",
+    "signal": "diagnostic",
+    "parentMeaning": "Shows current level and weak skill areas if a diagnostic was attempted."
+  }
+]

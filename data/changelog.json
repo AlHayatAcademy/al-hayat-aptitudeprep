@@ -1,5 +1,10 @@
 [
   {
+    "version": "V32",
+    "date": "2026-06-26",
+    "summary": "Added parent weekly report with parent-friendly progress rows, WhatsApp sharing and copyable report text."
+  },
+  {
     "version": "V31",
     "date": "2026-06-26",
     "summary": "Added weekly progress summary combining practice, mocks, diagnostic, notes, route tasks and revision queue signals."

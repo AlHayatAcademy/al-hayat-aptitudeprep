@@ -56,7 +56,8 @@
     routeTasks: "route-tasks.json",
     notePrompts: "note-prompts.json",
     revisionQueue: "revision-queue.json",
-    weeklySummary: "weekly-summary.json"
+    weeklySummary: "weekly-summary.json",
+    parentWeeklyReport: "parent-weekly-report.json"
   };
 
   async function loadJSON(file) {
