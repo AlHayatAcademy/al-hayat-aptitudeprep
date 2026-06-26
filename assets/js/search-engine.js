@@ -80,7 +80,8 @@
       ...(data.dashboard || []).map((item) => record("Dashboard", item.title, `${item.category} ${item.priority} ${item.summary} ${item.routeIds.join(" ")}`, "dashboard.html")),
       ...(data.testPages || []).map((item) => record("Test Page", item.title, `${item.hero} ${item.examFocus.join(" ")} ${item.weeklyPlan.join(" ")} ${item.seoKeywords.join(" ")} ${item.testId}`, "test-pages.html")),
       ...(data.chapterMaps || []).map((item) => record("Chapter Map", item.title, `${item.examUse} ${item.chapterIds.join(" ")} ${item.studyOrder.join(" ")} ${item.teacherNote}`, "chapter-maps.html")),
-      ...(data.questionBankBuilder || []).map((item) => record("Question Builder", item.title, `${item.category} ${item.priority} ${item.purpose} ${item.requiredFields.join(" ")} ${item.qualityChecks.join(" ")}`, "question-builder.html"))
+      ...(data.questionBankBuilder || []).map((item) => record("Question Builder", item.title, `${item.category} ${item.priority} ${item.purpose} ${item.requiredFields.join(" ")} ${item.qualityChecks.join(" ")}`, "question-builder.html")),
+      ...(data.questionImportChecklist || []).map((item) => record("Question Import", item.title, `${item.category} ${item.priority} ${item.purpose} ${item.steps.join(" ")} ${item.checks.join(" ")}`, "question-import.html"))
     ];
   }
 

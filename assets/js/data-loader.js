@@ -49,7 +49,8 @@
     dashboard: "dashboard.json",
     testPages: "test-pages.json",
     chapterMaps: "chapter-maps.json",
-    questionBankBuilder: "question-bank-builder.json"
+    questionBankBuilder: "question-bank-builder.json",
+    questionImportChecklist: "question-import-checklist.json"
   };
 
   async function loadJSON(file) {

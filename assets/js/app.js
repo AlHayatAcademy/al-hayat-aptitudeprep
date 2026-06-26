@@ -73,6 +73,7 @@
       "test-pages": renderTestPages,
       "chapter-maps": renderChapterMaps,
       "question-builder": renderQuestionBuilder,
+      "question-import": renderQuestionImport,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -135,6 +136,7 @@
             ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
             ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
             ["Question Builder", "MCQ templates and checks", "question-builder.html"],
+            ["Question Import", "Batch import safety checks", "question-import.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -192,6 +194,7 @@
           ${navLink("Test Pages", "test-pages.html")}
           ${navLink("Chapters", "chapter-maps.html")}
           ${navLink("Builder", "question-builder.html")}
+          ${navLink("Import", "question-import.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -239,6 +242,7 @@
         ${actionCard("Test Pages", "Open dedicated test pages.", "test-pages.html")}
         ${actionCard("Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html")}
         ${actionCard("Question Builder", "Use MCQ templates and checks.", "question-builder.html")}
+        ${actionCard("Question Import", "Validate batch MCQ uploads.", "question-import.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -635,6 +639,42 @@
       </section>
     `;
     wireSimpleCardFilter("#builderCategory", "#builderSearch", "[data-question-builder]");
+  }
+
+  function renderQuestionImport(data) {
+    const categories = [...new Set(data.questionImportChecklist.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Question Import", "Batch Import Checklist", "Use this workflow when adding many MCQs to data/questions.json. It protects the practice engine, search, Urdu explanations and topic links from broken data.")}
+      <section class="stat-grid">
+        ${statCard(data.questionImportChecklist.length, "Import Phases")}
+        ${statCard(data.questionImportChecklist.reduce((sum, item) => sum + item.steps.length, 0), "Workflow Steps")}
+        ${statCard(data.questionImportChecklist.reduce((sum, item) => sum + item.checks.length, 0), "Quality Checks")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Phase
+          <select id="importCategory">
+            <option value="all">All phases</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="importSearch" type="search" placeholder="Search JSON, Urdu, publish, practice...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Safe Batch Rule</h2>
+        <p>Add questions in small batches, keep them as draft first, test them in the practice engine, then publish only after answer, explanation, Urdu explanation and topic links are verified.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("question-builder.html")}">Question Builder</a>
+          <a class="btn secondary small" href="${url("question-bank.html")}">Question Targets</a>
+          <a class="btn ghost small" href="${url("practice.html")}">Practice QA</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.questionImportChecklist.map((item) => questionImportCard(item)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#importCategory", "#importSearch", "[data-question-import]");
   }
 
   function renderVocabularyBank(data) {
@@ -2180,6 +2220,27 @@
           <summary>JSON Example</summary>
           <pre class="code-sample"><code>${escapeHTML(item.jsonExample)}</code></pre>
         </details>
+      </article>
+    `;
+  }
+
+  function questionImportCard(item) {
+    return `
+      <article class="feature-card lesson-card import-card" data-question-import data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.priority)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.purpose)}</p>
+        <div class="lesson-block">
+          <h3>Workflow Steps</h3>
+          <ol class="clean-list">${item.steps.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <div class="lesson-block">
+          <h3>Must Pass Checks</h3>
+          <ul class="clean-list">${item.checks.map((check) => `<li>${escapeHTML(check)}</li>`).join("")}</ul>
+        </div>
+        <div class="button-row">
+          ${item.relatedLinks.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link)}">Open ${index + 1}</a>`).join("")}
+        </div>
       </article>
     `;
   }

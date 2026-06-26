@@ -1,0 +1,42 @@
+[
+  {
+    "id": "import-prepare-batch",
+    "title": "Prepare The Batch",
+    "category": "Before Import",
+    "priority": "Required",
+    "purpose": "Prepare a small reviewed batch before touching data/questions.json.",
+    "steps": ["Use 10-25 questions per batch first.", "Keep all new question IDs unique.", "Use only existing test, skill, subject and topic IDs.", "Keep status as draft until reviewed.", "Confirm every question has English and Urdu explanations."],
+    "checks": ["No duplicate IDs", "All options are complete", "answerIndex matches correct option", "No copied copyrighted passages without permission", "Difficulty is realistic"],
+    "relatedLinks": ["question-builder.html", "question-bank.html", "contributor-guide.html"]
+  },
+  {
+    "id": "import-validate-json",
+    "title": "Validate JSON Structure",
+    "category": "Validation",
+    "priority": "Required",
+    "purpose": "Make sure the site can still load the question file after editing.",
+    "steps": ["Paste new records carefully inside the questions array.", "Check commas between objects.", "Parse the JSON before committing.", "Confirm all strings use double quotes.", "Avoid hidden line breaks inside fields."],
+    "checks": ["data/questions.json parses", "No trailing commas", "No missing brackets", "No invalid quotation marks", "Site loads practice page"],
+    "relatedLinks": ["practice.html", "question-builder.html", "search.html"]
+  },
+  {
+    "id": "import-test-practice-flow",
+    "title": "Test In Practice Engine",
+    "category": "Practice QA",
+    "priority": "High",
+    "purpose": "Open the batch in the live practice engine before publishing.",
+    "steps": ["Filter by the target test, skill or subject.", "Attempt each new question.", "Click Show Answer.", "Click Explanation.", "Click Urdu Explanation.", "Click Study Topic."],
+    "checks": ["Correct answer appears", "Wrong answer styling works", "Urdu text is readable", "Study topic opens useful guidance", "Progress saves after attempt"],
+    "relatedLinks": ["practice.html", "question-review.html", "chapter-maps.html"]
+  },
+  {
+    "id": "import-publish-update",
+    "title": "Publish And Update Tracking",
+    "category": "After Import",
+    "priority": "Required",
+    "purpose": "Publish only reviewed items and keep expansion targets accurate.",
+    "steps": ["Change reviewed questions from draft to published.", "Update currentSampleCount in question-bank targets.", "Add a changelog note if the batch is important.", "Commit the batch with a clear message.", "Push and test the GitHub Pages site."],
+    "checks": ["Published questions appear in practice", "Question-bank target count updated", "Search can find new stems", "No console data loading error", "Live site opens after push"],
+    "relatedLinks": ["question-bank.html", "changelog.html", "dashboard.html"]
+  }
+]

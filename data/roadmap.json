@@ -139,8 +139,16 @@
     "id": "roadmap-v24",
     "phase": "V24",
     "title": "Question Import Checklist",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a batch-import checklist and validation guide for safely expanding JSON question files.",
-    "nextActions": ["Create import checklist", "Add validation steps", "Connect to builder and question targets"]
+    "nextActions": ["Use import checklist", "Validate small question batches", "Publish reviewed items only"]
+  },
+  {
+    "id": "roadmap-v25",
+    "phase": "V25",
+    "title": "Study Topic Pages",
+    "status": "Next",
+    "focus": "Add fuller topic-study cards so the practice engine Study Topic button has richer learning support.",
+    "nextActions": ["Create topic-study data", "Add topic-study page", "Connect practice engine to topic study"]
   }
 ]

@@ -656,6 +656,10 @@ main {
   border-top: 4px solid var(--green);
 }
 
+.import-card {
+  border-top: 4px solid var(--teal);
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

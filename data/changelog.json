@@ -1,5 +1,10 @@
 [
   {
+    "version": "V24",
+    "date": "2026-06-26",
+    "summary": "Added question import checklist for safe batch expansion of JSON question files, including validation, practice QA and publishing checks."
+  },
+  {
     "version": "V23",
     "date": "2026-06-26",
     "summary": "Added question bank builder with MCQ templates, required fields, quality checks and JSON examples for future expansion."
