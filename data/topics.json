@@ -1,0 +1,20 @@
+[
+  {
+    "id": "synonyms-in-context",
+    "name": "Synonyms in Context",
+    "skillId": "vocabulary",
+    "subjectId": "english",
+    "level": "Easy to Advanced",
+    "description": "Choose the nearest meaning of a word as used in a sentence.",
+    "children": []
+  },
+  {
+    "id": "percentages",
+    "name": "Percentages",
+    "skillId": "quantitative-reasoning",
+    "subjectId": "mathematics",
+    "level": "Foundation",
+    "description": "Percentage increase, decrease, comparison and exam shortcuts.",
+    "children": []
+  }
+]

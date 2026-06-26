@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mdcat-mini-mock",
+    "title": "MDCAT Mini Mock",
+    "mockType": "Full Test Sample",
+    "testId": "mdcat",
+    "section": "English + Biology Sample",
+    "durationMinutes": 5,
+    "questionIds": ["q-vocab-001"],
+    "instructions": ["Attempt every question.", "Review explanations after submission.", "This is a Version 1 sample mock."]
+  },
+  {
+    "id": "fast-quant-section-mock",
+    "title": "FAST Quant Section Mock",
+    "mockType": "Section Mock Sample",
+    "testId": "fast-nuces",
+    "section": "Quantitative Reasoning",
+    "durationMinutes": 5,
+    "questionIds": ["q-quant-001"],
+    "instructions": ["Use rough work for calculations.", "Try to solve within the time limit.", "This mock structure can hold a full FAST section later."]
+  }
+]

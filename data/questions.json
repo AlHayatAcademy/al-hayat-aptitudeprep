@@ -1,0 +1,40 @@
+[
+  {
+    "id": "q-vocab-001",
+    "testIds": ["mdcat"],
+    "groupId": "medical-entry-tests",
+    "skillId": "vocabulary",
+    "subjectId": "english",
+    "topicId": "synonyms-in-context",
+    "difficulty": "easy",
+    "questionType": "MCQ",
+    "examStyle": "MDCAT-style",
+    "timeLimit": 45,
+    "sourceType": "original",
+    "status": "published",
+    "stem": "In the sentence, “The scientist gave a concise explanation,” the word “concise” means:",
+    "options": ["Brief and clear", "Very emotional", "Difficult to accept", "Carelessly written"],
+    "answerIndex": 0,
+    "explanation": "Concise means expressing an idea in few words without losing clarity.",
+    "urduExplanation": "Concise کا مطلب ہے کم الفاظ میں واضح بات کرنا۔ اس لیے درست جواب “Brief and clear” ہے."
+  },
+  {
+    "id": "q-quant-001",
+    "testIds": ["fast-nuces"],
+    "groupId": "engineering-cs-tests",
+    "skillId": "quantitative-reasoning",
+    "subjectId": "mathematics",
+    "topicId": "percentages",
+    "difficulty": "medium",
+    "questionType": "MCQ",
+    "examStyle": "FAST-style",
+    "timeLimit": 75,
+    "sourceType": "original",
+    "status": "published",
+    "stem": "A number is increased by 20% and then decreased by 20%. What is the net change?",
+    "options": ["4% decrease", "No change", "4% increase", "8% decrease"],
+    "answerIndex": 0,
+    "explanation": "Let the number be 100. After a 20% increase it becomes 120. A 20% decrease of 120 is 24, so the result is 96: a 4% decrease.",
+    "urduExplanation": "اگر اصل عدد 100 ہو تو 20% اضافے کے بعد 120 ہو جائے گا۔ پھر 120 کا 20% کم کریں تو 96 بچے گا، یعنی کل 4% کمی۔"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "review-001",
+    "studentName": "Ayesha K.",
+    "targetTest": "MDCAT",
+    "rating": 5,
+    "quote": "The topic-wise practice helped me see exactly where I was weak and what to revise next."
+  },
+  {
+    "id": "review-002",
+    "studentName": "Hamza R.",
+    "targetTest": "FAST NUCES",
+    "rating": 5,
+    "quote": "The timed quantitative practice made FAST-style questions feel much more manageable."
+  }
+]

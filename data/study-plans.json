@@ -1,0 +1,16 @@
+[
+  {
+    "id": "mdcat-30-day-start",
+    "title": "MDCAT 30-Day Starter Plan",
+    "testId": "mdcat",
+    "duration": "30 days",
+    "steps": ["Revise one Biology topic daily.", "Practice 20 English vocabulary items daily.", "Attempt one mini mock every week."]
+  },
+  {
+    "id": "fast-21-day-quant",
+    "title": "FAST 21-Day Quant Starter Plan",
+    "testId": "fast-nuces",
+    "duration": "21 days",
+    "steps": ["Master percentages and ratios.", "Practice timed arithmetic daily.", "Attempt one quantitative section mock every week."]
+  }
+]

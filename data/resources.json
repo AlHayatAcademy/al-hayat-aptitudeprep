@@ -1,0 +1,36 @@
+[
+  {
+    "id": "mdcat-biology-preview",
+    "title": "MDCAT Biology Complete Notes",
+    "category": "Medical Entry Tests",
+    "type": "Premium Notes",
+    "access": "Limited Preview",
+    "format": "PDF / Web Notes",
+    "price": "Rs. ___",
+    "testIds": ["mdcat"],
+    "subjectIds": ["biology"],
+    "preview": [
+      "Chapter map: Cell structure, enzymes, bioenergetics and genetics.",
+      "Sample MCQ: Which organelle is known as the powerhouse of the cell?",
+      "Solved example and short exam strategy included in premium version."
+    ],
+    "whatsappText": "Assalamualaikum, I want to purchase MDCAT Biology Complete Notes. Please share price and payment details."
+  },
+  {
+    "id": "fast-math-formula-sheet",
+    "title": "FAST Mathematics Formula Sheet",
+    "category": "Engineering & Computer Science Entry Tests",
+    "type": "Free Resource",
+    "access": "Open",
+    "format": "PDF / Web Notes",
+    "price": "Free",
+    "testIds": ["fast-nuces"],
+    "subjectIds": ["mathematics"],
+    "preview": [
+      "Percentages: New value = Old value x (1 + rate/100).",
+      "Ratios: If a:b = 2:3 and total is 50, values are 20 and 30.",
+      "Use formulas after concept clarity, not as blind memorization."
+    ],
+    "whatsappText": "Assalamualaikum, I want guidance about FAST Mathematics resources."
+  }
+]

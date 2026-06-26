@@ -1,0 +1,20 @@
+[
+  {
+    "id": "biology",
+    "name": "Biology",
+    "group": "Science",
+    "description": "Conceptual biology practice for medical entry tests.",
+    "connectedTestIds": ["mdcat"],
+    "topicIds": ["cell-biology"],
+    "mockIds": ["mdcat-mini-mock"]
+  },
+  {
+    "id": "mathematics",
+    "name": "Mathematics",
+    "group": "Quantitative",
+    "description": "Entry-test mathematics with formulas, shortcuts and timed practice.",
+    "connectedTestIds": ["fast-nuces"],
+    "topicIds": ["percentages"],
+    "mockIds": ["fast-quant-section-mock"]
+  }
+]

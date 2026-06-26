@@ -1,0 +1,16 @@
+[
+  {
+    "id": "youtube-main",
+    "platform": "YouTube",
+    "title": "Al-Hayat AptitudePrep Lectures",
+    "description": "Video lectures, shorts and playlists will be connected here.",
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "id": "social-updates",
+    "platform": "Facebook / Instagram / TikTok",
+    "title": "Social Media Updates",
+    "description": "Reels, updates and quick tips can be added here as the media presence grows.",
+    "url": "https://www.facebook.com/"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "medical-entry-tests",
+    "name": "Medical Entry Tests",
+    "shortName": "Medical",
+    "description": "MDCAT, NMDCAT, NUMS MDCAT and Army Medical style preparation with science, English and reasoning practice.",
+    "icon": "medical",
+    "featuredTestIds": ["mdcat"],
+    "plannedTests": ["MDCAT", "NMDCAT", "NUMS MDCAT", "Army Medical / AMC"]
+  },
+  {
+    "id": "engineering-cs-tests",
+    "name": "Engineering & Computer Science Entry Tests",
+    "shortName": "Engineering & CS",
+    "description": "FAST, NUST NET, ECAT, PIEAS, GIKI and related tests through quantitative, analytical and subject practice.",
+    "icon": "engineering",
+    "featuredTestIds": ["fast-nuces"],
+    "plannedTests": ["ECAT", "NUST NET", "FAST NUCES", "PIEAS", "GIKI", "IST", "Air University"]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "vocabulary",
+    "name": "Vocabulary",
+    "category": "Verbal Skills",
+    "description": "Synonyms, antonyms, contextual meaning and exam-oriented word power.",
+    "connectedTestIds": ["mdcat"],
+    "topicIds": ["synonyms-in-context"],
+    "practiceModes": ["Learn", "Practice", "Skill Mock"]
+  },
+  {
+    "id": "quantitative-reasoning",
+    "name": "Quantitative Reasoning",
+    "category": "Reasoning Skills",
+    "description": "Number sense, percentages, ratios, algebraic thinking and timed problem solving.",
+    "connectedTestIds": ["fast-nuces"],
+    "topicIds": ["percentages"],
+    "practiceModes": ["Topic Practice", "Mixed Practice", "Timed Mock"]
+  }
+]

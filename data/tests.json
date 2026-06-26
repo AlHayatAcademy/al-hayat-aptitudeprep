@@ -1,0 +1,44 @@
+[
+  {
+    "id": "mdcat",
+    "groupId": "medical-entry-tests",
+    "name": "MDCAT",
+    "fullName": "Medical and Dental College Admission Test",
+    "description": "A connected MDCAT pathway covering Biology, Chemistry, Physics, English and logical reasoning.",
+    "format": [
+      "Topic-wise science MCQs",
+      "English vocabulary and grammar practice",
+      "Timed section and full mock tests"
+    ],
+    "sections": [
+      {"name": "Biology", "subjectId": "biology", "weight": "High"},
+      {"name": "English", "skillId": "vocabulary", "weight": "Medium"}
+    ],
+    "skillIds": ["vocabulary"],
+    "subjectIds": ["biology"],
+    "resourceIds": ["mdcat-biology-preview"],
+    "mockIds": ["mdcat-mini-mock"],
+    "status": "sample"
+  },
+  {
+    "id": "fast-nuces",
+    "groupId": "engineering-cs-tests",
+    "name": "FAST NUCES",
+    "fullName": "FAST National University Entry Test",
+    "description": "A FAST-style preparation route for mathematics, analytical reasoning, IQ and English.",
+    "format": [
+      "Quantitative reasoning practice",
+      "Analytical and IQ questions",
+      "Full-test simulation structure"
+    ],
+    "sections": [
+      {"name": "Mathematics", "subjectId": "mathematics", "weight": "High"},
+      {"name": "Quantitative Reasoning", "skillId": "quantitative-reasoning", "weight": "High"}
+    ],
+    "skillIds": ["quantitative-reasoning"],
+    "subjectIds": ["mathematics"],
+    "resourceIds": ["fast-math-formula-sheet"],
+    "mockIds": ["fast-quant-section-mock"],
+    "status": "sample"
+  }
+]
