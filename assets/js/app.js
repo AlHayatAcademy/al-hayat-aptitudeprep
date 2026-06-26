@@ -15,6 +15,16 @@
     ["dashboard", "Dashboard", "dashboard.html"],
     ["contact", "Contact", "contact.html"]
   ];
+  const SIDEBAR_PAGES = new Set([
+    "tests", "skills", "subjects", "practice", "mocks", "resources", "lessons", "topic-study",
+    "dashboard", "test-routes", "test-pages", "chapter-maps", "question-bank", "question-builder",
+    "question-import", "question-review", "repair-paths", "route-tasks", "revision-queue",
+    "results-report", "progress", "diagnostic", "flashcards", "vocabulary-bank", "formula-bank",
+    "question-sets", "worksheets", "assignments", "daily-plan", "study-plans", "premium-notes",
+    "download-center", "teacher-toolkit", "parent-guide", "weekly-summary", "parent-weekly-report",
+    "teacher-weekly-report", "class-remedial-plan", "remedial-homework", "homework-review",
+    "student-notes", "score-guide", "roadmap", "strategies", "mistakes", "error-log"
+  ]);
 
   document.addEventListener("DOMContentLoaded", async () => {
     renderShell();
@@ -110,6 +120,7 @@
       search: () => window.AHSearch.initSearchEngine(data, app)
     };
     (routes[page] || renderHome)(data);
+    injectStudySidebar(data);
     appendPageNavigation();
     wireAccordions();
     wireResourceButtons(data);
@@ -268,16 +279,16 @@
             <a class="btn ghost" href="${url("book-trial-class.html")}">Book Trial Class</a>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Learning system summary">
-          <div class="mini-map">
-            <a href="${url("tests.html")}">Tests</a>
-            <a href="${url("skills.html")}">Skills</a>
-            <a href="${url("subjects.html")}">Subjects</a>
-            <a href="${url("question-bank.html")}">Questions</a>
-            <a href="${url("mock-tests.html")}">Mocks</a>
-          </div>
-          <p>One question bank can serve many tests through clean tags: test, skill, subject, topic, difficulty and exam style.</p>
+      </section>
+      <section class="system-strip" aria-label="Connected learning system">
+        <div class="mini-map horizontal">
+          <a href="${url("tests.html")}">Tests</a>
+          <a href="${url("skills.html")}">Skills</a>
+          <a href="${url("subjects.html")}">Subjects</a>
+          <a href="${url("question-bank.html")}">Questions</a>
+          <a href="${url("mock-tests.html")}">Mocks</a>
         </div>
+        <p>One question bank can serve many tests through clean tags: test, skill, subject, topic, difficulty and exam style.</p>
       </section>
       <section class="home-action-groups" aria-label="Main actions">
         ${homeActionGroup("Start Here", "Core student actions", [
@@ -3771,7 +3782,7 @@
   }
 
   function wireAccordions() {
-    document.querySelectorAll(".accordion-card, .home-action-group").forEach((details) => {
+    document.querySelectorAll(".accordion-card, .home-action-group, .study-sidebar-box").forEach((details) => {
       const icon = details.querySelector(".summary-icon");
       if (icon) icon.textContent = details.open ? "−" : "+";
       details.addEventListener("toggle", () => {
@@ -3779,6 +3790,59 @@
         if (icon) icon.textContent = details.open ? "−" : "+";
       });
     });
+  }
+
+  function injectStudySidebar(data) {
+    if (!app || !SIDEBAR_PAGES.has(page)) {
+      app?.classList.remove("has-study-sidebar");
+      return;
+    }
+    app.classList.add("has-study-sidebar");
+    const firstTest = data.tests?.[0]?.id || "";
+    const firstSkill = data.skills?.[0]?.id || "";
+    const firstTopic = data.topics?.[0]?.id || "";
+    const sidebar = `
+      <aside class="study-sidebar" aria-label="Study navigator">
+        <details class="study-sidebar-box" open>
+          <summary>
+            <span>
+              <strong>Study Navigator</strong>
+              <small>Move through the learning route</small>
+            </span>
+            <span class="summary-icon">−</span>
+          </summary>
+          <nav class="study-nav-links">
+            ${studyNavLink("Choose Test", "choose-test.html")}
+            ${studyNavLink("Study Topic", firstTopic ? `topic-study.html?topic=${firstTopic}` : "topic-study.html")}
+            ${studyNavLink("Practice MCQs", firstSkill ? `practice.html?skill=${firstSkill}` : "practice.html")}
+            ${studyNavLink("Mock Test", firstTest ? `mock-tests.html?test=${firstTest}` : "mock-tests.html")}
+            ${studyNavLink("Review Mistakes", "question-review.html")}
+            ${studyNavLink("Progress", "dashboard.html")}
+          </nav>
+        </details>
+        <details class="study-sidebar-box">
+          <summary>
+            <span>
+              <strong>Quick Resources</strong>
+              <small>Notes, worksheets and tools</small>
+            </span>
+            <span class="summary-icon">+</span>
+          </summary>
+          <nav class="study-nav-links">
+            ${studyNavLink("Resources", "resources.html")}
+            ${studyNavLink("Premium Notes", "premium-notes.html")}
+            ${studyNavLink("Worksheets", "worksheets.html")}
+            ${studyNavLink("Question Bank", "question-bank.html")}
+            ${studyNavLink("Book Trial", "book-trial-class.html")}
+          </nav>
+        </details>
+      </aside>
+    `;
+    app.insertAdjacentHTML("afterbegin", sidebar);
+  }
+
+  function studyNavLink(label, href) {
+    return `<a href="${url(href)}">${escapeHTML(label)}</a>`;
   }
 
   function appendPageNavigation() {
