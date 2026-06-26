@@ -1,0 +1,47 @@
+[
+  {
+    "id": "parent-progress",
+    "title": "How To Read Progress",
+    "category": "Progress",
+    "concern": "My child is practising, but I cannot tell whether improvement is real.",
+    "guidance": "Look at accuracy, repeated weak topics and mock-test trend together. A single low score is not a disaster; repeated low accuracy in the same topic means the concept needs repair.",
+    "recommendedAction": "Open the Results Report, check weak topics, then ask the student to revise one weak topic before taking another mock.",
+    "link": "results-report.html"
+  },
+  {
+    "id": "parent-trial-class",
+    "title": "When To Book A Trial Class",
+    "category": "Trial Class",
+    "concern": "I am not sure whether my child needs regular classes or just resources.",
+    "guidance": "A trial class is useful when the student has unclear concepts, repeated mistakes, low confidence or no study routine. If the student is already strong, a diagnostic plus targeted resources may be enough.",
+    "recommendedAction": "Book a trial class with target test, class level and current weak area.",
+    "link": "book-trial-class.html"
+  },
+  {
+    "id": "parent-resources",
+    "title": "Choosing Notes And Practice",
+    "category": "Resources",
+    "concern": "There are many notes and resources. Which one should we buy first?",
+    "guidance": "Start from the target test and weak subject. Buy premium notes only when the preview matches the student's need and the student will actually practise from them.",
+    "recommendedAction": "Open Premium Notes, preview the relevant note and ask on WhatsApp before purchase.",
+    "link": "premium-notes.html"
+  },
+  {
+    "id": "parent-routine",
+    "title": "Daily Study Routine At Home",
+    "category": "Routine",
+    "concern": "My child studies irregularly and becomes serious only near the test.",
+    "guidance": "A small daily routine is better than occasional long study. The student should revise one concept, attempt a short practice set and record mistakes daily.",
+    "recommendedAction": "Use Daily Plan, Flashcards and Error Log for a simple home routine.",
+    "link": "daily-plan.html"
+  },
+  {
+    "id": "parent-warning-signs",
+    "title": "Warning Signs Parents Should Notice",
+    "category": "Warning Signs",
+    "concern": "How do I know preparation is going in the wrong direction?",
+    "guidance": "Warning signs include repeating the same mistakes, avoiding mocks, memorising formulas without application, low reading accuracy and no revision record.",
+    "recommendedAction": "Ask the student to take the Diagnostic Test and then review the Results Report.",
+    "link": "diagnostic.html"
+  }
+]

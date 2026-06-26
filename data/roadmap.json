@@ -59,8 +59,16 @@
     "id": "roadmap-v14",
     "phase": "V14",
     "title": "Parent Guidance Layer",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add parent-facing guidance, progress interpretation and trial-class decision support.",
-    "nextActions": ["Create parent guide data", "Add parent guide page", "Connect results report and trial class"]
+    "nextActions": ["Share parent guide", "Connect real parent FAQs", "Review trial-class questions"]
+  },
+  {
+    "id": "roadmap-v15",
+    "phase": "V15",
+    "title": "Admissions Timeline Planner",
+    "status": "Next",
+    "focus": "Add deadline-style preparation timelines for major tests and admission seasons.",
+    "nextActions": ["Create timeline data", "Add timeline page", "Connect study plans and reminders"]
   }
 ]

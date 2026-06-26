@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 13 static website for GitHub Pages.
+Version 14 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -17,6 +17,7 @@ Version 13 static website for GitHub Pages.
 - Results Report page for practice, mock, diagnostic, flashcard and error-log progress.
 - Lessons page with concepts, worked examples, strategy, mistakes and connected practice links.
 - Teacher Toolkit page with class plans, agendas, homework and follow-up messages.
+- Parent Guide page with progress, trial-class, routine and resource guidance.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -35,6 +36,7 @@ Version 13 static website for GitHub Pages.
 - Local report insights with weak-topic table and next-step actions.
 - Lesson library foundation connected to tests, skills, subjects, topics, notes and mocks.
 - Classroom toolkit connected to lessons, worksheets and assignments.
+- Parent-facing guidance connected to results report, trial class and WhatsApp support.
 
 ## How To Use
 
@@ -83,5 +85,6 @@ http://localhost:8080/
 - Add result insight bands in `data/result-insights.json`.
 - Add lessons in `data/lessons.json`.
 - Add teacher class plans in `data/teacher-toolkit.json`.
+- Add parent guidance cards in `data/parent-guide.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

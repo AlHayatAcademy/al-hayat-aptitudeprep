@@ -76,5 +76,11 @@
     "version": "V13",
     "date": "2026-06-26",
     "summary": "Added teacher classroom toolkit with class agendas, connected lessons, worksheets, assignments and follow-up messages."
+  },
+  {
+    "id": "change-v14",
+    "version": "V14",
+    "date": "2026-06-26",
+    "summary": "Added parent guide with progress interpretation, trial-class decisions, routine support and WhatsApp guidance."
   }
 ]

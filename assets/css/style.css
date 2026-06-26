@@ -596,6 +596,10 @@ main {
   color: #11605a;
 }
 
+.parent-card {
+  border-top: 4px solid var(--gold);
+}
+
 .accordion-list {
   display: grid;
   gap: 0.8rem;

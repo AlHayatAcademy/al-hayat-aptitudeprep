@@ -40,7 +40,8 @@
     premiumNotes: "premium-notes.json",
     resultInsights: "result-insights.json",
     lessons: "lessons.json",
-    teacherToolkit: "teacher-toolkit.json"
+    teacherToolkit: "teacher-toolkit.json",
+    parentGuide: "parent-guide.json"
   };
 
   async function loadJSON(file) {

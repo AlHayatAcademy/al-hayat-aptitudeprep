@@ -64,6 +64,7 @@
       "results-report": renderResultsReport,
       lessons: renderLessons,
       "teacher-toolkit": renderTeacherToolkit,
+      "parent-guide": renderParentGuide,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -117,6 +118,7 @@
             ["Results Report", "Weak areas and next steps", "results-report.html"],
             ["Lessons", "Concepts, examples and practice", "lessons.html"],
             ["Teacher Toolkit", "Class plans and follow-up", "teacher-toolkit.html"],
+            ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -165,6 +167,7 @@
           ${navLink("Results", "results-report.html")}
           ${navLink("Lessons", "lessons.html")}
           ${navLink("Teacher", "teacher-toolkit.html")}
+          ${navLink("Parents", "parent-guide.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -203,6 +206,7 @@
         ${actionCard("Results Report", "Review weak areas and next steps.", "results-report.html")}
         ${actionCard("Lessons", "Study concepts with examples and practice.", "lessons.html")}
         ${actionCard("Teacher Toolkit", "Run class plans with worksheets.", "teacher-toolkit.html")}
+        ${actionCard("Parent Guide", "Understand progress and next steps.", "parent-guide.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -856,6 +860,41 @@
       </section>
     `;
     wireSimpleCardFilter("#teacherTest", "#teacherSearch", "[data-teacher-plan]");
+  }
+
+  function renderParentGuide(data) {
+    const categories = [...new Set(data.parentGuide.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Parent Guide", "Support Test Preparation At Home", "Simple guidance for parents: how to read progress, when to book a trial class, and how to choose resources.")}
+      <section class="stat-grid">
+        ${statCard(data.parentGuide.length, "Guidance Cards")}
+        ${statCard(categories.length, "Parent Concerns")}
+        ${statCard("WhatsApp", "Quick Support")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Concern
+          <select id="parentCategory">
+            <option value="all">All concerns</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="parentSearch" type="search" placeholder="Search progress, trial, routine...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Parent Quick Rule</h2>
+        <p>Do not judge preparation from one score only. Check routine, weak topics, error log, and whether the student is improving after feedback.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("results-report.html")}">Open Results Report</a>
+          <a class="btn secondary small" href="${url("book-trial-class.html")}">Book Trial Class</a>
+        </div>
+      </section>
+      <section class="card-grid">
+        ${data.parentGuide.map((item) => parentGuideCard(item)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#parentCategory", "#parentSearch", "[data-parent-guide]");
   }
 
   function renderStudyPlans(data) {
@@ -1530,6 +1569,23 @@
           <a class="btn secondary small" href="${url("worksheets.html")}">Worksheet</a>
           <a class="btn ghost small" href="${url("assignments.html")}">Assignment</a>
           <a class="btn ghost small" href="https://wa.me/?text=${followUp}" target="_blank" rel="noopener">Share Follow-up</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function parentGuideCard(item) {
+    const message = encodeURIComponent(`Assalamualaikum, I need parent guidance about: ${item.title}. ${item.concern}`);
+    return `
+      <article class="feature-card parent-card" data-parent-guide data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p><strong>Parent concern:</strong> ${escapeHTML(item.concern)}</p>
+        <p>${escapeHTML(item.guidance)}</p>
+        <p class="connected-line">Recommended action: ${escapeHTML(item.recommendedAction)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.link)}">Open Action</a>
+          <a class="btn secondary small" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Ask on WhatsApp</a>
         </div>
       </article>
     `;

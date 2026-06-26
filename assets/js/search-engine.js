@@ -71,7 +71,8 @@
       ...(data.premiumNotes || []).map((item) => record("Premium Note", item.title, `${item.access} ${item.summary} ${item.previewSections.map((section) => `${section.heading} ${section.body}`).join(" ")} ${item.premiumIncludes.join(" ")}`, "premium-notes.html")),
       ...(data.resultInsights || []).map((item) => record("Results Report", item.band, `${item.message} ${item.nextActions.join(" ")}`, "results-report.html")),
       ...(data.lessons || []).map((item) => record("Lesson", item.title, `${item.level} ${item.concept} ${item.workedExample} ${item.strategy} ${item.commonMistake} ${item.testIds.join(" ")} ${item.topicIds.join(" ")}`, "lessons.html")),
-      ...(data.teacherToolkit || []).map((item) => record("Teacher Toolkit", item.title, `${item.classType} ${item.agenda.join(" ")} ${item.teacherNotes} ${item.homework} ${item.skillIds.join(" ")}`, "teacher-toolkit.html"))
+      ...(data.teacherToolkit || []).map((item) => record("Teacher Toolkit", item.title, `${item.classType} ${item.agenda.join(" ")} ${item.teacherNotes} ${item.homework} ${item.skillIds.join(" ")}`, "teacher-toolkit.html")),
+      ...(data.parentGuide || []).map((item) => record("Parent Guide", item.title, `${item.category} ${item.concern} ${item.guidance} ${item.recommendedAction}`, "parent-guide.html"))
     ];
   }
 
