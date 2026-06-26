@@ -58,5 +58,11 @@
     "version": "V10",
     "date": "2026-06-26",
     "summary": "Added premium notes preview page with structured sample notes, related resources and WhatsApp purchase flow."
+  },
+  {
+    "id": "change-v11",
+    "version": "V11",
+    "date": "2026-06-26",
+    "summary": "Added results report page with local progress summary, weak-topic table and next-step recommendations."
   }
 ]

@@ -35,8 +35,16 @@
     "id": "roadmap-v11",
     "phase": "V11",
     "title": "Student Result Experience",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Improve progress, score interpretation and weak-topic suggestions.",
-    "nextActions": ["Add weak-topic summaries", "Improve mock review", "Create parent-friendly report view"]
+    "nextActions": ["Review local report", "Use weak-topic practice links", "Share report pattern with parents"]
+  },
+  {
+    "id": "roadmap-v12",
+    "phase": "V12",
+    "title": "Lesson Library Foundation",
+    "status": "Next",
+    "focus": "Add lesson pages that connect concepts, examples, practice, notes and mocks.",
+    "nextActions": ["Create lesson data schema", "Add sample lessons", "Connect lessons to topics"]
   }
 ]

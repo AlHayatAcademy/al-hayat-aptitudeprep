@@ -1,0 +1,34 @@
+[
+  {
+    "id": "insight-accuracy-low",
+    "band": "Foundation",
+    "minAccuracy": 0,
+    "maxAccuracy": 49,
+    "message": "Accuracy is still below exam comfort level. Focus on concept revision before speed.",
+    "nextActions": ["Revise weak topics", "Attempt untimed practice", "Add repeated mistakes to the error log"]
+  },
+  {
+    "id": "insight-accuracy-building",
+    "band": "Building",
+    "minAccuracy": 50,
+    "maxAccuracy": 69,
+    "message": "The base is forming, but the student needs more controlled practice and review.",
+    "nextActions": ["Practise weak topics again", "Use flashcards daily", "Take one short mock after revision"]
+  },
+  {
+    "id": "insight-accuracy-ready",
+    "band": "Competitive",
+    "minAccuracy": 70,
+    "maxAccuracy": 84,
+    "message": "The student is becoming competitive. Timed practice and mixed mocks should now increase.",
+    "nextActions": ["Attempt timed sets", "Review wrong answers immediately", "Compare mock results weekly"]
+  },
+  {
+    "id": "insight-accuracy-strong",
+    "band": "Advanced",
+    "minAccuracy": 85,
+    "maxAccuracy": 100,
+    "message": "Performance is strong. Maintain accuracy while improving speed and test endurance.",
+    "nextActions": ["Use full mocks", "Work on time pressure", "Revise only high-risk topics"]
+  }
+]

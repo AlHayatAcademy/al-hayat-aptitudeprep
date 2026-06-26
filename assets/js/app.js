@@ -61,6 +61,7 @@
       flashcards: renderFlashcards,
       "error-log": renderErrorLog,
       "premium-notes": renderPremiumNotes,
+      "results-report": renderResultsReport,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -111,6 +112,7 @@
             ["Flashcards", "Revise core items fast", "flashcards.html"],
             ["Error Log", "Track repeated mistakes", "error-log.html"],
             ["Premium Notes", "Preview and purchase notes", "premium-notes.html"],
+            ["Results Report", "Weak areas and next steps", "results-report.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -156,6 +158,7 @@
           ${navLink("Diagnostic", "diagnostic.html")}
           ${navLink("Flashcards", "flashcards.html")}
           ${navLink("Premium Notes", "premium-notes.html")}
+          ${navLink("Results", "results-report.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -191,6 +194,7 @@
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
         ${actionCard("Premium Notes", "Open structured note previews.", "premium-notes.html")}
+        ${actionCard("Results Report", "Review weak areas and next steps.", "results-report.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -724,6 +728,72 @@
       </section>
     `;
     wireSimpleCardFilter("#premiumSubject", "#premiumSearch", "[data-premium-note]");
+  }
+
+  function renderResultsReport(data) {
+    const practice = readJSON("ah-aptitude-progress", {});
+    const mocks = readJSON("ah-aptitude-mocks", []);
+    const diagnostic = readJSON("ah-diagnostic-result", null);
+    const mastered = readJSON("ah-flashcard-mastered", {});
+    const errors = readJSON("ah-error-log", []);
+    const practiceTotals = Object.values(practice).reduce((totals, item) => {
+      totals.attempts += item.attempts || 0;
+      totals.correct += item.correct || 0;
+      return totals;
+    }, { attempts: 0, correct: 0 });
+    const practiceAccuracy = practiceTotals.attempts ? Math.round((practiceTotals.correct / practiceTotals.attempts) * 100) : 0;
+    const latestMock = mocks[0];
+    const mockAccuracy = latestMock?.total ? Math.round((latestMock.score / latestMock.total) * 100) : 0;
+    const masteredCount = Object.values(mastered).filter(Boolean).length;
+    const insight = findResultInsight(data.resultInsights, practiceAccuracy || mockAccuracy || 0);
+    const weakTopics = Object.entries(practice)
+      .map(([topicId, item]) => ({ topicId, attempts: item.attempts || 0, correct: item.correct || 0, accuracy: item.attempts ? Math.round((item.correct / item.attempts) * 100) : 0 }))
+      .filter((item) => item.attempts > 0)
+      .sort((a, b) => a.accuracy - b.accuracy)
+      .slice(0, 5);
+    const errorCauses = countBy(errors, "cause");
+
+    app.innerHTML = `
+      ${pageHero("Results Report", "Student Progress And Next Steps", "This browser-based report combines practice, mocks, diagnostic result, flashcards and error-log entries.")}
+      <section class="stat-grid">
+        ${statCard(practiceTotals.attempts, "Practice Attempts")}
+        ${statCard(`${practiceAccuracy}%`, "Practice Accuracy")}
+        ${statCard(latestMock ? `${latestMock.score}/${latestMock.total}` : "None", "Latest Mock")}
+        ${statCard(diagnostic ? `${diagnostic.score}/${diagnostic.total}` : "None", "Diagnostic")}
+        ${statCard(masteredCount, "Flashcards Mastered")}
+        ${statCard(errors.length, "Logged Mistakes")}
+      </section>
+      <section class="content-band result-summary">
+        <p class="eyebrow">${escapeHTML(insight.band)} Report</p>
+        <h2>${escapeHTML(insight.message)}</h2>
+        <ol class="clean-list">${insight.nextActions.map((action) => `<li>${escapeHTML(action)}</li>`).join("")}</ol>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("practice.html")}">Continue Practice</a>
+          <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
+          <a class="btn ghost small" href="${url("error-log.html")}">Update Error Log</a>
+        </div>
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Weak Topic Summary</h2>
+          <table>
+            <thead><tr><th>Topic</th><th>Attempts</th><th>Correct</th><th>Accuracy</th><th>Action</th></tr></thead>
+            <tbody>${weakTopics.length ? weakTopics.map((item) => weakTopicRow(item, data)).join("") : `<tr><td colspan="5">No practice data yet. Attempt practice questions first.</td></tr>`}</tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Review Signals</h2>
+          ${reportSignal("Diagnostic Weak Skills", diagnostic?.weakSkills?.join(", ") || "No diagnostic result yet.")}
+          ${reportSignal("Latest Mock", latestMock ? `${latestMock.title}: ${mockAccuracy}%` : "No mock attempt yet.")}
+          ${reportSignal("Common Error Causes", errorCauses.length ? errorCauses.map((item) => `${item.label} (${item.count})`).join(", ") : "No error-log entries yet.")}
+        </aside>
+      </section>
+      <section class="card-grid">
+        ${resultActionCard("Daily Repair Plan", "Use the daily checklist after reviewing weak topics.", "daily-plan.html")}
+        ${resultActionCard("Flashcard Revision", "Revise quick facts and mark cards as mastered.", "flashcards.html")}
+        ${resultActionCard("Score Guide", "Understand your current band and target movement.", "score-guide.html")}
+      </section>
+    `;
   }
 
   function renderStudyPlans(data) {
@@ -1296,6 +1366,41 @@
     `;
   }
 
+  function weakTopicRow(item, data) {
+    const topic = findName(data.topics, item.topicId);
+    const topicRecord = data.topics.find((entry) => entry.id === item.topicId);
+    const skillId = topicRecord?.skillIds?.[0] || "";
+    const practiceLink = skillId ? `practice.html?skill=${skillId}` : "practice.html";
+    return `
+      <tr>
+        <td>${escapeHTML(topic)}</td>
+        <td>${item.attempts}</td>
+        <td>${item.correct}</td>
+        <td>${item.accuracy}%</td>
+        <td><a class="text-link" href="${url(practiceLink)}">Practise</a></td>
+      </tr>
+    `;
+  }
+
+  function reportSignal(title, value) {
+    return `
+      <div class="report-signal">
+        <strong>${escapeHTML(title)}</strong>
+        <span>${escapeHTML(value)}</span>
+      </div>
+    `;
+  }
+
+  function resultActionCard(title, copy, href) {
+    return `
+      <article class="feature-card">
+        <h2>${escapeHTML(title)}</h2>
+        <p>${escapeHTML(copy)}</p>
+        <a class="btn secondary small" href="${url(href)}">Open</a>
+      </article>
+    `;
+  }
+
   function testCard(test, data) {
     const skills = test.skillIds.map((id) => findName(data.skills, id)).join(", ");
     const subjects = test.subjectIds.map((id) => findName(data.subjects, id)).join(", ");
@@ -1639,6 +1744,25 @@
 
   function findName(items, id) {
     return items.find((item) => item.id === id)?.name || id;
+  }
+
+  function findResultInsight(insights, accuracy) {
+    return insights.find((item) => accuracy >= item.minAccuracy && accuracy <= item.maxAccuracy) || insights[0] || {
+      band: "New",
+      message: "Start practice to generate a report.",
+      nextActions: ["Attempt practice", "Take a diagnostic", "Review results"]
+    };
+  }
+
+  function countBy(items, key) {
+    const counts = items.reduce((acc, item) => {
+      const label = item[key] || "Other";
+      acc[label] = (acc[label] || 0) + 1;
+      return acc;
+    }, {});
+    return Object.entries(counts)
+      .map(([label, count]) => ({ label, count }))
+      .sort((a, b) => b.count - a.count);
   }
 
   function readJSON(key, fallback) {
