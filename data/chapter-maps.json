@@ -1,0 +1,62 @@
+[
+  {
+    "id": "chapter-biology-foundation",
+    "subjectId": "biology",
+    "title": "Biology Foundation Map",
+    "examUse": "MDCAT, NMDCAT and NUMS science preparation.",
+    "chapterIds": ["cell-biology", "enzymes", "genetics"],
+    "lessonIds": ["lesson-mdcat-cell-basics"],
+    "resourceIds": ["mdcat-biology-preview"],
+    "questionIds": ["q-bio-001"],
+    "studyOrder": ["Cell structure and functions", "Enzyme action and biological control", "Genetics, inheritance and DNA basics"],
+    "teacherNote": "Start with cell function because later biology chapters reuse this language repeatedly."
+  },
+  {
+    "id": "chapter-chemistry-foundation",
+    "subjectId": "chemistry",
+    "title": "Chemistry Foundation Map",
+    "examUse": "Medical and engineering chemistry preparation.",
+    "chapterIds": ["atomic-structure", "chemical-bonding"],
+    "lessonIds": [],
+    "resourceIds": ["ecat-formula-book", "mdcat-biology-preview"],
+    "questionIds": ["q-chem-001"],
+    "studyOrder": ["Atomic particles and charge", "Electron arrangement", "Bonding concepts and properties"],
+    "teacherNote": "Keep chemistry factual but connect every fact to MCQ elimination."
+  },
+  {
+    "id": "chapter-physics-foundation",
+    "subjectId": "physics",
+    "title": "Physics Foundation Map",
+    "examUse": "MDCAT, ECAT, NUST NET and engineering tests.",
+    "chapterIds": ["kinematics", "electricity"],
+    "lessonIds": [],
+    "resourceIds": ["ecat-formula-book", "engineering-starter-pack"],
+    "questionIds": ["q-physics-001"],
+    "studyOrder": ["Distance, speed and velocity", "Acceleration and motion equations", "Current, voltage, resistance and power"],
+    "teacherNote": "Students should write formula, units and substitution before mental calculation."
+  },
+  {
+    "id": "chapter-math-foundation",
+    "subjectId": "mathematics",
+    "title": "Mathematics Foundation Map",
+    "examUse": "FAST, NET, ECAT, NAT, GAT, SAT and GRE quantitative preparation.",
+    "chapterIds": ["percentages", "ratios", "algebra-basics", "functions"],
+    "lessonIds": ["lesson-fast-percentages"],
+    "resourceIds": ["fast-math-formula-sheet", "engineering-starter-pack"],
+    "questionIds": ["q-quant-001", "q-quant-002"],
+    "studyOrder": ["Percentages and base value", "Ratios and proportions", "Algebraic simplification", "Functions and input-output logic"],
+    "teacherNote": "Quantitative speed improves after concept accuracy, not before it."
+  },
+  {
+    "id": "chapter-english-foundation",
+    "subjectId": "english",
+    "title": "English Foundation Map",
+    "examUse": "MDCAT, NAT, GAT, GRE, SAT, IELTS and admission English sections.",
+    "chapterIds": ["synonyms-in-context", "subject-verb-agreement", "main-idea", "essay-structure"],
+    "lessonIds": ["lesson-gre-context-vocab"],
+    "resourceIds": ["mdcat-english-vocab", "nat-gat-verbal-notes", "gre-vocab-preview"],
+    "questionIds": ["q-vocab-001", "q-grammar-001", "q-reading-001", "q-writing-001"],
+    "studyOrder": ["Vocabulary in context", "Grammar accuracy", "Reading main idea", "Essay thesis and structure"],
+    "teacherNote": "English should be practised through sentence logic, not isolated memorisation."
+  }
+]

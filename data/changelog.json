@@ -1,5 +1,10 @@
 [
   {
+    "version": "V22",
+    "date": "2026-06-26",
+    "summary": "Added subject chapter maps for Biology, Chemistry, Physics, Mathematics and English connected to topics, practice, lessons and resources."
+  },
+  {
     "version": "V21",
     "date": "2026-06-26",
     "summary": "Improved MCQ practice flow with separate attempt step, answer reveal, explanation, Urdu explanation, next question and study topic controls."

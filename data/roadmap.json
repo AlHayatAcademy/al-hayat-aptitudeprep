@@ -123,8 +123,16 @@
     "id": "roadmap-v22",
     "phase": "V22",
     "title": "Subject Chapter Maps",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add subject-wise chapter maps for Biology, Chemistry, Physics, Mathematics and English.",
-    "nextActions": ["Create chapter map data", "Add chapter map page", "Connect chapters to practice and lessons"]
+    "nextActions": ["Use chapter maps", "Expand subject chapters", "Connect more lessons and resources"]
+  },
+  {
+    "id": "roadmap-v23",
+    "phase": "V23",
+    "title": "Question Bank Builder",
+    "status": "Next",
+    "focus": "Add admin-friendly templates and quality checklist for adding large question banks gradually.",
+    "nextActions": ["Create builder data", "Add question template page", "Connect content quality checks"]
   }
 ]

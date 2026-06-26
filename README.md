@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 21 static website for GitHub Pages.
+Version 22 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -25,6 +25,7 @@ Version 21 static website for GitHub Pages.
 - Student Dashboard page with route selection, progress signals and next actions.
 - Test Pages hub with dedicated deep-page records for MDCAT, FAST, NAT and GAT.
 - Improved MCQ practice engine with Attempt, Show Answer, Explanation, Urdu Explanation, Next Question and Study Topic controls.
+- Subject Chapter Maps page for Biology, Chemistry, Physics, Mathematics and English.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -51,6 +52,7 @@ Version 21 static website for GitHub Pages.
 - Student dashboard connected to local progress, routes, lessons, mocks, downloads and results report.
 - Test pages connected to test routes, lessons, mocks, resources, timelines and question sets.
 - Practice questions now support staged answer checking and topic study panels.
+- Chapter maps connect subjects, topics, lessons, resources, questions and practice.
 
 ## How To Use
 
@@ -106,5 +108,6 @@ http://localhost:8080/
 - Add test-route pathways in `data/test-routes.json`.
 - Add dashboard action cards in `data/dashboard.json`.
 - Add test-specific page records in `data/test-pages.json`.
+- Add subject chapter maps in `data/chapter-maps.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

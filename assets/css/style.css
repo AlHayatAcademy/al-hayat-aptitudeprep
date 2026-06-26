@@ -648,6 +648,10 @@ main {
   border-top: 4px solid var(--blue);
 }
 
+.chapter-map-card {
+  border-top: 4px solid var(--gold);
+}
+
 @media print {
   .site-header,
   .site-footer,

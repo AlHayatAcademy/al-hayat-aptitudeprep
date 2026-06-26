@@ -47,7 +47,8 @@
     questionReview: "question-review.json",
     testRoutes: "test-routes.json",
     dashboard: "dashboard.json",
-    testPages: "test-pages.json"
+    testPages: "test-pages.json",
+    chapterMaps: "chapter-maps.json"
   };
 
   async function loadJSON(file) {

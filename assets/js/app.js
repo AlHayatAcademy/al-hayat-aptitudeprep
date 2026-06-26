@@ -71,6 +71,7 @@
       "test-routes": renderTestRoutes,
       dashboard: renderDashboard,
       "test-pages": renderTestPages,
+      "chapter-maps": renderChapterMaps,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -131,6 +132,7 @@
             ["Test Routes", "Connected preparation pathways", "test-routes.html"],
             ["Dashboard", "Progress and next actions", "dashboard.html"],
             ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
+            ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -186,6 +188,7 @@
           ${navLink("Routes", "test-routes.html")}
           ${navLink("Dashboard", "dashboard.html")}
           ${navLink("Test Pages", "test-pages.html")}
+          ${navLink("Chapters", "chapter-maps.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -231,6 +234,7 @@
         ${actionCard("Test Routes", "Follow connected test pathways.", "test-routes.html")}
         ${actionCard("Dashboard", "See progress and next actions.", "dashboard.html")}
         ${actionCard("Test Pages", "Open dedicated test pages.", "test-pages.html")}
+        ${actionCard("Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1190,6 +1194,45 @@
     wireSimpleCardFilter("#testPageCategory", "#testPageSearch", "[data-test-page]");
   }
 
+  function renderChapterMaps(data) {
+    const groups = [...new Set(data.chapterMaps.map((item) => {
+      const subject = data.subjects.find((entry) => entry.id === item.subjectId);
+      return subject?.group || "General";
+    }))].sort();
+    app.innerHTML = `
+      ${pageHero("Chapter Maps", "Subject-Wise Study Routes", "Use chapter maps to move from subject chapters to topics, lessons, practice questions and resources without losing the exam route.")}
+      <section class="stat-grid">
+        ${statCard(data.chapterMaps.length, "Subject Maps")}
+        ${statCard(new Set(data.chapterMaps.flatMap((item) => item.chapterIds)).size, "Mapped Topics")}
+        ${statCard(data.chapterMaps.reduce((sum, item) => sum + item.questionIds.length, 0), "Linked Questions")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Subject Group
+          <select id="chapterGroup">
+            <option value="all">All groups</option>
+            ${groups.map((group) => `<option value="${escapeHTML(group)}">${escapeHTML(group)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="chapterSearch" type="search" placeholder="Search biology, formulas, English, kinematics...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>How To Use Chapter Maps</h2>
+        <p>Study chapters in order, open the connected topic practice, then use lessons and resources only where they support the MCQ route.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("subjects.html")}">Open Subjects</a>
+          <a class="btn secondary small" href="${url("practice.html")}">Practice</a>
+          <a class="btn ghost small" href="${url("lessons.html")}">Lessons</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.chapterMaps.map((item) => chapterMapCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#chapterGroup", "#chapterSearch", "[data-chapter-map]");
+  }
+
   function renderStudyPlans(data) {
     app.innerHTML = `
       ${pageHero("Study Plans", "Roadmaps For Focused Preparation", "Keep test-wise weekly or monthly plans in JSON and connect them to practice and mocks.")}
@@ -2038,6 +2081,42 @@
           <a class="btn secondary small" href="${url("mock-tests.html")}">Mock Tests</a>
           <a class="btn ghost small" href="${url("resources.html")}">Resources</a>
           <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function chapterMapCard(item, data) {
+    const subject = data.subjects.find((entry) => entry.id === item.subjectId);
+    const chapters = item.chapterIds.map((id) => data.topics.find((entry) => entry.id === id)).filter(Boolean);
+    const lessons = item.lessonIds.map((id) => data.lessons.find((entry) => entry.id === id)?.title || id).join(", ");
+    const resources = item.resourceIds.map((id) => data.resources.find((entry) => entry.id === id)?.title || id).join(", ");
+    const questions = item.questionIds.map((id) => data.questions.find((entry) => entry.id === id)?.stem || id);
+    return `
+      <article class="feature-card lesson-card chapter-map-card" data-chapter-map data-category="${escapeHTML(subject?.group || "General")}">
+        <p class="eyebrow">${escapeHTML(subject?.group || "Subject")} • ${escapeHTML(subject?.name || item.subjectId)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.examUse)}</p>
+        <div class="lesson-block">
+          <h3>Study Order</h3>
+          <ol class="clean-list">${item.studyOrder.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <div class="lesson-block">
+          <h3>Mapped Chapters</h3>
+          <ul class="clean-list">${chapters.map((topic) => `<li><strong>${escapeHTML(topic.name)}</strong>: ${escapeHTML(topic.description)}</li>`).join("")}</ul>
+        </div>
+        <details class="mini-details">
+          <summary>Connected Content</summary>
+          <p><strong>Lessons:</strong> ${escapeHTML(lessons || "Add lessons later")}</p>
+          <p><strong>Resources:</strong> ${escapeHTML(resources || "Add resources later")}</p>
+          <p><strong>Sample questions:</strong> ${escapeHTML(questions.join(" | "))}</p>
+          <p><strong>Teacher note:</strong> ${escapeHTML(item.teacherNote)}</p>
+        </details>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(`practice.html?subject=${item.subjectId}`)}">Subject Practice</a>
+          <a class="btn secondary small" href="${url("lessons.html")}">Lessons</a>
+          <a class="btn ghost small" href="${url("resources.html")}">Resources</a>
+          <a class="btn ghost small" href="${url("question-review.html")}">Review</a>
         </div>
       </article>
     `;

@@ -39,6 +39,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `test-routes.html`
 - `dashboard.html`
 - `test-pages.html`
+- `chapter-maps.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`
