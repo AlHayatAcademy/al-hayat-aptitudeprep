@@ -1,5 +1,10 @@
 [
   {
+    "version": "V23",
+    "date": "2026-06-26",
+    "summary": "Added question bank builder with MCQ templates, required fields, quality checks and JSON examples for future expansion."
+  },
+  {
     "version": "V22",
     "date": "2026-06-26",
     "summary": "Added subject chapter maps for Biology, Chemistry, Physics, Mathematics and English connected to topics, practice, lessons and resources."

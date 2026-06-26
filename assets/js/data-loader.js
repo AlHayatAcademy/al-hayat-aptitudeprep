@@ -48,7 +48,8 @@
     testRoutes: "test-routes.json",
     dashboard: "dashboard.json",
     testPages: "test-pages.json",
-    chapterMaps: "chapter-maps.json"
+    chapterMaps: "chapter-maps.json",
+    questionBankBuilder: "question-bank-builder.json"
   };
 
   async function loadJSON(file) {

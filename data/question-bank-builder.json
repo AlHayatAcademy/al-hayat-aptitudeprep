@@ -1,0 +1,42 @@
+[
+  {
+    "id": "builder-mcq-core",
+    "title": "Standard MCQ Template",
+    "category": "Template",
+    "priority": "Required",
+    "purpose": "Use this structure for every single-option MCQ added to data/questions.json.",
+    "requiredFields": ["id", "testIds", "groupId", "skillId", "subjectId", "topicId", "difficulty", "questionType", "examStyle", "timeLimit", "status", "stem", "options", "answerIndex", "explanation", "urduExplanation"],
+    "qualityChecks": ["One correct answer only", "Four clear options", "Distractors plausible but not ambiguous", "Explanation teaches the method", "Urdu explanation is simple and exam-oriented"],
+    "jsonExample": "{\n  \"id\": \"q-mdcat-bio-002\",\n  \"testIds\": [\"mdcat\", \"nmdcat\"],\n  \"groupId\": \"medical-entry-tests\",\n  \"skillId\": \"science-concepts\",\n  \"subjectId\": \"biology\",\n  \"topicId\": \"cell-biology\",\n  \"difficulty\": \"medium\",\n  \"questionType\": \"MCQ\",\n  \"examStyle\": \"MDCAT-style\",\n  \"timeLimit\": 45,\n  \"sourceType\": \"original\",\n  \"status\": \"draft\",\n  \"stem\": \"Question stem here?\",\n  \"options\": [\"Correct option\", \"Distractor 1\", \"Distractor 2\", \"Distractor 3\"],\n  \"answerIndex\": 0,\n  \"explanation\": \"Explain why the correct option is right.\",\n  \"urduExplanation\": \"اردو میں مختصر اور واضح وضاحت لکھیں۔\"\n}"
+  },
+  {
+    "id": "builder-verbal-context",
+    "title": "Vocabulary In Context Template",
+    "category": "Verbal",
+    "priority": "High",
+    "purpose": "Use for synonyms, antonyms, sentence completion and contextual vocabulary questions.",
+    "requiredFields": ["sentence context", "target word", "logic clue", "answerIndex", "English explanation", "Urdu explanation"],
+    "qualityChecks": ["Sentence must guide the meaning", "Avoid rare words without context", "Do not make two options equally close", "Mention the clue word in explanation"],
+    "jsonExample": "{\n  \"stem\": \"In the sentence, 'The argument was coherent,' coherent means:\",\n  \"options\": [\"Logical and clear\", \"Angry\", \"Incomplete\", \"Very long\"],\n  \"answerIndex\": 0,\n  \"explanation\": \"Coherent means logically connected and clear.\",\n  \"urduExplanation\": \"Coherent کا مطلب منطقی طور پر مربوط اور واضح ہے۔\"\n}"
+  },
+  {
+    "id": "builder-quantitative",
+    "title": "Quantitative Question Template",
+    "category": "Quantitative",
+    "priority": "High",
+    "purpose": "Use for percentages, ratios, algebra, functions, data interpretation and formula-based MCQs.",
+    "requiredFields": ["given values", "required value", "calculation path", "answerIndex", "unit if needed", "shortcut explanation"],
+    "qualityChecks": ["Numbers should be solvable without long calculation", "Options should reflect common mistakes", "Explanation should show steps", "Urdu explanation should clarify formula use"],
+    "jsonExample": "{\n  \"stem\": \"A value increases from 80 to 100. What is the percentage increase?\",\n  \"options\": [\"25%\", \"20%\", \"30%\", \"15%\"],\n  \"answerIndex\": 0,\n  \"explanation\": \"Increase is 20. Percentage increase = 20/80 x 100 = 25%.\",\n  \"urduExplanation\": \"اصل قیمت 80 ہے، اضافہ 20 ہے؛ 20/80 کو 100 سے ضرب دیں تو 25% بنتا ہے۔\"\n}"
+  },
+  {
+    "id": "builder-review-flow",
+    "title": "Review Before Publishing",
+    "category": "Quality Review",
+    "priority": "Required",
+    "purpose": "Use this checklist before changing status from draft to published.",
+    "requiredFields": ["valid IDs", "clear answer", "tested explanation", "Urdu explanation", "correct topic", "appropriate difficulty"],
+    "qualityChecks": ["Run JSON validation", "Attempt question in practice engine", "Check answer reveal", "Check Urdu panel", "Check Study Topic link", "Update question-bank target count"],
+    "jsonExample": "{\n  \"status\": \"draft first, then published after review\",\n  \"reviewedBy\": \"content editor\",\n  \"reviewNote\": \"Answer, explanation and Urdu explanation checked.\"\n}"
+  }
+]

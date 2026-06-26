@@ -131,8 +131,16 @@
     "id": "roadmap-v23",
     "phase": "V23",
     "title": "Question Bank Builder",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add admin-friendly templates and quality checklist for adding large question banks gradually.",
-    "nextActions": ["Create builder data", "Add question template page", "Connect content quality checks"]
+    "nextActions": ["Use builder templates", "Add questions in small batches", "Validate and publish reviewed items"]
+  },
+  {
+    "id": "roadmap-v24",
+    "phase": "V24",
+    "title": "Question Import Checklist",
+    "status": "Next",
+    "focus": "Add a batch-import checklist and validation guide for safely expanding JSON question files.",
+    "nextActions": ["Create import checklist", "Add validation steps", "Connect to builder and question targets"]
   }
 ]

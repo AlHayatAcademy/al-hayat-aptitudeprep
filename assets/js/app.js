@@ -72,6 +72,7 @@
       dashboard: renderDashboard,
       "test-pages": renderTestPages,
       "chapter-maps": renderChapterMaps,
+      "question-builder": renderQuestionBuilder,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -133,6 +134,7 @@
             ["Dashboard", "Progress and next actions", "dashboard.html"],
             ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
             ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
+            ["Question Builder", "MCQ templates and checks", "question-builder.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -189,6 +191,7 @@
           ${navLink("Dashboard", "dashboard.html")}
           ${navLink("Test Pages", "test-pages.html")}
           ${navLink("Chapters", "chapter-maps.html")}
+          ${navLink("Builder", "question-builder.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -235,6 +238,7 @@
         ${actionCard("Dashboard", "See progress and next actions.", "dashboard.html")}
         ${actionCard("Test Pages", "Open dedicated test pages.", "test-pages.html")}
         ${actionCard("Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html")}
+        ${actionCard("Question Builder", "Use MCQ templates and checks.", "question-builder.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -595,6 +599,42 @@
         </table>
       </section>
     `;
+  }
+
+  function renderQuestionBuilder(data) {
+    const categories = [...new Set(data.questionBankBuilder.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Question Builder", "MCQ Templates And Quality Checks", "Use these templates before adding new questions to data/questions.json. This keeps practice, mocks, Urdu explanations and study-topic links consistent.")}
+      <section class="stat-grid">
+        ${statCard(data.questionBankBuilder.length, "Builder Cards")}
+        ${statCard(data.questionBankTargets.length, "Target Areas")}
+        ${statCard(data.questions.length, "Current Questions")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="builderCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="builderSearch" type="search" placeholder="Search template, Urdu, quant, review...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Before Adding Questions</h2>
+        <p>Always add a small batch first, validate the JSON, test the questions in the practice engine, then update the current sample count in the question-bank target table.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("question-bank.html")}">Question Targets</a>
+          <a class="btn secondary small" href="${url("practice.html")}">Test Practice Flow</a>
+          <a class="btn ghost small" href="${url("contributor-guide.html")}">Contributor Guide</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.questionBankBuilder.map((item) => questionBuilderCard(item)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#builderCategory", "#builderSearch", "[data-question-builder]");
   }
 
   function renderVocabularyBank(data) {
@@ -2118,6 +2158,28 @@
           <a class="btn ghost small" href="${url("resources.html")}">Resources</a>
           <a class="btn ghost small" href="${url("question-review.html")}">Review</a>
         </div>
+      </article>
+    `;
+  }
+
+  function questionBuilderCard(item) {
+    return `
+      <article class="feature-card lesson-card builder-card" data-question-builder data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.priority)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.purpose)}</p>
+        <div class="lesson-block">
+          <h3>Required Fields</h3>
+          <ul class="clean-list">${item.requiredFields.map((field) => `<li>${escapeHTML(field)}</li>`).join("")}</ul>
+        </div>
+        <div class="lesson-block">
+          <h3>Quality Checks</h3>
+          <ol class="clean-list">${item.qualityChecks.map((check) => `<li>${escapeHTML(check)}</li>`).join("")}</ol>
+        </div>
+        <details class="mini-details">
+          <summary>JSON Example</summary>
+          <pre class="code-sample"><code>${escapeHTML(item.jsonExample)}</code></pre>
+        </details>
       </article>
     `;
   }

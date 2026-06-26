@@ -652,6 +652,26 @@ main {
   border-top: 4px solid var(--gold);
 }
 
+.builder-card {
+  border-top: 4px solid var(--green);
+}
+
+.code-sample {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #0f172a;
+  color: #e5edf7;
+  padding: 0.85rem;
+  white-space: pre;
+}
+
+.code-sample code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
 @media print {
   .site-header,
   .site-footer,
