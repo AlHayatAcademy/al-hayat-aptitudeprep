@@ -1,0 +1,34 @@
+[
+  {
+    "id": "roadmap-v7",
+    "phase": "V7",
+    "title": "Management Dashboard Foundation",
+    "status": "Ready",
+    "focus": "Roadmap, changelog, contributor guidance and question-bank targets.",
+    "nextActions": ["Publish V7 files", "Review question-bank targets", "Choose first full test to expand"]
+  },
+  {
+    "id": "roadmap-v8",
+    "phase": "V8",
+    "title": "Deep Content Expansion",
+    "status": "Next",
+    "focus": "Add 25-50 high-quality questions for the first selected test route.",
+    "nextActions": ["Choose MDCAT, FAST or NAT first", "Expand topics", "Add reviewed explanations"]
+  },
+  {
+    "id": "roadmap-v9",
+    "phase": "V9",
+    "title": "Premium Notes Preview System",
+    "status": "Planned",
+    "focus": "Turn resource previews into fuller web-based sample notes with purchase flow.",
+    "nextActions": ["Add real prices", "Add sample pages", "Connect PDF download placeholders"]
+  },
+  {
+    "id": "roadmap-v10",
+    "phase": "V10",
+    "title": "Student Result Experience",
+    "status": "Planned",
+    "focus": "Improve progress, score interpretation and weak-topic suggestions.",
+    "nextActions": ["Add weak-topic summaries", "Improve mock review", "Create parent-friendly report view"]
+  }
+]

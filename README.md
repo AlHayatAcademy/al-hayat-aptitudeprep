@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 6 static website for GitHub Pages.
+Version 7 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -10,6 +10,7 @@ Version 6 static website for GitHub Pages.
 - Compare Tests, Glossary and Choose My Test pages.
 - Strategies, Common Mistakes and Daily Plan pages.
 - Worksheets, Assignments and Score Guide pages.
+- Roadmap, Changelog, Contributor Guide and Question Bank pages.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -21,6 +22,7 @@ Version 6 static website for GitHub Pages.
 - Test format summaries, decision guide and glossary search.
 - Practical strategy cards, mistake correction cards and a browser-saved daily checklist.
 - Classroom worksheet previews, assignment packs and score-band guidance.
+- Site management tools for tracking versions, content quality and question-bank expansion targets.
 
 ## How To Use
 
@@ -55,5 +57,9 @@ http://localhost:8080/
 - Add worksheet previews in `data/worksheets.json`.
 - Add assignment packs in `data/assignments.json`.
 - Add score-band guidance in `data/score-bands.json`.
+- Add roadmap milestones in `data/roadmap.json`.
+- Add version history in `data/changelog.json`.
+- Add content rules in `data/contributor-guide.json`.
+- Add question-bank targets in `data/question-bank-targets.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

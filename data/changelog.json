@@ -1,0 +1,44 @@
+[
+  {
+    "id": "change-v1",
+    "version": "V1",
+    "date": "2026-06-26",
+    "summary": "Initial GitHub Pages structure with major pages, JSON data, practice engine, mock engine, resources and trial form."
+  },
+  {
+    "id": "change-v2",
+    "version": "V2",
+    "date": "2026-06-26",
+    "summary": "Expanded test groups, tests, skills, subjects, topics, sample questions, mocks, resources, study plans, reviews and media."
+  },
+  {
+    "id": "change-v3",
+    "version": "V3",
+    "date": "2026-06-26",
+    "summary": "Added FAQ, announcements, pathways, homepage stats, filtered resources and searchable help content."
+  },
+  {
+    "id": "change-v4",
+    "version": "V4",
+    "date": "2026-06-26",
+    "summary": "Added Choose My Test, Compare Tests, Glossary, test formats and decision guide."
+  },
+  {
+    "id": "change-v5",
+    "version": "V5",
+    "date": "2026-06-26",
+    "summary": "Added strategies, common mistakes and daily plan checklist with browser-saved completion."
+  },
+  {
+    "id": "change-v6",
+    "version": "V6",
+    "date": "2026-06-26",
+    "summary": "Added worksheets, assignments and score guide for class and teacher use."
+  },
+  {
+    "id": "change-v7",
+    "version": "V7",
+    "date": "2026-06-26",
+    "summary": "Added roadmap, changelog, contributor guide and question-bank targets for future expansion."
+  }
+]

@@ -26,7 +26,11 @@
     dailyChecklist: "daily-checklist.json",
     worksheets: "worksheets.json",
     assignments: "assignments.json",
-    scoreBands: "score-bands.json"
+    scoreBands: "score-bands.json",
+    roadmap: "roadmap.json",
+    changelog: "changelog.json",
+    contributorGuide: "contributor-guide.json",
+    questionBankTargets: "question-bank-targets.json"
   };
 
   async function loadJSON(file) {

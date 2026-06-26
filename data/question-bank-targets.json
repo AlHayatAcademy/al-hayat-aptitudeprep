@@ -1,0 +1,56 @@
+[
+  {
+    "id": "target-mdcat-vocab",
+    "testId": "mdcat",
+    "skillId": "vocabulary",
+    "topicId": "synonyms-in-context",
+    "targetCount": 100,
+    "currentSampleCount": 1,
+    "priority": "High"
+  },
+  {
+    "id": "target-fast-quant",
+    "testId": "fast-nuces",
+    "skillId": "quantitative-reasoning",
+    "topicId": "percentages",
+    "targetCount": 150,
+    "currentSampleCount": 1,
+    "priority": "High"
+  },
+  {
+    "id": "target-gat-analytical",
+    "testId": "gat-general",
+    "skillId": "analytical-reasoning",
+    "topicId": "arrangements",
+    "targetCount": 100,
+    "currentSampleCount": 1,
+    "priority": "High"
+  },
+  {
+    "id": "target-lat-logical",
+    "testId": "lat",
+    "skillId": "logical-reasoning",
+    "topicId": "assumptions",
+    "targetCount": 75,
+    "currentSampleCount": 1,
+    "priority": "Medium"
+  },
+  {
+    "id": "target-ielts-reading",
+    "testId": "ielts",
+    "skillId": "reading-comprehension",
+    "topicId": "main-idea",
+    "targetCount": 60,
+    "currentSampleCount": 1,
+    "priority": "Medium"
+  },
+  {
+    "id": "target-mdcat-science",
+    "testId": "mdcat",
+    "skillId": "science-concepts",
+    "topicId": "cell-biology",
+    "targetCount": 200,
+    "currentSampleCount": 1,
+    "priority": "High"
+  }
+]

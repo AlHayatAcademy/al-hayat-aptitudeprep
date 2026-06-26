@@ -1,0 +1,26 @@
+[
+  {
+    "id": "guide-question-quality",
+    "title": "Question Quality Rule",
+    "category": "Question Bank",
+    "guidelines": ["Every question must have one clear correct answer.", "Distractors should be plausible but not ambiguous.", "Explanation must teach the method, not only state the answer.", "Urdu explanation should be simple and exam-oriented."]
+  },
+  {
+    "id": "guide-tagging",
+    "title": "Tagging Rule",
+    "category": "Data Structure",
+    "guidelines": ["Every question must include testIds, groupId, skillId, subjectId and topicId.", "Use existing IDs from JSON files.", "Do not create duplicate topics for the same concept.", "Use status: published only after review."]
+  },
+  {
+    "id": "guide-resource",
+    "title": "Resource Preview Rule",
+    "category": "Resources",
+    "guidelines": ["Free resources should be genuinely useful.", "Premium previews should show value without giving the full product.", "WhatsApp text should mention the exact resource title.", "Prices can remain blank until finalized."]
+  },
+  {
+    "id": "guide-language",
+    "title": "Language Rule",
+    "category": "Style",
+    "guidelines": ["Use clear student-friendly English.", "Use Urdu explanations only where they clarify learning.", "Avoid confusing academic wording in MCQ explanations.", "Keep examples direct and exam-oriented."]
+  }
+]

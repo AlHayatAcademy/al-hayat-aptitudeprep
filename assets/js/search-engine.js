@@ -57,7 +57,11 @@
       ...(data.dailyChecklist || []).map((item) => record("Daily Checklist", item.title, `${item.category} ${item.task}`, "daily-plan.html")),
       ...(data.worksheets || []).map((item) => record("Worksheet", item.title, `${item.category} ${item.level} ${item.preview.join(" ")}`, "worksheets.html")),
       ...(data.assignments || []).map((item) => record("Assignment", item.title, `${item.duration} ${item.tasks.join(" ")} ${item.teacherNote}`, "assignments.html")),
-      ...(data.scoreBands || []).map((item) => record("Score Band", item.label, `${item.range} ${item.meaning} ${item.nextStep}`, "score-guide.html"))
+      ...(data.scoreBands || []).map((item) => record("Score Band", item.label, `${item.range} ${item.meaning} ${item.nextStep}`, "score-guide.html")),
+      ...(data.roadmap || []).map((item) => record("Roadmap", item.title, `${item.phase} ${item.status} ${item.focus} ${item.nextActions.join(" ")}`, "roadmap.html")),
+      ...(data.changelog || []).map((item) => record("Changelog", item.version, `${item.date} ${item.summary}`, "changelog.html")),
+      ...(data.contributorGuide || []).map((item) => record("Contributor Guide", item.title, `${item.category} ${item.guidelines.join(" ")}`, "contributor-guide.html")),
+      ...(data.questionBankTargets || []).map((item) => record("Question Bank Target", item.id, `${item.priority} ${item.targetCount} ${item.currentSampleCount}`, "question-bank.html"))
     ];
   }
 

@@ -18,6 +18,10 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `worksheets.html`
 - `assignments.html`
 - `score-guide.html`
+- `roadmap.html`
+- `changelog.html`
+- `contributor-guide.html`
+- `question-bank.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`

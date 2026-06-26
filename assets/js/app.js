@@ -50,6 +50,10 @@
       worksheets: renderWorksheets,
       assignments: renderAssignments,
       "score-guide": renderScoreGuide,
+      roadmap: renderRoadmap,
+      changelog: renderChangelog,
+      "contributor-guide": renderContributorGuide,
+      "question-bank": renderQuestionBank,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -104,6 +108,10 @@
             ["Worksheets", "Printable-style practice", "worksheets.html"],
             ["Assignments", "Classwork and homework packs", "assignments.html"],
             ["Score Guide", "Understand mock scores", "score-guide.html"],
+            ["Question Bank", "Expansion targets", "question-bank.html"],
+            ["Roadmap", "Version and content plan", "roadmap.html"],
+            ["Contributor Guide", "Content quality rules", "contributor-guide.html"],
+            ["Changelog", "Version history", "changelog.html"],
             ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
@@ -132,6 +140,7 @@
           ${navLink("Glossary", "glossary.html")}
           ${navLink("Daily Plan", "daily-plan.html")}
           ${navLink("Score Guide", "score-guide.html")}
+          ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -166,6 +175,7 @@
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
         ${actionCard("Worksheets", "Use class-ready practice packs.", "worksheets.html")}
+        ${actionCard("Question Bank", "Track expansion targets.", "question-bank.html")}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -470,6 +480,52 @@
           <a class="btn primary" href="${url("mock-tests.html")}">Attempt Mock</a>
           <a class="btn secondary" href="${url("mistakes.html")}">Review Mistakes</a>
         </div>
+      </section>
+    `;
+  }
+
+  function renderRoadmap(data) {
+    app.innerHTML = `
+      ${pageHero("Roadmap", "Version And Content Expansion Plan", "Track what has been built and what should be expanded next.")}
+      <section class="card-grid">
+        ${data.roadmap.map((item) => roadmapCard(item)).join("")}
+      </section>
+    `;
+  }
+
+  function renderChangelog(data) {
+    app.innerHTML = `
+      ${pageHero("Changelog", "Website Version History", "A compact history of the main improvements added to Al-Hayat AptitudePrep.")}
+      <section class="timeline-list">
+        ${data.changelog.map((item) => changelogCard(item)).join("")}
+      </section>
+    `;
+  }
+
+  function renderContributorGuide(data) {
+    app.innerHTML = `
+      ${pageHero("Contributor Guide", "Quality Rules For Future Content", "Use these rules when adding questions, explanations, resources and notes.")}
+      <section class="card-grid">
+        ${data.contributorGuide.map((item) => contributorGuideCard(item)).join("")}
+      </section>
+    `;
+  }
+
+  function renderQuestionBank(data) {
+    const totalTarget = data.questionBankTargets.reduce((sum, item) => sum + item.targetCount, 0);
+    const totalCurrent = data.questionBankTargets.reduce((sum, item) => sum + item.currentSampleCount, 0);
+    app.innerHTML = `
+      ${pageHero("Question Bank", "Expansion Targets And Priorities", "Track what the question bank should become test by test, skill by skill and topic by topic.")}
+      <section class="stat-grid">
+        ${statCard(data.questionBankTargets.length, "Target Areas")}
+        ${statCard(totalTarget, "Target Questions")}
+        ${statCard(totalCurrent, "Current Samples")}
+      </section>
+      <section class="table-wrap">
+        <table>
+          <thead><tr><th>Priority</th><th>Test</th><th>Skill</th><th>Topic</th><th>Current</th><th>Target</th></tr></thead>
+          <tbody>${data.questionBankTargets.map((item) => questionTargetRow(item, data)).join("")}</tbody>
+        </table>
       </section>
     `;
   }
@@ -857,6 +913,50 @@
         <p>${escapeHTML(item.meaning)}</p>
         <p class="connected-line">Next step: ${escapeHTML(item.nextStep)}</p>
       </article>
+    `;
+  }
+
+  function roadmapCard(item) {
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(item.phase)} • ${escapeHTML(item.status)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.focus)}</p>
+        <ol class="clean-list">${item.nextActions.map((action) => `<li>${escapeHTML(action)}</li>`).join("")}</ol>
+      </article>
+    `;
+  }
+
+  function changelogCard(item) {
+    return `
+      <article class="announcement-card">
+        <span>${escapeHTML(item.version)} • ${escapeHTML(item.date)}</span>
+        <h2>${escapeHTML(item.version)}</h2>
+        <p>${escapeHTML(item.summary)}</p>
+      </article>
+    `;
+  }
+
+  function contributorGuideCard(item) {
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <ul class="clean-list">${item.guidelines.map((guide) => `<li>${escapeHTML(guide)}</li>`).join("")}</ul>
+      </article>
+    `;
+  }
+
+  function questionTargetRow(item, data) {
+    return `
+      <tr>
+        <td>${escapeHTML(item.priority)}</td>
+        <td>${escapeHTML(findName(data.tests, item.testId))}</td>
+        <td>${escapeHTML(findName(data.skills, item.skillId))}</td>
+        <td>${escapeHTML(findName(data.topics, item.topicId))}</td>
+        <td>${item.currentSampleCount}</td>
+        <td>${item.targetCount}</td>
+      </tr>
     `;
   }
 
