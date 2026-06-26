@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vocab-concise",
+    "word": "concise",
+    "level": "Foundation",
+    "meaning": "brief but clear",
+    "synonyms": ["brief", "succinct", "compact"],
+    "antonyms": ["wordy", "lengthy", "verbose"],
+    "example": "The teacher gave a concise explanation before starting the test.",
+    "connectedTestIds": ["mdcat", "nat", "sat", "gat-general"]
+  },
+  {
+    "id": "vocab-meticulous",
+    "word": "meticulous",
+    "level": "Advanced",
+    "meaning": "showing great attention to detail",
+    "synonyms": ["careful", "precise", "thorough"],
+    "antonyms": ["careless", "negligent", "sloppy"],
+    "example": "A meticulous student checks each option before marking the answer.",
+    "connectedTestIds": ["gre", "sat", "gat-general"]
+  },
+  {
+    "id": "vocab-accessible",
+    "word": "accessible",
+    "level": "Intermediate",
+    "meaning": "easy to understand or reach",
+    "synonyms": ["understandable", "reachable", "available"],
+    "antonyms": ["obscure", "inaccessible", "unclear"],
+    "example": "Good examples make a difficult concept accessible.",
+    "connectedTestIds": ["ielts", "toefl", "sat", "nat"]
+  },
+  {
+    "id": "vocab-ambiguous",
+    "word": "ambiguous",
+    "level": "Intermediate",
+    "meaning": "having more than one possible meaning",
+    "synonyms": ["unclear", "vague", "uncertain"],
+    "antonyms": ["clear", "definite", "explicit"],
+    "example": "An ambiguous question should be reviewed before publication.",
+    "connectedTestIds": ["lat", "gat-general", "gre"]
+  },
+  {
+    "id": "vocab-coherent",
+    "word": "coherent",
+    "level": "Intermediate",
+    "meaning": "logical and well connected",
+    "synonyms": ["logical", "consistent", "connected"],
+    "antonyms": ["confused", "illogical", "disordered"],
+    "example": "A coherent essay presents ideas in a clear order.",
+    "connectedTestIds": ["ielts", "toefl", "lat", "gre"]
+  },
+  {
+    "id": "vocab-inference",
+    "word": "inference",
+    "level": "Intermediate",
+    "meaning": "a conclusion drawn from evidence",
+    "synonyms": ["conclusion", "deduction", "interpretation"],
+    "antonyms": ["fact", "statement", "observation"],
+    "example": "The correct inference must be supported by the passage.",
+    "connectedTestIds": ["sat", "gre", "ielts", "lsat"]
+  },
+  {
+    "id": "vocab-plausible",
+    "word": "plausible",
+    "level": "Advanced",
+    "meaning": "seeming reasonable or believable",
+    "synonyms": ["believable", "reasonable", "credible"],
+    "antonyms": ["unlikely", "implausible", "unbelievable"],
+    "example": "A good distractor is plausible but still incorrect.",
+    "connectedTestIds": ["gre", "gmat", "gat-general"]
+  },
+  {
+    "id": "vocab-relevant",
+    "word": "relevant",
+    "level": "Foundation",
+    "meaning": "closely connected to the matter being discussed",
+    "synonyms": ["related", "applicable", "connected"],
+    "antonyms": ["irrelevant", "unrelated", "inapplicable"],
+    "example": "Only relevant evidence should be used in an argument.",
+    "connectedTestIds": ["lat", "ielts", "sat", "gat-general"]
+  },
+  {
+    "id": "vocab-assertion",
+    "word": "assertion",
+    "level": "Advanced",
+    "meaning": "a confident statement or claim",
+    "synonyms": ["claim", "statement", "declaration"],
+    "antonyms": ["denial", "question", "doubt"],
+    "example": "The passage begins with an assertion about online learning.",
+    "connectedTestIds": ["gre", "lsat", "sat"]
+  },
+  {
+    "id": "vocab-evaluate",
+    "word": "evaluate",
+    "level": "Foundation",
+    "meaning": "to judge or assess carefully",
+    "synonyms": ["assess", "judge", "measure"],
+    "antonyms": ["ignore", "neglect", "guess"],
+    "example": "Evaluate every option before choosing the answer.",
+    "connectedTestIds": ["mdcat", "nat", "ielts", "gat-general"]
+  },
+  {
+    "id": "vocab-contradict",
+    "word": "contradict",
+    "level": "Intermediate",
+    "meaning": "to say the opposite of something",
+    "synonyms": ["oppose", "deny", "conflict"],
+    "antonyms": ["confirm", "support", "agree"],
+    "example": "An option is wrong if it contradicts the passage.",
+    "connectedTestIds": ["sat", "gre", "ielts", "lsat"]
+  },
+  {
+    "id": "vocab-precise",
+    "word": "precise",
+    "level": "Foundation",
+    "meaning": "exact and accurate",
+    "synonyms": ["exact", "accurate", "specific"],
+    "antonyms": ["vague", "rough", "unclear"],
+    "example": "Precise calculation reduces mistakes in quantitative tests.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "sat", "gre"]
+  }
+]

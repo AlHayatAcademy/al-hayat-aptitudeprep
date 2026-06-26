@@ -1,0 +1,82 @@
+[
+  {
+    "id": "formula-percentage-change",
+    "title": "Percentage Change",
+    "subjectId": "mathematics",
+    "topicId": "percentages",
+    "formula": "Percentage change = (change / original value) × 100",
+    "useCase": "Use when a value increases or decreases compared with its original value.",
+    "example": "If 80 becomes 100, change = 20, so percentage change = 20/80 × 100 = 25%.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "nat", "gat-general", "sat"]
+  },
+  {
+    "id": "formula-ratio-share",
+    "title": "Ratio Sharing",
+    "subjectId": "mathematics",
+    "topicId": "ratios",
+    "formula": "One part = total / sum of ratio parts",
+    "useCase": "Use when a total quantity is divided according to a ratio.",
+    "example": "For 2:3 and total 50, one part = 50/5 = 10; shares are 20 and 30.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "nat", "gat-general"]
+  },
+  {
+    "id": "formula-average",
+    "title": "Average",
+    "subjectId": "mathematics",
+    "topicId": "averages",
+    "formula": "Average = sum of values / number of values",
+    "useCase": "Use for mean score, combined values and data interpretation.",
+    "example": "Average of 10, 20 and 30 is 60/3 = 20.",
+    "connectedTestIds": ["nat", "gat-general", "gre", "gmat"]
+  },
+  {
+    "id": "formula-speed",
+    "title": "Speed",
+    "subjectId": "physics",
+    "topicId": "kinematics",
+    "formula": "Speed = distance / time",
+    "useCase": "Use when distance and time are given and motion is uniform.",
+    "example": "60 meters in 5 seconds gives speed = 60/5 = 12 m/s.",
+    "connectedTestIds": ["mdcat", "ecat", "nust-net", "giki"]
+  },
+  {
+    "id": "formula-ohms-law",
+    "title": "Ohm's Law",
+    "subjectId": "physics",
+    "topicId": "electricity",
+    "formula": "V = IR",
+    "useCase": "Use for voltage, current and resistance problems in simple circuits.",
+    "example": "If I = 2 A and R = 5 Ω, then V = 10 V.",
+    "connectedTestIds": ["mdcat", "ecat", "nust-net", "pieas"]
+  },
+  {
+    "id": "formula-density",
+    "title": "Density",
+    "subjectId": "physics",
+    "topicId": "kinematics",
+    "formula": "Density = mass / volume",
+    "useCase": "Use for basic physical property questions.",
+    "example": "Mass 100 g and volume 20 cm³ gives density = 5 g/cm³.",
+    "connectedTestIds": ["mdcat", "ecat", "nust-net"]
+  },
+  {
+    "id": "formula-mole",
+    "title": "Number of Moles",
+    "subjectId": "chemistry",
+    "topicId": "atomic-structure",
+    "formula": "Moles = mass / molar mass",
+    "useCase": "Use in basic stoichiometry and chemistry numericals.",
+    "example": "18 g water with molar mass 18 g/mol gives 1 mole.",
+    "connectedTestIds": ["mdcat", "ecat", "nust-net", "pieas"]
+  },
+  {
+    "id": "formula-probability-basic",
+    "title": "Basic Probability",
+    "subjectId": "mathematics",
+    "topicId": "algebra-basics",
+    "formula": "Probability = favorable outcomes / total outcomes",
+    "useCase": "Use for simple chance and selection problems.",
+    "example": "One head in a coin toss has probability 1/2.",
+    "connectedTestIds": ["fast-nuces", "nat", "gat-general", "gre", "gmat"]
+  }
+]

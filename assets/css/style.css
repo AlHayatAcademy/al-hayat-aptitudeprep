@@ -473,6 +473,16 @@ main {
   text-decoration-color: #7bbf91;
 }
 
+.formula-box {
+  border: 1px solid #b9cce1;
+  border-left: 5px solid var(--blue);
+  border-radius: 7px;
+  background: #f0f6ff;
+  color: #123f82;
+  font-weight: 900;
+  padding: 0.75rem 0.85rem;
+}
+
 .accordion-list {
   display: grid;
   gap: 0.8rem;

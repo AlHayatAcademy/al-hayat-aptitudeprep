@@ -54,6 +54,9 @@
       changelog: renderChangelog,
       "contributor-guide": renderContributorGuide,
       "question-bank": renderQuestionBank,
+      "vocabulary-bank": renderVocabularyBank,
+      "formula-bank": renderFormulaBank,
+      "question-sets": renderQuestionSets,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -109,6 +112,9 @@
             ["Assignments", "Classwork and homework packs", "assignments.html"],
             ["Score Guide", "Understand mock scores", "score-guide.html"],
             ["Question Bank", "Expansion targets", "question-bank.html"],
+            ["Vocabulary Bank", "Words, synonyms and examples", "vocabulary-bank.html"],
+            ["Formula Bank", "Math and science formulas", "formula-bank.html"],
+            ["Question Sets", "Curated starter drills", "question-sets.html"],
             ["Roadmap", "Version and content plan", "roadmap.html"],
             ["Contributor Guide", "Content quality rules", "contributor-guide.html"],
             ["Changelog", "Version history", "changelog.html"],
@@ -141,6 +147,7 @@
           ${navLink("Daily Plan", "daily-plan.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
+          ${navLink("Vocabulary", "vocabulary-bank.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -176,6 +183,8 @@
         ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
         ${actionCard("Worksheets", "Use class-ready practice packs.", "worksheets.html")}
         ${actionCard("Question Bank", "Track expansion targets.", "question-bank.html")}
+        ${actionCard("Vocabulary", "Study exam words in context.", "vocabulary-bank.html")}
+        ${actionCard("Formulas", "Revise key formulas quickly.", "formula-bank.html")}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -526,6 +535,59 @@
           <thead><tr><th>Priority</th><th>Test</th><th>Skill</th><th>Topic</th><th>Current</th><th>Target</th></tr></thead>
           <tbody>${data.questionBankTargets.map((item) => questionTargetRow(item, data)).join("")}</tbody>
         </table>
+      </section>
+    `;
+  }
+
+  function renderVocabularyBank(data) {
+    const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
+    app.innerHTML = `
+      ${pageHero("Vocabulary Bank", "Exam Words With Context", "Study meanings, synonyms, antonyms and example sentences connected to target tests.")}
+      <section class="toolbar-panel">
+        <label>Level
+          <select id="vocabLevel">
+            <option value="all">All levels</option>
+            ${levels.map((level) => `<option value="${escapeHTML(level)}">${escapeHTML(level)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="vocabSearch" type="search" placeholder="Search word, meaning, synonym...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.vocabularyBank.map((item) => vocabularyCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#vocabLevel", "#vocabSearch", "[data-vocab-card]");
+  }
+
+  function renderFormulaBank(data) {
+    const subjects = [...new Set(data.formulaBank.map((item) => findName(data.subjects, item.subjectId)))].sort();
+    app.innerHTML = `
+      ${pageHero("Formula Bank", "Key Formulas With Examples", "Revise math, physics and chemistry formulas with use cases and exam examples.")}
+      <section class="toolbar-panel">
+        <label>Subject
+          <select id="formulaSubject">
+            <option value="all">All subjects</option>
+            ${subjects.map((subject) => `<option value="${escapeHTML(subject)}">${escapeHTML(subject)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="formulaSearch" type="search" placeholder="Search formula, topic, test...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.formulaBank.map((item) => formulaCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#formulaSubject", "#formulaSearch", "[data-formula-card]");
+  }
+
+  function renderQuestionSets(data) {
+    app.innerHTML = `
+      ${pageHero("Question Sets", "Curated Starter Practice Sets", "Use short sets to practise a focused exam route before taking full mock tests.")}
+      <section class="card-grid">
+        ${data.questionSets.map((item) => questionSetCard(item, data)).join("")}
       </section>
     `;
   }
@@ -957,6 +1019,52 @@
         <td>${item.currentSampleCount}</td>
         <td>${item.targetCount}</td>
       </tr>
+    `;
+  }
+
+  function vocabularyCard(item, data) {
+    const tests = item.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    return `
+      <article class="feature-card" data-vocab-card data-category="${escapeHTML(item.level)}">
+        <p class="eyebrow">${escapeHTML(item.level)}</p>
+        <h2>${escapeHTML(item.word)}</h2>
+        <p>${escapeHTML(item.meaning)}</p>
+        <p><strong>Synonyms:</strong> ${escapeHTML(item.synonyms.join(", "))}</p>
+        <p><strong>Antonyms:</strong> ${escapeHTML(item.antonyms.join(", "))}</p>
+        <p class="connected-line">Example: ${escapeHTML(item.example)}</p>
+        <p>Connected tests: ${escapeHTML(tests)}</p>
+      </article>
+    `;
+  }
+
+  function formulaCard(item, data) {
+    const subject = findName(data.subjects, item.subjectId);
+    const topic = findName(data.topics, item.topicId);
+    const tests = item.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    return `
+      <article class="feature-card" data-formula-card data-category="${escapeHTML(subject)}">
+        <p class="eyebrow">${escapeHTML(subject)} • ${escapeHTML(topic)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p class="formula-box">${escapeHTML(item.formula)}</p>
+        <p>${escapeHTML(item.useCase)}</p>
+        <p class="connected-line">Example: ${escapeHTML(item.example)}</p>
+        <p>Connected tests: ${escapeHTML(tests)}</p>
+      </article>
+    `;
+  }
+
+  function questionSetCard(item, data) {
+    const test = findName(data.tests, item.testId);
+    const skills = item.skillIds.map((id) => findName(data.skills, id)).join(", ");
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(test)} • ${item.recommendedMinutes} minutes</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.purpose)}</p>
+        <p class="connected-line">Skills: ${escapeHTML(skills)}</p>
+        <p>Questions: ${escapeHTML(item.questionIds.join(", "))}</p>
+        <a class="btn primary small" href="${url(`practice.html?test=${item.testId}`)}">Practise This Route</a>
+      </article>
     `;
   }
 

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "set-mdcat-english-starter",
+    "title": "MDCAT English Starter Set",
+    "testId": "mdcat",
+    "skillIds": ["vocabulary", "grammar", "sentence-completion"],
+    "questionIds": ["q-vocab-001", "q-grammar-001", "q-completion-001"],
+    "purpose": "Short warm-up set for English vocabulary and grammar.",
+    "recommendedMinutes": 6
+  },
+  {
+    "id": "set-fast-quant-starter",
+    "title": "FAST Quant Starter Set",
+    "testId": "fast-nuces",
+    "skillIds": ["quantitative-reasoning", "analytical-reasoning"],
+    "questionIds": ["q-quant-001", "q-quant-002", "q-analytical-001"],
+    "purpose": "Basic quant and arrangement practice for FAST preparation.",
+    "recommendedMinutes": 7
+  },
+  {
+    "id": "set-gat-mixed-starter",
+    "title": "GAT Mixed Starter Set",
+    "testId": "gat-general",
+    "skillIds": ["vocabulary", "reading-comprehension", "quantitative-reasoning", "logical-reasoning"],
+    "questionIds": ["q-vocab-002", "q-reading-001", "q-quant-001", "q-logical-001"],
+    "purpose": "Compact GAT practice across verbal, quant and reasoning.",
+    "recommendedMinutes": 8
+  },
+  {
+    "id": "set-lat-reasoning-writing",
+    "title": "LAT Reasoning and Writing Set",
+    "testId": "lat",
+    "skillIds": ["grammar", "logical-reasoning", "writing"],
+    "questionIds": ["q-grammar-001", "q-logical-001", "q-writing-001"],
+    "purpose": "Practice the law-admission mix of English, logic and writing.",
+    "recommendedMinutes": 8
+  },
+  {
+    "id": "set-science-foundation",
+    "title": "Science Foundation Set",
+    "testId": "mdcat",
+    "skillIds": ["science-concepts"],
+    "questionIds": ["q-bio-001", "q-chem-001", "q-physics-001"],
+    "purpose": "Quick science concept check for medical and engineering students.",
+    "recommendedMinutes": 6
+  }
+]

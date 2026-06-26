@@ -30,7 +30,10 @@
     roadmap: "roadmap.json",
     changelog: "changelog.json",
     contributorGuide: "contributor-guide.json",
-    questionBankTargets: "question-bank-targets.json"
+    questionBankTargets: "question-bank-targets.json",
+    vocabularyBank: "vocabulary-bank.json",
+    formulaBank: "formula-bank.json",
+    questionSets: "question-sets.json"
   };
 
   async function loadJSON(file) {

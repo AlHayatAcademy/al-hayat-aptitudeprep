@@ -61,7 +61,10 @@
       ...(data.roadmap || []).map((item) => record("Roadmap", item.title, `${item.phase} ${item.status} ${item.focus} ${item.nextActions.join(" ")}`, "roadmap.html")),
       ...(data.changelog || []).map((item) => record("Changelog", item.version, `${item.date} ${item.summary}`, "changelog.html")),
       ...(data.contributorGuide || []).map((item) => record("Contributor Guide", item.title, `${item.category} ${item.guidelines.join(" ")}`, "contributor-guide.html")),
-      ...(data.questionBankTargets || []).map((item) => record("Question Bank Target", item.id, `${item.priority} ${item.targetCount} ${item.currentSampleCount}`, "question-bank.html"))
+      ...(data.questionBankTargets || []).map((item) => record("Question Bank Target", item.id, `${item.priority} ${item.targetCount} ${item.currentSampleCount}`, "question-bank.html")),
+      ...(data.vocabularyBank || []).map((item) => record("Vocabulary", item.word, `${item.level} ${item.meaning} ${item.synonyms.join(" ")} ${item.antonyms.join(" ")} ${item.example}`, "vocabulary-bank.html")),
+      ...(data.formulaBank || []).map((item) => record("Formula", item.title, `${item.formula} ${item.useCase} ${item.example}`, "formula-bank.html")),
+      ...(data.questionSets || []).map((item) => record("Question Set", item.title, `${item.purpose} ${item.skillIds.join(" ")}`, "question-sets.html"))
     ];
   }
 

@@ -22,6 +22,9 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `changelog.html`
 - `contributor-guide.html`
 - `question-bank.html`
+- `vocabulary-bank.html`
+- `formula-bank.html`
+- `question-sets.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`
