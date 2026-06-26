@@ -1,0 +1,67 @@
+[
+  {
+    "id": "download-mdcat-science-pack",
+    "title": "MDCAT Science Class Pack",
+    "category": "Class Pack",
+    "audience": "Teacher",
+    "format": "Printable Web Pack",
+    "status": "Preview Ready",
+    "sourceType": "teacher-toolkit",
+    "sourceId": "teacher-mdcat-biology-class",
+    "linkedPage": "teacher-toolkit.html",
+    "includes": ["Class agenda", "Science worksheet", "Week 1 assignment", "Parent follow-up message"],
+    "printNote": "Open the teacher toolkit plan, then use browser print or save as PDF."
+  },
+  {
+    "id": "download-fast-quant-worksheet",
+    "title": "FAST Percentages And Ratios Worksheet",
+    "category": "Worksheet",
+    "audience": "Student",
+    "format": "Printable Worksheet",
+    "status": "Preview Ready",
+    "sourceType": "worksheet",
+    "sourceId": "worksheet-percentages-ratios",
+    "linkedPage": "worksheets.html",
+    "includes": ["Percentage drills", "Ratio questions", "Timed practice suggestion", "Formula-bank link"],
+    "printNote": "Open the worksheet page and print the selected worksheet section."
+  },
+  {
+    "id": "download-parent-progress-guide",
+    "title": "Parent Progress Review Guide",
+    "category": "Parent Handout",
+    "audience": "Parent",
+    "format": "Guidance Sheet",
+    "status": "Preview Ready",
+    "sourceType": "parent-guide",
+    "sourceId": "parent-progress",
+    "linkedPage": "parent-guide.html",
+    "includes": ["How to read progress", "Warning signs", "Trial-class decision support", "Results-report link"],
+    "printNote": "Open the parent guide and print the progress guidance card."
+  },
+  {
+    "id": "download-nat-gat-timeline",
+    "title": "NAT / GAT 30-Day Timeline",
+    "category": "Timeline",
+    "audience": "Student",
+    "format": "Planning Sheet",
+    "status": "Preview Ready",
+    "sourceType": "timeline",
+    "sourceId": "timeline-nat-gat-30",
+    "linkedPage": "admissions-timeline.html",
+    "includes": ["Weekly phases", "Diagnostic step", "Question-set practice", "Final mock review"],
+    "printNote": "Open the admissions timeline and print the NAT/GAT timeline card."
+  },
+  {
+    "id": "download-daily-repair-checklist",
+    "title": "Daily Repair Checklist",
+    "category": "Checklist",
+    "audience": "Student",
+    "format": "Daily Checklist",
+    "status": "Browser Checklist",
+    "sourceType": "daily-plan",
+    "sourceId": "daily-plan",
+    "linkedPage": "daily-plan.html",
+    "includes": ["Daily study tasks", "Practice routine", "Flashcard revision", "Error-log reminder"],
+    "printNote": "Use the daily plan online or print it as a simple checklist."
+  }
+]

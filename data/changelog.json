@@ -88,5 +88,11 @@
     "version": "V15",
     "date": "2026-06-26",
     "summary": "Added admissions timeline planner with phased preparation schedules connected to study plans, diagnostics, mocks and trial class."
+  },
+  {
+    "id": "change-v16",
+    "version": "V16",
+    "date": "2026-06-26",
+    "summary": "Added download and print center for printable worksheets, class packs, parent handouts, timelines and checklists."
   }
 ]

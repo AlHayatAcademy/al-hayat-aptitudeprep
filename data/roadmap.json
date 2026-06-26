@@ -75,8 +75,16 @@
     "id": "roadmap-v16",
     "phase": "V16",
     "title": "Download And Print Center",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a center for printable worksheets, checklists, plans and class packs.",
-    "nextActions": ["Create download center data", "Add printable links", "Connect worksheets and teacher toolkit"]
+    "nextActions": ["Add real PDFs later", "Review printable packs", "Connect more worksheets"]
+  },
+  {
+    "id": "roadmap-v17",
+    "phase": "V17",
+    "title": "Expanded Question Review",
+    "status": "Next",
+    "focus": "Improve question review with explanation filters, wrong-answer patterns and revision links.",
+    "nextActions": ["Create review data", "Improve practice review", "Connect error log and results report"]
   }
 ]

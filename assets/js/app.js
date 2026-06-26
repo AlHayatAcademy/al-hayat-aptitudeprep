@@ -66,6 +66,7 @@
       "teacher-toolkit": renderTeacherToolkit,
       "parent-guide": renderParentGuide,
       "admissions-timeline": renderAdmissionsTimeline,
+      "download-center": renderDownloadCenter,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -121,6 +122,7 @@
             ["Teacher Toolkit", "Class plans and follow-up", "teacher-toolkit.html"],
             ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
             ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"],
+            ["Download Center", "Print packs and checklists", "download-center.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -171,6 +173,7 @@
           ${navLink("Teacher", "teacher-toolkit.html")}
           ${navLink("Parents", "parent-guide.html")}
           ${navLink("Timeline", "admissions-timeline.html")}
+          ${navLink("Downloads", "download-center.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -211,6 +214,7 @@
         ${actionCard("Teacher Toolkit", "Run class plans with worksheets.", "teacher-toolkit.html")}
         ${actionCard("Parent Guide", "Understand progress and next steps.", "parent-guide.html")}
         ${actionCard("Timeline", "Plan preparation by admission season.", "admissions-timeline.html")}
+        ${actionCard("Downloads", "Open printable packs and checklists.", "download-center.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -926,6 +930,37 @@
       </section>
     `;
     wireSimpleCardFilter("#timelineSeason", "#timelineSearch", "[data-admissions-timeline]");
+  }
+
+  function renderDownloadCenter(data) {
+    const categories = [...new Set(data.downloadCenter.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Download Center", "Print Packs, Checklists And Handouts", "Open printable web packs for students, teachers and parents. Real PDFs can be added later without changing the page structure.")}
+      <section class="stat-grid">
+        ${statCard(data.downloadCenter.length, "Download Items")}
+        ${statCard(categories.length, "Categories")}
+        ${statCard("Print", "Browser Ready")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="downloadCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="downloadSearch" type="search" placeholder="Search worksheet, parent, class pack...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>How To Use</h2>
+        <p>Open the source page for the pack you need, then use the browser print option or save as PDF. Later, direct PDF files can be linked from the same JSON records.</p>
+      </section>
+      <section class="card-grid">
+        ${data.downloadCenter.map((item) => downloadCard(item)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#downloadCategory", "#downloadSearch", "[data-download-card]");
   }
 
   function renderStudyPlans(data) {
@@ -1645,6 +1680,22 @@
           <a class="btn secondary small" href="${url("diagnostic.html")}">Take Diagnostic</a>
           <a class="btn ghost small" href="${url("mock-tests.html")}">Mock Tests</a>
           <a class="btn ghost small" href="${url("book-trial-class.html")}">Book Trial</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function downloadCard(item) {
+    return `
+      <article class="feature-card download-card" data-download-card data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.audience)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.format)} • ${escapeHTML(item.status)}</p>
+        <ul class="clean-list">${item.includes.map((entry) => `<li>${escapeHTML(entry)}</li>`).join("")}</ul>
+        <p class="connected-line">${escapeHTML(item.printNote)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.linkedPage)}">Open Source</a>
+          <button class="btn secondary small" type="button" onclick="window.print()">Print Page</button>
         </div>
       </article>
     `;

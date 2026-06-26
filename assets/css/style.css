@@ -618,6 +618,37 @@ main {
   color: var(--muted);
 }
 
+.download-card {
+  border-top: 4px solid var(--blue);
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .toolbar-panel,
+  .button-row,
+  .nav-cta,
+  .menu-button {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .feature-card,
+  .content-band,
+  .table-wrap {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
+
 .accordion-list {
   display: grid;
   gap: 0.8rem;

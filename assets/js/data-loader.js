@@ -42,7 +42,8 @@
     lessons: "lessons.json",
     teacherToolkit: "teacher-toolkit.json",
     parentGuide: "parent-guide.json",
-    admissionsTimelines: "admissions-timelines.json"
+    admissionsTimelines: "admissions-timelines.json",
+    downloadCenter: "download-center.json"
   };
 
   async function loadJSON(file) {
