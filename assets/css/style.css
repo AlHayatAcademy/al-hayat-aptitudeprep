@@ -293,13 +293,22 @@ main {
   gap: 0.55rem;
 }
 
-.mini-map span {
+.mini-map a {
   border: 1px solid #c6d8e8;
   border-left: 5px solid var(--teal);
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.78);
   padding: 0.7rem 0.8rem;
+  color: var(--ink);
   font-weight: 800;
+}
+
+.mini-map a:hover,
+.mini-map a:focus-visible {
+  border-color: var(--blue);
+  border-left-color: var(--blue);
+  background: #e8f2ff;
+  color: #123f82;
 }
 
 .quick-actions,
@@ -1020,8 +1029,16 @@ textarea {
   margin-top: 0.75rem;
 }
 
+.answer-tools {
+  background: #ffffff;
+}
+
 .answer-panel {
   border-left: 5px solid var(--green);
+}
+
+.explanation-panel {
+  line-height: 1.75;
 }
 
 .topic-panel {
@@ -1058,6 +1075,16 @@ textarea {
   padding: 0.55rem 0.85rem;
   font-size: 1.2rem;
   font-weight: 900;
+}
+
+.page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 .sticky-tools {

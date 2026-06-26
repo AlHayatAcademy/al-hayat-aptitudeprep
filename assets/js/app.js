@@ -2,6 +2,19 @@
   const WHATSAPP_NUMBER = "923354910481";
   const page = document.body.dataset.page || "home";
   const app = document.querySelector("#app");
+  const PAGE_FLOW = [
+    ["home", "Home", "index.html"],
+    ["tests", "Tests", "tests.html"],
+    ["skills", "Skills", "skills.html"],
+    ["subjects", "Subjects", "subjects.html"],
+    ["practice", "Practice", "practice.html"],
+    ["mocks", "Mock Tests", "mock-tests.html"],
+    ["resources", "Resources", "resources.html"],
+    ["lessons", "Lessons", "lessons.html"],
+    ["topic-study", "Topic Study", "topic-study.html"],
+    ["dashboard", "Dashboard", "dashboard.html"],
+    ["contact", "Contact", "contact.html"]
+  ];
 
   document.addEventListener("DOMContentLoaded", async () => {
     renderShell();
@@ -97,6 +110,7 @@
       search: () => window.AHSearch.initSearchEngine(data, app)
     };
     (routes[page] || renderHome)(data);
+    appendPageNavigation();
     wireAccordions();
     wireResourceButtons(data);
     wireResourceFilters();
@@ -256,7 +270,11 @@
         </div>
         <div class="hero-panel" aria-label="Learning system summary">
           <div class="mini-map">
-            <span>Tests</span><span>Skills</span><span>Subjects</span><span>Questions</span><span>Mocks</span>
+            <a href="${url("tests.html")}">Tests</a>
+            <a href="${url("skills.html")}">Skills</a>
+            <a href="${url("subjects.html")}">Subjects</a>
+            <a href="${url("question-bank.html")}">Questions</a>
+            <a href="${url("mock-tests.html")}">Mocks</a>
           </div>
           <p>One question bank can serve many tests through clean tags: test, skill, subject, topic, difficulty and exam style.</p>
         </div>
@@ -3761,6 +3779,21 @@
         if (icon) icon.textContent = details.open ? "−" : "+";
       });
     });
+  }
+
+  function appendPageNavigation() {
+    if (!app || page === "home") return;
+    const currentIndex = PAGE_FLOW.findIndex(([pageId]) => pageId === page);
+    const safeIndex = currentIndex >= 0 ? currentIndex : 0;
+    const previous = PAGE_FLOW[Math.max(0, safeIndex - 1)];
+    const next = PAGE_FLOW[Math.min(PAGE_FLOW.length - 1, safeIndex + 1)];
+    app.insertAdjacentHTML("beforeend", `
+      <nav class="page-navigation" aria-label="Page navigation">
+        <a class="btn ghost small" href="${url(previous[2])}">Previous: ${escapeHTML(previous[1])}</a>
+        <a class="btn secondary small" href="${url("index.html")}">Home</a>
+        <a class="btn primary small" href="${url(next[2])}">Next: ${escapeHTML(next[1])}</a>
+      </nav>
+    `);
   }
 
   function pageHero(label, title, copy) {

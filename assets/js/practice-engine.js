@@ -85,18 +85,8 @@
           const chosen = Number(button.dataset.answer);
           const current = state.responses[question.id] || {};
           if (current.attempted) return;
-          state.responses[question.id] = { ...current, chosen, attempted: false };
-          render();
-        });
-      });
-
-      mount.querySelectorAll("[data-attempt-question]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const question = data.questions.find((item) => item.id === button.dataset.attemptQuestion);
-          const current = state.responses[question.id] || {};
-          if (current.chosen === undefined || current.attempted) return;
-          const correct = current.chosen === question.answerIndex;
-          state.responses[question.id] = { ...current, attempted: true, correct };
+          const correct = chosen === question.answerIndex;
+          state.responses[question.id] = { ...current, chosen, attempted: true, correct };
           savePracticeAttempt(question, correct);
           render();
         });
@@ -106,6 +96,9 @@
         button.addEventListener("click", () => {
           const target = mount.querySelector(`#${button.dataset.togglePanel}`);
           target.hidden = !target.hidden;
+          if (button.dataset.revealActions) {
+            button.textContent = target.hidden ? "Show Answer" : "Hide Answer Tools";
+          }
         });
       });
 
@@ -136,8 +129,8 @@
         return `<button class="option ${resultClass}" data-question="${question.id}" data-answer="${index}" data-select-answer type="button" ${attempted ? "disabled" : ""}>${escapeHTML(option)}</button>`;
       }).join("");
       const result = !attempted
-        ? `<p class="hint">${selected === undefined ? "Select one option, then click Attempt." : "Option selected. Click Attempt to check."}</p>`
-        : `<p class="${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct." : "Not correct."}</p>`;
+        ? `<p class="hint">Click one option to check your answer instantly.</p>`
+        : `<p class="${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct. Your selected answer is right." : "Not correct. Review the answer and explanation below."}</p>`;
       const answerText = question.options[question.answerIndex];
       return `
         <article class="question-card" id="practice-${question.id}">
@@ -150,20 +143,25 @@
           <div class="options-grid">${optionButtons}</div>
           ${result}
           <div class="button-row practice-actions">
-            <button class="btn primary small" data-attempt-question="${question.id}" type="button" ${selected === undefined || attempted ? "disabled" : ""}>Attempt</button>
-            <button class="btn secondary small" data-toggle-panel="answer-${question.id}" type="button" ${attempted ? "" : "disabled"}>Show Answer</button>
-            <button class="btn ghost small" data-toggle-panel="explanation-${question.id}" type="button" ${attempted ? "" : "disabled"}>Explanation</button>
-            <button class="btn ghost small" data-toggle-panel="urdu-${question.id}" type="button" ${attempted ? "" : "disabled"}>اردو وضاحت</button>
-            <button class="btn ghost small" data-next-question="practice-${nextQuestion?.id || question.id}" type="button" ${nextQuestion ? "" : "disabled"}>Next Question</button>
-            <a class="btn ghost small" href="${rootUrl(`topic-study.html?topic=${question.topicId}`)}">Study Topic</a>
+            <button class="btn secondary small" data-toggle-panel="answer-tools-${question.id}" data-reveal-actions="true" type="button">Show Answer</button>
           </div>
-          <div id="answer-${question.id}" class="practice-panel answer-panel" hidden>
-            <strong>Answer:</strong> ${escapeHTML(answerText)}
+          <div id="answer-tools-${question.id}" class="practice-panel answer-tools" hidden>
+            <div class="button-row practice-actions">
+              <button class="btn ghost small" data-toggle-panel="answer-${question.id}" type="button">Correct Answer</button>
+              <button class="btn ghost small" data-toggle-panel="explanation-${question.id}" type="button">Explanation</button>
+              <button class="btn ghost small" data-toggle-panel="urdu-${question.id}" type="button">اردو وضاحت</button>
+              <button class="btn ghost small" data-next-question="practice-${nextQuestion?.id || question.id}" type="button" ${nextQuestion ? "" : "disabled"}>Next Question</button>
+              <a class="btn ghost small" href="${rootUrl(`topic-study.html?topic=${question.topicId}`)}">Back To Topic</a>
+              <a class="btn ghost small" href="${rootUrl("index.html")}">Back To Home Page</a>
+            </div>
+            <div id="answer-${question.id}" class="practice-panel answer-panel" hidden>
+              <strong>Correct Answer:</strong> ${escapeHTML(answerText)}
+            </div>
+            <div id="explanation-${question.id}" class="practice-panel explanation-panel" hidden>
+              <strong>Explanation:</strong> ${fullExplanation(question, answerText)}
+            </div>
+            <div id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</div>
           </div>
-          <div id="explanation-${question.id}" class="practice-panel" hidden>
-            <strong>Explanation:</strong> ${escapeHTML(question.explanation)}
-          </div>
-          <div id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</div>
         </article>
       `;
     }
@@ -197,6 +195,13 @@
     topic.correct += correct ? 1 : 0;
     current[question.topicId] = topic;
     localStorage.setItem(key, JSON.stringify(current));
+  }
+
+  function fullExplanation(question, answerText) {
+    const explanation = escapeHTML(question.explanation || "Review the meaning, rule or logic used in the question, then compare each option with the exact demand of the stem.");
+    const answer = escapeHTML(answerText);
+    const example = escapeHTML(question.stem);
+    return `${explanation}<br><br><strong>Example:</strong> In this question, the correct choice is <strong>${answer}</strong>. Read the stem carefully, identify the tested concept, and remove options that do not match that concept. Stem: ${example}`;
   }
 
   function escapeHTML(value) {
