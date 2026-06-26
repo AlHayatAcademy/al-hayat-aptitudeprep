@@ -1,0 +1,37 @@
+[
+  {
+    "id": "decision-pre-medical",
+    "question": "Are you a pre-medical student targeting medical colleges?",
+    "recommendation": "Start with the Medical Entry Starter pathway and focus on Biology, Chemistry, Physics and English.",
+    "link": "tests.html#medical-entry-tests",
+    "testIds": ["mdcat", "nmdcat", "nums-mdcat"]
+  },
+  {
+    "id": "decision-cs-engineering",
+    "question": "Are you applying for engineering, computer science or technology universities?",
+    "recommendation": "Start with the Engineering & CS pathway and prioritise math, IQ, analytical reasoning and English.",
+    "link": "tests.html#engineering-cs-tests",
+    "testIds": ["fast-nuces", "nust-net", "ecat"]
+  },
+  {
+    "id": "decision-general",
+    "question": "Are you preparing for NAT, USAT, GAT or scholarship aptitude tests?",
+    "recommendation": "Use the General Aptitude route with verbal, quantitative and analytical practice.",
+    "link": "tests.html#undergraduate-admission-tests",
+    "testIds": ["nat", "usat", "gat-general", "hat"]
+  },
+  {
+    "id": "decision-law",
+    "question": "Are you preparing for law admission?",
+    "recommendation": "Choose the Law Admission route and combine English, legal aptitude, logic, essay and general knowledge.",
+    "link": "tests.html#law-admission-tests",
+    "testIds": ["lat", "law-gat", "lsat"]
+  },
+  {
+    "id": "decision-english",
+    "question": "Do you need IELTS, TOEFL or PTE?",
+    "recommendation": "Choose the English Proficiency route and focus on reading, writing, grammar and speaking/listening practice.",
+    "link": "tests.html#english-proficiency-tests",
+    "testIds": ["ielts", "toefl", "pte"]
+  }
+]

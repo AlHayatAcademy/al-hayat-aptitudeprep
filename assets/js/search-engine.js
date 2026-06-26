@@ -48,7 +48,10 @@
       ...data.questions.map((item) => record("Question", item.stem, `${item.examStyle} ${item.difficulty}`, `practice.html?skill=${item.skillId}`)),
       ...(data.faqs || []).map((item) => record("FAQ", item.question, `${item.category} ${item.answer}`, "faq.html")),
       ...(data.pathways || []).map((item) => record("Pathway", item.title, `${item.bestFor} ${item.steps.join(" ")}`, item.primaryLink)),
-      ...(data.announcements || []).map((item) => record("Announcement", item.title, `${item.type} ${item.message}`, "index.html"))
+      ...(data.announcements || []).map((item) => record("Announcement", item.title, `${item.type} ${item.message}`, "index.html")),
+      ...(data.testFormats || []).map((item) => record("Test Format", item.title, `${item.sections.join(" ")} ${item.questionStyle} ${item.bestStrategy}`, "compare.html")),
+      ...(data.glossary || []).map((item) => record("Glossary", item.term, `${item.category} ${item.definition} ${item.example}`, "glossary.html")),
+      ...(data.decisionGuide || []).map((item) => record("Decision Guide", item.question, `${item.recommendation} ${item.testIds.join(" ")}`, "choose-test.html"))
     ];
   }
 

@@ -17,7 +17,10 @@
     media: "media.json",
     faqs: "faqs.json",
     announcements: "announcements.json",
-    pathways: "pathways.json"
+    pathways: "pathways.json",
+    testFormats: "test-formats.json",
+    glossary: "glossary.json",
+    decisionGuide: "decision-guide.json"
   };
 
   async function loadJSON(file) {

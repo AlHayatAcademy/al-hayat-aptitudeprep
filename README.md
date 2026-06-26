@@ -1,12 +1,13 @@
 # Al-Hayat AptitudePrep
 
-Version 3 static website for GitHub Pages.
+Version 4 static website for GitHub Pages.
 
 ## What Is Included
 
 - Home, Tests, Skills, Subjects, Practice, Mock Tests, Resources, Study Plans, Progress, Book Trial Class, Reviews, Media, About, Contact and Search pages.
 - Share page with copy-link and WhatsApp share actions.
 - FAQ page with searchable student help.
+- Compare Tests, Glossary and Choose My Test pages.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -15,6 +16,7 @@ Version 3 static website for GitHub Pages.
 - Trial-class lead form that opens WhatsApp with the submitted details.
 - Expanded test groups, tests, skills, subjects, topics, sample questions, mocks, resources and study plans.
 - Homepage stats, student pathways, announcements and filtered resources.
+- Test format summaries, decision guide and glossary search.
 
 ## How To Use
 
@@ -40,5 +42,8 @@ http://localhost:8080/
 - Add more FAQs in `data/faqs.json`.
 - Add student pathways in `data/pathways.json`.
 - Add announcements in `data/announcements.json`.
+- Add test format summaries in `data/test-formats.json`.
+- Add glossary terms in `data/glossary.json`.
+- Add route-selection cards in `data/decision-guide.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

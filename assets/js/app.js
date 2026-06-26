@@ -41,6 +41,9 @@
       practice: () => window.AHPractice.initPracticeEngine(data, app),
       mocks: () => window.AHMocks.initMockEngine(data, app),
       resources: renderResources,
+      compare: renderCompare,
+      glossary: renderGlossary,
+      choose: renderChooseTest,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -85,6 +88,9 @@
           ${navLink("Mock Tests", "mock-tests.html")}
           ${navLink("Resources", "resources.html")}
           ${navDropdown("More", [
+            ["Choose My Test", "Find the right route", "choose-test.html"],
+            ["Compare Tests", "Formats, sections and strategies", "compare.html"],
+            ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
@@ -110,6 +116,7 @@
           ${navLink("Progress", "progress.html")}
           ${navLink("Share", "share.html")}
           ${navLink("FAQ", "faq.html")}
+          ${navLink("Glossary", "glossary.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -141,6 +148,7 @@
         ${actionCard("Practice", "Attempt tagged sample MCQs with instant feedback.", "practice.html")}
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
+        ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -251,6 +259,84 @@
         <button class="dialog-close" data-close-dialog type="button" aria-label="Close preview">×</button>
         <div id="resourceDialogContent"></div>
       </dialog>
+    `;
+  }
+
+  function renderCompare(data) {
+    const rows = data.testFormats.map((format) => {
+      const test = data.tests.find((item) => item.id === format.testId);
+      return `
+        <tr>
+          <td><strong>${escapeHTML(test?.name || format.testId)}</strong><br><span>${escapeHTML(format.title)}</span></td>
+          <td>${format.sections.map((section) => `<span class="pill">${escapeHTML(section)}</span>`).join("")}</td>
+          <td>${escapeHTML(format.questionStyle)}</td>
+          <td>${escapeHTML(format.bestStrategy)}</td>
+        </tr>
+      `;
+    }).join("");
+    app.innerHTML = `
+      ${pageHero("Compare", "Compare Major Test Formats", "See sections, question style and preparation strategy before choosing a route.")}
+      <section class="table-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Test</th><th>Sections</th><th>Question Style</th><th>Best Strategy</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>
+      <section class="card-grid">
+        ${data.testFormats.map((format) => formatCard(format, data)).join("")}
+      </section>
+    `;
+  }
+
+  function renderGlossary(data) {
+    const categories = [...new Set(data.glossary.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Glossary", "Aptitude And Mock-Test Terms", "Understand common words used in preparation, testing, progress and website structure.")}
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="glossaryCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="glossarySearch" type="search" placeholder="Search MCQ, mock, aptitude...">
+        </label>
+      </section>
+      <section class="card-grid" id="glossaryList">
+        ${data.glossary.map((item) => glossaryCard(item)).join("")}
+      </section>
+    `;
+
+    const category = app.querySelector("#glossaryCategory");
+    const search = app.querySelector("#glossarySearch");
+    const filter = () => {
+      const selected = category.value;
+      const term = search.value.trim().toLowerCase();
+      app.querySelectorAll("[data-glossary-card]").forEach((card) => {
+        const categoryOk = selected === "all" || card.dataset.category === selected;
+        const textOk = !term || card.textContent.toLowerCase().includes(term);
+        card.hidden = !(categoryOk && textOk);
+      });
+    };
+    category.addEventListener("change", filter);
+    search.addEventListener("input", filter);
+  }
+
+  function renderChooseTest(data) {
+    app.innerHTML = `
+      ${pageHero("Choose My Test", "Find The Right Preparation Route", "Answer the route question closest to your goal and open the connected test group.")}
+      <section class="card-grid">
+        ${data.decisionGuide.map((item) => decisionCard(item, data)).join("")}
+      </section>
+      <section class="content-band">
+        <h2>Still unsure?</h2>
+        <p>Book a trial class or send a WhatsApp message with your class, background and target admission route.</p>
+        <div class="button-row">
+          <a class="btn primary" href="${url("book-trial-class.html")}">Book Trial Class</a>
+          <a class="btn secondary" href="${url("compare.html")}">Compare Tests</a>
+        </div>
+      </section>
     `;
   }
 
@@ -509,6 +595,48 @@
           <p>${escapeHTML(faq.answer)}</p>
         </div>
       </details>
+    `;
+  }
+
+  function formatCard(format, data) {
+    const test = data.tests.find((item) => item.id === format.testId);
+    const skills = format.prioritySkills.map((id) => findName(data.skills, id)).join(", ");
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(test?.name || format.testId)}</p>
+        <h2>${escapeHTML(format.title)}</h2>
+        <p>${escapeHTML(format.questionStyle)}</p>
+        <p class="connected-line">Priority skills: ${escapeHTML(skills)}</p>
+        <div class="tag-row">${format.sections.map((section) => `<span>${escapeHTML(section)}</span>`).join("")}</div>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(`practice.html?test=${format.testId}`)}">Practice</a>
+          <a class="btn secondary small" href="${url("mock-tests.html")}">Mock</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function glossaryCard(item) {
+    return `
+      <article class="feature-card" data-glossary-card data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.term)}</h2>
+        <p>${escapeHTML(item.definition)}</p>
+        <p class="connected-line">Example: ${escapeHTML(item.example)}</p>
+      </article>
+    `;
+  }
+
+  function decisionCard(item, data) {
+    const tests = item.testIds.map((id) => findName(data.tests, id)).join(", ");
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">Decision Guide</p>
+        <h2>${escapeHTML(item.question)}</h2>
+        <p>${escapeHTML(item.recommendation)}</p>
+        <p class="connected-line">Related tests: ${escapeHTML(tests)}</p>
+        <a class="btn primary small" href="${url(item.link)}">Open Recommended Route</a>
+      </article>
     `;
   }
 

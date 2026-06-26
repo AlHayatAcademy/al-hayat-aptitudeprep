@@ -1,0 +1,72 @@
+[
+  {
+    "id": "glossary-mcq",
+    "term": "MCQ",
+    "category": "Assessment",
+    "definition": "A multiple-choice question with one correct answer and several distractors.",
+    "example": "Most entry tests use MCQs for quick objective assessment."
+  },
+  {
+    "id": "glossary-distractor",
+    "term": "Distractor",
+    "category": "Assessment",
+    "definition": "An incorrect option designed to test whether the student truly understands the concept.",
+    "example": "In vocabulary questions, a distractor may look similar but have the wrong meaning."
+  },
+  {
+    "id": "glossary-section-mock",
+    "term": "Section Mock",
+    "category": "Mock Tests",
+    "definition": "A timed practice test for one section of an exam, such as English, Quantitative or Biology.",
+    "example": "A FAST Quant Section Mock trains speed before attempting a full mock."
+  },
+  {
+    "id": "glossary-full-mock",
+    "term": "Full Mock",
+    "category": "Mock Tests",
+    "definition": "A complete test simulation that follows the structure and timing of the target exam.",
+    "example": "A full MDCAT mock should include all major science and English sections."
+  },
+  {
+    "id": "glossary-aptitude",
+    "term": "Aptitude",
+    "category": "Skills",
+    "definition": "A student’s ability to reason, solve problems, understand language and learn under test conditions.",
+    "example": "NAT and GAT measure verbal, quantitative and analytical aptitude."
+  },
+  {
+    "id": "glossary-analytical",
+    "term": "Analytical Reasoning",
+    "category": "Skills",
+    "definition": "Reasoning with rules, arrangements, conditions, grouping and logical relations.",
+    "example": "If A is before B and C is not last, analytical reasoning helps find valid arrangements."
+  },
+  {
+    "id": "glossary-verbal",
+    "term": "Verbal Reasoning",
+    "category": "Skills",
+    "definition": "The ability to understand words, sentences, passages and arguments.",
+    "example": "Vocabulary, grammar and reading comprehension are verbal reasoning areas."
+  },
+  {
+    "id": "glossary-quant",
+    "term": "Quantitative Reasoning",
+    "category": "Skills",
+    "definition": "The ability to solve numerical, mathematical and data-based problems efficiently.",
+    "example": "Percentages, ratios, averages and algebra are common quantitative topics."
+  },
+  {
+    "id": "glossary-tagging",
+    "term": "Question Tagging",
+    "category": "Website System",
+    "definition": "A way to connect one question to tests, skills, subjects, topics and difficulty levels.",
+    "example": "One vocabulary question can be tagged for MDCAT, NAT, SAT and GAT."
+  },
+  {
+    "id": "glossary-weakness",
+    "term": "Weakness-Based Practice",
+    "category": "Study Strategy",
+    "definition": "Practice that focuses on topics where the student has low accuracy or repeated mistakes.",
+    "example": "If percentage questions are often wrong, the student should repeat that topic before mixed mocks."
+  }
+]

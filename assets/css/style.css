@@ -485,12 +485,23 @@ main {
 
 .tag-row span,
 .meta-row span,
-.instruction-box span {
+.instruction-box span,
+.pill {
+  display: inline-flex;
   border-radius: 999px;
   background: #eaf1f8;
   color: #263b52;
   padding: 0.28rem 0.58rem;
   font-size: 0.84rem;
+}
+
+.compare-table td:first-child span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.compare-table .pill {
+  margin: 0.12rem;
 }
 
 .mini-details {

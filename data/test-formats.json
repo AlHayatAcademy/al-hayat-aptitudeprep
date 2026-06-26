@@ -1,0 +1,74 @@
+[
+  {
+    "id": "format-mdcat",
+    "testId": "mdcat",
+    "title": "MDCAT Format Snapshot",
+    "sections": ["Biology", "Chemistry", "Physics", "English", "Logical Reasoning"],
+    "questionStyle": "Mostly concept-based MCQs with science-heavy preparation.",
+    "bestStrategy": "Master textbook concepts first, then practise timed topic MCQs and weekly science mocks.",
+    "prioritySkills": ["science-concepts", "vocabulary", "grammar", "logical-reasoning"]
+  },
+  {
+    "id": "format-fast",
+    "testId": "fast-nuces",
+    "title": "FAST NUCES Format Snapshot",
+    "sections": ["Mathematics", "Analytical Reasoning", "IQ", "English"],
+    "questionStyle": "Speed-focused quantitative and reasoning questions with strong mathematics demand.",
+    "bestStrategy": "Practise arithmetic speed, algebra, percentages, arrangements and IQ patterns daily.",
+    "prioritySkills": ["quantitative-reasoning", "analytical-reasoning", "spatial-iq", "vocabulary"]
+  },
+  {
+    "id": "format-net",
+    "testId": "nust-net",
+    "title": "NUST NET Format Snapshot",
+    "sections": ["Mathematics", "Physics", "Chemistry / Computer", "English", "Intelligence"],
+    "questionStyle": "Subject-heavy test with a separate intelligence component.",
+    "bestStrategy": "Revise formulas, solve subject MCQs and keep a daily IQ practice slot.",
+    "prioritySkills": ["science-concepts", "quantitative-reasoning", "spatial-iq", "vocabulary"]
+  },
+  {
+    "id": "format-nat",
+    "testId": "nat",
+    "title": "NAT Format Snapshot",
+    "sections": ["Verbal", "Analytical", "Quantitative", "Subject Route"],
+    "questionStyle": "Balanced aptitude test with verbal, quantitative and analytical sections.",
+    "bestStrategy": "Use mixed practice daily and revise common vocabulary, grammar and math basics.",
+    "prioritySkills": ["vocabulary", "grammar", "quantitative-reasoning", "analytical-reasoning"]
+  },
+  {
+    "id": "format-gat",
+    "testId": "gat-general",
+    "title": "GAT General Format Snapshot",
+    "sections": ["Verbal Reasoning", "Quantitative Reasoning", "Analytical Reasoning"],
+    "questionStyle": "Graduate-level aptitude test focused on reasoning and problem solving.",
+    "bestStrategy": "Build accuracy first, then improve timing through weekly full-pattern mocks.",
+    "prioritySkills": ["reading-comprehension", "vocabulary", "quantitative-reasoning", "analytical-reasoning"]
+  },
+  {
+    "id": "format-lat",
+    "testId": "lat",
+    "title": "LAT Format Snapshot",
+    "sections": ["English", "General Knowledge", "Legal Aptitude", "Essay / Personal Statement"],
+    "questionStyle": "Law admission route combining English, awareness, reasoning and writing.",
+    "bestStrategy": "Practise grammar, short essays, legal reasoning and general knowledge together.",
+    "prioritySkills": ["grammar", "reading-comprehension", "logical-reasoning", "writing"]
+  },
+  {
+    "id": "format-ielts",
+    "testId": "ielts",
+    "title": "IELTS Format Snapshot",
+    "sections": ["Listening", "Reading", "Writing", "Speaking"],
+    "questionStyle": "English proficiency test based on language performance and band descriptors.",
+    "bestStrategy": "Practise reading and writing with feedback, then add speaking fluency and listening accuracy.",
+    "prioritySkills": ["reading-comprehension", "writing", "grammar", "vocabulary"]
+  },
+  {
+    "id": "format-sat",
+    "testId": "sat",
+    "title": "SAT Format Snapshot",
+    "sections": ["Reading and Writing", "Math"],
+    "questionStyle": "International aptitude test with evidence-based reading, grammar and math.",
+    "bestStrategy": "Alternate English and math practice, review mistakes and build timed accuracy.",
+    "prioritySkills": ["reading-comprehension", "grammar", "quantitative-reasoning", "data-interpretation"]
+  }
+]
