@@ -12,5 +12,33 @@
     "targetTest": "FAST NUCES",
     "rating": 5,
     "quote": "The timed quantitative practice made FAST-style questions feel much more manageable."
+  },
+  {
+    "id": "review-003",
+    "studentName": "Mahnoor A.",
+    "targetTest": "NUST NET",
+    "rating": 5,
+    "quote": "The separate IQ and math practice gave me a clearer preparation routine."
+  },
+  {
+    "id": "review-004",
+    "studentName": "Usman S.",
+    "targetTest": "GAT General",
+    "rating": 5,
+    "quote": "I liked the connected verbal and analytical structure because it felt organized instead of scattered."
+  },
+  {
+    "id": "review-005",
+    "studentName": "Fatima N.",
+    "targetTest": "LAT",
+    "rating": 5,
+    "quote": "The essay and legal reasoning route helped me understand what to practise first."
+  },
+  {
+    "id": "review-006",
+    "studentName": "Ali M.",
+    "targetTest": "IELTS",
+    "rating": 5,
+    "quote": "The reading and writing samples are simple, direct and useful for band-focused practice."
   }
 ]

@@ -5,16 +5,70 @@
     "shortName": "Medical",
     "description": "MDCAT, NMDCAT, NUMS MDCAT and Army Medical style preparation with science, English and reasoning practice.",
     "icon": "medical",
-    "featuredTestIds": ["mdcat"],
+    "featuredTestIds": ["mdcat", "nums-mdcat"],
     "plannedTests": ["MDCAT", "NMDCAT", "NUMS MDCAT", "Army Medical / AMC"]
   },
   {
     "id": "engineering-cs-tests",
     "name": "Engineering & Computer Science Entry Tests",
     "shortName": "Engineering & CS",
-    "description": "FAST, NUST NET, ECAT, PIEAS, GIKI and related tests through quantitative, analytical and subject practice.",
+    "description": "FAST, NUST NET, ECAT, PIEAS, GIKI, IST and Air University preparation through quantitative, analytical and subject practice.",
     "icon": "engineering",
-    "featuredTestIds": ["fast-nuces"],
+    "featuredTestIds": ["fast-nuces", "nust-net"],
     "plannedTests": ["ECAT", "NUST NET", "FAST NUCES", "PIEAS", "GIKI", "IST", "Air University"]
+  },
+  {
+    "id": "undergraduate-admission-tests",
+    "name": "Undergraduate Admission Tests",
+    "shortName": "Undergraduate",
+    "description": "NAT, USAT, HEC and university-route admission tests with English, mathematics, general knowledge and reasoning.",
+    "icon": "undergraduate",
+    "featuredTestIds": ["nat", "usat"],
+    "plannedTests": ["NAT", "USAT", "COMSATS NAT Route", "Bahria University", "Punjab University Entry"]
+  },
+  {
+    "id": "graduate-scholarship-tests",
+    "name": "Graduate Admission & Scholarship Tests",
+    "shortName": "Graduate",
+    "description": "GAT, GRE, GMAT and scholarship-test preparation with verbal, quantitative and analytical writing skills.",
+    "icon": "graduate",
+    "featuredTestIds": ["gat-general", "gre"],
+    "plannedTests": ["GAT General", "GAT Subject", "GRE", "GMAT", "HAT"]
+  },
+  {
+    "id": "law-admission-tests",
+    "name": "Law Admission Tests",
+    "shortName": "Law",
+    "description": "LAT, Law GAT and LSAT-style preparation with reading, legal aptitude and logical reasoning.",
+    "icon": "law",
+    "featuredTestIds": ["lat", "law-gat"],
+    "plannedTests": ["LAT", "Law GAT", "LSAT"]
+  },
+  {
+    "id": "forces-intelligence-tests",
+    "name": "Forces & Intelligence Tests",
+    "shortName": "Forces",
+    "description": "ISSB and initial intelligence test preparation with verbal, non-verbal, analytical and personality-oriented practice.",
+    "icon": "forces",
+    "featuredTestIds": ["issb", "initial-intelligence"],
+    "plannedTests": ["ISSB", "Initial Intelligence Tests", "Army Medical / AMC"]
+  },
+  {
+    "id": "english-proficiency-tests",
+    "name": "English Language Proficiency Tests",
+    "shortName": "English",
+    "description": "IELTS, TOEFL and PTE preparation through reading, writing, listening, speaking, grammar and vocabulary.",
+    "icon": "english",
+    "featuredTestIds": ["ielts", "toefl"],
+    "plannedTests": ["IELTS", "TOEFL", "PTE"]
+  },
+  {
+    "id": "international-aptitude-tests",
+    "name": "International Aptitude Tests",
+    "shortName": "International",
+    "description": "SAT, GRE, GMAT and LSAT preparation with international-style verbal, quantitative and reasoning practice.",
+    "icon": "international",
+    "featuredTestIds": ["sat", "gmat"],
+    "plannedTests": ["SAT", "GRE", "GMAT", "LSAT"]
   }
 ]

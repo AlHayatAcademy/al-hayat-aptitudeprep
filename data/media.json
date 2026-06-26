@@ -3,14 +3,35 @@
     "id": "youtube-main",
     "platform": "YouTube",
     "title": "Al-Hayat AptitudePrep Lectures",
-    "description": "Video lectures, shorts and playlists will be connected here.",
+    "description": "Full lectures, playlists and test-wise preparation sessions will be connected here.",
     "url": "https://www.youtube.com/"
   },
   {
-    "id": "social-updates",
-    "platform": "Facebook / Instagram / TikTok",
-    "title": "Social Media Updates",
-    "description": "Reels, updates and quick tips can be added here as the media presence grows.",
+    "id": "youtube-shorts",
+    "platform": "YouTube Shorts",
+    "title": "One-Minute Aptitude Tips",
+    "description": "Short vocabulary, math shortcut and reasoning videos for quick daily revision.",
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "id": "facebook-updates",
+    "platform": "Facebook",
+    "title": "Class Announcements and Updates",
+    "description": "Trial class announcements, result stories, notes previews and schedule updates.",
     "url": "https://www.facebook.com/"
+  },
+  {
+    "id": "instagram-reels",
+    "platform": "Instagram",
+    "title": "Exam Tips and Reels",
+    "description": "Visual tips, success stories and quick study reminders for students.",
+    "url": "https://www.instagram.com/"
+  },
+  {
+    "id": "tiktok-practice",
+    "platform": "TikTok",
+    "title": "Quick Practice Clips",
+    "description": "Fast question-solving clips and mini drills for aptitude practice.",
+    "url": "https://www.tiktok.com/"
   }
 ]

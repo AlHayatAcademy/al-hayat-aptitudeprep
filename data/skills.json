@@ -3,18 +3,117 @@
     "id": "vocabulary",
     "name": "Vocabulary",
     "category": "Verbal Skills",
-    "description": "Synonyms, antonyms, contextual meaning and exam-oriented word power.",
-    "connectedTestIds": ["mdcat"],
-    "topicIds": ["synonyms-in-context"],
+    "description": "Synonyms, antonyms, contextual meaning, word families, roots and exam-oriented word power.",
+    "connectedTestIds": ["mdcat", "nat", "usat", "gat-general", "gre", "sat", "lat", "ielts", "toefl", "pte"],
+    "topicIds": ["synonyms-in-context", "antonyms", "word-roots"],
     "practiceModes": ["Learn", "Practice", "Skill Mock"]
+  },
+  {
+    "id": "grammar",
+    "name": "Grammar",
+    "category": "Verbal Skills",
+    "description": "Parts of speech, tenses, subject-verb agreement, modifiers, punctuation and error correction.",
+    "connectedTestIds": ["mdcat", "nat", "usat", "sat", "lat", "ielts", "toefl", "pte"],
+    "topicIds": ["subject-verb-agreement", "sentence-correction"],
+    "practiceModes": ["Concept", "Error Practice", "Timed Drill"]
+  },
+  {
+    "id": "reading-comprehension",
+    "name": "Reading Comprehension",
+    "category": "Verbal Skills",
+    "description": "Main idea, inference, tone, evidence, summary, argument and passage-based reasoning.",
+    "connectedTestIds": ["sat", "gre", "gmat", "lsat", "gat-general", "ielts", "toefl", "usat"],
+    "topicIds": ["main-idea", "inference", "tone-purpose"],
+    "practiceModes": ["Passage Practice", "Inference Drill", "Section Mock"]
+  },
+  {
+    "id": "sentence-completion",
+    "name": "Sentence Completion",
+    "category": "Verbal Skills",
+    "description": "Context clues, contrast markers, logical connectors and vocabulary-in-blank questions.",
+    "connectedTestIds": ["nat", "gat-general", "gre", "sat", "mdcat"],
+    "topicIds": ["context-clues", "double-blank-completion"],
+    "practiceModes": ["Context Practice", "Vocabulary Drill", "Timed Set"]
   },
   {
     "id": "quantitative-reasoning",
     "name": "Quantitative Reasoning",
     "category": "Reasoning Skills",
-    "description": "Number sense, percentages, ratios, algebraic thinking and timed problem solving.",
-    "connectedTestIds": ["fast-nuces"],
-    "topicIds": ["percentages"],
+    "description": "Number sense, percentages, ratios, averages, algebra, probability and timed problem solving.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "ecat", "nat", "usat", "gat-general", "gre", "gmat", "sat"],
+    "topicIds": ["percentages", "ratios", "averages", "algebra-basics"],
     "practiceModes": ["Topic Practice", "Mixed Practice", "Timed Mock"]
+  },
+  {
+    "id": "analytical-reasoning",
+    "name": "Analytical Reasoning",
+    "category": "Reasoning Skills",
+    "description": "Arrangements, grouping, conditions, schedules, selection problems and multi-step reasoning.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "nat", "gat-general", "hat", "issb", "initial-intelligence"],
+    "topicIds": ["arrangements", "grouping-logic", "conditional-reasoning"],
+    "practiceModes": ["Set Practice", "Diagram Practice", "Section Mock"]
+  },
+  {
+    "id": "logical-reasoning",
+    "name": "Logical Reasoning",
+    "category": "Reasoning Skills",
+    "description": "Arguments, assumptions, conclusions, weakening, strengthening, flaws and legal reasoning.",
+    "connectedTestIds": ["lat", "law-gat", "lsat", "gmat", "gat-general", "usat"],
+    "topicIds": ["assumptions", "strengthen-weaken", "logical-fallacies"],
+    "practiceModes": ["Argument Drill", "Legal Aptitude", "Timed Mock"]
+  },
+  {
+    "id": "data-interpretation",
+    "name": "Data Interpretation",
+    "category": "Quantitative Skills",
+    "description": "Tables, charts, ratios, trends, percentage comparison and evidence-based numerical judgement.",
+    "connectedTestIds": ["gat-general", "gre", "gmat", "sat", "nust-net", "nat"],
+    "topicIds": ["tables-and-charts", "trend-analysis"],
+    "practiceModes": ["Chart Practice", "Mixed Data Set", "Timed Drill"]
+  },
+  {
+    "id": "spatial-iq",
+    "name": "Spatial & Non-Verbal IQ",
+    "category": "Intelligence Skills",
+    "description": "Series, patterns, analogies, rotations, mirror images and non-verbal intelligence questions.",
+    "connectedTestIds": ["issb", "initial-intelligence", "fast-nuces", "nust-net"],
+    "topicIds": ["number-series", "figure-patterns"],
+    "practiceModes": ["Pattern Drill", "IQ Set", "Timed Mock"]
+  },
+  {
+    "id": "writing",
+    "name": "Writing",
+    "category": "English Proficiency",
+    "description": "Essay, summary, task response, coherence, paragraphing, grammar accuracy and academic tone.",
+    "connectedTestIds": ["ielts", "toefl", "pte", "gre", "gmat", "sat"],
+    "topicIds": ["essay-structure", "summary-writing"],
+    "practiceModes": ["Model Answer", "Writing Prompt", "Rubric Review"]
+  },
+  {
+    "id": "science-concepts",
+    "name": "Science Concepts",
+    "category": "Subject Skills",
+    "description": "Biology, chemistry and physics concepts tested in medical and engineering entry tests.",
+    "connectedTestIds": ["mdcat", "nmdcat", "nums-mdcat", "ecat", "nust-net", "pieas", "giki"],
+    "topicIds": ["cell-biology", "enzymes", "genetics", "atomic-structure", "chemical-bonding", "kinematics", "electricity"],
+    "practiceModes": ["Concept MCQs", "Numerical Practice", "Subject Mock"]
+  },
+  {
+    "id": "computer-aptitude",
+    "name": "Computer Aptitude",
+    "category": "Subject Skills",
+    "description": "Computer fundamentals, programming logic and digital concepts for CS-oriented admission routes.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "air-university", "comsats-nat-route"],
+    "topicIds": ["programming-logic", "computer-fundamentals"],
+    "practiceModes": ["Concept MCQs", "Logic Practice", "Section Mock"]
+  },
+  {
+    "id": "general-awareness",
+    "name": "General Awareness",
+    "category": "General Aptitude",
+    "description": "Pakistan studies, everyday science, current affairs and general knowledge for aptitude tests.",
+    "connectedTestIds": ["nat", "usat", "lat", "issb", "hat"],
+    "topicIds": ["pakistan-studies", "everyday-science"],
+    "practiceModes": ["Fact Practice", "Current Affairs", "Mixed Mock"]
   }
 ]

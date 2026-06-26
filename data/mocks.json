@@ -4,19 +4,139 @@
     "title": "MDCAT Mini Mock",
     "mockType": "Full Test Sample",
     "testId": "mdcat",
-    "section": "English + Biology Sample",
-    "durationMinutes": 5,
-    "questionIds": ["q-vocab-001"],
-    "instructions": ["Attempt every question.", "Review explanations after submission.", "This is a Version 1 sample mock."]
+    "section": "English + Science Sample",
+    "durationMinutes": 8,
+    "questionIds": ["q-vocab-001", "q-grammar-001", "q-bio-001", "q-chem-001", "q-physics-001"],
+    "instructions": ["Attempt every question.", "Review explanations after submission.", "This is a Version 2 sample mock."]
+  },
+  {
+    "id": "mdcat-science-mock",
+    "title": "MDCAT Science Section Mock",
+    "mockType": "Subject Mock Sample",
+    "testId": "mdcat",
+    "section": "Biology, Chemistry and Physics",
+    "durationMinutes": 6,
+    "questionIds": ["q-bio-001", "q-chem-001", "q-physics-001"],
+    "instructions": ["Focus on concept clarity.", "Solve science MCQs without rushing.", "Use this as a model for a full science section later."]
   },
   {
     "id": "fast-quant-section-mock",
     "title": "FAST Quant Section Mock",
     "mockType": "Section Mock Sample",
     "testId": "fast-nuces",
-    "section": "Quantitative Reasoning",
-    "durationMinutes": 5,
-    "questionIds": ["q-quant-001"],
+    "section": "Quantitative Reasoning + IQ",
+    "durationMinutes": 7,
+    "questionIds": ["q-quant-001", "q-quant-002", "q-analytical-001", "q-iq-001", "q-cs-001"],
     "instructions": ["Use rough work for calculations.", "Try to solve within the time limit.", "This mock structure can hold a full FAST section later."]
+  },
+  {
+    "id": "ecat-subject-mock",
+    "title": "ECAT Subject Sample Mock",
+    "mockType": "Subject Mock Sample",
+    "testId": "ecat",
+    "section": "Math, Physics and Chemistry",
+    "durationMinutes": 6,
+    "questionIds": ["q-quant-002", "q-physics-001", "q-chem-001"],
+    "instructions": ["Use formulas carefully.", "Check units in physics questions.", "Review explanations after submission."]
+  },
+  {
+    "id": "net-iq-section-mock",
+    "title": "NUST NET IQ Section Mock",
+    "mockType": "Section Mock Sample",
+    "testId": "nust-net",
+    "section": "Intelligence + Quantitative",
+    "durationMinutes": 6,
+    "questionIds": ["q-iq-001", "q-analytical-001", "q-quant-001"],
+    "instructions": ["Work quickly but accurately.", "Use elimination for IQ questions.", "Track weak reasoning topics."]
+  },
+  {
+    "id": "nat-mixed-mock",
+    "title": "NAT Mixed Aptitude Mock",
+    "mockType": "Mixed Aptitude Sample",
+    "testId": "nat",
+    "section": "Verbal, Quantitative, Analytical and GK",
+    "durationMinutes": 8,
+    "questionIds": ["q-vocab-001", "q-completion-001", "q-quant-002", "q-analytical-001", "q-gk-001"],
+    "instructions": ["Attempt all skills.", "Use this mock to identify weak sections.", "Review both English and reasoning mistakes."]
+  },
+  {
+    "id": "gat-general-sample",
+    "title": "GAT General Sample Mock",
+    "mockType": "Full Pattern Sample",
+    "testId": "gat-general",
+    "section": "Verbal, Quantitative and Analytical",
+    "durationMinutes": 8,
+    "questionIds": ["q-vocab-002", "q-reading-001", "q-quant-001", "q-data-001", "q-logical-001"],
+    "instructions": ["Balance time across sections.", "Do not spend too long on one question.", "Use explanations for revision."]
+  },
+  {
+    "id": "lat-sample-mock",
+    "title": "LAT Legal Aptitude Sample Mock",
+    "mockType": "Law Aptitude Sample",
+    "testId": "lat",
+    "section": "English, Legal Reasoning and Writing",
+    "durationMinutes": 7,
+    "questionIds": ["q-grammar-001", "q-reading-001", "q-logical-001", "q-writing-001", "q-gk-001"],
+    "instructions": ["Read the argument carefully.", "Separate facts from assumptions.", "Use the writing item as a model."]
+  },
+  {
+    "id": "ielts-reading-sample",
+    "title": "IELTS Reading and Writing Sample",
+    "mockType": "English Proficiency Sample",
+    "testId": "ielts",
+    "section": "Reading + Writing",
+    "durationMinutes": 6,
+    "questionIds": ["q-reading-001", "q-writing-001", "q-grammar-001", "q-vocab-001"],
+    "instructions": ["Focus on main idea and clarity.", "Notice academic tone.", "Use the writing model for structure."]
+  },
+  {
+    "id": "sat-sample-mock",
+    "title": "SAT English and Math Sample",
+    "mockType": "International Aptitude Sample",
+    "testId": "sat",
+    "section": "Reading, Grammar and Math",
+    "durationMinutes": 7,
+    "questionIds": ["q-reading-001", "q-grammar-001", "q-vocab-002", "q-quant-001", "q-data-001"],
+    "instructions": ["Read every option carefully.", "Use evidence in reading questions.", "Check math calculations before submitting."]
+  },
+  {
+    "id": "gre-verbal-quant-sample",
+    "title": "GRE Verbal and Quant Sample",
+    "mockType": "Graduate Sample",
+    "testId": "gre",
+    "section": "Verbal + Quantitative",
+    "durationMinutes": 8,
+    "questionIds": ["q-vocab-002", "q-reading-001", "q-completion-001", "q-quant-001", "q-data-001"],
+    "instructions": ["Use context clues.", "Avoid vocabulary guesses without evidence.", "Manage time between verbal and quant."]
+  },
+  {
+    "id": "gmat-data-sample",
+    "title": "GMAT Data and Reasoning Sample",
+    "mockType": "Data + Critical Reasoning",
+    "testId": "gmat",
+    "section": "Data Interpretation and Logical Reasoning",
+    "durationMinutes": 6,
+    "questionIds": ["q-data-001", "q-logical-001", "q-quant-001"],
+    "instructions": ["Interpret the data before calculating.", "Look for the assumption in arguments.", "Eliminate extreme options."]
+  },
+  {
+    "id": "initial-iq-mock",
+    "title": "Initial Intelligence Sample Mock",
+    "mockType": "IQ Sample",
+    "testId": "initial-intelligence",
+    "section": "Verbal and Non-Verbal IQ",
+    "durationMinutes": 5,
+    "questionIds": ["q-iq-001", "q-analytical-001", "q-quant-002"],
+    "instructions": ["Speed matters.", "Identify the pattern first.", "Skip and return if stuck."]
+  },
+  {
+    "id": "mixed-aptitude-mock",
+    "title": "Mixed Aptitude Sample Mock",
+    "mockType": "Cross-Skill Sample",
+    "testId": "usat",
+    "section": "Vocabulary, Quant, Analytical and GK",
+    "durationMinutes": 8,
+    "questionIds": ["q-vocab-001", "q-quant-001", "q-analytical-001", "q-logical-001", "q-gk-001"],
+    "instructions": ["This mock combines multiple skills.", "Use it for weakness diagnosis.", "Review the topic-wise progress page afterward."]
   }
 ]

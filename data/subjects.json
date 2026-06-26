@@ -4,17 +4,71 @@
     "name": "Biology",
     "group": "Science",
     "description": "Conceptual biology practice for medical entry tests.",
-    "connectedTestIds": ["mdcat"],
-    "topicIds": ["cell-biology"],
+    "connectedTestIds": ["mdcat", "nmdcat", "nums-mdcat", "amc"],
+    "topicIds": ["cell-biology", "enzymes", "genetics"],
     "mockIds": ["mdcat-mini-mock"]
+  },
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "group": "Science",
+    "description": "Physical, organic and inorganic chemistry practice for medical and engineering tests.",
+    "connectedTestIds": ["mdcat", "nmdcat", "nums-mdcat", "ecat", "nust-net", "pieas", "giki"],
+    "topicIds": ["atomic-structure", "chemical-bonding"],
+    "mockIds": ["mdcat-science-mock", "ecat-subject-mock"]
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "group": "Science",
+    "description": "Mechanics, electricity, waves, modern physics and numerical problem solving.",
+    "connectedTestIds": ["mdcat", "ecat", "nust-net", "pieas", "giki", "nums-mdcat"],
+    "topicIds": ["kinematics", "electricity"],
+    "mockIds": ["ecat-subject-mock"]
   },
   {
     "id": "mathematics",
     "name": "Mathematics",
     "group": "Quantitative",
     "description": "Entry-test mathematics with formulas, shortcuts and timed practice.",
-    "connectedTestIds": ["fast-nuces"],
-    "topicIds": ["percentages"],
+    "connectedTestIds": ["ecat", "nust-net", "fast-nuces", "pieas", "giki", "sat", "gre", "gmat"],
+    "topicIds": ["percentages", "ratios", "algebra-basics", "functions"],
     "mockIds": ["fast-quant-section-mock"]
+  },
+  {
+    "id": "english",
+    "name": "English",
+    "group": "Language",
+    "description": "Vocabulary, grammar, reading, writing and exam-style English practice.",
+    "connectedTestIds": ["mdcat", "nat", "usat", "gat-general", "sat", "gre", "ielts", "toefl", "pte", "lat"],
+    "topicIds": ["synonyms-in-context", "subject-verb-agreement", "main-idea", "essay-structure"],
+    "mockIds": ["ielts-reading-sample"]
+  },
+  {
+    "id": "computer-science",
+    "name": "Computer Science",
+    "group": "Technology",
+    "description": "Computer fundamentals, programming logic, databases and digital concepts for CS-oriented tests.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "air-university", "comsats-nat-route"],
+    "topicIds": ["programming-logic", "computer-fundamentals"],
+    "mockIds": ["fast-quant-section-mock"]
+  },
+  {
+    "id": "general-knowledge",
+    "name": "General Knowledge",
+    "group": "General Aptitude",
+    "description": "Pakistan studies, current affairs, everyday science and general awareness for admission tests.",
+    "connectedTestIds": ["nat", "usat", "lat", "issb", "hat"],
+    "topicIds": ["pakistan-studies", "everyday-science"],
+    "mockIds": ["nat-mixed-mock"]
+  },
+  {
+    "id": "analytical-iq",
+    "name": "Analytical & IQ",
+    "group": "Reasoning",
+    "description": "Analytical, logical, verbal and non-verbal intelligence practice.",
+    "connectedTestIds": ["fast-nuces", "nust-net", "gat-general", "issb", "initial-intelligence", "lat", "law-gat"],
+    "topicIds": ["arrangements", "assumptions", "number-series", "figure-patterns"],
+    "mockIds": ["mixed-aptitude-mock"]
   }
 ]

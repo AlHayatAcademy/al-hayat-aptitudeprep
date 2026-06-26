@@ -7,10 +7,59 @@
     "steps": ["Revise one Biology topic daily.", "Practice 20 English vocabulary items daily.", "Attempt one mini mock every week."]
   },
   {
+    "id": "mdcat-90-day-complete",
+    "title": "MDCAT 90-Day Complete Roadmap",
+    "testId": "mdcat",
+    "duration": "90 days",
+    "steps": ["Complete Biology, Chemistry and Physics topic cycles.", "Revise English vocabulary and grammar daily.", "Take weekly science mocks and monthly full mocks."]
+  },
+  {
     "id": "fast-21-day-quant",
     "title": "FAST 21-Day Quant Starter Plan",
     "testId": "fast-nuces",
     "duration": "21 days",
-    "steps": ["Master percentages and ratios.", "Practice timed arithmetic daily.", "Attempt one quantitative section mock every week."]
+    "steps": ["Master percentages, ratios and averages.", "Practice timed arithmetic daily.", "Attempt one quantitative section mock every week."]
+  },
+  {
+    "id": "net-45-day-plan",
+    "title": "NUST NET 45-Day Plan",
+    "testId": "nust-net",
+    "duration": "45 days",
+    "steps": ["Revise math and physics formulas.", "Practice intelligence questions daily.", "Attempt one NET-style section mock every week."]
+  },
+  {
+    "id": "nat-14-day-plan",
+    "title": "NAT 14-Day Mixed Aptitude Plan",
+    "testId": "nat",
+    "duration": "14 days",
+    "steps": ["Practice verbal, analytical and quantitative sections daily.", "Revise common vocabulary and grammar errors.", "Take two mixed mocks before test day."]
+  },
+  {
+    "id": "gat-30-day-plan",
+    "title": "GAT General 30-Day Plan",
+    "testId": "gat-general",
+    "duration": "30 days",
+    "steps": ["Build verbal reasoning through vocabulary and reading.", "Practice quant and data interpretation on alternate days.", "Attempt weekly full pattern mocks."]
+  },
+  {
+    "id": "lat-20-day-plan",
+    "title": "LAT 20-Day Law Admission Plan",
+    "testId": "lat",
+    "duration": "20 days",
+    "steps": ["Practice English grammar and reading daily.", "Write short essay outlines twice a week.", "Revise legal aptitude and general knowledge."]
+  },
+  {
+    "id": "ielts-28-day-plan",
+    "title": "IELTS 28-Day Band Improvement Plan",
+    "testId": "ielts",
+    "duration": "28 days",
+    "steps": ["Practice reading main idea and inference questions.", "Write one Task 2 outline every alternate day.", "Record speaking responses and review fluency."]
+  },
+  {
+    "id": "sat-30-day-plan",
+    "title": "SAT 30-Day English and Math Plan",
+    "testId": "sat",
+    "duration": "30 days",
+    "steps": ["Alternate English and math practice days.", "Review grammar rules and data questions.", "Attempt weekly SAT-style mixed mocks."]
   }
 ]

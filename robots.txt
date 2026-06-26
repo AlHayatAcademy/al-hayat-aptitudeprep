@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drimranhayat.github.io/al-hayat-aptitudeprep/sitemap.xml
+Sitemap: https://alhayatacademy.github.io/al-hayat-aptitudeprep/sitemap.xml

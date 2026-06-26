@@ -45,6 +45,7 @@
       progress: renderProgress,
       reviews: renderReviews,
       media: renderMedia,
+      share: renderShare,
       about: renderAbout,
       contact: renderContact,
       trial: renderTrial,
@@ -54,6 +55,7 @@
     wireAccordions();
     wireResourceButtons(data);
     wireTrialForm();
+    wireShareTools();
   }
 
   function headerHTML() {
@@ -84,6 +86,7 @@
             ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
+            ["Share", "Copy or send the website link", "share.html"],
             ["About & Contact", "Mission, trust and contact details", "about.html"]
           ])}
           <a class="nav-cta" href="${url("book-trial-class.html")}">Book Trial</a>
@@ -102,6 +105,7 @@
         <div class="footer-links">
           ${navLink("Search", "search.html")}
           ${navLink("Progress", "progress.html")}
+          ${navLink("Share", "share.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -276,6 +280,31 @@
     `;
   }
 
+  function renderShare() {
+    const cleanUrl = "https://alhayatacademy.github.io/al-hayat-aptitudeprep/";
+    const shareText = "Al-Hayat AptitudePrep: Entry Tests, Aptitude Skills, Mock Tests and Smart Practice.";
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareText} ${cleanUrl}`)}`;
+    app.innerHTML = `
+      ${pageHero("Share", "Share Al-Hayat AptitudePrep", "Send the website link to students, parents, colleagues and study groups.")}
+      <section class="contact-grid">
+        <article class="feature-card">
+          <h2>Website Link</h2>
+          <p class="connected-line">${cleanUrl}</p>
+          <div class="button-row">
+            <button class="btn primary" data-copy-link="${cleanUrl}" type="button">Copy Link</button>
+            <a class="btn secondary" href="${whatsappUrl}" target="_blank" rel="noopener">Share on WhatsApp</a>
+          </div>
+          <p id="copyStatus" class="hint" aria-live="polite"></p>
+        </article>
+        <article class="feature-card">
+          <h2>Suggested Message</h2>
+          <p>${shareText}</p>
+          <p>Prepare for MDCAT, FAST, NUST NET, NAT, GAT, SAT, GRE, IELTS and more through connected practice and mock tests.</p>
+        </article>
+      </section>
+    `;
+  }
+
   function renderAbout() {
     app.innerHTML = `
       ${pageHero("About", "A Connected Aptitude Learning System", "Al-Hayat AptitudePrep is designed as a clean, expandable preparation hub rather than disconnected pages.")}
@@ -284,8 +313,8 @@
         <p>To help students prepare for entry tests through clear concepts, exam-oriented practice, timed mocks, premium notes and guided trial classes.</p>
         <h2>Teaching Model</h2>
         <p>The platform connects every test to its required skills, subjects, topics, question bank, resources and mock tests. Shared skills are reused through tags so students do not waste time studying the same material in separate places.</p>
-        <h2>Version 1 Focus</h2>
-        <p>This build creates the full structure with small sample data. Future updates can add full question banks, real notes, media playlists and complete test patterns.</p>
+        <h2>Version 2 Focus</h2>
+        <p>This build expands the test catalogue, skill map, subject routes, sample questions, resources, mocks, study plans and sharing tools while keeping the site easy to grow.</p>
       </section>
     `;
   }
@@ -297,12 +326,12 @@
       <section class="contact-grid">
         <article class="feature-card">
           <h2>WhatsApp</h2>
-          <p>Replace the placeholder number in <code>assets/js/app.js</code> with your real number.</p>
+          <p>Message for trial classes, resources, premium notes and test-preparation guidance.</p>
           <a class="btn primary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Message on WhatsApp</a>
         </article>
         <article class="feature-card">
           <h2>Email</h2>
-          <p>Add your official email here when ready.</p>
+          <p>Use email for formal queries and longer messages.</p>
           <a class="text-link" href="mailto:drimranhayatmalik@gmail.com">drimranhayatmalik@gmail.com</a>
         </article>
       </section>
@@ -443,6 +472,20 @@
         `Message: ${data.get("message")}`
       ];
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+    });
+  }
+
+  function wireShareTools() {
+    const button = document.querySelector("[data-copy-link]");
+    if (!button) return;
+    button.addEventListener("click", async () => {
+      const status = document.querySelector("#copyStatus");
+      try {
+        await navigator.clipboard.writeText(button.dataset.copyLink);
+        if (status) status.textContent = "Link copied.";
+      } catch {
+        if (status) status.textContent = "Copy failed. Select and copy the link manually.";
+      }
     });
   }
 
