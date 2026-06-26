@@ -38,7 +38,8 @@
     flashcards: "flashcards.json",
     errorLogPrompts: "error-log-prompts.json",
     premiumNotes: "premium-notes.json",
-    resultInsights: "result-insights.json"
+    resultInsights: "result-insights.json",
+    lessons: "lessons.json"
   };
 
   async function loadJSON(file) {

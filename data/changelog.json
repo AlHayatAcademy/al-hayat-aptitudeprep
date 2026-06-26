@@ -64,5 +64,11 @@
     "version": "V11",
     "date": "2026-06-26",
     "summary": "Added results report page with local progress summary, weak-topic table and next-step recommendations."
+  },
+  {
+    "id": "change-v12",
+    "version": "V12",
+    "date": "2026-06-26",
+    "summary": "Added lesson library foundation with concept, example, strategy, mistake and connected practice links."
   }
 ]

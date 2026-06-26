@@ -69,7 +69,8 @@
       ...(data.flashcards || []).map((item) => record("Flashcard", item.front, `${item.back} ${item.category} ${item.level} ${item.skillId}`, "flashcards.html")),
       ...(data.errorLogPrompts || []).map((item) => record("Error Log Prompt", item.title, `${item.category} ${item.diagnosis} ${item.correctionPrompt}`, "error-log.html")),
       ...(data.premiumNotes || []).map((item) => record("Premium Note", item.title, `${item.access} ${item.summary} ${item.previewSections.map((section) => `${section.heading} ${section.body}`).join(" ")} ${item.premiumIncludes.join(" ")}`, "premium-notes.html")),
-      ...(data.resultInsights || []).map((item) => record("Results Report", item.band, `${item.message} ${item.nextActions.join(" ")}`, "results-report.html"))
+      ...(data.resultInsights || []).map((item) => record("Results Report", item.band, `${item.message} ${item.nextActions.join(" ")}`, "results-report.html")),
+      ...(data.lessons || []).map((item) => record("Lesson", item.title, `${item.level} ${item.concept} ${item.workedExample} ${item.strategy} ${item.commonMistake} ${item.testIds.join(" ")} ${item.topicIds.join(" ")}`, "lessons.html"))
     ];
   }
 

@@ -62,6 +62,7 @@
       "error-log": renderErrorLog,
       "premium-notes": renderPremiumNotes,
       "results-report": renderResultsReport,
+      lessons: renderLessons,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -113,6 +114,7 @@
             ["Error Log", "Track repeated mistakes", "error-log.html"],
             ["Premium Notes", "Preview and purchase notes", "premium-notes.html"],
             ["Results Report", "Weak areas and next steps", "results-report.html"],
+            ["Lessons", "Concepts, examples and practice", "lessons.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -159,6 +161,7 @@
           ${navLink("Flashcards", "flashcards.html")}
           ${navLink("Premium Notes", "premium-notes.html")}
           ${navLink("Results", "results-report.html")}
+          ${navLink("Lessons", "lessons.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -195,6 +198,7 @@
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
         ${actionCard("Premium Notes", "Open structured note previews.", "premium-notes.html")}
         ${actionCard("Results Report", "Review weak areas and next steps.", "results-report.html")}
+        ${actionCard("Lessons", "Study concepts with examples and practice.", "lessons.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -794,6 +798,33 @@
         ${resultActionCard("Score Guide", "Understand your current band and target movement.", "score-guide.html")}
       </section>
     `;
+  }
+
+  function renderLessons(data) {
+    const subjects = [...new Set(data.lessons.map((lesson) => findName(data.subjects, lesson.subjectId)))].sort();
+    app.innerHTML = `
+      ${pageHero("Lessons", "Concepts Connected To Practice", "Study a focused lesson, then move directly to practice, notes, flashcards and mock tests.")}
+      <section class="stat-grid">
+        ${statCard(data.lessons.length, "Lessons")}
+        ${statCard(new Set(data.lessons.flatMap((lesson) => lesson.topicIds)).size, "Topics")}
+        ${statCard(new Set(data.lessons.flatMap((lesson) => lesson.testIds)).size, "Connected Tests")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Subject
+          <select id="lessonSubject">
+            <option value="all">All subjects</option>
+            ${subjects.map((subject) => `<option value="${escapeHTML(subject)}">${escapeHTML(subject)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="lessonSearch" type="search" placeholder="Search cell, percentages, assumptions...">
+        </label>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.lessons.map((lesson) => lessonCard(lesson, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#lessonSubject", "#lessonSearch", "[data-lesson-card]");
   }
 
   function renderStudyPlans(data) {
@@ -1397,6 +1428,42 @@
         <h2>${escapeHTML(title)}</h2>
         <p>${escapeHTML(copy)}</p>
         <a class="btn secondary small" href="${url(href)}">Open</a>
+      </article>
+    `;
+  }
+
+  function lessonCard(lesson, data) {
+    const subject = findName(data.subjects, lesson.subjectId);
+    const tests = lesson.testIds.map((id) => findName(data.tests, id)).join(", ");
+    const skills = lesson.skillIds.map((id) => findName(data.skills, id)).join(", ");
+    const topics = lesson.topicIds.map((id) => findName(data.topics, id)).join(", ");
+    const mock = data.mocks.find((item) => item.id === lesson.mockId);
+    return `
+      <article class="feature-card lesson-card" data-lesson-card data-category="${escapeHTML(subject)}">
+        <p class="eyebrow">${escapeHTML(subject)} • ${escapeHTML(lesson.level)} • ${lesson.durationMinutes} minutes</p>
+        <h2>${escapeHTML(lesson.title)}</h2>
+        <p class="connected-line">Tests: ${escapeHTML(tests)}</p>
+        <p>Skills: ${escapeHTML(skills)}</p>
+        <p>Topics: ${escapeHTML(topics)}</p>
+        <div class="lesson-block">
+          <h3>Concept</h3>
+          <p>${escapeHTML(lesson.concept)}</p>
+        </div>
+        <div class="lesson-block">
+          <h3>Worked Example</h3>
+          <p>${escapeHTML(lesson.workedExample)}</p>
+        </div>
+        <div class="lesson-block">
+          <h3>Strategy</h3>
+          <p>${escapeHTML(lesson.strategy)}</p>
+        </div>
+        <p class="danger-note"><strong>Common mistake:</strong> ${escapeHTML(lesson.commonMistake)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(lesson.practiceLink)}">Practise</a>
+          <a class="btn secondary small" href="${url(`premium-notes.html#${lesson.premiumNoteId}`)}">Notes</a>
+          <a class="btn ghost small" href="${url("flashcards.html")}">Flashcards</a>
+          <a class="btn ghost small" href="${url("mock-tests.html")}">${escapeHTML(mock ? "Mock" : "Mock Tests")}</a>
+        </div>
       </article>
     `;
   }

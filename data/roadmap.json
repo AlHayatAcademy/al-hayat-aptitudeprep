@@ -43,8 +43,16 @@
     "id": "roadmap-v12",
     "phase": "V12",
     "title": "Lesson Library Foundation",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add lesson pages that connect concepts, examples, practice, notes and mocks.",
-    "nextActions": ["Create lesson data schema", "Add sample lessons", "Connect lessons to topics"]
+    "nextActions": ["Expand lesson bank", "Add more worked examples", "Connect lessons to worksheets"]
+  },
+  {
+    "id": "roadmap-v13",
+    "phase": "V13",
+    "title": "Teacher Classroom Toolkit",
+    "status": "Next",
+    "focus": "Add classroom-ready lesson plans, attendance-style task flow and printable class packs.",
+    "nextActions": ["Create teacher toolkit data", "Add class plan page", "Connect assignments and worksheets"]
   }
 ]

@@ -30,6 +30,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `error-log.html`
 - `premium-notes.html`
 - `results-report.html`
+- `lessons.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`
