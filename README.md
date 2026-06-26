@@ -98,7 +98,15 @@ Then open:
 http://localhost:8080/
 ```
 
+For data validation before committing:
+
+```bash
+node scripts/validate-data.js
+```
+
 ## Main Expansion Points
+
+Before adding large batches, read `DATA_EXPANSION_GUIDE.md`.
 
 - Add full-length question banks in `data/questions.json`.
 - Add real prices and fuller previews in `data/resources.json`.

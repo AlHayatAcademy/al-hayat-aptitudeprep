@@ -65,3 +65,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `search.html`
 
 This `/pages` folder is reserved for future deep pages such as individual test landing pages, individual skill lessons, subject chapters and resource previews.
+
+For data expansion rules, use the root file:
+
+- `DATA_EXPANSION_GUIDE.md`

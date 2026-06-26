@@ -261,44 +261,55 @@
           <p>One question bank can serve many tests through clean tags: test, skill, subject, topic, difficulty and exam style.</p>
         </div>
       </section>
-      <section class="quick-actions" aria-label="Main actions">
-        ${actionCard("Tests", "Choose MDCAT, FAST and future test routes.", "tests.html")}
-        ${actionCard("Practice", "Attempt tagged sample MCQs with instant feedback.", "practice.html")}
-        ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
-        ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
-        ${actionCard("Premium Notes", "Open structured note previews.", "premium-notes.html")}
-        ${actionCard("Results Report", "Review weak areas and next steps.", "results-report.html")}
-        ${actionCard("Lessons", "Study concepts with examples and practice.", "lessons.html")}
-        ${actionCard("Teacher Toolkit", "Run class plans with worksheets.", "teacher-toolkit.html")}
-        ${actionCard("Parent Guide", "Understand progress and next steps.", "parent-guide.html")}
-        ${actionCard("Timeline", "Plan preparation by admission season.", "admissions-timeline.html")}
-        ${actionCard("Downloads", "Open printable packs and checklists.", "download-center.html")}
-        ${actionCard("Question Review", "Study wrong-answer patterns.", "question-review.html")}
-        ${actionCard("Test Routes", "Follow connected test pathways.", "test-routes.html")}
-        ${actionCard("Dashboard", "See progress and next actions.", "dashboard.html")}
-        ${actionCard("Test Pages", "Open dedicated test pages.", "test-pages.html")}
-        ${actionCard("Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html")}
-        ${actionCard("Question Builder", "Use MCQ templates and checks.", "question-builder.html")}
-        ${actionCard("Question Import", "Validate batch MCQ uploads.", "question-import.html")}
-        ${actionCard("Topic Study", "Review focused topic cards.", "topic-study.html")}
-        ${actionCard("Repair Paths", "Fix weak topics step by step.", "repair-paths.html")}
-        ${actionCard("Route Tasks", "Open today’s tasks by test route.", "route-tasks.html")}
-        ${actionCard("Student Notes", "Save topic, task and review notes.", "student-notes.html")}
-        ${actionCard("Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html")}
-        ${actionCard("Weekly Summary", "Review progress across the week.", "weekly-summary.html")}
-        ${actionCard("Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html")}
-        ${actionCard("Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html")}
-        ${actionCard("Class Remedial Plan", "Run weak-area class recovery sessions.", "class-remedial-plan.html")}
-        ${actionCard("Remedial Homework", "Complete follow-up weak-area tasks.", "remedial-homework.html")}
-        ${actionCard("Homework Review", "Review remedial homework completion.", "homework-review.html")}
-        ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
-        ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
-        ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
-        ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
-        ${actionCard("Worksheets", "Use class-ready practice packs.", "worksheets.html")}
-        ${actionCard("Question Bank", "Track expansion targets.", "question-bank.html")}
-        ${actionCard("Vocabulary", "Study exam words in context.", "vocabulary-bank.html")}
-        ${actionCard("Formulas", "Revise key formulas quickly.", "formula-bank.html")}
+      <section class="home-action-groups" aria-label="Main actions">
+        ${homeActionGroup("Start Here", "Core student actions", [
+          ["Tests", "Choose MDCAT, FAST and future test routes.", "tests.html"],
+          ["Practice", "Attempt tagged sample MCQs with instant feedback.", "practice.html"],
+          ["Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html"],
+          ["Dashboard", "See progress and next actions.", "dashboard.html"],
+          ["Book Trial", "Book online or physical class.", "book-trial-class.html"]
+        ], true)}
+        ${homeActionGroup("Study And Revision", "Concepts, drills and weak-area repair", [
+          ["Lessons", "Study concepts with examples and practice.", "lessons.html"],
+          ["Topic Study", "Review focused topic cards.", "topic-study.html"],
+          ["Flashcards", "Revise words, formulas and rules.", "flashcards.html"],
+          ["Vocabulary", "Study exam words in context.", "vocabulary-bank.html"],
+          ["Formulas", "Revise key formulas quickly.", "formula-bank.html"],
+          ["Question Review", "Study wrong-answer patterns.", "question-review.html"],
+          ["Repair Paths", "Fix weak topics step by step.", "repair-paths.html"],
+          ["Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html"]
+        ])}
+        ${homeActionGroup("Routes And Planning", "Test routes, plans and daily tasks", [
+          ["Choose Test", "Find the best route for your goal.", "choose-test.html"],
+          ["Diagnostic", "Check your current level quickly.", "diagnostic.html"],
+          ["Test Routes", "Follow connected test pathways.", "test-routes.html"],
+          ["Test Pages", "Open dedicated test pages.", "test-pages.html"],
+          ["Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html"],
+          ["Route Tasks", "Open today’s tasks by test route.", "route-tasks.html"],
+          ["Daily Plan", "Follow a practical study checklist.", "daily-plan.html"],
+          ["Timeline", "Plan preparation by admission season.", "admissions-timeline.html"]
+        ])}
+        ${homeActionGroup("Reports And Follow-Up", "Progress, parent and teacher follow-up", [
+          ["Results Report", "Review weak areas and next steps.", "results-report.html"],
+          ["Weekly Summary", "Review progress across the week.", "weekly-summary.html"],
+          ["Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html"],
+          ["Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html"],
+          ["Class Remedial Plan", "Run weak-area class recovery sessions.", "class-remedial-plan.html"],
+          ["Remedial Homework", "Complete follow-up weak-area tasks.", "remedial-homework.html"],
+          ["Homework Review", "Review remedial homework completion.", "homework-review.html"],
+          ["Student Notes", "Save topic, task and review notes.", "student-notes.html"]
+        ])}
+        ${homeActionGroup("Resources And Tools", "Notes, downloads and content tools", [
+          ["Resources", "Preview notes and purchase premium resources.", "resources.html"],
+          ["Premium Notes", "Open structured note previews.", "premium-notes.html"],
+          ["Downloads", "Open printable packs and checklists.", "download-center.html"],
+          ["Worksheets", "Use class-ready practice packs.", "worksheets.html"],
+          ["Teacher Toolkit", "Run class plans with worksheets.", "teacher-toolkit.html"],
+          ["Parent Guide", "Understand progress and next steps.", "parent-guide.html"],
+          ["Question Bank", "Track expansion targets.", "question-bank.html"],
+          ["Question Builder", "Use MCQ templates and checks.", "question-builder.html"],
+          ["Question Import", "Validate batch MCQ uploads.", "question-import.html"]
+        ])}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -334,7 +345,7 @@
         <h2>Practice Once, Use Across Tests</h2>
       </section>
       <section class="card-grid">
-        ${data.skills.map((skill) => skillCard(skill, data)).join("")}
+        ${data.skills.map((skill) => skillCard(skill, data, true)).join("")}
       </section>
     `;
   }
@@ -3328,16 +3339,35 @@
 
   function skillCard(skill, data, includeActions = false) {
     const tests = skill.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    const firstTopic = skill.topicIds?.[0] || "";
+    const topicLink = firstTopic ? `topic-study.html?topic=${firstTopic}` : `practice.html?skill=${skill.id}`;
+    const firstTest = skill.connectedTestIds?.[0] || "";
+    const mockLink = firstTest ? `mock-tests.html?test=${firstTest}` : "mock-tests.html";
     return `
       <article class="feature-card" id="${skill.id}">
         <p class="eyebrow">${escapeHTML(skill.category)}</p>
         <h2>${escapeHTML(skill.name)}</h2>
         <p>${escapeHTML(skill.description)}</p>
         <p class="connected-line">Connected tests: ${escapeHTML(tests)}</p>
-        <div class="tag-row">${skill.practiceModes.map((mode) => `<span>${escapeHTML(mode)}</span>`).join("")}</div>
-        ${includeActions ? `<div class="button-row"><a class="btn primary small" href="${url(`practice.html?skill=${skill.id}`)}">Skill Practice</a><a class="btn secondary small" href="${url("mock-tests.html")}">Skill Mock</a></div>` : ""}
+        <div class="tag-row action-tags">
+          ${skill.practiceModes.map((mode) => `<a href="${url(resolvePracticeModeLink(mode, skill, topicLink, mockLink))}">${escapeHTML(mode)}</a>`).join("")}
+        </div>
+        ${includeActions ? `<div class="button-row">
+          <a class="btn primary small" href="${url(`practice.html?skill=${skill.id}`)}">Practice This Skill</a>
+          <a class="btn secondary small" href="${url(topicLink)}">Study Topics</a>
+          <a class="btn ghost small" href="${url(mockLink)}">Open Mock</a>
+        </div>` : ""}
       </article>
     `;
+  }
+
+  function resolvePracticeModeLink(mode, skill, topicLink, mockLink) {
+    const normalized = mode.toLowerCase();
+    if (normalized.includes("mock") || normalized.includes("timed") || normalized.includes("section")) return mockLink;
+    if (normalized.includes("learn") || normalized.includes("concept") || normalized.includes("model") || normalized.includes("rubric")) return topicLink;
+    if (normalized.includes("error")) return "error-log.html";
+    if (normalized.includes("review")) return "question-review.html";
+    return `practice.html?skill=${skill.id}`;
   }
 
   function resourceCard(resource) {
@@ -3723,7 +3753,9 @@
   }
 
   function wireAccordions() {
-    document.querySelectorAll(".accordion-card").forEach((details) => {
+    document.querySelectorAll(".accordion-card, .home-action-group").forEach((details) => {
+      const icon = details.querySelector(".summary-icon");
+      if (icon) icon.textContent = details.open ? "−" : "+";
       details.addEventListener("toggle", () => {
         const icon = details.querySelector(".summary-icon");
         if (icon) icon.textContent = details.open ? "−" : "+";
@@ -3745,6 +3777,23 @@
 
   function actionCard(title, copy, href) {
     return `<a class="action-card" href="${url(href)}"><strong>${escapeHTML(title)}</strong><span>${escapeHTML(copy)}</span></a>`;
+  }
+
+  function homeActionGroup(title, subtitle, items, open = false) {
+    return `
+      <details class="home-action-group" ${open ? "open" : ""}>
+        <summary>
+          <span>
+            <strong>${escapeHTML(title)}</strong>
+            <small>${escapeHTML(subtitle)}</small>
+          </span>
+          <span class="summary-icon">+</span>
+        </summary>
+        <div class="quick-actions compact">
+          ${items.map(([label, copy, href]) => actionCard(label, copy, href)).join("")}
+        </div>
+      </details>
+    `;
   }
 
   function navLink(label, href) {
