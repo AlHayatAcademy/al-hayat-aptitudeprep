@@ -147,8 +147,16 @@
     "id": "roadmap-v25",
     "phase": "V25",
     "title": "Study Topic Pages",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add fuller topic-study cards so the practice engine Study Topic button has richer learning support.",
-    "nextActions": ["Create topic-study data", "Add topic-study page", "Connect practice engine to topic study"]
+    "nextActions": ["Use topic study links", "Add more topic cards", "Connect every high-priority topic"]
+  },
+  {
+    "id": "roadmap-v26",
+    "phase": "V26",
+    "title": "Weak Topic Repair Paths",
+    "status": "Next",
+    "focus": "Add guided repair paths that connect weak topics to study cards, practice sets, flashcards and review.",
+    "nextActions": ["Create repair-path data", "Add repair-path page", "Connect dashboard and results report"]
   }
 ]

@@ -74,6 +74,7 @@
       "chapter-maps": renderChapterMaps,
       "question-builder": renderQuestionBuilder,
       "question-import": renderQuestionImport,
+      "topic-study": renderTopicStudy,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -137,6 +138,7 @@
             ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
             ["Question Builder", "MCQ templates and checks", "question-builder.html"],
             ["Question Import", "Batch import safety checks", "question-import.html"],
+            ["Topic Study", "Focused topic explanations", "topic-study.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -195,6 +197,7 @@
           ${navLink("Chapters", "chapter-maps.html")}
           ${navLink("Builder", "question-builder.html")}
           ${navLink("Import", "question-import.html")}
+          ${navLink("Topic Study", "topic-study.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -243,6 +246,7 @@
         ${actionCard("Chapter Maps", "Follow subject chapter routes.", "chapter-maps.html")}
         ${actionCard("Question Builder", "Use MCQ templates and checks.", "question-builder.html")}
         ${actionCard("Question Import", "Validate batch MCQ uploads.", "question-import.html")}
+        ${actionCard("Topic Study", "Review focused topic cards.", "topic-study.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -675,6 +679,50 @@
       </section>
     `;
     wireSimpleCardFilter("#importCategory", "#importSearch", "[data-question-import]");
+  }
+
+  function renderTopicStudy(data) {
+    const params = new URLSearchParams(window.location.search);
+    const selectedTopic = params.get("topic");
+    const subjects = [...new Set(data.topicStudy.map((item) => {
+      const topic = data.topics.find((entry) => entry.id === item.topicId);
+      return findName(data.subjects, topic?.subjectId || "");
+    }))].filter(Boolean).sort();
+    const cards = selectedTopic
+      ? data.topicStudy.filter((item) => item.topicId === selectedTopic)
+      : data.topicStudy;
+    app.innerHTML = `
+      ${pageHero("Topic Study", "Focused Topic Support", "Review the concept, example, common trap and Urdu summary before returning to practice.")}
+      <section class="stat-grid">
+        ${statCard(data.topicStudy.length, "Study Cards")}
+        ${statCard(new Set(data.topicStudy.map((item) => item.topicId)).size, "Topics")}
+        ${statCard(new Set(subjects).size, "Subjects")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Subject
+          <select id="topicStudySubject">
+            <option value="all">All subjects</option>
+            ${subjects.map((subject) => `<option value="${escapeHTML(subject)}">${escapeHTML(subject)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="topicStudySearch" type="search" placeholder="Search percentage, vocabulary, biology...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>How This Connects To Practice</h2>
+        <p>When a learner clicks Study Topic inside the practice engine, this page can open the relevant topic card for quick concept repair.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("practice.html")}">Return To Practice</a>
+          <a class="btn secondary small" href="${url("chapter-maps.html")}">Chapter Maps</a>
+          <a class="btn ghost small" href="${url("lessons.html")}">Lessons</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${cards.map((item) => topicStudyCard(item, data)).join("") || `<div class="empty-state"><h2>No study card found</h2><p>Add this topic in <code>data/topic-study.json</code>.</p></div>`}
+      </section>
+    `;
+    wireSimpleCardFilter("#topicStudySubject", "#topicStudySearch", "[data-topic-study]");
   }
 
   function renderVocabularyBank(data) {
@@ -2240,6 +2288,34 @@
         </div>
         <div class="button-row">
           ${item.relatedLinks.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link)}">Open ${index + 1}</a>`).join("")}
+        </div>
+      </article>
+    `;
+  }
+
+  function topicStudyCard(item, data) {
+    const topic = data.topics.find((entry) => entry.id === item.topicId);
+    const subject = findName(data.subjects, topic?.subjectId || "");
+    const skill = findName(data.skills, topic?.skillId || "");
+    return `
+      <article class="feature-card lesson-card topic-study-card" data-topic-study data-category="${escapeHTML(subject)}" id="${escapeHTML(item.topicId)}">
+        <p class="eyebrow">${escapeHTML(subject)} • ${escapeHTML(skill)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.summary)}</p>
+        <div class="lesson-block">
+          <h3>Key Points</h3>
+          <ul class="clean-list">${item.keyPoints.map((point) => `<li>${escapeHTML(point)}</li>`).join("")}</ul>
+        </div>
+        <div class="lesson-block">
+          <h3>Worked Example</h3>
+          <p>${escapeHTML(item.workedExample)}</p>
+        </div>
+        <p class="danger-note"><strong>Common trap:</strong> ${escapeHTML(item.commonTrap)}</p>
+        <p class="urdu-note">${escapeHTML(item.urduSummary)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.practiceLink)}">Practise Topic</a>
+          <a class="btn secondary small" href="${url("question-review.html")}">Review Mistakes</a>
+          <a class="btn ghost small" href="${url("chapter-maps.html")}">Chapter Map</a>
         </div>
       </article>
     `;

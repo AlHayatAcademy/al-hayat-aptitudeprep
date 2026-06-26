@@ -50,7 +50,8 @@
     testPages: "test-pages.json",
     chapterMaps: "chapter-maps.json",
     questionBankBuilder: "question-bank-builder.json",
-    questionImportChecklist: "question-import-checklist.json"
+    questionImportChecklist: "question-import-checklist.json",
+    topicStudy: "topic-study.json"
   };
 
   async function loadJSON(file) {

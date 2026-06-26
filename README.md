@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 24 static website for GitHub Pages.
+Version 25 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -28,6 +28,7 @@ Version 24 static website for GitHub Pages.
 - Subject Chapter Maps page for Biology, Chemistry, Physics, Mathematics and English.
 - Question Builder page with MCQ templates, quality checks and JSON examples.
 - Question Import Checklist page for safe batch expansion of `data/questions.json`.
+- Topic Study page with focused concept cards linked from MCQ practice.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -57,6 +58,7 @@ Version 24 static website for GitHub Pages.
 - Chapter maps connect subjects, topics, lessons, resources, questions and practice.
 - Question builder supports future question-bank expansion with consistent required fields and review rules.
 - Question import workflow connects batch preparation, JSON validation, practice QA and publishing checks.
+- Practice Study Topic links now open focused topic cards with English and Urdu support.
 
 ## How To Use
 
@@ -115,5 +117,6 @@ http://localhost:8080/
 - Add subject chapter maps in `data/chapter-maps.json`.
 - Add question-builder templates in `data/question-bank-builder.json`.
 - Add question-import workflow records in `data/question-import-checklist.json`.
+- Add topic-study cards in `data/topic-study.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

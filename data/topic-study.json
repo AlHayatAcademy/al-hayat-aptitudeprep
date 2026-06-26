@@ -1,0 +1,46 @@
+[
+  {
+    "id": "study-synonyms-context",
+    "topicId": "synonyms-in-context",
+    "title": "Synonyms In Context",
+    "summary": "Context vocabulary questions test meaning inside a sentence, not dictionary memory alone.",
+    "keyPoints": ["Read the whole sentence first.", "Mark contrast, cause-effect and tone words.", "Choose the option that fits the sentence direction.", "Reject familiar meanings that do not fit the context."],
+    "workedExample": "If a sentence says, 'Although the task looked simple, it was arduous,' the contrast tells us arduous means difficult.",
+    "commonTrap": "Choosing a word you know without checking whether it fits the sentence.",
+    "urduSummary": "Context vocabulary میں لفظ کا مطلب پورے جملے کے اندر دیکھا جاتا ہے، صرف رٹا ہوا معنی کافی نہیں ہوتا۔",
+    "practiceLink": "practice.html?skill=vocabulary"
+  },
+  {
+    "id": "study-percentages",
+    "topicId": "percentages",
+    "title": "Percentages",
+    "summary": "Percentage questions compare change with the original value. The original value is the base.",
+    "keyPoints": ["Write original value first.", "Find the change.", "Use change/original x 100.", "For increase then decrease, calculate step by step."],
+    "workedExample": "If 80 becomes 100, the increase is 20. Percentage increase = 20/80 x 100 = 25%.",
+    "commonTrap": "Using the final value as the denominator when the question asks for increase from the original.",
+    "urduSummary": "Percentage میں اصل قیمت کو base بنایا جاتا ہے؛ final value کو denominator بنانے سے جواب غلط ہو جاتا ہے۔",
+    "practiceLink": "practice.html?skill=quantitative-reasoning"
+  },
+  {
+    "id": "study-main-idea",
+    "topicId": "main-idea",
+    "title": "Main Idea",
+    "summary": "Main idea questions ask for the central point, not one small detail from the passage.",
+    "keyPoints": ["Find what the whole passage is mostly about.", "Ignore options that are too narrow.", "Avoid extreme claims not supported by the passage.", "Check the writer's purpose."],
+    "workedExample": "If a passage says practice improves when connected to feedback, the main idea is that feedback makes practice more effective.",
+    "commonTrap": "Selecting a true detail instead of the central claim.",
+    "urduSummary": "Main idea میں پورے passage کا مرکزی خیال مطلوب ہوتا ہے، کوئی چھوٹی detail نہیں۔",
+    "practiceLink": "practice.html?skill=reading-comprehension"
+  },
+  {
+    "id": "study-cell-biology",
+    "topicId": "cell-biology",
+    "title": "Cell Biology",
+    "summary": "Cell biology questions usually test organelle functions and basic cell structure.",
+    "keyPoints": ["Learn organelles by function first.", "Connect mitochondria with ATP.", "Connect ribosomes with protein synthesis.", "Compare prokaryotic and eukaryotic cells."],
+    "workedExample": "If a question asks for the powerhouse of the cell, the answer is mitochondrion because mitochondria produce ATP.",
+    "commonTrap": "Memorising organelle names without remembering their functions.",
+    "urduSummary": "Cell Biology میں organelles کے نام کے ساتھ ان کا کام یاد رکھنا ضروری ہے۔",
+    "practiceLink": "practice.html?subject=biology"
+  }
+]

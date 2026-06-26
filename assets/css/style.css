@@ -660,6 +660,10 @@ main {
   border-top: 4px solid var(--teal);
 }
 
+.topic-study-card {
+  border-top: 4px solid var(--blue);
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

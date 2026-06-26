@@ -139,7 +139,6 @@
         ? `<p class="hint">${selected === undefined ? "Select one option, then click Attempt." : "Option selected. Click Attempt to check."}</p>`
         : `<p class="${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct." : "Not correct."}</p>`;
       const answerText = question.options[question.answerIndex];
-      const topicDescription = topicRecord?.description || "Review the connected topic, then return to practice.";
       return `
         <article class="question-card" id="practice-${question.id}">
           <div class="meta-row">
@@ -156,7 +155,7 @@
             <button class="btn ghost small" data-toggle-panel="explanation-${question.id}" type="button" ${attempted ? "" : "disabled"}>Explanation</button>
             <button class="btn ghost small" data-toggle-panel="urdu-${question.id}" type="button" ${attempted ? "" : "disabled"}>اردو وضاحت</button>
             <button class="btn ghost small" data-next-question="practice-${nextQuestion?.id || question.id}" type="button" ${nextQuestion ? "" : "disabled"}>Next Question</button>
-            <button class="btn ghost small" data-toggle-panel="topic-${question.id}" type="button">Study Topic</button>
+            <a class="btn ghost small" href="${rootUrl(`topic-study.html?topic=${question.topicId}`)}">Study Topic</a>
           </div>
           <div id="answer-${question.id}" class="practice-panel answer-panel" hidden>
             <strong>Answer:</strong> ${escapeHTML(answerText)}
@@ -165,14 +164,6 @@
             <strong>Explanation:</strong> ${escapeHTML(question.explanation)}
           </div>
           <div id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</div>
-          <div id="topic-${question.id}" class="practice-panel topic-panel" hidden>
-            <strong>${escapeHTML(topic)}</strong>
-            <p>${escapeHTML(topicDescription)}</p>
-            <div class="button-row">
-              <a class="btn secondary small" href="${rootUrl(`lessons.html`)}">Open Lessons</a>
-              <a class="btn ghost small" href="${rootUrl(`question-review.html`)}">Question Review</a>
-            </div>
-          </div>
         </article>
       `;
     }
