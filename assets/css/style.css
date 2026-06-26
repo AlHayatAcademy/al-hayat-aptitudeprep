@@ -687,6 +687,15 @@ main {
   margin-top: 0.75rem;
 }
 
+.revision-queue-card {
+  border-top: 4px solid var(--teal);
+}
+
+.revision-queue-card.done {
+  border-color: #9fd9b2;
+  background: #f4fbf6;
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

@@ -187,8 +187,16 @@
     "id": "roadmap-v30",
     "phase": "V30",
     "title": "Revision Queue",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a revision queue that collects weak topics, notes, flashcards and repair paths into one review list.",
-    "nextActions": ["Create revision queue page", "Connect notes and weak topics", "Add local queue status"]
+    "nextActions": ["Use revision queue", "Mark reviewed items", "Add deeper queue rules"]
+  },
+  {
+    "id": "roadmap-v31",
+    "phase": "V31",
+    "title": "Weekly Progress Summary",
+    "status": "Next",
+    "focus": "Add a weekly summary that combines practice attempts, mocks, notes, route tasks and revision queue progress.",
+    "nextActions": ["Create weekly summary page", "Read local progress signals", "Connect dashboard"]
   }
 ]

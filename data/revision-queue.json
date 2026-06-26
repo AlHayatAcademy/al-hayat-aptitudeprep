@@ -1,0 +1,23 @@
+[
+  {
+    "id": "queue-rule-repair",
+    "category": "Repair Paths",
+    "title": "Review Weak Topic Repair Paths",
+    "purpose": "Prioritise repair paths when a topic repeatedly appears weak in practice or review.",
+    "sources": ["data/repair-paths.json", "results-report.html", "practice.html"]
+  },
+  {
+    "id": "queue-rule-flashcards",
+    "category": "Flashcards",
+    "title": "Review Unmastered Flashcards",
+    "purpose": "Keep unmastered flashcards in the queue until the learner marks them mastered.",
+    "sources": ["data/flashcards.json", "flashcards.html"]
+  },
+  {
+    "id": "queue-rule-notes",
+    "category": "Student Notes",
+    "title": "Review Recent Student Notes",
+    "purpose": "Bring recent browser-saved notes into revision so corrections are not forgotten.",
+    "sources": ["student-notes.html", "localStorage"]
+  }
+]

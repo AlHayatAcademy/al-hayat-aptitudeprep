@@ -85,7 +85,8 @@
       ...(data.topicStudy || []).map((item) => record("Topic Study", item.title, `${item.summary} ${item.keyPoints.join(" ")} ${item.workedExample} ${item.commonTrap} ${item.urduSummary}`, `topic-study.html?topic=${item.topicId}`)),
       ...(data.repairPaths || []).map((item) => record("Repair Path", item.title, `${item.trigger} ${item.steps.join(" ")} ${item.topicId} ${item.skillId}`, `repair-paths.html#${item.id}`)),
       ...(data.routeTasks || []).map((item) => record("Route Task", item.title, `${item.dayLabel} ${item.goal} ${item.routeId} ${item.tasks.map((task) => `${task.time} ${task.action}`).join(" ")} ${item.completionChecks.join(" ")} ${item.coachNote}`, `route-tasks.html#${item.id}`)),
-      ...(data.notePrompts || []).map((item) => record("Student Note Prompt", item.title, `${item.context} ${item.prompt}`, "student-notes.html"))
+      ...(data.notePrompts || []).map((item) => record("Student Note Prompt", item.title, `${item.context} ${item.prompt}`, "student-notes.html")),
+      ...(data.revisionQueue || []).map((item) => record("Revision Queue", item.title, `${item.category} ${item.purpose} ${item.sources.join(" ")}`, "revision-queue.html"))
     ];
   }
 

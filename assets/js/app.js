@@ -78,6 +78,7 @@
       "repair-paths": renderRepairPaths,
       "route-tasks": renderRouteTasks,
       "student-notes": renderStudentNotes,
+      "revision-queue": renderRevisionQueue,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -98,6 +99,7 @@
     wireDailyChecklist();
     wireRouteTaskTracker();
     wireStudentNotes();
+    wireRevisionQueue();
   }
 
   function headerHTML() {
@@ -147,6 +149,7 @@
             ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
             ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
             ["Student Notes", "Save topic and review notes", "student-notes.html"],
+            ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -209,6 +212,7 @@
           ${navLink("Repair", "repair-paths.html")}
           ${navLink("Route Tasks", "route-tasks.html")}
           ${navLink("Notes", "student-notes.html")}
+          ${navLink("Revision", "revision-queue.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -261,6 +265,7 @@
         ${actionCard("Repair Paths", "Fix weak topics step by step.", "repair-paths.html")}
         ${actionCard("Route Tasks", "Open today’s tasks by test route.", "route-tasks.html")}
         ${actionCard("Student Notes", "Save topic, task and review notes.", "student-notes.html")}
+        ${actionCard("Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -885,6 +890,49 @@
     wireSimpleCardFilter("#notePromptCategory", "#notePromptSearch", "[data-note-prompt]");
   }
 
+  function renderRevisionQueue(data) {
+    const notes = readJSON("ah-student-notes", []);
+    const mastered = readJSON("ah-flashcard-mastered", {});
+    const queueStatus = readJSON("ah-revision-queue-status", {});
+    const queue = buildRevisionQueue(data, notes, mastered);
+    const doneCount = queue.filter((item) => queueStatus[item.id]).length;
+    const categories = [...new Set(queue.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Revision Queue", "One Review List", "Collect weak topics, repair paths, saved notes, flashcards and wrong-answer reviews into one focused revision list.")}
+      <section class="stat-grid">
+        ${statCard(queue.length, "Queue Items")}
+        ${statCard(doneCount, "Completed")}
+        ${statCard(queue.length - doneCount, "Remaining")}
+        ${statCard(notes.length, "Saved Notes")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="revisionCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="revisionSearch" type="search" placeholder="Search vocabulary, note, flashcard, review...">
+        </label>
+        <button class="btn ghost small" type="button" id="resetRevisionQueue">Reset Queue Status</button>
+      </section>
+      <section class="content-band">
+        <h2>How To Use The Queue</h2>
+        <p>Start with repair paths and wrong-answer reviews, then revise flashcards and saved notes. Mark each item complete only after you can explain the correction without looking.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("repair-paths.html")}">Repair Paths</a>
+          <a class="btn secondary small" href="${url("student-notes.html")}">Student Notes</a>
+          <a class="btn ghost small" href="${url("flashcards.html")}">Flashcards</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${queue.map((item) => revisionQueueCard(item, queueStatus)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#revisionCategory", "#revisionSearch", "[data-revision-item]");
+  }
+
   function renderVocabularyBank(data) {
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
     app.innerHTML = `
@@ -1353,6 +1401,7 @@
     const errors = readJSON("ah-error-log", []);
     const routeTaskStatus = readJSON("ah-route-task-status", {});
     const notes = readJSON("ah-student-notes", []);
+    const revisionStatus = readJSON("ah-revision-queue-status", {});
     const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
     const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
     const selectedRouteTasks = data.routeTasks.filter((item) => item.routeId === selectedRoute?.id);
@@ -1360,6 +1409,8 @@
     const selectedRouteTaskDone = selectedRouteTasks.reduce((sum, item) => {
       return sum + item.tasks.filter((task, index) => routeTaskStatus[`${item.id}-${index}`]).length;
     }, 0);
+    const revisionQueue = buildRevisionQueue(data, notes, mastered);
+    const revisionDone = revisionQueue.filter((item) => revisionStatus[item.id]).length;
     const practiceTotals = Object.values(practice).reduce((totals, item) => {
       totals.attempts += item.attempts || 0;
       totals.correct += item.correct || 0;
@@ -1391,6 +1442,7 @@
         ${statCard(errors.length, "Logged Mistakes")}
         ${statCard(`${selectedRouteTaskDone}/${selectedRouteTaskTotal}`, "Route Tasks")}
         ${statCard(notes.length, "Student Notes")}
+        ${statCard(`${revisionDone}/${revisionQueue.length}`, "Revision Queue")}
       </section>
       <section class="toolbar-panel">
         <label>My Route
@@ -1425,6 +1477,7 @@
           ${reportSignal("Latest Mock", latestMock ? `${latestMock.title}: ${mockAccuracy}%` : "No mock attempt yet.")}
           ${reportSignal("Route Task Progress", selectedRouteTaskTotal ? `${selectedRouteTaskDone} of ${selectedRouteTaskTotal} daily tasks completed.` : "No route tasks available yet.")}
           ${reportSignal("Saved Notes", notes.length ? `${notes.length} notes saved in this browser.` : "No student notes saved yet.")}
+          ${reportSignal("Revision Queue", revisionQueue.length ? `${revisionDone} of ${revisionQueue.length} queue items reviewed.` : "No queue items available yet.")}
         </aside>
       </section>
       <section class="card-grid">
@@ -1450,6 +1503,7 @@
           <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
           <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
           <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
+          <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2413,6 +2467,61 @@
     `;
   }
 
+  function buildRevisionQueue(data, notes, mastered) {
+    const repairItems = data.repairPaths.map((item) => ({
+      id: `repair-${item.id}`,
+      category: "Repair Path",
+      title: item.title,
+      detail: item.trigger,
+      meta: findName(data.topics, item.topicId),
+      href: `repair-paths.html#${item.id}`
+    }));
+    const reviewItems = data.questionReview.map((item) => ({
+      id: `review-${item.id}`,
+      category: "Question Review",
+      title: item.title,
+      detail: item.wrongAnswerPattern,
+      meta: findName(data.skills, item.skillId),
+      href: `question-review.html#${item.id}`
+    }));
+    const flashcardItems = data.flashcards
+      .filter((item) => !mastered[item.id])
+      .map((item) => ({
+        id: `flash-${item.id}`,
+        category: "Flashcard",
+        title: item.front,
+        detail: item.back,
+        meta: `${item.category} • ${item.level}`,
+        href: "flashcards.html"
+      }));
+    const noteItems = notes.slice(0, 6).map((item) => ({
+      id: `note-${item.id}`,
+      category: "Student Note",
+      title: item.title,
+      detail: item.body,
+      meta: `${item.context} • ${item.targetId || "general"}`,
+      href: "student-notes.html"
+    }));
+    return [...repairItems, ...reviewItems, ...flashcardItems, ...noteItems];
+  }
+
+  function revisionQueueCard(item, status = {}) {
+    return `
+      <article class="feature-card lesson-card revision-queue-card ${status[item.id] ? "done" : ""}" data-revision-item data-category="${escapeHTML(item.category)}" data-revision-card="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.meta)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.detail)}</p>
+        <label class="mastery-check">
+          <input type="checkbox" data-revision-check="${escapeHTML(item.id)}" ${status[item.id] ? "checked" : ""}>
+          <span>Mark reviewed</span>
+        </label>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.href)}">Open Source</a>
+        </div>
+      </article>
+    `;
+  }
+
   function testPageCard(item, data) {
     const test = data.tests.find((entry) => entry.id === item.testId);
     const groupName = findName(data.groups, test?.groupId || "");
@@ -2817,6 +2926,31 @@
     clear?.addEventListener("click", () => {
       localStorage.removeItem(key);
       render();
+    });
+  }
+
+  function wireRevisionQueue() {
+    const controls = document.querySelectorAll("[data-revision-check]");
+    if (!controls.length) return;
+    const key = "ah-revision-queue-status";
+    const read = () => readJSON(key, {});
+    const write = (value) => localStorage.setItem(key, JSON.stringify(value));
+    controls.forEach((control) => {
+      control.addEventListener("change", () => {
+        const current = read();
+        current[control.dataset.revisionCheck] = control.checked;
+        write(current);
+        const card = document.querySelector(`[data-revision-card="${control.dataset.revisionCheck}"]`);
+        if (card) card.classList.toggle("done", control.checked);
+      });
+    });
+    document.querySelector("#resetRevisionQueue")?.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      controls.forEach((control) => {
+        control.checked = false;
+        const card = document.querySelector(`[data-revision-card="${control.dataset.revisionCheck}"]`);
+        if (card) card.classList.remove("done");
+      });
     });
   }
 

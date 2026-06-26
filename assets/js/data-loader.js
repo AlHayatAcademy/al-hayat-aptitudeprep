@@ -54,7 +54,8 @@
     topicStudy: "topic-study.json",
     repairPaths: "repair-paths.json",
     routeTasks: "route-tasks.json",
-    notePrompts: "note-prompts.json"
+    notePrompts: "note-prompts.json",
+    revisionQueue: "revision-queue.json"
   };
 
   async function loadJSON(file) {

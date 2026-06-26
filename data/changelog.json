@@ -1,5 +1,10 @@
 [
   {
+    "version": "V30",
+    "date": "2026-06-26",
+    "summary": "Added revision queue with local review status, combining repair paths, question reviews, unmastered flashcards and saved notes."
+  },
+  {
     "version": "V29",
     "date": "2026-06-26",
     "summary": "Added browser-saved student notes connected to topic study, route tasks, repair paths, question review and dashboard signals."
