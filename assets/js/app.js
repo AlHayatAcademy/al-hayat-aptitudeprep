@@ -47,6 +47,9 @@
       strategies: renderStrategies,
       mistakes: renderMistakes,
       "daily-plan": renderDailyPlan,
+      worksheets: renderWorksheets,
+      assignments: renderAssignments,
+      "score-guide": renderScoreGuide,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -98,6 +101,9 @@
             ["Strategies", "How to solve smarter", "strategies.html"],
             ["Daily Plan", "Today’s study checklist", "daily-plan.html"],
             ["Common Mistakes", "Avoid repeated errors", "mistakes.html"],
+            ["Worksheets", "Printable-style practice", "worksheets.html"],
+            ["Assignments", "Classwork and homework packs", "assignments.html"],
+            ["Score Guide", "Understand mock scores", "score-guide.html"],
             ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
@@ -125,6 +131,7 @@
           ${navLink("FAQ", "faq.html")}
           ${navLink("Glossary", "glossary.html")}
           ${navLink("Daily Plan", "daily-plan.html")}
+          ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -158,6 +165,7 @@
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
+        ${actionCard("Worksheets", "Use class-ready practice packs.", "worksheets.html")}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -413,6 +421,54 @@
         <div class="button-row">
           <button class="btn ghost" id="resetDailyChecklist" type="button">Reset Today</button>
           <a class="btn primary" href="${url("progress.html")}">View Progress</a>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderWorksheets(data) {
+    const categories = [...new Set(data.worksheets.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Worksheets", "Class-Ready Worksheet Previews", "Use worksheet cards for focused classroom practice, homework or printable PDF planning.")}
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="worksheetCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="worksheetSearch" type="search" placeholder="Search worksheet, skill, test...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.worksheets.map((item) => worksheetCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#worksheetCategory", "#worksheetSearch", "[data-worksheet-card]");
+  }
+
+  function renderAssignments(data) {
+    app.innerHTML = `
+      ${pageHero("Assignments", "Classwork And Homework Packs", "Give students clear weekly tasks, submission mode and teacher-checking focus.")}
+      <section class="card-grid">
+        ${data.assignments.map((item) => assignmentCard(item, data)).join("")}
+      </section>
+    `;
+  }
+
+  function renderScoreGuide(data) {
+    app.innerHTML = `
+      ${pageHero("Score Guide", "Understand Mock Scores And Next Steps", "Use score bands to decide whether a student needs concept rebuilding, mixed practice or full mock simulation.")}
+      <section class="card-grid">
+        ${data.scoreBands.map((item) => scoreBandCard(item)).join("")}
+      </section>
+      <section class="content-band">
+        <h2>How to use score bands</h2>
+        <p>Do not judge only by percentage. Also check timing, repeated mistakes, topic weakness and confidence during mock review.</p>
+        <div class="button-row">
+          <a class="btn primary" href="${url("mock-tests.html")}">Attempt Mock</a>
+          <a class="btn secondary" href="${url("mistakes.html")}">Review Mistakes</a>
         </div>
       </section>
     `;
@@ -757,6 +813,49 @@
         </label>
         <p>${escapeHTML(item.task)}</p>
         <a class="text-link" href="${url(item.link)}">Open task</a>
+      </article>
+    `;
+  }
+
+  function worksheetCard(item, data) {
+    const skills = item.linkedSkillIds.map((id) => findName(data.skills, id)).join(", ");
+    const tests = item.linkedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    return `
+      <article class="feature-card" data-worksheet-card data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.level)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p class="connected-line">${item.estimatedMinutes} minutes • ${escapeHTML(item.status)}</p>
+        <ul class="clean-list">${item.preview.map((point) => `<li>${escapeHTML(point)}</li>`).join("")}</ul>
+        <p>Skills: ${escapeHTML(skills)}</p>
+        <p>Tests: ${escapeHTML(tests)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("practice.html")}">Practise Online</a>
+          <a class="btn ghost small" href="${url("contact.html")}">Request Printable</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function assignmentCard(item, data) {
+    const test = findName(data.tests, item.targetTestId);
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(test)} • ${escapeHTML(item.duration)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <ol class="clean-list">${item.tasks.map((task) => `<li>${escapeHTML(task)}</li>`).join("")}</ol>
+        <p class="connected-line">Submission: ${escapeHTML(item.submissionMode)}</p>
+        <p>Teacher note: ${escapeHTML(item.teacherNote)}</p>
+      </article>
+    `;
+  }
+
+  function scoreBandCard(item) {
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(item.range)}</p>
+        <h2>${escapeHTML(item.label)}</h2>
+        <p>${escapeHTML(item.meaning)}</p>
+        <p class="connected-line">Next step: ${escapeHTML(item.nextStep)}</p>
       </article>
     `;
   }

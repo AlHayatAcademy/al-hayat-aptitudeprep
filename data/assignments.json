@@ -1,0 +1,47 @@
+[
+  {
+    "id": "assignment-mdcat-week-1",
+    "title": "MDCAT Week 1 Assignment",
+    "targetTestId": "mdcat",
+    "duration": "7 days",
+    "tasks": ["Complete Biology cell worksheet.", "Practise 50 vocabulary items.", "Attempt MDCAT Mini Mock.", "Review all wrong answers by topic."],
+    "submissionMode": "WhatsApp photo or PDF",
+    "teacherNote": "Check whether the student is weak in concept recall or time pressure."
+  },
+  {
+    "id": "assignment-fast-quant-1",
+    "title": "FAST Quant Speed Assignment",
+    "targetTestId": "fast-nuces",
+    "duration": "5 days",
+    "tasks": ["Solve percentages and ratios worksheet.", "Attempt one analytical arrangement set daily.", "Complete FAST Quant Section Mock.", "Write top 5 repeated mistakes."],
+    "submissionMode": "WhatsApp score screenshot",
+    "teacherNote": "Observe speed, careless errors and algebraic translation."
+  },
+  {
+    "id": "assignment-nat-mixed-1",
+    "title": "NAT Mixed Aptitude Assignment",
+    "targetTestId": "nat",
+    "duration": "7 days",
+    "tasks": ["Practise vocabulary in context.", "Solve one quantitative set.", "Solve one analytical set.", "Attempt NAT Mixed Aptitude Mock."],
+    "submissionMode": "Checklist plus mock score",
+    "teacherNote": "Use this to identify the student’s strongest and weakest aptitude section."
+  },
+  {
+    "id": "assignment-lat-writing-1",
+    "title": "LAT Essay and Reasoning Assignment",
+    "targetTestId": "lat",
+    "duration": "5 days",
+    "tasks": ["Write two essay outlines.", "Practise logical assumption questions.", "Revise Pakistan studies facts.", "Attempt LAT sample mock."],
+    "submissionMode": "Typed outline or notebook photo",
+    "teacherNote": "Check clarity of thesis, relevance of examples and reasoning accuracy."
+  },
+  {
+    "id": "assignment-ielts-writing-1",
+    "title": "IELTS Writing Improvement Assignment",
+    "targetTestId": "ielts",
+    "duration": "7 days",
+    "tasks": ["Complete writing outline worksheet.", "Write one Task 2 response.", "Practise reading main idea questions.", "Review grammar accuracy errors."],
+    "submissionMode": "Typed response",
+    "teacherNote": "Assess task response, coherence, grammar control and vocabulary range."
+  }
+]

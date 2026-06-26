@@ -1,0 +1,30 @@
+[
+  {
+    "id": "band-starter",
+    "label": "Starter",
+    "range": "0-40%",
+    "meaning": "The student needs concept rebuilding and guided practice before heavy mock testing.",
+    "nextStep": "Use topic worksheets, daily checklist and short untimed practice."
+  },
+  {
+    "id": "band-building",
+    "label": "Building",
+    "range": "41-60%",
+    "meaning": "The student understands some areas but loses marks through gaps, weak timing or inconsistent method.",
+    "nextStep": "Use mixed practice, common mistake review and section mocks."
+  },
+  {
+    "id": "band-competitive",
+    "label": "Competitive",
+    "range": "61-80%",
+    "meaning": "The student has a workable base and should now improve speed, accuracy and weak-topic recovery.",
+    "nextStep": "Use timed mocks, error logs and weekly revision cycles."
+  },
+  {
+    "id": "band-advanced",
+    "label": "Advanced",
+    "range": "81-100%",
+    "meaning": "The student is strong but still needs exam temperament, precision and full-length simulation.",
+    "nextStep": "Use full mocks, difficult mixed sets and final revision sheets."
+  }
+]

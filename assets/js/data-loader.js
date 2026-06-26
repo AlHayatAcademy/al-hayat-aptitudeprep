@@ -23,7 +23,10 @@
     decisionGuide: "decision-guide.json",
     strategies: "strategies.json",
     commonMistakes: "common-mistakes.json",
-    dailyChecklist: "daily-checklist.json"
+    dailyChecklist: "daily-checklist.json",
+    worksheets: "worksheets.json",
+    assignments: "assignments.json",
+    scoreBands: "score-bands.json"
   };
 
   async function loadJSON(file) {

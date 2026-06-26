@@ -1,0 +1,68 @@
+[
+  {
+    "id": "worksheet-vocab-context",
+    "title": "Vocabulary in Context Worksheet",
+    "category": "Verbal",
+    "level": "Foundation",
+    "linkedSkillIds": ["vocabulary", "sentence-completion"],
+    "linkedTestIds": ["mdcat", "nat", "gat-general", "sat"],
+    "estimatedMinutes": 25,
+    "preview": ["10 synonym-in-context items", "5 antonym items", "Short Urdu explanation space"],
+    "status": "Preview Ready"
+  },
+  {
+    "id": "worksheet-grammar-errors",
+    "title": "Grammar Error Correction Worksheet",
+    "category": "Verbal",
+    "level": "Foundation",
+    "linkedSkillIds": ["grammar"],
+    "linkedTestIds": ["mdcat", "nat", "usat", "sat", "lat"],
+    "estimatedMinutes": 20,
+    "preview": ["Subject-verb agreement", "Tense consistency", "Sentence correction practice"],
+    "status": "Preview Ready"
+  },
+  {
+    "id": "worksheet-percentages-ratios",
+    "title": "Percentages and Ratios Worksheet",
+    "category": "Quantitative",
+    "level": "Foundation",
+    "linkedSkillIds": ["quantitative-reasoning"],
+    "linkedTestIds": ["fast-nuces", "nust-net", "ecat", "nat", "gat-general"],
+    "estimatedMinutes": 30,
+    "preview": ["Percentage increase/decrease", "Ratio sharing", "Short timed drill"],
+    "status": "Preview Ready"
+  },
+  {
+    "id": "worksheet-analytical-arrangements",
+    "title": "Analytical Arrangements Worksheet",
+    "category": "Reasoning",
+    "level": "Intermediate",
+    "linkedSkillIds": ["analytical-reasoning"],
+    "linkedTestIds": ["fast-nuces", "nust-net", "gat-general", "hat", "lsat"],
+    "estimatedMinutes": 35,
+    "preview": ["Linear arrangement", "Grouping condition", "Diagram practice box"],
+    "status": "Preview Ready"
+  },
+  {
+    "id": "worksheet-mdcat-science",
+    "title": "MDCAT Science Quick Revision Worksheet",
+    "category": "Science",
+    "level": "Foundation",
+    "linkedSkillIds": ["science-concepts"],
+    "linkedTestIds": ["mdcat", "nmdcat", "nums-mdcat"],
+    "estimatedMinutes": 30,
+    "preview": ["Cell biology MCQs", "Atomic structure MCQs", "Kinematics numericals"],
+    "status": "Preview Ready"
+  },
+  {
+    "id": "worksheet-ielts-writing",
+    "title": "IELTS Writing Outline Worksheet",
+    "category": "Writing",
+    "level": "Intermediate",
+    "linkedSkillIds": ["writing"],
+    "linkedTestIds": ["ielts", "toefl", "pte"],
+    "estimatedMinutes": 25,
+    "preview": ["Thesis line", "Two body paragraph plan", "Conclusion checklist"],
+    "status": "Preview Ready"
+  }
+]

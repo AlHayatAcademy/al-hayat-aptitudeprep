@@ -54,7 +54,10 @@
       ...(data.decisionGuide || []).map((item) => record("Decision Guide", item.question, `${item.recommendation} ${item.testIds.join(" ")}`, "choose-test.html")),
       ...(data.strategies || []).map((item) => record("Strategy", item.title, `${item.category} ${item.quickTip} ${item.steps.join(" ")}`, "strategies.html")),
       ...(data.commonMistakes || []).map((item) => record("Common Mistake", item.title, `${item.category} ${item.problem} ${item.fix}`, "mistakes.html")),
-      ...(data.dailyChecklist || []).map((item) => record("Daily Checklist", item.title, `${item.category} ${item.task}`, "daily-plan.html"))
+      ...(data.dailyChecklist || []).map((item) => record("Daily Checklist", item.title, `${item.category} ${item.task}`, "daily-plan.html")),
+      ...(data.worksheets || []).map((item) => record("Worksheet", item.title, `${item.category} ${item.level} ${item.preview.join(" ")}`, "worksheets.html")),
+      ...(data.assignments || []).map((item) => record("Assignment", item.title, `${item.duration} ${item.tasks.join(" ")} ${item.teacherNote}`, "assignments.html")),
+      ...(data.scoreBands || []).map((item) => record("Score Band", item.label, `${item.range} ${item.meaning} ${item.nextStep}`, "score-guide.html"))
     ];
   }
 
