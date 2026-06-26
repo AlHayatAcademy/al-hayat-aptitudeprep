@@ -53,7 +53,8 @@
     questionImportChecklist: "question-import-checklist.json",
     topicStudy: "topic-study.json",
     repairPaths: "repair-paths.json",
-    routeTasks: "route-tasks.json"
+    routeTasks: "route-tasks.json",
+    notePrompts: "note-prompts.json"
   };
 
   async function loadJSON(file) {

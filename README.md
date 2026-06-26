@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 28 static website for GitHub Pages.
+Version 29 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -32,6 +32,7 @@ Version 28 static website for GitHub Pages.
 - Weak Topic Repair Paths page connecting weak topics to study cards, practice, flashcards/formulas and review.
 - Route Tasks page with daily task flows by selected test route.
 - Browser-saved completion tracking for route tasks.
+- Student Notes page with browser-saved notes for topics, route tasks and mistake review.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -65,6 +66,7 @@ Version 28 static website for GitHub Pages.
 - Repair paths connect weak-topic signals to study topic cards, practice drills, revision tools and question review.
 - Route tasks connect the selected route to daily study, practice, review, mock and resource actions.
 - Dashboard now shows selected-route task completion progress.
+- Student notes connect topic study, route tasks, repair paths, review and dashboard signals.
 
 ## How To Use
 
@@ -126,5 +128,6 @@ http://localhost:8080/
 - Add topic-study cards in `data/topic-study.json`.
 - Add weak-topic repair paths in `data/repair-paths.json`.
 - Add route-based daily task flows in `data/route-tasks.json`.
+- Add student note prompts in `data/note-prompts.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

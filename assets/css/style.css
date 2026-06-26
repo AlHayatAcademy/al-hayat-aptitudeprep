@@ -677,6 +677,16 @@ main {
   background: #f4fbf6;
 }
 
+.student-note-card {
+  border-top: 4px solid var(--gold);
+}
+
+.note-prompt-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

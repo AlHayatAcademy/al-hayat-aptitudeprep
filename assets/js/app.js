@@ -77,6 +77,7 @@
       "topic-study": renderTopicStudy,
       "repair-paths": renderRepairPaths,
       "route-tasks": renderRouteTasks,
+      "student-notes": renderStudentNotes,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -96,6 +97,7 @@
     wireShareTools();
     wireDailyChecklist();
     wireRouteTaskTracker();
+    wireStudentNotes();
   }
 
   function headerHTML() {
@@ -144,6 +146,7 @@
             ["Topic Study", "Focused topic explanations", "topic-study.html"],
             ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
             ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
+            ["Student Notes", "Save topic and review notes", "student-notes.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -205,6 +208,7 @@
           ${navLink("Topic Study", "topic-study.html")}
           ${navLink("Repair", "repair-paths.html")}
           ${navLink("Route Tasks", "route-tasks.html")}
+          ${navLink("Notes", "student-notes.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -256,6 +260,7 @@
         ${actionCard("Topic Study", "Review focused topic cards.", "topic-study.html")}
         ${actionCard("Repair Paths", "Fix weak topics step by step.", "repair-paths.html")}
         ${actionCard("Route Tasks", "Open today’s tasks by test route.", "route-tasks.html")}
+        ${actionCard("Student Notes", "Save topic, task and review notes.", "student-notes.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -725,6 +730,7 @@
           <a class="btn primary small" href="${url("practice.html")}">Return To Practice</a>
           <a class="btn secondary small" href="${url("chapter-maps.html")}">Chapter Maps</a>
           <a class="btn ghost small" href="${url("lessons.html")}">Lessons</a>
+          <a class="btn ghost small" href="${url(`student-notes.html?context=topic${selectedTopic ? `&target=${selectedTopic}` : ""}`)}">Student Notes</a>
         </div>
       </section>
       <section class="card-grid lesson-grid">
@@ -804,6 +810,7 @@
           <a class="btn primary small" href="${url("dashboard.html")}">Dashboard</a>
           <a class="btn secondary small" href="${url("study-plans.html")}">Study Plans</a>
           <a class="btn ghost small" href="${url("test-routes.html")}">Route Details</a>
+          <a class="btn ghost small" href="${url(`student-notes.html?context=route-task&target=${visibleTasks[0]?.id || ""}`)}">Student Notes</a>
           <button class="btn ghost small" type="button" id="resetRouteTasks">Reset Route Tasks</button>
         </div>
       </section>
@@ -817,6 +824,65 @@
       renderRouteTasks(data);
       wireAccordions();
     });
+  }
+
+  function renderStudentNotes(data) {
+    const notes = readJSON("ah-student-notes", []);
+    const params = new URLSearchParams(window.location.search);
+    const requestedContext = params.get("context") || "topic";
+    const requestedTarget = params.get("target") || "";
+    const promptCategories = [...new Set(data.notePrompts.map((item) => item.context))].sort();
+    app.innerHTML = `
+      ${pageHero("Student Notes", "Saved Study Notes", "Write short notes for topics, route tasks and mistake review. Notes are saved in this browser for quick revision.")}
+      <section class="stat-grid">
+        ${statCard(notes.length, "Saved Notes")}
+        ${statCard(new Set(notes.map((item) => item.context)).size || 0, "Contexts")}
+        ${statCard(data.notePrompts.length, "Note Prompts")}
+      </section>
+      <section class="split-layout">
+        <form class="form-shell" id="studentNoteForm">
+          <h2>Add Note</h2>
+          <label>Context
+            <select name="context">
+              ${["topic", "route-task", "question-review", "general"].map((context) => `<option value="${context}" ${context === requestedContext ? "selected" : ""}>${escapeHTML(context)}</option>`).join("")}
+            </select>
+          </label>
+          <label>Linked Item
+            <input name="targetId" value="${escapeHTML(requestedTarget)}" placeholder="Example: percentages, task-medical-day-1">
+          </label>
+          <label>Note Title
+            <input name="title" required placeholder="Example: My percentage mistake">
+          </label>
+          <label>Note
+            <textarea name="body" rows="6" required placeholder="Write the concept, mistake, correction or next action."></textarea>
+          </label>
+          <button class="btn primary" type="submit">Save Note</button>
+        </form>
+        <aside class="side-panel">
+          <h2>Useful Prompts</h2>
+          <label>Prompt Type
+            <select id="notePromptCategory">
+              <option value="all">All prompts</option>
+              ${promptCategories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+            </select>
+          </label>
+          <input id="notePromptSearch" type="search" value="" hidden>
+          <div class="note-prompt-list">
+            ${data.notePrompts.map((item) => notePromptCard(item)).join("")}
+          </div>
+        </aside>
+      </section>
+      <section class="toolbar-panel">
+        <label class="search-field">Saved Notes Search
+          <input id="noteSearch" type="search" placeholder="Search topic, route, mistake, correction...">
+        </label>
+        <button class="btn ghost small" type="button" id="clearStudentNotes">Clear All Notes</button>
+      </section>
+      <section class="card-grid" id="studentNotesList">
+        ${notes.map((item) => studentNoteCard(item)).join("") || `<div class="empty-state"><h2>No notes yet</h2><p>Add your first topic, task or review note above.</p></div>`}
+      </section>
+    `;
+    wireSimpleCardFilter("#notePromptCategory", "#notePromptSearch", "[data-note-prompt]");
   }
 
   function renderVocabularyBank(data) {
@@ -1233,6 +1299,7 @@
         <div class="button-row">
           <a class="btn primary small" href="${url("error-log.html")}">Open Error Log</a>
           <a class="btn secondary small" href="${url("results-report.html")}">Open Results Report</a>
+          <a class="btn ghost small" href="${url("student-notes.html?context=question-review")}">Student Notes</a>
         </div>
       </section>
       <section class="card-grid">
@@ -1285,6 +1352,7 @@
     const mastered = readJSON("ah-flashcard-mastered", {});
     const errors = readJSON("ah-error-log", []);
     const routeTaskStatus = readJSON("ah-route-task-status", {});
+    const notes = readJSON("ah-student-notes", []);
     const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
     const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
     const selectedRouteTasks = data.routeTasks.filter((item) => item.routeId === selectedRoute?.id);
@@ -1322,6 +1390,7 @@
         ${statCard(masteredCount, "Flashcards Mastered")}
         ${statCard(errors.length, "Logged Mistakes")}
         ${statCard(`${selectedRouteTaskDone}/${selectedRouteTaskTotal}`, "Route Tasks")}
+        ${statCard(notes.length, "Student Notes")}
       </section>
       <section class="toolbar-panel">
         <label>My Route
@@ -1355,6 +1424,7 @@
           ${reportSignal("Weak Topics", weakTopics.length ? weakTopics.map((item) => `${findName(data.topics, item.topicId)} (${item.accuracy}%)`).join(", ") : "No weak-topic data yet.")}
           ${reportSignal("Latest Mock", latestMock ? `${latestMock.title}: ${mockAccuracy}%` : "No mock attempt yet.")}
           ${reportSignal("Route Task Progress", selectedRouteTaskTotal ? `${selectedRouteTaskDone} of ${selectedRouteTaskTotal} daily tasks completed.` : "No route tasks available yet.")}
+          ${reportSignal("Saved Notes", notes.length ? `${notes.length} notes saved in this browser.` : "No student notes saved yet.")}
         </aside>
       </section>
       <section class="card-grid">
@@ -1379,6 +1449,7 @@
           <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
           <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
           <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
+          <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2316,7 +2387,28 @@
         </details>
         <div class="button-row">
           ${item.links.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link.href)}">${escapeHTML(link.label)}</a>`).join("")}
+          <a class="btn ghost small" href="${url(`student-notes.html?context=route-task&target=${item.id}`)}">Notes</a>
         </div>
+      </article>
+    `;
+  }
+
+  function notePromptCard(item) {
+    return `
+      <article class="report-signal note-prompt" data-note-prompt data-category="${escapeHTML(item.context)}">
+        <strong>${escapeHTML(item.title)}</strong>
+        <span>${escapeHTML(item.prompt)}</span>
+      </article>
+    `;
+  }
+
+  function studentNoteCard(item) {
+    return `
+      <article class="feature-card student-note-card" data-student-note>
+        <p class="eyebrow">${escapeHTML(item.context)} • ${escapeHTML(item.targetId || "general")}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.body)}</p>
+        <p class="connected-line">Saved: ${escapeHTML(new Date(item.date).toLocaleString())}</p>
       </article>
     `;
   }
@@ -2465,6 +2557,7 @@
           <a class="btn primary small" href="${url(item.practiceLink)}">Practise Topic</a>
           <a class="btn secondary small" href="${url("question-review.html")}">Review Mistakes</a>
           <a class="btn ghost small" href="${url("chapter-maps.html")}">Chapter Map</a>
+          <a class="btn ghost small" href="${url(`student-notes.html?context=topic&target=${item.topicId}`)}">Notes</a>
         </div>
       </article>
     `;
@@ -2490,6 +2583,7 @@
           <a class="btn secondary small" href="${url(item.practiceLink)}">Practice</a>
           <a class="btn ghost small" href="${url(item.flashcardLink)}">Revise</a>
           <a class="btn ghost small" href="${url(item.reviewLink)}">Review</a>
+          <a class="btn ghost small" href="${url(`student-notes.html?context=topic&target=${item.topicId}`)}">Notes</a>
         </div>
       </article>
     `;
@@ -2683,6 +2777,46 @@
         syncCard(control.dataset.routeTaskCheck.replace(/-\d+$/, ""));
       });
       write(current);
+    });
+  }
+
+  function wireStudentNotes() {
+    const form = document.querySelector("#studentNoteForm");
+    const list = document.querySelector("#studentNotesList");
+    const search = document.querySelector("#noteSearch");
+    const clear = document.querySelector("#clearStudentNotes");
+    if (!form || !list) return;
+    const key = "ah-student-notes";
+    const render = () => {
+      const notes = readJSON(key, []);
+      const term = search?.value.trim().toLowerCase() || "";
+      const filtered = term
+        ? notes.filter((item) => `${item.context} ${item.targetId} ${item.title} ${item.body}`.toLowerCase().includes(term))
+        : notes;
+      list.innerHTML = filtered.length
+        ? filtered.map((item) => studentNoteCard(item)).join("")
+        : `<div class="empty-state"><h2>No matching notes</h2><p>Add a note or search with a broader term.</p></div>`;
+    };
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const notes = readJSON(key, []);
+      notes.unshift({
+        id: `note-${Date.now()}`,
+        context: formData.get("context"),
+        targetId: formData.get("targetId"),
+        title: formData.get("title"),
+        body: formData.get("body"),
+        date: new Date().toISOString()
+      });
+      localStorage.setItem(key, JSON.stringify(notes));
+      form.reset();
+      render();
+    });
+    search?.addEventListener("input", render);
+    clear?.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      render();
     });
   }
 

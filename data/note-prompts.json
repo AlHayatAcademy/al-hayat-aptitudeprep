@@ -1,0 +1,20 @@
+[
+  {
+    "id": "note-prompt-topic",
+    "context": "topic",
+    "title": "Topic Correction Note",
+    "prompt": "What was the concept, what was your wrong thought, and what is the corrected rule?"
+  },
+  {
+    "id": "note-prompt-route-task",
+    "context": "route-task",
+    "title": "Daily Task Reflection",
+    "prompt": "Which task was completed, which task needs another attempt, and what is tomorrow's first action?"
+  },
+  {
+    "id": "note-prompt-question-review",
+    "context": "question-review",
+    "title": "Wrong Answer Review",
+    "prompt": "Why was the wrong option tempting, and what clue should you notice next time?"
+  }
+]

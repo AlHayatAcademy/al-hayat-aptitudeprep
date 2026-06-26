@@ -179,8 +179,16 @@
     "id": "roadmap-v29",
     "phase": "V29",
     "title": "Student Notes Layer",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add browser-saved student notes connected to topics, route tasks and mistake review.",
-    "nextActions": ["Create notes interface", "Store notes locally", "Connect notes to review pages"]
+    "nextActions": ["Use student notes", "Add more note prompts", "Review notes after mocks"]
+  },
+  {
+    "id": "roadmap-v30",
+    "phase": "V30",
+    "title": "Revision Queue",
+    "status": "Next",
+    "focus": "Add a revision queue that collects weak topics, notes, flashcards and repair paths into one review list.",
+    "nextActions": ["Create revision queue page", "Connect notes and weak topics", "Add local queue status"]
   }
 ]
