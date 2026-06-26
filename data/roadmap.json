@@ -11,24 +11,24 @@
     "id": "roadmap-v8",
     "phase": "V8",
     "title": "Deep Content Expansion",
-    "status": "Next",
-    "focus": "Add 25-50 high-quality questions for the first selected test route.",
-    "nextActions": ["Choose MDCAT, FAST or NAT first", "Expand topics", "Add reviewed explanations"]
+    "status": "Ready",
+    "focus": "Vocabulary bank, formula bank and curated question sets.",
+    "nextActions": ["Expand vocabulary examples", "Add formula variations", "Build route-specific drills"]
   },
   {
     "id": "roadmap-v9",
     "phase": "V9",
-    "title": "Premium Notes Preview System",
-    "status": "Planned",
-    "focus": "Turn resource previews into fuller web-based sample notes with purchase flow.",
-    "nextActions": ["Add real prices", "Add sample pages", "Connect PDF download placeholders"]
+    "title": "Student Self-Assessment Layer",
+    "status": "Ready",
+    "focus": "Diagnostic test, flashcards and error log for revision control.",
+    "nextActions": ["Add more diagnostic items", "Create topic-wise flashcard decks", "Review error-log patterns weekly"]
   },
   {
     "id": "roadmap-v10",
     "phase": "V10",
-    "title": "Student Result Experience",
-    "status": "Planned",
-    "focus": "Improve progress, score interpretation and weak-topic suggestions.",
-    "nextActions": ["Add weak-topic summaries", "Improve mock review", "Create parent-friendly report view"]
+    "title": "Premium Notes Preview System",
+    "status": "Next",
+    "focus": "Turn resource previews into fuller web-based sample notes with purchase flow.",
+    "nextActions": ["Add real prices", "Add sample pages", "Connect PDF download placeholders"]
   }
 ]

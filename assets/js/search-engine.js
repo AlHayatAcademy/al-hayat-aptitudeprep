@@ -64,7 +64,10 @@
       ...(data.questionBankTargets || []).map((item) => record("Question Bank Target", item.id, `${item.priority} ${item.targetCount} ${item.currentSampleCount}`, "question-bank.html")),
       ...(data.vocabularyBank || []).map((item) => record("Vocabulary", item.word, `${item.level} ${item.meaning} ${item.synonyms.join(" ")} ${item.antonyms.join(" ")} ${item.example}`, "vocabulary-bank.html")),
       ...(data.formulaBank || []).map((item) => record("Formula", item.title, `${item.formula} ${item.useCase} ${item.example}`, "formula-bank.html")),
-      ...(data.questionSets || []).map((item) => record("Question Set", item.title, `${item.purpose} ${item.skillIds.join(" ")}`, "question-sets.html"))
+      ...(data.questionSets || []).map((item) => record("Question Set", item.title, `${item.purpose} ${item.skillIds.join(" ")}`, "question-sets.html")),
+      ...(data.diagnosticQuiz || []).map((item) => record("Diagnostic", item.stem, `${item.difficulty} ${item.levelSignal} ${item.skillId} ${item.topicId}`, "diagnostic.html")),
+      ...(data.flashcards || []).map((item) => record("Flashcard", item.front, `${item.back} ${item.category} ${item.level} ${item.skillId}`, "flashcards.html")),
+      ...(data.errorLogPrompts || []).map((item) => record("Error Log Prompt", item.title, `${item.category} ${item.diagnosis} ${item.correctionPrompt}`, "error-log.html"))
     ];
   }
 

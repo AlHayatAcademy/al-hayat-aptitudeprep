@@ -57,6 +57,9 @@
       "vocabulary-bank": renderVocabularyBank,
       "formula-bank": renderFormulaBank,
       "question-sets": renderQuestionSets,
+      diagnostic: renderDiagnostic,
+      flashcards: renderFlashcards,
+      "error-log": renderErrorLog,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -103,6 +106,9 @@
           ${navLink("Resources", "resources.html")}
           ${navDropdown("More", [
             ["Choose My Test", "Find the right route", "choose-test.html"],
+            ["Diagnostic Test", "Find strengths and weak areas", "diagnostic.html"],
+            ["Flashcards", "Revise core items fast", "flashcards.html"],
+            ["Error Log", "Track repeated mistakes", "error-log.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -145,6 +151,8 @@
           ${navLink("FAQ", "faq.html")}
           ${navLink("Glossary", "glossary.html")}
           ${navLink("Daily Plan", "daily-plan.html")}
+          ${navLink("Diagnostic", "diagnostic.html")}
+          ${navLink("Flashcards", "flashcards.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -180,6 +188,8 @@
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
+        ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
+        ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
         ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
         ${actionCard("Worksheets", "Use class-ready practice packs.", "worksheets.html")}
         ${actionCard("Question Bank", "Track expansion targets.", "question-bank.html")}
@@ -590,6 +600,104 @@
         ${data.questionSets.map((item) => questionSetCard(item, data)).join("")}
       </section>
     `;
+  }
+
+  function renderDiagnostic(data) {
+    const previous = JSON.parse(localStorage.getItem("ah-diagnostic-result") || "null");
+    app.innerHTML = `
+      ${pageHero("Diagnostic Test", "Find Your Starting Level", "Attempt a short mixed diagnostic and receive skill-wise next steps for practice.")}
+      <section class="stat-grid">
+        ${statCard(data.diagnosticQuiz.length, "Diagnostic Items")}
+        ${statCard(new Set(data.diagnosticQuiz.map((item) => item.skillId)).size, "Skills Checked")}
+        ${statCard(previous ? `${previous.score}/${previous.total}` : "New", "Last Result")}
+      </section>
+      <section class="question-list diagnostic-list">
+        ${data.diagnosticQuiz.map((item, index) => diagnosticQuestionCard(item, index, data)).join("")}
+      </section>
+      <section class="content-band">
+        <button class="btn primary" id="scoreDiagnostic" type="button">Score Diagnostic</button>
+        <button class="btn ghost" id="resetDiagnostic" type="button">Reset Diagnostic</button>
+        <div id="diagnosticResult" class="diagnostic-result" aria-live="polite"></div>
+      </section>
+    `;
+    wireDiagnosticQuiz(data);
+  }
+
+  function renderFlashcards(data) {
+    const categories = [...new Set(data.flashcards.map((item) => item.category))].sort();
+    const mastered = readJSON("ah-flashcard-mastered", {});
+    const masteredCount = Object.values(mastered).filter(Boolean).length;
+    app.innerHTML = `
+      ${pageHero("Flashcards", "Quick Revision Cards", "Use small cards for vocabulary, formulas, grammar rules and reasoning reminders.")}
+      <section class="stat-grid">
+        ${statCard(data.flashcards.length, "Cards")}
+        ${statCard(masteredCount, "Mastered")}
+        ${statCard(data.flashcards.length - masteredCount, "To Revise")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="flashcardCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="flashcardSearch" type="search" placeholder="Search card, topic, test...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.flashcards.map((item) => flashcardCard(item, data, mastered[item.id])).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#flashcardCategory", "#flashcardSearch", "[data-flashcard-card]");
+    wireFlashcards();
+  }
+
+  function renderErrorLog(data) {
+    const skillOptions = data.skills.map((skill) => `<option value="${skill.id}">${escapeHTML(skill.name)}</option>`).join("");
+    app.innerHTML = `
+      ${pageHero("Error Log", "Turn Mistakes Into Revision Targets", "Record repeated errors, identify the cause and connect each mistake to a next action.")}
+      <section class="split-layout">
+        <aside class="side-panel">
+          <h2>Add Mistake</h2>
+          <form id="errorLogForm" class="lead-form single-column">
+            <label>Skill
+              <select name="skillId" required>${skillOptions}</select>
+            </label>
+            ${input("questionRef", "Question / Topic Reference", "text", true)}
+            <label>Cause
+              <select name="cause">
+                <option>Concept gap</option>
+                <option>Careless reading</option>
+                <option>Time pressure</option>
+                <option>Formula issue</option>
+                <option>Vocabulary confusion</option>
+              </select>
+            </label>
+            <label>Correction Plan
+              <textarea name="plan" rows="4" placeholder="What will you revise before attempting again?" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Save Error</button>
+            <button class="btn ghost" id="clearErrorLog" type="button">Clear Log</button>
+          </form>
+        </aside>
+        <section class="table-wrap">
+          <h2>Saved Error Log</h2>
+          <table>
+            <thead><tr><th>Skill</th><th>Reference</th><th>Cause</th><th>Plan</th><th>Date</th></tr></thead>
+            <tbody id="errorLogRows"></tbody>
+          </table>
+        </section>
+      </section>
+      <section class="section-head">
+        <p class="eyebrow">Correction Prompts</p>
+        <h2>Common Causes To Watch</h2>
+      </section>
+      <section class="card-grid">
+        ${data.errorLogPrompts.map((item) => errorPromptCard(item, data)).join("")}
+      </section>
+    `;
+    wireErrorLog(data);
   }
 
   function renderStudyPlans(data) {
@@ -1068,6 +1176,67 @@
     `;
   }
 
+  function diagnosticQuestionCard(item, index, data) {
+    const skill = findName(data.skills, item.skillId);
+    const topic = findName(data.topics, item.topicId);
+    return `
+      <article class="question-card" data-diagnostic-question="${item.id}">
+        <div class="meta-row">
+          <span>Question ${index + 1}</span>
+          <span>${escapeHTML(skill)}</span>
+          <span>${escapeHTML(item.difficulty)}</span>
+        </div>
+        <h2>${escapeHTML(item.stem)}</h2>
+        <div class="options-grid">
+          ${item.options.map((option, optionIndex) => `
+            <label class="option selectable-option">
+              <input type="radio" name="${item.id}" value="${optionIndex}">
+              <span>${escapeHTML(option)}</span>
+            </label>
+          `).join("")}
+        </div>
+        <p class="connected-line">${escapeHTML(topic)} • ${escapeHTML(item.levelSignal)}</p>
+        <p class="hint" data-diagnostic-feedback="${item.id}" hidden>${escapeHTML(item.explanation)}</p>
+      </article>
+    `;
+  }
+
+  function flashcardCard(item, data, mastered) {
+    const skill = findName(data.skills, item.skillId);
+    const topic = findName(data.topics, item.topicId);
+    const tests = item.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    return `
+      <article class="feature-card flashcard ${mastered ? "done" : ""}" data-flashcard-card data-category="${escapeHTML(item.category)}" data-flashcard-id="${item.id}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.level)}</p>
+        <h2>${escapeHTML(item.front)}</h2>
+        <details class="mini-details">
+          <summary>Show Answer</summary>
+          <p>${escapeHTML(item.back)}</p>
+        </details>
+        <p class="connected-line">${escapeHTML(skill)} • ${escapeHTML(topic)}</p>
+        <p>Connected tests: ${escapeHTML(tests)}</p>
+        <label class="mastery-check">
+          <input type="checkbox" data-flashcard-mastered="${item.id}" ${mastered ? "checked" : ""}>
+          <span>Mark as mastered</span>
+        </label>
+      </article>
+    `;
+  }
+
+  function errorPromptCard(item, data) {
+    const skills = item.relatedSkillIds.map((id) => findName(data.skills, id)).join(", ");
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.diagnosis)}</p>
+        <p class="connected-line">Correction: ${escapeHTML(item.correctionPrompt)}</p>
+        <p>Related skills: ${escapeHTML(skills)}</p>
+        <a class="btn secondary small" href="${url(item.actionLink)}">Open Action</a>
+      </article>
+    `;
+  }
+
   function testCard(test, data) {
     const skills = test.skillIds.map((id) => findName(data.skills, id)).join(", ");
     const subjects = test.subjectIds.map((id) => findName(data.subjects, id)).join(", ");
@@ -1219,6 +1388,126 @@
     });
   }
 
+  function wireDiagnosticQuiz(data) {
+    const scoreButton = document.querySelector("#scoreDiagnostic");
+    const resetButton = document.querySelector("#resetDiagnostic");
+    const result = document.querySelector("#diagnosticResult");
+    if (!scoreButton || !result) return;
+
+    scoreButton.addEventListener("click", () => {
+      let score = 0;
+      const skillTotals = {};
+      const skillCorrect = {};
+
+      data.diagnosticQuiz.forEach((item) => {
+        const selected = document.querySelector(`input[name="${item.id}"]:checked`);
+        const chosen = selected ? Number(selected.value) : -1;
+        const correct = chosen === item.answerIndex;
+        const skill = findName(data.skills, item.skillId);
+        skillTotals[skill] = (skillTotals[skill] || 0) + 1;
+        skillCorrect[skill] = (skillCorrect[skill] || 0) + (correct ? 1 : 0);
+        score += correct ? 1 : 0;
+
+        const card = document.querySelector(`[data-diagnostic-question="${item.id}"]`);
+        const feedback = document.querySelector(`[data-diagnostic-feedback="${item.id}"]`);
+        if (card) card.classList.toggle("done", correct);
+        if (feedback) {
+          feedback.hidden = false;
+          feedback.textContent = `${correct ? "Correct." : "Review this."} ${item.explanation}`;
+        }
+      });
+
+      const weakSkills = Object.keys(skillTotals).filter((skill) => skillCorrect[skill] < skillTotals[skill]);
+      const nextStep = weakSkills.length
+        ? `Revise: ${weakSkills.join(", ")}.`
+        : "Strong start. Move to timed practice and mocks.";
+      const payload = { score, total: data.diagnosticQuiz.length, weakSkills, date: new Date().toISOString() };
+      localStorage.setItem("ah-diagnostic-result", JSON.stringify(payload));
+      result.innerHTML = `
+        <h2>Diagnostic Result: ${score}/${data.diagnosticQuiz.length}</h2>
+        <p>${escapeHTML(nextStep)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("practice.html")}">Start Practice</a>
+          <a class="btn secondary small" href="${url("error-log.html")}">Open Error Log</a>
+        </div>
+      `;
+    });
+
+    resetButton?.addEventListener("click", () => {
+      localStorage.removeItem("ah-diagnostic-result");
+      document.querySelectorAll("[data-diagnostic-question]").forEach((card) => card.classList.remove("done"));
+      document.querySelectorAll("[data-diagnostic-feedback]").forEach((feedback) => {
+        feedback.hidden = true;
+        feedback.textContent = "";
+      });
+      document.querySelectorAll("input[type='radio']").forEach((input) => {
+        input.checked = false;
+      });
+      result.innerHTML = "";
+    });
+  }
+
+  function wireFlashcards() {
+    const controls = document.querySelectorAll("[data-flashcard-mastered]");
+    if (!controls.length) return;
+    const key = "ah-flashcard-mastered";
+    controls.forEach((control) => {
+      control.addEventListener("change", () => {
+        const current = readJSON(key, {});
+        current[control.dataset.flashcardMastered] = control.checked;
+        localStorage.setItem(key, JSON.stringify(current));
+        const card = document.querySelector(`[data-flashcard-id="${control.dataset.flashcardMastered}"]`);
+        if (card) card.classList.toggle("done", control.checked);
+      });
+    });
+  }
+
+  function wireErrorLog(data) {
+    const form = document.querySelector("#errorLogForm");
+    const rows = document.querySelector("#errorLogRows");
+    const clear = document.querySelector("#clearErrorLog");
+    if (!form || !rows) return;
+    const key = "ah-error-log";
+
+    const renderRows = () => {
+      const entries = readJSON(key, []);
+      rows.innerHTML = entries.length
+        ? entries.map((entry) => `
+          <tr>
+            <td>${escapeHTML(findName(data.skills, entry.skillId))}</td>
+            <td>${escapeHTML(entry.questionRef)}</td>
+            <td>${escapeHTML(entry.cause)}</td>
+            <td>${escapeHTML(entry.plan)}</td>
+            <td>${escapeHTML(new Date(entry.date).toLocaleDateString())}</td>
+          </tr>
+        `).join("")
+        : `<tr><td colspan="5">No saved mistakes yet. Add one after practice or mocks.</td></tr>`;
+    };
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const entries = readJSON(key, []);
+      entries.unshift({
+        skillId: formData.get("skillId"),
+        questionRef: formData.get("questionRef"),
+        cause: formData.get("cause"),
+        plan: formData.get("plan"),
+        date: new Date().toISOString()
+      });
+      localStorage.setItem(key, JSON.stringify(entries.slice(0, 30)));
+      form.reset();
+      renderRows();
+    });
+
+    clear?.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      renderRows();
+    });
+
+    renderRows();
+  }
+
   function wireSimpleCardFilter(categorySelector, searchSelector, cardSelector) {
     const category = document.querySelector(categorySelector);
     const search = document.querySelector(searchSelector);
@@ -1291,6 +1580,14 @@
 
   function findName(items, id) {
     return items.find((item) => item.id === id)?.name || id;
+  }
+
+  function readJSON(key, fallback) {
+    try {
+      return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+    } catch {
+      return fallback;
+    }
   }
 
   function escapeHTML(value) {

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "error-speed-001",
+    "title": "Rushing The Stem",
+    "category": "Time Management",
+    "relatedSkillIds": ["reading-comprehension", "logical-reasoning"],
+    "diagnosis": "The student answers before identifying what the question is actually asking.",
+    "correctionPrompt": "Underline the command word first: closest, except, main idea, assumption, inference.",
+    "actionLink": "strategies.html"
+  },
+  {
+    "id": "error-formula-001",
+    "title": "Using Formula Without Units",
+    "category": "Quantitative",
+    "relatedSkillIds": ["quantitative-reasoning", "science-concepts"],
+    "diagnosis": "The formula is remembered, but the values are placed without checking units.",
+    "correctionPrompt": "Write the formula, convert units, then substitute values.",
+    "actionLink": "formula-bank.html"
+  },
+  {
+    "id": "error-vocab-001",
+    "title": "Memorising Words Without Context",
+    "category": "Verbal",
+    "relatedSkillIds": ["vocabulary", "sentence-completion"],
+    "diagnosis": "The student knows a rough meaning but misses the sentence context.",
+    "correctionPrompt": "Learn each word with one synonym, one antonym and one exam sentence.",
+    "actionLink": "vocabulary-bank.html"
+  },
+  {
+    "id": "error-elimination-001",
+    "title": "Not Eliminating Weak Options",
+    "category": "Strategy",
+    "relatedSkillIds": ["analytical-reasoning", "logical-reasoning"],
+    "diagnosis": "The student searches only for the right answer and ignores obviously wrong choices.",
+    "correctionPrompt": "Cancel two weak options before choosing between the remaining two.",
+    "actionLink": "practice.html"
+  }
+]

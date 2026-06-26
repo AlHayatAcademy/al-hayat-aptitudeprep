@@ -33,7 +33,10 @@
     questionBankTargets: "question-bank-targets.json",
     vocabularyBank: "vocabulary-bank.json",
     formulaBank: "formula-bank.json",
-    questionSets: "question-sets.json"
+    questionSets: "question-sets.json",
+    diagnosticQuiz: "diagnostic-quiz.json",
+    flashcards: "flashcards.json",
+    errorLogPrompts: "error-log-prompts.json"
   };
 
   async function loadJSON(file) {

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "flash-vocab-001",
+    "front": "Concise",
+    "back": "Brief and clear. Example: A concise explanation saves exam time.",
+    "category": "Vocabulary",
+    "level": "Easy",
+    "skillId": "vocabulary",
+    "topicId": "synonyms-in-context",
+    "connectedTestIds": ["mdcat", "sat", "gat-general"]
+  },
+  {
+    "id": "flash-vocab-002",
+    "front": "Meticulous",
+    "back": "Very careful and detailed. Antonym: careless.",
+    "category": "Vocabulary",
+    "level": "Medium",
+    "skillId": "vocabulary",
+    "topicId": "antonyms",
+    "connectedTestIds": ["gre", "sat", "gat-general"]
+  },
+  {
+    "id": "flash-formula-001",
+    "front": "Percentage Increase",
+    "back": "Increase ÷ original × 100. If 200 becomes 250, increase is 25%.",
+    "category": "Formula",
+    "level": "Easy",
+    "skillId": "quantitative-reasoning",
+    "topicId": "percentages",
+    "connectedTestIds": ["fast-nuces", "nat", "gat-general"]
+  },
+  {
+    "id": "flash-grammar-001",
+    "front": "Each / Every",
+    "back": "Usually takes a singular verb: Each student has a card.",
+    "category": "Grammar",
+    "level": "Easy",
+    "skillId": "grammar",
+    "topicId": "subject-verb-agreement",
+    "connectedTestIds": ["sat", "nat", "gat-general"]
+  },
+  {
+    "id": "flash-logic-001",
+    "front": "Correlation vs Causation",
+    "back": "Two things happening together does not prove one caused the other.",
+    "category": "Reasoning",
+    "level": "Medium",
+    "skillId": "logical-reasoning",
+    "topicId": "assumptions",
+    "connectedTestIds": ["gat-general", "gre", "lsat"]
+  },
+  {
+    "id": "flash-reading-001",
+    "front": "Main Idea",
+    "back": "The central message of a passage, not one minor detail.",
+    "category": "Reading",
+    "level": "Easy",
+    "skillId": "reading-comprehension",
+    "topicId": "main-idea",
+    "connectedTestIds": ["ielts", "toefl", "sat"]
+  }
+]

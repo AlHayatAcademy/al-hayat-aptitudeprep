@@ -40,5 +40,17 @@
     "version": "V7",
     "date": "2026-06-26",
     "summary": "Added roadmap, changelog, contributor guide and question-bank targets for future expansion."
+  },
+  {
+    "id": "change-v8",
+    "version": "V8",
+    "date": "2026-06-26",
+    "summary": "Added vocabulary bank, formula bank and curated question sets for deeper study content."
+  },
+  {
+    "id": "change-v9",
+    "version": "V9",
+    "date": "2026-06-26",
+    "summary": "Added diagnostic test, flashcards and browser-saved error log for stronger student self-assessment."
   }
 ]

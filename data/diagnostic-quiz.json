@@ -1,0 +1,80 @@
+[
+  {
+    "id": "diag-vocab-001",
+    "testIds": ["mdcat", "nat", "gat-general", "sat"],
+    "skillId": "vocabulary",
+    "subjectId": "english",
+    "topicId": "synonyms-in-context",
+    "difficulty": "easy",
+    "stem": "Choose the closest meaning of “precise” in exam instructions.",
+    "options": ["Exact", "Lengthy", "Emotional", "Delayed"],
+    "answerIndex": 0,
+    "explanation": "Precise means exact and clear.",
+    "levelSignal": "Vocabulary basics are ready if this is easy."
+  },
+  {
+    "id": "diag-grammar-001",
+    "testIds": ["sat", "nat", "gat-general"],
+    "skillId": "grammar",
+    "subjectId": "english",
+    "topicId": "subject-verb-agreement",
+    "difficulty": "easy",
+    "stem": "Choose the correct sentence.",
+    "options": ["Each of the students has a card.", "Each of the students have a card.", "Each students has a card.", "Each students have cards."],
+    "answerIndex": 0,
+    "explanation": "Each is singular, so the verb should be has.",
+    "levelSignal": "Grammar accuracy is essential for verbal sections."
+  },
+  {
+    "id": "diag-quant-001",
+    "testIds": ["fast-nuces", "nust-net", "nat", "gat-general"],
+    "skillId": "quantitative-reasoning",
+    "subjectId": "mathematics",
+    "topicId": "percentages",
+    "difficulty": "medium",
+    "stem": "A price rises from 200 to 250. What is the percentage increase?",
+    "options": ["20%", "25%", "40%", "50%"],
+    "answerIndex": 1,
+    "explanation": "The increase is 50. 50 is 25% of 200.",
+    "levelSignal": "Percentages are a priority for most aptitude tests."
+  },
+  {
+    "id": "diag-logic-001",
+    "testIds": ["gat-general", "gre", "lsat", "fast-nuces"],
+    "skillId": "logical-reasoning",
+    "subjectId": "analytical-iq",
+    "topicId": "assumptions",
+    "difficulty": "medium",
+    "stem": "A school says: “Students who revise daily score better; therefore, daily revision causes better scores.” What is the weak point?",
+    "options": ["It assumes correlation proves causation", "It uses too many examples", "It defines revision clearly", "It avoids comparison"],
+    "answerIndex": 0,
+    "explanation": "The claim jumps from association to cause without ruling out other factors.",
+    "levelSignal": "Argument logic needs slow reading and evidence checking."
+  },
+  {
+    "id": "diag-reading-001",
+    "testIds": ["ielts", "toefl", "sat", "gre"],
+    "skillId": "reading-comprehension",
+    "subjectId": "english",
+    "topicId": "main-idea",
+    "difficulty": "medium",
+    "stem": "A paragraph explains that speed without accuracy lowers exam performance. What is the main idea?",
+    "options": ["Accuracy and speed must be balanced", "Speed is always harmful", "Accuracy is irrelevant", "Long answers are better"],
+    "answerIndex": 0,
+    "explanation": "The main idea is balance, not rejection of speed.",
+    "levelSignal": "Reading questions reward central meaning, not isolated words."
+  },
+  {
+    "id": "diag-physics-001",
+    "testIds": ["mdcat", "nust-net", "ecat"],
+    "skillId": "science-concepts",
+    "subjectId": "physics",
+    "topicId": "kinematics",
+    "difficulty": "medium",
+    "stem": "If speed is constant, distance is found by:",
+    "options": ["speed × time", "speed ÷ time", "time ÷ speed", "speed + time"],
+    "answerIndex": 0,
+    "explanation": "Distance equals speed multiplied by time when speed is constant.",
+    "levelSignal": "Formula meaning matters more than memorising symbols."
+  }
+]

@@ -25,6 +25,9 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `vocabulary-bank.html`
 - `formula-bank.html`
 - `question-sets.html`
+- `diagnostic.html`
+- `flashcards.html`
+- `error-log.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`
