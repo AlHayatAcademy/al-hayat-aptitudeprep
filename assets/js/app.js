@@ -303,7 +303,7 @@
         <article class="feature-card">
           <h2>Email</h2>
           <p>Add your official email here when ready.</p>
-          <p class="connected-line">Email: To be added</p>
+          <a class="text-link" href="mailto:drimranhayatmalik@gmail.com">drimranhayatmalik@gmail.com</a>
         </article>
       </section>
     `;
