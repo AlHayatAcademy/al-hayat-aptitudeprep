@@ -163,8 +163,16 @@
     "id": "roadmap-v27",
     "phase": "V27",
     "title": "Route-Based Daily Tasks",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add daily task flows by selected route so students know what to study each day.",
-    "nextActions": ["Create route-task data", "Add route-task page", "Connect dashboard and study plans"]
+    "nextActions": ["Use route tasks", "Add more days", "Connect student completion tracking"]
+  },
+  {
+    "id": "roadmap-v28",
+    "phase": "V28",
+    "title": "Task Completion Tracker",
+    "status": "Next",
+    "focus": "Add browser-saved completion tracking for route tasks and daily study routines.",
+    "nextActions": ["Add task status storage", "Show completion summary", "Connect dashboard signals"]
   }
 ]

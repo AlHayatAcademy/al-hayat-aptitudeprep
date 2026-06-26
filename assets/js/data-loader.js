@@ -52,7 +52,8 @@
     questionBankBuilder: "question-bank-builder.json",
     questionImportChecklist: "question-import-checklist.json",
     topicStudy: "topic-study.json",
-    repairPaths: "repair-paths.json"
+    repairPaths: "repair-paths.json",
+    routeTasks: "route-tasks.json"
   };
 
   async function loadJSON(file) {

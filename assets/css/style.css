@@ -668,6 +668,10 @@ main {
   border-top: 4px solid var(--danger);
 }
 
+.route-task-card {
+  border-top: 4px solid var(--green);
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

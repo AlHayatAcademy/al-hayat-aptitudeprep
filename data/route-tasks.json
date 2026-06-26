@@ -1,0 +1,86 @@
+[
+  {
+    "id": "task-medical-day-1",
+    "routeId": "route-medical-entry",
+    "dayLabel": "Day 1",
+    "title": "Medical Route Daily Start",
+    "goal": "Build one science concept block and keep English vocabulary active.",
+    "tasks": [
+      { "time": "20 min", "action": "Study Cell Biology topic support and write three organelle functions." },
+      { "time": "25 min", "action": "Attempt Biology or MDCAT practice questions without rushing." },
+      { "time": "15 min", "action": "Revise vocabulary flashcards and mark difficult words." },
+      { "time": "10 min", "action": "Log one weak point in the error log." }
+    ],
+    "completionChecks": ["One topic reviewed", "One practice set attempted", "One error-log entry created"],
+    "coachNote": "For medical students, daily consistency in Biology plus English gives better long-term retention than occasional long sessions.",
+    "links": [
+      { "label": "Study Topic", "href": "topic-study.html?topic=cell-biology" },
+      { "label": "Practice", "href": "practice.html?test=mdcat" },
+      { "label": "Flashcards", "href": "flashcards.html" },
+      { "label": "Error Log", "href": "error-log.html" }
+    ]
+  },
+  {
+    "id": "task-engineering-day-1",
+    "routeId": "route-engineering-cs",
+    "dayLabel": "Day 1",
+    "title": "Engineering And CS Quant Start",
+    "goal": "Strengthen timed quantitative reasoning before moving to larger mocks.",
+    "tasks": [
+      { "time": "15 min", "action": "Review percentages and base-value calculation." },
+      { "time": "30 min", "action": "Attempt quantitative practice under time pressure." },
+      { "time": "15 min", "action": "Open formula bank and revise weak formulas." },
+      { "time": "10 min", "action": "Use repair paths for any repeated percentage mistake." }
+    ],
+    "completionChecks": ["Percentage card reviewed", "Timed quant set attempted", "Formula weakness identified"],
+    "coachNote": "Engineering routes need speed, but speed should come after clean method. Check base values and units before shortcuts.",
+    "links": [
+      { "label": "Study Percentages", "href": "topic-study.html?topic=percentages" },
+      { "label": "Practice", "href": "practice.html?test=fast-nuces" },
+      { "label": "Formulas", "href": "formula-bank.html" },
+      { "label": "Repair Path", "href": "repair-paths.html#repair-percentages" }
+    ]
+  },
+  {
+    "id": "task-nat-gat-day-1",
+    "routeId": "route-nat-gat",
+    "dayLabel": "Day 1",
+    "title": "NAT And GAT Mixed Practice",
+    "goal": "Balance verbal, quantitative and analytical reasoning in one controlled session.",
+    "tasks": [
+      { "time": "15 min", "action": "Revise vocabulary in context." },
+      { "time": "20 min", "action": "Attempt a mixed practice set." },
+      { "time": "20 min", "action": "Review one wrong-answer pattern." },
+      { "time": "10 min", "action": "Select tomorrow's weak topic from the results report." }
+    ],
+    "completionChecks": ["Mixed set attempted", "Wrong-answer pattern reviewed", "Tomorrow weak topic selected"],
+    "coachNote": "NAT and GAT preparation improves when the student rotates skills daily instead of spending the whole week on only one section.",
+    "links": [
+      { "label": "Vocabulary", "href": "topic-study.html?topic=synonyms-in-context" },
+      { "label": "Practice", "href": "practice.html?test=nat" },
+      { "label": "Review", "href": "question-review.html" },
+      { "label": "Report", "href": "results-report.html" }
+    ]
+  },
+  {
+    "id": "task-international-day-1",
+    "routeId": "route-international-tests",
+    "dayLabel": "Day 1",
+    "title": "International Reading And Vocabulary",
+    "goal": "Improve reading purpose, central idea and vocabulary-in-context accuracy.",
+    "tasks": [
+      { "time": "20 min", "action": "Study main idea and write the central point of one passage." },
+      { "time": "20 min", "action": "Revise vocabulary flashcards with example sentences." },
+      { "time": "25 min", "action": "Attempt reading comprehension practice." },
+      { "time": "10 min", "action": "Review one mistake and record the correction." }
+    ],
+    "completionChecks": ["Main idea reviewed", "Vocabulary revised", "Reading practice attempted"],
+    "coachNote": "International test students should connect vocabulary with passage purpose, not isolated word memorisation.",
+    "links": [
+      { "label": "Main Idea", "href": "topic-study.html?topic=main-idea" },
+      { "label": "Flashcards", "href": "flashcards.html" },
+      { "label": "Practice", "href": "practice.html?skill=reading-comprehension" },
+      { "label": "Review", "href": "question-review.html" }
+    ]
+  }
+]

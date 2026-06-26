@@ -76,6 +76,7 @@
       "question-import": renderQuestionImport,
       "topic-study": renderTopicStudy,
       "repair-paths": renderRepairPaths,
+      "route-tasks": renderRouteTasks,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -141,6 +142,7 @@
             ["Question Import", "Batch import safety checks", "question-import.html"],
             ["Topic Study", "Focused topic explanations", "topic-study.html"],
             ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
+            ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -201,6 +203,7 @@
           ${navLink("Import", "question-import.html")}
           ${navLink("Topic Study", "topic-study.html")}
           ${navLink("Repair", "repair-paths.html")}
+          ${navLink("Route Tasks", "route-tasks.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -251,6 +254,7 @@
         ${actionCard("Question Import", "Validate batch MCQ uploads.", "question-import.html")}
         ${actionCard("Topic Study", "Review focused topic cards.", "topic-study.html")}
         ${actionCard("Repair Paths", "Fix weak topics step by step.", "repair-paths.html")}
+        ${actionCard("Route Tasks", "Open today’s tasks by test route.", "route-tasks.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -765,6 +769,48 @@
     wireSimpleCardFilter("#repairSkill", "#repairSearch", "[data-repair-path]");
   }
 
+  function renderRouteTasks(data) {
+    const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
+    const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const visibleTasks = data.routeTasks.filter((item) => !selectedRoute || item.routeId === selectedRoute.id);
+    app.innerHTML = `
+      ${pageHero("Route Tasks", "Daily Work By Test Route", "Choose a preparation route and follow a short daily task flow connected to study plans, practice, mocks, review and resources.")}
+      <section class="stat-grid">
+        ${statCard(data.routeTasks.length, "Task Flows")}
+        ${statCard(new Set(data.routeTasks.map((item) => item.routeId)).size, "Routes")}
+        ${statCard(data.routeTasks.reduce((sum, item) => sum + item.tasks.length, 0), "Daily Tasks")}
+      </section>
+      <section class="toolbar-panel">
+        <label>My Route
+          <select id="routeTaskRoute">
+            ${data.testRoutes.map((route) => `<option value="${escapeHTML(route.id)}" ${route.id === selectedRoute?.id ? "selected" : ""}>${escapeHTML(route.title)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="routeTaskSearch" type="search" placeholder="Search diagnostic, practice, mock, review...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Selected Route</h2>
+        <p>${escapeHTML(selectedRoute?.title || "Preparation Route")}: ${escapeHTML(selectedRoute?.audience || "Select a route to show daily tasks.")}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("dashboard.html")}">Dashboard</a>
+          <a class="btn secondary small" href="${url("study-plans.html")}">Study Plans</a>
+          <a class="btn ghost small" href="${url("test-routes.html")}">Route Details</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${visibleTasks.map((item) => routeTaskCard(item, data)).join("") || `<div class="empty-state"><h2>No task flow found</h2><p>Add this route in <code>data/route-tasks.json</code>.</p></div>`}
+      </section>
+    `;
+    wireSimpleCardFilter(null, "#routeTaskSearch", "[data-route-task]");
+    document.querySelector("#routeTaskRoute")?.addEventListener("change", (event) => {
+      localStorage.setItem("ah-selected-route", event.target.value);
+      renderRouteTasks(data);
+      wireAccordions();
+    });
+  }
+
   function renderVocabularyBank(data) {
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
     app.innerHTML = `
@@ -1273,6 +1319,7 @@
           <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
           <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
+          <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
         </div>
       </section>
       <section class="split-layout dashboard-current">
@@ -1315,6 +1362,7 @@
           <a class="text-link" href="${url("question-sets.html")}">Open Question Sets</a>
           <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
           <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
+          <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2198,6 +2246,7 @@
           <a class="btn secondary small" href="${url("lessons.html")}">Lessons</a>
           <a class="btn ghost small" href="${url("mock-tests.html")}">Mocks</a>
           <a class="btn ghost small" href="${url("test-pages.html")}">Test Pages</a>
+          <a class="btn ghost small" href="${url("route-tasks.html")}">Daily Tasks</a>
           <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
           <a class="btn ghost small" href="${url("book-trial-class.html")}">Trial</a>
         </div>
@@ -2212,6 +2261,32 @@
         <h2>${escapeHTML(item.title)}</h2>
         <p>${escapeHTML(item.summary)}</p>
         <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
+      </article>
+    `;
+  }
+
+  function routeTaskCard(item, data) {
+    const route = data.testRoutes.find((entry) => entry.id === item.routeId);
+    return `
+      <article class="feature-card lesson-card route-task-card" data-route-task id="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(item.dayLabel)} • ${escapeHTML(route?.title || item.routeId)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.goal)}</p>
+        <div class="lesson-block">
+          <h3>Today’s Tasks</h3>
+          <ol class="clean-list">${item.tasks.map((task) => `<li><strong>${escapeHTML(task.time)}</strong> ${escapeHTML(task.action)}</li>`).join("")}</ol>
+        </div>
+        <div class="lesson-block">
+          <h3>Completion Check</h3>
+          <ul class="clean-list">${item.completionChecks.map((check) => `<li>${escapeHTML(check)}</li>`).join("")}</ul>
+        </div>
+        <details class="mini-details">
+          <summary>Teacher Or Parent Note</summary>
+          <p>${escapeHTML(item.coachNote)}</p>
+        </details>
+        <div class="button-row">
+          ${item.links.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link.href)}">${escapeHTML(link.label)}</a>`).join("")}
+        </div>
       </article>
     `;
   }
@@ -2662,11 +2737,11 @@
   }
 
   function wireSimpleCardFilter(categorySelector, searchSelector, cardSelector) {
-    const category = document.querySelector(categorySelector);
+    const category = categorySelector ? document.querySelector(categorySelector) : null;
     const search = document.querySelector(searchSelector);
-    if (!category || !search) return;
+    if (!search) return;
     const filter = () => {
-      const selected = category.value;
+      const selected = category ? category.value : "all";
       const term = search.value.trim().toLowerCase();
       document.querySelectorAll(cardSelector).forEach((card) => {
         const categoryOk = selected === "all" || card.dataset.category === selected;
@@ -2674,7 +2749,7 @@
         card.hidden = !(categoryOk && textOk);
       });
     };
-    category.addEventListener("change", filter);
+    category?.addEventListener("change", filter);
     search.addEventListener("input", filter);
   }
 

@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 26 static website for GitHub Pages.
+Version 27 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -30,6 +30,7 @@ Version 26 static website for GitHub Pages.
 - Question Import Checklist page for safe batch expansion of `data/questions.json`.
 - Topic Study page with focused concept cards linked from MCQ practice.
 - Weak Topic Repair Paths page connecting weak topics to study cards, practice, flashcards/formulas and review.
+- Route Tasks page with daily task flows by selected test route.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -61,6 +62,7 @@ Version 26 static website for GitHub Pages.
 - Question import workflow connects batch preparation, JSON validation, practice QA and publishing checks.
 - Practice Study Topic links now open focused topic cards with English and Urdu support.
 - Repair paths connect weak-topic signals to study topic cards, practice drills, revision tools and question review.
+- Route tasks connect the selected route to daily study, practice, review, mock and resource actions.
 
 ## How To Use
 
@@ -121,5 +123,6 @@ http://localhost:8080/
 - Add question-import workflow records in `data/question-import-checklist.json`.
 - Add topic-study cards in `data/topic-study.json`.
 - Add weak-topic repair paths in `data/repair-paths.json`.
+- Add route-based daily task flows in `data/route-tasks.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.
