@@ -82,5 +82,11 @@
     "version": "V14",
     "date": "2026-06-26",
     "summary": "Added parent guide with progress interpretation, trial-class decisions, routine support and WhatsApp guidance."
+  },
+  {
+    "id": "change-v15",
+    "version": "V15",
+    "date": "2026-06-26",
+    "summary": "Added admissions timeline planner with phased preparation schedules connected to study plans, diagnostics, mocks and trial class."
   }
 ]

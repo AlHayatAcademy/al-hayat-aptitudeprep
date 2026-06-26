@@ -1,0 +1,66 @@
+[
+  {
+    "id": "timeline-mdcat-90",
+    "title": "MDCAT 90-Day Admissions Timeline",
+    "season": "Medical Entry Season",
+    "targetTestIds": ["mdcat", "nmdcat", "nums-mdcat"],
+    "studyPlanId": "mdcat-90-day-complete",
+    "urgency": "Long Range",
+    "milestones": [
+      {"phase": "Days 90-61", "task": "Complete diagnostic, identify weak science chapters, begin daily Biology/Chemistry revision."},
+      {"phase": "Days 60-31", "task": "Move into topic-wise MCQs, formula revision and weekly mini-mocks."},
+      {"phase": "Days 30-11", "task": "Use full mixed practice, revise error log and focus on repeated weak areas."},
+      {"phase": "Final 10 Days", "task": "Attempt timed mocks, avoid new heavy topics and revise high-yield notes."}
+    ],
+    "parentNote": "Parents should track routine and mock trend, not only one daily score.",
+    "primaryLink": "study-plans.html"
+  },
+  {
+    "id": "timeline-fast-net-45",
+    "title": "FAST / NUST NET 45-Day Timeline",
+    "season": "Engineering & CS Entry Season",
+    "targetTestIds": ["fast-nuces", "nust-net", "ecat"],
+    "studyPlanId": "net-45-day-plan",
+    "urgency": "Focused",
+    "milestones": [
+      {"phase": "Days 45-31", "task": "Revise math foundations, percentages, ratios, algebra and physics formulas."},
+      {"phase": "Days 30-16", "task": "Practise quantitative and IQ sections with timed drills."},
+      {"phase": "Days 15-6", "task": "Take alternate-day mocks and repair mistakes from the results report."},
+      {"phase": "Final 5 Days", "task": "Revise formula bank, flashcards and the most repeated error-log entries."}
+    ],
+    "parentNote": "If speed is low, prioritise short timed sets instead of long passive revision.",
+    "primaryLink": "formula-bank.html"
+  },
+  {
+    "id": "timeline-nat-gat-30",
+    "title": "NAT / GAT 30-Day Timeline",
+    "season": "Undergraduate & Graduate Testing",
+    "targetTestIds": ["nat", "gat-general", "hat"],
+    "studyPlanId": "gat-30-day-plan",
+    "urgency": "Short Range",
+    "milestones": [
+      {"phase": "Week 1", "task": "Take diagnostic, revise vocabulary, grammar and basic quantitative rules."},
+      {"phase": "Week 2", "task": "Focus on analytical arrangements, assumptions and reading comprehension."},
+      {"phase": "Week 3", "task": "Attempt mixed question sets and record all repeated mistakes."},
+      {"phase": "Final Week", "task": "Take timed mocks, revise flashcards and review weak-topic summary."}
+    ],
+    "parentNote": "Short-range preparation needs consistency every day; missing two days can disturb the whole plan.",
+    "primaryLink": "question-sets.html"
+  },
+  {
+    "id": "timeline-ielts-sat-28",
+    "title": "IELTS / SAT 28-Day Skill Timeline",
+    "season": "International Test Preparation",
+    "targetTestIds": ["ielts", "sat", "gre"],
+    "studyPlanId": "ielts-28-day-plan",
+    "urgency": "Skill Intensive",
+    "milestones": [
+      {"phase": "Week 1", "task": "Diagnostic reading/writing check, vocabulary in context and grammar repair."},
+      {"phase": "Week 2", "task": "Practise reading purpose, inference, tone and sentence logic."},
+      {"phase": "Week 3", "task": "Add timed writing or verbal practice and review model strategies."},
+      {"phase": "Final Week", "task": "Use mock review, flashcards and error log for final correction."}
+    ],
+    "parentNote": "Language tests improve through feedback cycles; reading only notes is not enough.",
+    "primaryLink": "lessons.html"
+  }
+]

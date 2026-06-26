@@ -72,7 +72,8 @@
       ...(data.resultInsights || []).map((item) => record("Results Report", item.band, `${item.message} ${item.nextActions.join(" ")}`, "results-report.html")),
       ...(data.lessons || []).map((item) => record("Lesson", item.title, `${item.level} ${item.concept} ${item.workedExample} ${item.strategy} ${item.commonMistake} ${item.testIds.join(" ")} ${item.topicIds.join(" ")}`, "lessons.html")),
       ...(data.teacherToolkit || []).map((item) => record("Teacher Toolkit", item.title, `${item.classType} ${item.agenda.join(" ")} ${item.teacherNotes} ${item.homework} ${item.skillIds.join(" ")}`, "teacher-toolkit.html")),
-      ...(data.parentGuide || []).map((item) => record("Parent Guide", item.title, `${item.category} ${item.concern} ${item.guidance} ${item.recommendedAction}`, "parent-guide.html"))
+      ...(data.parentGuide || []).map((item) => record("Parent Guide", item.title, `${item.category} ${item.concern} ${item.guidance} ${item.recommendedAction}`, "parent-guide.html")),
+      ...(data.admissionsTimelines || []).map((item) => record("Admissions Timeline", item.title, `${item.season} ${item.urgency} ${item.targetTestIds.join(" ")} ${item.milestones.map((milestone) => `${milestone.phase} ${milestone.task}`).join(" ")}`, "admissions-timeline.html"))
     ];
   }
 

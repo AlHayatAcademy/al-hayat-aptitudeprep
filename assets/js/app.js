@@ -65,6 +65,7 @@
       lessons: renderLessons,
       "teacher-toolkit": renderTeacherToolkit,
       "parent-guide": renderParentGuide,
+      "admissions-timeline": renderAdmissionsTimeline,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -119,6 +120,7 @@
             ["Lessons", "Concepts, examples and practice", "lessons.html"],
             ["Teacher Toolkit", "Class plans and follow-up", "teacher-toolkit.html"],
             ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
+            ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -168,6 +170,7 @@
           ${navLink("Lessons", "lessons.html")}
           ${navLink("Teacher", "teacher-toolkit.html")}
           ${navLink("Parents", "parent-guide.html")}
+          ${navLink("Timeline", "admissions-timeline.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -207,6 +210,7 @@
         ${actionCard("Lessons", "Study concepts with examples and practice.", "lessons.html")}
         ${actionCard("Teacher Toolkit", "Run class plans with worksheets.", "teacher-toolkit.html")}
         ${actionCard("Parent Guide", "Understand progress and next steps.", "parent-guide.html")}
+        ${actionCard("Timeline", "Plan preparation by admission season.", "admissions-timeline.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -895,6 +899,33 @@
       </section>
     `;
     wireSimpleCardFilter("#parentCategory", "#parentSearch", "[data-parent-guide]");
+  }
+
+  function renderAdmissionsTimeline(data) {
+    const seasons = [...new Set(data.admissionsTimelines.map((item) => item.season))].sort();
+    app.innerHTML = `
+      ${pageHero("Admissions Timeline", "Plan Preparation By Test Season", "Use phased timelines to connect diagnostics, study plans, practice, mocks and final revision.")}
+      <section class="stat-grid">
+        ${statCard(data.admissionsTimelines.length, "Timelines")}
+        ${statCard(new Set(data.admissionsTimelines.flatMap((item) => item.targetTestIds)).size, "Target Tests")}
+        ${statCard("4", "Phases Each")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Season
+          <select id="timelineSeason">
+            <option value="all">All seasons</option>
+            ${seasons.map((season) => `<option value="${escapeHTML(season)}">${escapeHTML(season)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="timelineSearch" type="search" placeholder="Search MDCAT, FAST, final days...">
+        </label>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.admissionsTimelines.map((item) => admissionsTimelineCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#timelineSeason", "#timelineSearch", "[data-admissions-timeline]");
   }
 
   function renderStudyPlans(data) {
@@ -1586,6 +1617,34 @@
         <div class="button-row">
           <a class="btn primary small" href="${url(item.link)}">Open Action</a>
           <a class="btn secondary small" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function admissionsTimelineCard(item, data) {
+    const tests = item.targetTestIds.map((id) => findName(data.tests, id)).join(", ");
+    const plan = data.studyPlans.find((entry) => entry.id === item.studyPlanId);
+    return `
+      <article class="feature-card lesson-card timeline-card" data-admissions-timeline data-category="${escapeHTML(item.season)}">
+        <p class="eyebrow">${escapeHTML(item.season)} • ${escapeHTML(item.urgency)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p class="connected-line">Target tests: ${escapeHTML(tests)}</p>
+        <p>Connected study plan: ${escapeHTML(plan?.title || item.studyPlanId)}</p>
+        <div class="timeline-steps">
+          ${item.milestones.map((milestone) => `
+            <section>
+              <strong>${escapeHTML(milestone.phase)}</strong>
+              <p>${escapeHTML(milestone.task)}</p>
+            </section>
+          `).join("")}
+        </div>
+        <p class="connected-line">Parent note: ${escapeHTML(item.parentNote)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.primaryLink)}">Open Plan</a>
+          <a class="btn secondary small" href="${url("diagnostic.html")}">Take Diagnostic</a>
+          <a class="btn ghost small" href="${url("mock-tests.html")}">Mock Tests</a>
+          <a class="btn ghost small" href="${url("book-trial-class.html")}">Book Trial</a>
         </div>
       </article>
     `;
