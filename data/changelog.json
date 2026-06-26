@@ -1,5 +1,10 @@
 [
   {
+    "version": "V33",
+    "date": "2026-06-26",
+    "summary": "Added teacher weekly report with class follow-up actions, remedial planning rows and copyable teacher plan."
+  },
+  {
     "version": "V32",
     "date": "2026-06-26",
     "summary": "Added parent weekly report with parent-friendly progress rows, WhatsApp sharing and copyable report text."

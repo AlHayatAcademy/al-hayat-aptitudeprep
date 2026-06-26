@@ -211,8 +211,16 @@
     "id": "roadmap-v33",
     "phase": "V33",
     "title": "Teacher Weekly Report",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a teacher-facing weekly report for class follow-up and remedial planning.",
-    "nextActions": ["Create teacher report page", "Summarise weak areas", "Connect teacher toolkit"]
+    "nextActions": ["Use teacher weekly report", "Review weak-area signals", "Connect class follow-up with teacher toolkit"]
+  },
+  {
+    "id": "roadmap-v34",
+    "phase": "V34",
+    "title": "Class Remedial Plan",
+    "status": "Next",
+    "focus": "Add structured remedial class plans based on weak topics, errors and revision queue progress.",
+    "nextActions": ["Create remedial-plan page", "Add plan data", "Connect teacher report"]
   }
 ]

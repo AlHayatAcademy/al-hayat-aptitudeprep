@@ -1206,3 +1206,7 @@ th {
     flex-direction: column;
   }
 }
+
+.teacher-report-card {
+  border-top: 4px solid var(--teal);
+}

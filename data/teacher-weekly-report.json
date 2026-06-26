@@ -1,0 +1,56 @@
+[
+  {
+    "id": "teacher-practice",
+    "category": "Practice",
+    "signal": "practice",
+    "title": "Practice Follow-Up",
+    "teacherAction": "Assign one short remedial set based on the weakest repeated topic.",
+    "link": "practice.html",
+    "buttonLabel": "Open Practice"
+  },
+  {
+    "id": "teacher-mocks",
+    "category": "Mocks",
+    "signal": "mocks",
+    "title": "Mock Review",
+    "teacherAction": "Use the latest mock score to decide whether to revise concepts or increase timed sets.",
+    "link": "mock-tests.html",
+    "buttonLabel": "Open Mocks"
+  },
+  {
+    "id": "teacher-errors",
+    "category": "Error Review",
+    "signal": "errors",
+    "title": "Repeated Mistake Check",
+    "teacherAction": "Start next class by correcting one saved mistake pattern.",
+    "link": "error-log.html",
+    "buttonLabel": "Open Error Log"
+  },
+  {
+    "id": "teacher-revision",
+    "category": "Revision",
+    "signal": "revision",
+    "title": "Revision Queue Follow-Up",
+    "teacherAction": "Ask the student to explain one reviewed queue item without looking.",
+    "link": "revision-queue.html",
+    "buttonLabel": "Open Queue"
+  },
+  {
+    "id": "teacher-tasks",
+    "category": "Routine",
+    "signal": "tasks",
+    "title": "Route Task Completion",
+    "teacherAction": "Check whether daily route tasks are being completed before assigning more work.",
+    "link": "route-tasks.html",
+    "buttonLabel": "Open Tasks"
+  },
+  {
+    "id": "teacher-notes",
+    "category": "Reflection",
+    "signal": "notes",
+    "title": "Student Notes Review",
+    "teacherAction": "Review saved notes to identify repeated misconceptions.",
+    "link": "student-notes.html",
+    "buttonLabel": "Open Notes"
+  }
+]

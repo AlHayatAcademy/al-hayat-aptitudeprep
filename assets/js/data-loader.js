@@ -57,7 +57,8 @@
     notePrompts: "note-prompts.json",
     revisionQueue: "revision-queue.json",
     weeklySummary: "weekly-summary.json",
-    parentWeeklyReport: "parent-weekly-report.json"
+    parentWeeklyReport: "parent-weekly-report.json",
+    teacherWeeklyReport: "teacher-weekly-report.json"
   };
 
   async function loadJSON(file) {

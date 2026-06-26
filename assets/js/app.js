@@ -81,6 +81,7 @@
       "revision-queue": renderRevisionQueue,
       "weekly-summary": renderWeeklySummary,
       "parent-weekly-report": renderParentWeeklyReport,
+      "teacher-weekly-report": renderTeacherWeeklyReport,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -154,6 +155,7 @@
             ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
             ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"],
             ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
+            ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -219,6 +221,7 @@
           ${navLink("Revision", "revision-queue.html")}
           ${navLink("Weekly", "weekly-summary.html")}
           ${navLink("Parent Report", "parent-weekly-report.html")}
+          ${navLink("Teacher Report", "teacher-weekly-report.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -274,6 +277,7 @@
         ${actionCard("Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html")}
         ${actionCard("Weekly Summary", "Review progress across the week.", "weekly-summary.html")}
         ${actionCard("Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html")}
+        ${actionCard("Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -962,6 +966,7 @@
           <a class="btn secondary small" href="${url("revision-queue.html")}">Revision Queue</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Route Tasks</a>
           <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
+          <a class="btn ghost small" href="${url("teacher-weekly-report.html")}">Teacher Report</a>
         </div>
       </section>
       <section class="card-grid">
@@ -1037,6 +1042,58 @@
       <section class="content-band">
         <h2>WhatsApp Preview</h2>
         <pre class="code-sample"><code>${escapeHTML(shareText)}</code></pre>
+      </section>
+    `;
+  }
+
+  function renderTeacherWeeklyReport(data) {
+    const signals = getWeeklySignals(data);
+    const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
+    const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const planText = buildTeacherReportText(signals, selectedRoute);
+    app.innerHTML = `
+      ${pageHero("Teacher Weekly Report", "Class Follow-Up Plan", "A teacher-facing weekly report for remedial planning, follow-up tasks and next class focus.")}
+      <section class="stat-grid">
+        ${statCard(signals.practiceAttempts, "Practice")}
+        ${statCard(`${signals.practiceAccuracy}%`, "Accuracy")}
+        ${statCard(`${signals.routeTaskDone}/${signals.routeTaskTotal}`, "Tasks")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+        ${statCard(signals.errorCount, "Errors")}
+        ${statCard(signals.notesCount, "Notes")}
+      </section>
+      <section class="content-band">
+        <p class="eyebrow">${escapeHTML(selectedRoute?.title || "Selected Route")}</p>
+        <h2>Recommended Teaching Focus</h2>
+        <p>${escapeHTML(signals.headline)}</p>
+        <div class="button-row">
+          <button class="btn primary small" type="button" data-copy-link="${escapeHTML(planText)}">Copy Teacher Plan</button>
+          <a class="btn secondary small" href="${url("teacher-toolkit.html")}">Teacher Toolkit</a>
+          <a class="btn ghost small" href="${url("question-review.html")}">Question Review</a>
+          <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
+        </div>
+        <p id="copyStatus" class="hint" aria-live="polite"></p>
+      </section>
+      <section class="card-grid">
+        ${data.teacherWeeklyReport.map((item) => teacherReportCard(item, signals)).join("")}
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Class Follow-Up Table</h2>
+          <table>
+            <thead><tr><th>Area</th><th>Teacher Action</th></tr></thead>
+            <tbody>${data.teacherWeeklyReport.map((item) => teacherReportRow(item, signals)).join("")}</tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Next Class Sequence</h2>
+          ${reportSignal("Starter", "Review the weakest repeated pattern for 5 minutes.")}
+          ${reportSignal("Main Task", signals.firstAction)}
+          ${reportSignal("Exit Check", "Ask the student to explain one correction without looking.")}
+        </aside>
+      </section>
+      <section class="content-band">
+        <h2>Teacher Plan Preview</h2>
+        <pre class="code-sample"><code>${escapeHTML(planText)}</code></pre>
       </section>
     `;
   }
@@ -1329,6 +1386,15 @@
           <input id="teacherSearch" type="search" placeholder="Search MDCAT, FAST, assumptions...">
         </label>
       </section>
+      <section class="content-band">
+        <h2>Weekly Follow-Up</h2>
+        <p>Use the teacher weekly report to turn browser-saved practice, mock, revision and route-task signals into the next class plan.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("teacher-weekly-report.html")}">Open Teacher Report</a>
+          <a class="btn secondary small" href="${url("weekly-summary.html")}">Weekly Summary</a>
+          <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
+        </div>
+      </section>
       <section class="card-grid lesson-grid">
         ${data.teacherToolkit.map((item) => teacherPlanCard(item, data)).join("")}
       </section>
@@ -1566,6 +1632,7 @@
           <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
           <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
           <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
+          <a class="btn ghost small" href="${url("teacher-weekly-report.html")}">Teacher Report</a>
         </div>
       </section>
       <section class="split-layout dashboard-current">
@@ -1616,6 +1683,7 @@
           <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
           <a class="text-link" href="${url("weekly-summary.html")}">Open Weekly Summary</a>
           <a class="text-link" href="${url("parent-weekly-report.html")}">Open Parent Report</a>
+          <a class="text-link" href="${url("teacher-weekly-report.html")}">Open Teacher Report</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2730,6 +2798,49 @@
       `Next action 1: ${signals.firstAction}`,
       `Next action 2: ${signals.secondAction}`,
       `Next action 3: ${signals.thirdAction}`
+    ].join("\n");
+  }
+
+  function teacherReportCard(item, signals) {
+    return `
+      <article class="feature-card teacher-report-card">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(resolveTeacherSignal(item.signal, signals))}</p>
+        <p class="connected-line">${escapeHTML(item.teacherAction)}</p>
+        <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
+      </article>
+    `;
+  }
+
+  function teacherReportRow(item, signals) {
+    return `<tr><td>${escapeHTML(item.title)}</td><td>${escapeHTML(resolveTeacherSignal(item.signal, signals))} — ${escapeHTML(item.teacherAction)}</td></tr>`;
+  }
+
+  function resolveTeacherSignal(signal, signals) {
+    const valueMap = {
+      practice: `${signals.practiceAttempts} attempts, ${signals.practiceAccuracy}% accuracy`,
+      mocks: signals.latestMockText,
+      errors: `${signals.errorCount} saved mistakes`,
+      revision: `${signals.revisionDone}/${signals.revisionTotal} revision items reviewed`,
+      tasks: `${signals.routeTaskDone}/${signals.routeTaskTotal} route tasks completed`,
+      notes: `${signals.notesCount} saved notes`
+    };
+    return valueMap[signal] || "No signal available yet";
+  }
+
+  function buildTeacherReportText(signals, route) {
+    return [
+      "Al-Hayat AptitudePrep Teacher Weekly Plan",
+      `Route: ${route?.title || "Selected route"}`,
+      `Practice: ${signals.practiceAttempts} attempts, ${signals.practiceAccuracy}% accuracy`,
+      `Mock: ${signals.latestMockText}`,
+      `Errors: ${signals.errorCount}`,
+      `Revision: ${signals.revisionDone}/${signals.revisionTotal}`,
+      `Route tasks: ${signals.routeTaskDone}/${signals.routeTaskTotal}`,
+      `Teaching focus: ${signals.firstAction}`,
+      `Follow-up: ${signals.secondAction}`,
+      `Exit check: ${signals.thirdAction}`
     ].join("\n");
   }
 

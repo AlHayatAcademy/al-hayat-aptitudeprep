@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 32 static website for GitHub Pages.
+Version 33 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -36,6 +36,7 @@ Version 32 static website for GitHub Pages.
 - Revision Queue page with browser-saved review status.
 - Weekly Summary page combining practice, mocks, notes, route tasks and revision progress.
 - Parent Weekly Report page with WhatsApp share text.
+- Teacher Weekly Report page for class follow-up and remedial planning.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -73,6 +74,7 @@ Version 32 static website for GitHub Pages.
 - Revision queue combines repair paths, question review, unmastered flashcards and saved notes.
 - Weekly summary reads local progress signals and gives next actions for the coming study cycle.
 - Parent report turns weekly signals into parent-friendly summary and WhatsApp message.
+- Teacher report turns weekly signals into class follow-up actions and a copyable teacher plan.
 
 ## How To Use
 
@@ -138,5 +140,6 @@ http://localhost:8080/
 - Add revision queue source rules in `data/revision-queue.json`.
 - Add weekly summary cards in `data/weekly-summary.json`.
 - Add parent weekly report rows in `data/parent-weekly-report.json`.
+- Add teacher weekly report rows in `data/teacher-weekly-report.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

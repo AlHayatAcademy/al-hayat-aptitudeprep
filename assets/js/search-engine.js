@@ -88,7 +88,8 @@
       ...(data.notePrompts || []).map((item) => record("Student Note Prompt", item.title, `${item.context} ${item.prompt}`, "student-notes.html")),
       ...(data.revisionQueue || []).map((item) => record("Revision Queue", item.title, `${item.category} ${item.purpose} ${item.sources.join(" ")}`, "revision-queue.html")),
       ...(data.weeklySummary || []).map((item) => record("Weekly Summary", item.title, `${item.category} ${item.signal} ${item.description}`, "weekly-summary.html")),
-      ...(data.parentWeeklyReport || []).map((item) => record("Parent Weekly Report", item.label, `${item.signal} ${item.parentMeaning}`, "parent-weekly-report.html"))
+      ...(data.parentWeeklyReport || []).map((item) => record("Parent Weekly Report", item.label, `${item.signal} ${item.parentMeaning}`, "parent-weekly-report.html")),
+      ...(data.teacherWeeklyReport || []).map((item) => record("Teacher Weekly Report", item.title, `${item.category} ${item.signal} ${item.teacherAction}`, "teacher-weekly-report.html"))
     ];
   }
 
