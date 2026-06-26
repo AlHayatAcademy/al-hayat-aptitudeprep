@@ -84,6 +84,7 @@
       "teacher-weekly-report": renderTeacherWeeklyReport,
       "class-remedial-plan": renderClassRemedialPlan,
       "remedial-homework": renderRemedialHomework,
+      "homework-review": renderHomeworkReview,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -161,6 +162,7 @@
             ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
             ["Class Remedial Plan", "Run weak-area class plans", "class-remedial-plan.html"],
             ["Remedial Homework", "Student weak-area homework", "remedial-homework.html"],
+            ["Homework Review", "Review remedial completion", "homework-review.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -229,6 +231,7 @@
           ${navLink("Teacher Report", "teacher-weekly-report.html")}
           ${navLink("Remedial Plan", "class-remedial-plan.html")}
           ${navLink("Homework", "remedial-homework.html")}
+          ${navLink("Homework Review", "homework-review.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -287,6 +290,7 @@
         ${actionCard("Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html")}
         ${actionCard("Class Remedial Plan", "Run weak-area class recovery sessions.", "class-remedial-plan.html")}
         ${actionCard("Remedial Homework", "Complete follow-up weak-area tasks.", "remedial-homework.html")}
+        ${actionCard("Homework Review", "Review remedial homework completion.", "homework-review.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1194,6 +1198,7 @@
         <div class="button-row">
           <a class="btn primary small" href="${url("class-remedial-plan.html")}">Class Remedial Plan</a>
           <a class="btn secondary small" href="${url("practice.html")}">Practice</a>
+          <a class="btn ghost small" href="${url("homework-review.html")}">Review Report</a>
           <a class="btn ghost small" href="${url("student-notes.html")}">Student Notes</a>
           <a class="btn ghost small" href="${url("revision-queue.html")}">Revision Queue</a>
         </div>
@@ -1203,6 +1208,54 @@
       </section>
     `;
     wireSimpleCardFilter("#homeworkCategory", "#homeworkSearch", "[data-remedial-homework]");
+  }
+
+  function renderHomeworkReview(data) {
+    const signals = getWeeklySignals(data);
+    const status = readJSON("ah-remedial-homework-status", {});
+    const total = data.remedialHomework.length;
+    const done = data.remedialHomework.filter((item) => status[item.id]).length;
+    const percent = total ? Math.round((done / total) * 100) : 0;
+    const reviewText = buildHomeworkReviewText(data, signals, status, percent);
+    app.innerHTML = `
+      ${pageHero("Homework Review", "Remedial Completion Report", "Review student remedial homework completion and decide whether to advance, repeat or assign support work.")}
+      <section class="stat-grid">
+        ${statCard(total, "Homework Tasks")}
+        ${statCard(done, "Completed")}
+        ${statCard(total - done, "Remaining")}
+        ${statCard(`${percent}%`, "Completion")}
+        ${statCard(signals.errorCount, "Saved Errors")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+      </section>
+      <section class="content-band">
+        <h2>${escapeHTML(resolveHomeworkReviewBand(percent))}</h2>
+        <p>${escapeHTML(resolveHomeworkReviewAdvice(percent, signals))}</p>
+        <div class="button-row">
+          <button class="btn primary small" type="button" data-copy-link="${escapeHTML(reviewText)}">Copy Review</button>
+          <a class="btn secondary small" href="${url("remedial-homework.html")}">Open Homework</a>
+          <a class="btn ghost small" href="${url("teacher-weekly-report.html")}">Teacher Report</a>
+          <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
+        </div>
+        <p id="copyStatus" class="hint" aria-live="polite"></p>
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Homework Review Table</h2>
+          <table>
+            <thead><tr><th>Task</th><th>Status</th><th>Next Review</th></tr></thead>
+            <tbody>${data.remedialHomework.map((item) => homeworkReviewRow(item, status)).join("")}</tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Review Rules</h2>
+          ${data.homeworkReview.map((item) => reportSignal(item.label, resolveHomeworkReviewSignal(item.signal, percent, signals))).join("")}
+        </aside>
+      </section>
+      <section class="content-band">
+        <h2>Copyable Review</h2>
+        <pre class="code-sample"><code>${escapeHTML(reviewText)}</code></pre>
+      </section>
+    `;
   }
 
   function renderVocabularyBank(data) {
@@ -3029,6 +3082,50 @@
         </div>
       </article>
     `;
+  }
+
+  function homeworkReviewRow(item, status) {
+    const complete = Boolean(status[item.id]);
+    return `<tr><td>${escapeHTML(item.title)}</td><td>${complete ? "Complete" : "Pending"}</td><td>${escapeHTML(complete ? "Move to mixed practice or mock review." : item.studentTask)}</td></tr>`;
+  }
+
+  function resolveHomeworkReviewBand(percent) {
+    if (percent >= 80) return "Ready For Next Practice Step";
+    if (percent >= 40) return "Partial Completion: Review Before Moving On";
+    return "Homework Incomplete: Repeat Remedial Follow-Up";
+  }
+
+  function resolveHomeworkReviewAdvice(percent, signals) {
+    if (percent >= 80) return `Most remedial work is complete. Move to timed practice and monitor accuracy, currently ${signals.practiceAccuracy}%.`;
+    if (percent >= 40) return "Review the incomplete tasks first, then assign one short practice set before the next class.";
+    return "Repeat the remedial homework cycle before increasing test difficulty or assigning a full mock.";
+  }
+
+  function resolveHomeworkReviewSignal(signal, percent, signals) {
+    const valueMap = {
+      completion: `${percent}% remedial homework completion`,
+      errors: `${signals.errorCount} saved mistakes still available for review`,
+      revision: `${signals.revisionDone}/${signals.revisionTotal} revision items reviewed`,
+      parent: percent >= 80 ? "Send positive progress summary." : "Ask parent to monitor homework completion before the next class.",
+      teacher: percent >= 80 ? "Advance to mixed practice." : "Repeat correction and exit-check sequence."
+    };
+    return valueMap[signal] || signals.summary;
+  }
+
+  function buildHomeworkReviewText(data, signals, status, percent) {
+    const lines = [
+      "Al-Hayat AptitudePrep Homework Review",
+      `Completion: ${percent}%`,
+      `Practice accuracy: ${signals.practiceAccuracy}%`,
+      `Saved errors: ${signals.errorCount}`,
+      `Revision: ${signals.revisionDone}/${signals.revisionTotal}`,
+      `Decision: ${resolveHomeworkReviewBand(percent)}`,
+      ""
+    ];
+    data.remedialHomework.forEach((item) => {
+      lines.push(`${status[item.id] ? "Done" : "Pending"}: ${item.title}`);
+    });
+    return lines.join("\n");
   }
 
   function testPageCard(item, data) {

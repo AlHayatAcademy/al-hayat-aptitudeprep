@@ -91,7 +91,8 @@
       ...(data.parentWeeklyReport || []).map((item) => record("Parent Weekly Report", item.label, `${item.signal} ${item.parentMeaning}`, "parent-weekly-report.html")),
       ...(data.teacherWeeklyReport || []).map((item) => record("Teacher Weekly Report", item.title, `${item.category} ${item.signal} ${item.teacherAction}`, "teacher-weekly-report.html")),
       ...(data.classRemedialPlan || []).map((item) => record("Class Remedial Plan", item.title, `${item.stage} ${item.signal} ${item.goal} ${item.teacherAction} ${item.classSteps.join(" ")}`, "class-remedial-plan.html")),
-      ...(data.remedialHomework || []).map((item) => record("Remedial Homework", item.title, `${item.category} ${item.studentTask} ${item.completionChecks.join(" ")}`, "remedial-homework.html"))
+      ...(data.remedialHomework || []).map((item) => record("Remedial Homework", item.title, `${item.category} ${item.studentTask} ${item.completionChecks.join(" ")}`, "remedial-homework.html")),
+      ...(data.homeworkReview || []).map((item) => record("Homework Review", item.label, `${item.signal} ${item.meaning}`, "homework-review.html"))
     ];
   }
 

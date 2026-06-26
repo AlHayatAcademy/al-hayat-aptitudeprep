@@ -235,8 +235,16 @@
     "id": "roadmap-v36",
     "phase": "V36",
     "title": "Homework Review Report",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a review report for remedial homework completion and follow-up decisions.",
-    "nextActions": ["Create homework-review page", "Summarise completion", "Connect teacher and parent reports"]
+    "nextActions": ["Review homework completion", "Copy teacher follow-up", "Share parent decision"]
+  },
+  {
+    "id": "roadmap-v37",
+    "phase": "Data Expansion",
+    "title": "Step-By-Step Data Expansion",
+    "status": "Next",
+    "focus": "Stop adding major structure and begin expanding JSON data files in controlled batches.",
+    "nextActions": ["Expand tests and topics", "Add questions by skill", "Add resources and notes gradually"]
   }
 ]

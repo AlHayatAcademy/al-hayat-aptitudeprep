@@ -1,5 +1,10 @@
 [
   {
+    "version": "V36",
+    "date": "2026-06-26",
+    "summary": "Added homework review report with remedial completion summary, teacher decision rules and parent follow-up text."
+  },
+  {
     "version": "V35",
     "date": "2026-06-26",
     "summary": "Added student remedial homework with weak-topic, error-correction and revision follow-up tasks plus browser-saved completion."

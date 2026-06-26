@@ -1,0 +1,20 @@
+[
+  {
+    "id": "review-completion",
+    "label": "Completion",
+    "signal": "completion",
+    "meaning": "Use completion percentage before increasing difficulty."
+  },
+  {
+    "id": "review-teacher",
+    "label": "Teacher Decision",
+    "signal": "teacher",
+    "meaning": "Decide whether to repeat remedial teaching or move to mixed practice."
+  },
+  {
+    "id": "review-parent",
+    "label": "Parent Follow-Up",
+    "signal": "parent",
+    "meaning": "Decide whether to share encouragement or ask for homework monitoring."
+  }
+]
