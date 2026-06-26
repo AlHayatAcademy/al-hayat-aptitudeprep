@@ -195,8 +195,16 @@
     "id": "roadmap-v31",
     "phase": "V31",
     "title": "Weekly Progress Summary",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add a weekly summary that combines practice attempts, mocks, notes, route tasks and revision queue progress.",
-    "nextActions": ["Create weekly summary page", "Read local progress signals", "Connect dashboard"]
+    "nextActions": ["Use weekly summary", "Review next actions", "Share progress with parent or teacher"]
+  },
+  {
+    "id": "roadmap-v32",
+    "phase": "V32",
+    "title": "Parent Weekly Report",
+    "status": "Next",
+    "focus": "Add a parent-facing weekly report summary with WhatsApp share text.",
+    "nextActions": ["Create parent report page", "Summarise weekly signals", "Add WhatsApp share action"]
   }
 ]

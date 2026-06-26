@@ -79,6 +79,7 @@
       "route-tasks": renderRouteTasks,
       "student-notes": renderStudentNotes,
       "revision-queue": renderRevisionQueue,
+      "weekly-summary": renderWeeklySummary,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -150,6 +151,7 @@
             ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
             ["Student Notes", "Save topic and review notes", "student-notes.html"],
             ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
+            ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -213,6 +215,7 @@
           ${navLink("Route Tasks", "route-tasks.html")}
           ${navLink("Notes", "student-notes.html")}
           ${navLink("Revision", "revision-queue.html")}
+          ${navLink("Weekly", "weekly-summary.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -266,6 +269,7 @@
         ${actionCard("Route Tasks", "Open today’s tasks by test route.", "route-tasks.html")}
         ${actionCard("Student Notes", "Save topic, task and review notes.", "student-notes.html")}
         ${actionCard("Revision Queue", "Review weak topics, notes and flashcards.", "revision-queue.html")}
+        ${actionCard("Weekly Summary", "Review progress across the week.", "weekly-summary.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -933,6 +937,55 @@
     wireSimpleCardFilter("#revisionCategory", "#revisionSearch", "[data-revision-item]");
   }
 
+  function renderWeeklySummary(data) {
+    const signals = getWeeklySignals(data);
+    app.innerHTML = `
+      ${pageHero("Weekly Summary", "Progress Across The Week", "Review the main browser-saved signals from practice, mocks, diagnostic, notes, route tasks and revision queue.")}
+      <section class="stat-grid">
+        ${statCard(signals.practiceAttempts, "Practice Attempts")}
+        ${statCard(`${signals.practiceAccuracy}%`, "Practice Accuracy")}
+        ${statCard(signals.latestMock, "Latest Mock")}
+        ${statCard(`${signals.routeTaskDone}/${signals.routeTaskTotal}`, "Route Tasks")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+        ${statCard(signals.notesCount, "Notes")}
+      </section>
+      <section class="content-band">
+        <p class="eyebrow">${escapeHTML(signals.weekLabel)}</p>
+        <h2>${escapeHTML(signals.headline)}</h2>
+        <p>${escapeHTML(signals.summary)}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("dashboard.html")}">Dashboard</a>
+          <a class="btn secondary small" href="${url("revision-queue.html")}">Revision Queue</a>
+          <a class="btn ghost small" href="${url("route-tasks.html")}">Route Tasks</a>
+        </div>
+      </section>
+      <section class="card-grid">
+        ${data.weeklySummary.map((item) => weeklySummaryCard(item, signals)).join("")}
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Weekly Signals</h2>
+          <table>
+            <thead><tr><th>Area</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Diagnostic</td><td>${escapeHTML(signals.diagnosticText)}</td></tr>
+              <tr><td>Latest mock</td><td>${escapeHTML(signals.latestMockText)}</td></tr>
+              <tr><td>Error log</td><td>${escapeHTML(`${signals.errorCount} saved mistakes`)}</td></tr>
+              <tr><td>Flashcards</td><td>${escapeHTML(`${signals.masteredCount} mastered`)}</td></tr>
+              <tr><td>Revision queue</td><td>${escapeHTML(`${signals.revisionDone} of ${signals.revisionTotal} reviewed`)}</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Next Actions</h2>
+          ${reportSignal("Do First", signals.firstAction)}
+          ${reportSignal("Then", signals.secondAction)}
+          ${reportSignal("Before Next Mock", signals.thirdAction)}
+        </aside>
+      </section>
+    `;
+  }
+
   function renderVocabularyBank(data) {
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
     app.innerHTML = `
@@ -1456,6 +1509,7 @@
           <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
+          <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
         </div>
       </section>
       <section class="split-layout dashboard-current">
@@ -1504,6 +1558,7 @@
           <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
           <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
           <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
+          <a class="text-link" href="${url("weekly-summary.html")}">Open Weekly Summary</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2518,6 +2573,78 @@
         <div class="button-row">
           <a class="btn primary small" href="${url(item.href)}">Open Source</a>
         </div>
+      </article>
+    `;
+  }
+
+  function getWeeklySignals(data) {
+    const practice = readJSON("ah-aptitude-progress", {});
+    const mocks = readJSON("ah-aptitude-mocks", []);
+    const diagnostic = readJSON("ah-diagnostic-result", null);
+    const mastered = readJSON("ah-flashcard-mastered", {});
+    const errors = readJSON("ah-error-log", []);
+    const notes = readJSON("ah-student-notes", []);
+    const routeTaskStatus = readJSON("ah-route-task-status", {});
+    const revisionStatus = readJSON("ah-revision-queue-status", {});
+    const practiceTotals = Object.values(practice).reduce((totals, item) => {
+      totals.attempts += item.attempts || 0;
+      totals.correct += item.correct || 0;
+      return totals;
+    }, { attempts: 0, correct: 0 });
+    const practiceAccuracy = practiceTotals.attempts ? Math.round((practiceTotals.correct / practiceTotals.attempts) * 100) : 0;
+    const routeTaskTotal = data.routeTasks.reduce((sum, item) => sum + item.tasks.length, 0);
+    const routeTaskDone = data.routeTasks.reduce((sum, item) => {
+      return sum + item.tasks.filter((task, index) => routeTaskStatus[`${item.id}-${index}`]).length;
+    }, 0);
+    const revisionQueue = buildRevisionQueue(data, notes, mastered);
+    const revisionDone = revisionQueue.filter((item) => revisionStatus[item.id]).length;
+    const masteredCount = Object.values(mastered).filter(Boolean).length;
+    const latestMock = mocks[0];
+    const latestMockText = latestMock ? `${latestMock.title}: ${latestMock.score}/${latestMock.total}` : "No mock attempted yet";
+    const weekLabel = new Date().toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" });
+    const headline = practiceTotals.attempts || latestMock || routeTaskDone || revisionDone
+      ? "Progress signals are available for review."
+      : "Start with practice, route tasks and diagnostic work.";
+    const summary = practiceTotals.attempts
+      ? `You attempted ${practiceTotals.attempts} practice questions with ${practiceAccuracy}% accuracy.`
+      : "No practice attempts are saved yet in this browser.";
+    return {
+      weekLabel,
+      headline,
+      summary,
+      practiceAttempts: practiceTotals.attempts,
+      practiceAccuracy,
+      latestMock: latestMock ? `${latestMock.score}/${latestMock.total}` : "None",
+      latestMockText,
+      diagnosticText: diagnostic ? `${diagnostic.score}/${diagnostic.total}; weak skills: ${(diagnostic.weakSkills || []).join(", ") || "none"}` : "No diagnostic result yet",
+      routeTaskDone,
+      routeTaskTotal,
+      revisionDone,
+      revisionTotal: revisionQueue.length,
+      notesCount: notes.length,
+      errorCount: errors.length,
+      masteredCount,
+      firstAction: practiceAccuracy && practiceAccuracy < 60 ? "Open Repair Paths and fix the weakest topic." : "Complete today's route tasks.",
+      secondAction: revisionDone < revisionQueue.length ? "Review remaining Revision Queue items." : "Attempt a short timed practice set.",
+      thirdAction: errors.length ? "Review the error log before taking another mock." : "Take a mock after one focused practice block."
+    };
+  }
+
+  function weeklySummaryCard(item, signals) {
+    const valueMap = {
+      practice: `${signals.practiceAttempts} attempts, ${signals.practiceAccuracy}% accuracy`,
+      mocks: signals.latestMockText,
+      tasks: `${signals.routeTaskDone}/${signals.routeTaskTotal} route tasks done`,
+      revision: `${signals.revisionDone}/${signals.revisionTotal} queue items reviewed`,
+      notes: `${signals.notesCount} saved notes`
+    };
+    return `
+      <article class="feature-card weekly-summary-card">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(valueMap[item.signal] || item.description)}</p>
+        <p class="connected-line">${escapeHTML(item.description)}</p>
+        <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
       </article>
     `;
   }

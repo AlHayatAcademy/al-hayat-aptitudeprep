@@ -86,7 +86,8 @@
       ...(data.repairPaths || []).map((item) => record("Repair Path", item.title, `${item.trigger} ${item.steps.join(" ")} ${item.topicId} ${item.skillId}`, `repair-paths.html#${item.id}`)),
       ...(data.routeTasks || []).map((item) => record("Route Task", item.title, `${item.dayLabel} ${item.goal} ${item.routeId} ${item.tasks.map((task) => `${task.time} ${task.action}`).join(" ")} ${item.completionChecks.join(" ")} ${item.coachNote}`, `route-tasks.html#${item.id}`)),
       ...(data.notePrompts || []).map((item) => record("Student Note Prompt", item.title, `${item.context} ${item.prompt}`, "student-notes.html")),
-      ...(data.revisionQueue || []).map((item) => record("Revision Queue", item.title, `${item.category} ${item.purpose} ${item.sources.join(" ")}`, "revision-queue.html"))
+      ...(data.revisionQueue || []).map((item) => record("Revision Queue", item.title, `${item.category} ${item.purpose} ${item.sources.join(" ")}`, "revision-queue.html")),
+      ...(data.weeklySummary || []).map((item) => record("Weekly Summary", item.title, `${item.category} ${item.signal} ${item.description}`, "weekly-summary.html"))
     ];
   }
 

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "weekly-practice",
+    "category": "Practice",
+    "signal": "practice",
+    "title": "Practice Volume And Accuracy",
+    "description": "Review how many questions were attempted and whether accuracy is moving toward the target band.",
+    "link": "practice.html",
+    "buttonLabel": "Continue Practice"
+  },
+  {
+    "id": "weekly-mocks",
+    "category": "Mocks",
+    "signal": "mocks",
+    "title": "Latest Mock Signal",
+    "description": "Use the latest saved mock attempt to decide whether to revise or increase timed practice.",
+    "link": "mock-tests.html",
+    "buttonLabel": "Open Mocks"
+  },
+  {
+    "id": "weekly-tasks",
+    "category": "Route Tasks",
+    "signal": "tasks",
+    "title": "Route Task Completion",
+    "description": "Check whether the selected route tasks are being completed consistently.",
+    "link": "route-tasks.html",
+    "buttonLabel": "Open Tasks"
+  },
+  {
+    "id": "weekly-revision",
+    "category": "Revision",
+    "signal": "revision",
+    "title": "Revision Queue Completion",
+    "description": "Review how many weak-topic, flashcard and note items have been marked reviewed.",
+    "link": "revision-queue.html",
+    "buttonLabel": "Open Queue"
+  },
+  {
+    "id": "weekly-notes",
+    "category": "Notes",
+    "signal": "notes",
+    "title": "Saved Student Notes",
+    "description": "Use saved notes to identify recurring corrections and next study actions.",
+    "link": "student-notes.html",
+    "buttonLabel": "Open Notes"
+  }
+]

@@ -55,7 +55,8 @@
     repairPaths: "repair-paths.json",
     routeTasks: "route-tasks.json",
     notePrompts: "note-prompts.json",
-    revisionQueue: "revision-queue.json"
+    revisionQueue: "revision-queue.json",
+    weeklySummary: "weekly-summary.json"
   };
 
   async function loadJSON(file) {
