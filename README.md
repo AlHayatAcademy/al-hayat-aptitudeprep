@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 33 static website for GitHub Pages.
+Version 34 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -37,6 +37,7 @@ Version 33 static website for GitHub Pages.
 - Weekly Summary page combining practice, mocks, notes, route tasks and revision progress.
 - Parent Weekly Report page with WhatsApp share text.
 - Teacher Weekly Report page for class follow-up and remedial planning.
+- Class Remedial Plan page for weak-topic recovery classes.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -75,6 +76,7 @@ Version 33 static website for GitHub Pages.
 - Weekly summary reads local progress signals and gives next actions for the coming study cycle.
 - Parent report turns weekly signals into parent-friendly summary and WhatsApp message.
 - Teacher report turns weekly signals into class follow-up actions and a copyable teacher plan.
+- Class remedial plan converts weak topics, saved errors, revision queue progress and route tasks into class blocks.
 
 ## How To Use
 
@@ -141,5 +143,6 @@ http://localhost:8080/
 - Add weekly summary cards in `data/weekly-summary.json`.
 - Add parent weekly report rows in `data/parent-weekly-report.json`.
 - Add teacher weekly report rows in `data/teacher-weekly-report.json`.
+- Add remedial class blocks in `data/class-remedial-plan.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

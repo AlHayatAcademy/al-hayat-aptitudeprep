@@ -82,6 +82,7 @@
       "weekly-summary": renderWeeklySummary,
       "parent-weekly-report": renderParentWeeklyReport,
       "teacher-weekly-report": renderTeacherWeeklyReport,
+      "class-remedial-plan": renderClassRemedialPlan,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -156,6 +157,7 @@
             ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"],
             ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
             ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
+            ["Class Remedial Plan", "Run weak-area class plans", "class-remedial-plan.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -222,6 +224,7 @@
           ${navLink("Weekly", "weekly-summary.html")}
           ${navLink("Parent Report", "parent-weekly-report.html")}
           ${navLink("Teacher Report", "teacher-weekly-report.html")}
+          ${navLink("Remedial Plan", "class-remedial-plan.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -278,6 +281,7 @@
         ${actionCard("Weekly Summary", "Review progress across the week.", "weekly-summary.html")}
         ${actionCard("Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html")}
         ${actionCard("Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html")}
+        ${actionCard("Class Remedial Plan", "Run weak-area class recovery sessions.", "class-remedial-plan.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1068,6 +1072,7 @@
         <div class="button-row">
           <button class="btn primary small" type="button" data-copy-link="${escapeHTML(planText)}">Copy Teacher Plan</button>
           <a class="btn secondary small" href="${url("teacher-toolkit.html")}">Teacher Toolkit</a>
+          <a class="btn ghost small" href="${url("class-remedial-plan.html")}">Remedial Plan</a>
           <a class="btn ghost small" href="${url("question-review.html")}">Question Review</a>
           <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
         </div>
@@ -1093,6 +1098,58 @@
       </section>
       <section class="content-band">
         <h2>Teacher Plan Preview</h2>
+        <pre class="code-sample"><code>${escapeHTML(planText)}</code></pre>
+      </section>
+    `;
+  }
+
+  function renderClassRemedialPlan(data) {
+    const signals = getWeeklySignals(data);
+    const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
+    const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const planText = buildClassRemedialText(data.classRemedialPlan, signals, selectedRoute);
+    app.innerHTML = `
+      ${pageHero("Class Remedial Plan", "Weak-Area Recovery Sessions", "Run structured remedial classes using weak topics, error review, revision queue progress and route tasks.")}
+      <section class="stat-grid">
+        ${statCard(signals.practiceAttempts, "Practice Attempts")}
+        ${statCard(`${signals.practiceAccuracy}%`, "Accuracy")}
+        ${statCard(signals.errorCount, "Saved Errors")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+        ${statCard(`${signals.routeTaskDone}/${signals.routeTaskTotal}`, "Route Tasks")}
+        ${statCard(data.classRemedialPlan.length, "Plan Blocks")}
+      </section>
+      <section class="content-band">
+        <p class="eyebrow">${escapeHTML(selectedRoute?.title || "Selected Route")}</p>
+        <h2>Remedial Class Sequence</h2>
+        <p>Start with the strongest signal: low practice accuracy, saved mistakes, incomplete revision or weak route-task completion. Each block below can be expanded later into full lesson plans.</p>
+        <div class="button-row">
+          <button class="btn primary small" type="button" data-copy-link="${escapeHTML(planText)}">Copy Remedial Plan</button>
+          <a class="btn secondary small" href="${url("teacher-weekly-report.html")}">Teacher Report</a>
+          <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
+          <a class="btn ghost small" href="${url("revision-queue.html")}">Revision Queue</a>
+        </div>
+        <p id="copyStatus" class="hint" aria-live="polite"></p>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.classRemedialPlan.map((item) => remedialPlanCard(item, signals)).join("")}
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Class Plan Table</h2>
+          <table>
+            <thead><tr><th>Stage</th><th>Teacher Action</th><th>Evidence</th></tr></thead>
+            <tbody>${data.classRemedialPlan.map((item) => remedialPlanRow(item, signals)).join("")}</tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Connected Follow-Up</h2>
+          ${reportSignal("Before Class", signals.firstAction)}
+          ${reportSignal("During Class", "Use one diagnostic question, one guided correction and one independent exit check.")}
+          ${reportSignal("After Class", signals.thirdAction)}
+        </aside>
+      </section>
+      <section class="content-band">
+        <h2>Copyable Plan</h2>
         <pre class="code-sample"><code>${escapeHTML(planText)}</code></pre>
       </section>
     `;
@@ -1392,6 +1449,7 @@
         <div class="button-row">
           <a class="btn primary small" href="${url("teacher-weekly-report.html")}">Open Teacher Report</a>
           <a class="btn secondary small" href="${url("weekly-summary.html")}">Weekly Summary</a>
+          <a class="btn ghost small" href="${url("class-remedial-plan.html")}">Remedial Plan</a>
           <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
         </div>
       </section>
@@ -1629,6 +1687,7 @@
           <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
           <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
+          <a class="btn ghost small" href="${url("class-remedial-plan.html")}">Remedial Plan</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
           <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
           <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
@@ -1678,6 +1737,7 @@
           <a class="text-link" href="${url("question-sets.html")}">Open Question Sets</a>
           <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
           <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
+          <a class="text-link" href="${url("class-remedial-plan.html")}">Open Remedial Plan</a>
           <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
           <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
           <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
@@ -2842,6 +2902,59 @@
       `Follow-up: ${signals.secondAction}`,
       `Exit check: ${signals.thirdAction}`
     ].join("\n");
+  }
+
+  function remedialPlanCard(item, signals) {
+    return `
+      <article class="feature-card lesson-card remedial-plan-card" id="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(item.stage)} • ${escapeHTML(item.duration)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.goal)}</p>
+        <p class="connected-line">Evidence: ${escapeHTML(resolveRemedialSignal(item.signal, signals))}</p>
+        <div class="lesson-block">
+          <h3>Class Steps</h3>
+          <ol class="clean-list">${item.classSteps.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <div class="button-row">
+          <a class="btn secondary small" href="${url(item.primaryLink)}">${escapeHTML(item.primaryLabel)}</a>
+          <a class="btn ghost small" href="${url(item.followUpLink)}">${escapeHTML(item.followUpLabel)}</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function remedialPlanRow(item, signals) {
+    return `<tr><td>${escapeHTML(item.stage)}</td><td>${escapeHTML(item.teacherAction)}</td><td>${escapeHTML(resolveRemedialSignal(item.signal, signals))}</td></tr>`;
+  }
+
+  function resolveRemedialSignal(signal, signals) {
+    const valueMap = {
+      weakTopics: signals.firstAction,
+      errors: `${signals.errorCount} saved mistakes for correction review`,
+      revision: `${signals.revisionDone}/${signals.revisionTotal} revision queue items reviewed`,
+      tasks: `${signals.routeTaskDone}/${signals.routeTaskTotal} route tasks completed`,
+      mocks: signals.latestMockText
+    };
+    return valueMap[signal] || signals.summary;
+  }
+
+  function buildClassRemedialText(items, signals, route) {
+    const lines = [
+      "Al-Hayat AptitudePrep Class Remedial Plan",
+      `Route: ${route?.title || "Selected route"}`,
+      `Practice signal: ${signals.practiceAttempts} attempts, ${signals.practiceAccuracy}% accuracy`,
+      `Mock signal: ${signals.latestMockText}`,
+      `Errors: ${signals.errorCount}`,
+      `Revision: ${signals.revisionDone}/${signals.revisionTotal}`,
+      `Route tasks: ${signals.routeTaskDone}/${signals.routeTaskTotal}`,
+      ""
+    ];
+    items.forEach((item, index) => {
+      lines.push(`${index + 1}. ${item.stage}: ${item.title}`);
+      lines.push(`Goal: ${item.goal}`);
+      lines.push(`Teacher action: ${item.teacherAction}`);
+    });
+    return lines.join("\n");
   }
 
   function testPageCard(item, data) {

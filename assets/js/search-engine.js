@@ -89,7 +89,8 @@
       ...(data.revisionQueue || []).map((item) => record("Revision Queue", item.title, `${item.category} ${item.purpose} ${item.sources.join(" ")}`, "revision-queue.html")),
       ...(data.weeklySummary || []).map((item) => record("Weekly Summary", item.title, `${item.category} ${item.signal} ${item.description}`, "weekly-summary.html")),
       ...(data.parentWeeklyReport || []).map((item) => record("Parent Weekly Report", item.label, `${item.signal} ${item.parentMeaning}`, "parent-weekly-report.html")),
-      ...(data.teacherWeeklyReport || []).map((item) => record("Teacher Weekly Report", item.title, `${item.category} ${item.signal} ${item.teacherAction}`, "teacher-weekly-report.html"))
+      ...(data.teacherWeeklyReport || []).map((item) => record("Teacher Weekly Report", item.title, `${item.category} ${item.signal} ${item.teacherAction}`, "teacher-weekly-report.html")),
+      ...(data.classRemedialPlan || []).map((item) => record("Class Remedial Plan", item.title, `${item.stage} ${item.signal} ${item.goal} ${item.teacherAction} ${item.classSteps.join(" ")}`, "class-remedial-plan.html"))
     ];
   }
 

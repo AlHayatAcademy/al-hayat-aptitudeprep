@@ -1,0 +1,56 @@
+[
+  {
+    "id": "remedial-weak-topic",
+    "stage": "Starter",
+    "duration": "10 minutes",
+    "signal": "weakTopics",
+    "title": "Weak Topic Reset",
+    "goal": "Identify the weakest repeated concept and rebuild the core idea before timed practice.",
+    "teacherAction": "Ask one diagnostic question, explain the concept briefly, then solve one guided example.",
+    "classSteps": [
+      "Ask the student to explain where the confusion starts.",
+      "Show one corrected method with minimum wording.",
+      "Give one similar question for independent attempt."
+    ],
+    "primaryLink": "repair-paths.html",
+    "primaryLabel": "Open Repair Paths",
+    "followUpLink": "topic-study.html",
+    "followUpLabel": "Open Topic Study"
+  },
+  {
+    "id": "remedial-error-review",
+    "stage": "Correction",
+    "duration": "15 minutes",
+    "signal": "errors",
+    "title": "Saved Error Correction",
+    "goal": "Convert saved mistakes into correction rules the student can reuse.",
+    "teacherAction": "Review one saved error pattern and require the student to state the corrected rule aloud.",
+    "classSteps": [
+      "Choose one repeated wrong-answer pattern.",
+      "Compare the wrong method with the correct method.",
+      "Write one correction rule and one prevention rule."
+    ],
+    "primaryLink": "error-log.html",
+    "primaryLabel": "Open Error Log",
+    "followUpLink": "question-review.html",
+    "followUpLabel": "Open Review"
+  },
+  {
+    "id": "remedial-revision-exit",
+    "stage": "Exit Check",
+    "duration": "10 minutes",
+    "signal": "revision",
+    "title": "Revision Queue Exit Check",
+    "goal": "Confirm that the student can recall and apply the corrected idea without help.",
+    "teacherAction": "Use one revision queue item as the final independent check before assigning homework.",
+    "classSteps": [
+      "Select one pending revision item.",
+      "Ask the student to solve without notes.",
+      "Assign one route task only if the exit check is correct."
+    ],
+    "primaryLink": "revision-queue.html",
+    "primaryLabel": "Open Queue",
+    "followUpLink": "route-tasks.html",
+    "followUpLabel": "Open Tasks"
+  }
+]

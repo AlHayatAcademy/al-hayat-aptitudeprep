@@ -219,8 +219,16 @@
     "id": "roadmap-v34",
     "phase": "V34",
     "title": "Class Remedial Plan",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add structured remedial class plans based on weak topics, errors and revision queue progress.",
-    "nextActions": ["Create remedial-plan page", "Add plan data", "Connect teacher report"]
+    "nextActions": ["Use remedial plan blocks", "Connect weak topic recovery", "Assign route-task follow-up"]
+  },
+  {
+    "id": "roadmap-v35",
+    "phase": "V35",
+    "title": "Student Remedial Homework",
+    "status": "Next",
+    "focus": "Add student-facing remedial homework sets after teacher-led class recovery.",
+    "nextActions": ["Create remedial-homework page", "Add homework data", "Connect class remedial plan"]
   }
 ]
