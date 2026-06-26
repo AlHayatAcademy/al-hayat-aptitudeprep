@@ -128,7 +128,7 @@
       <a class="skip-link" href="#app">Skip to content</a>
       <header class="site-header">
         <a class="brand" href="${url("index.html")}" aria-label="Al-Hayat AptitudePrep home">
-          <span class="brand-mark">AH</span>
+          <img class="brand-logo" src="${url("assets/img/al-hayat-logo.png")}" alt="" width="56" height="56">
           <span><strong>Al-Hayat</strong><small>AptitudePrep</small></span>
         </a>
         <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
