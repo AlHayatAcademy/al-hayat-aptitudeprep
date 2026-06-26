@@ -1,0 +1,47 @@
+[
+  {
+    "id": "teacher-mdcat-biology-class",
+    "title": "MDCAT Biology Cell Structure Class",
+    "classType": "Concept Class",
+    "durationMinutes": 60,
+    "targetTestId": "mdcat",
+    "lessonId": "lesson-mdcat-cell-basics",
+    "worksheetId": "worksheet-mdcat-science",
+    "assignmentId": "assignment-mdcat-week-1",
+    "skillIds": ["science-concepts"],
+    "agenda": ["5 min diagnostic recap", "20 min cell organelles concept map", "15 min MCQ discussion", "10 min worksheet attempt", "10 min error-log and homework instructions"],
+    "teacherNotes": "Keep the class visual and function-based. Ask students to explain organelle function before choosing an MCQ option.",
+    "homework": "Attempt MDCAT Week 1 Assignment and add two wrong answers to the error log.",
+    "followUpText": "Today we studied MDCAT Biology cell structure. Please revise organelle functions, complete the assigned worksheet and attempt the Week 1 assignment."
+  },
+  {
+    "id": "teacher-fast-percentages-class",
+    "title": "FAST Quant Percentages Speed Class",
+    "classType": "Practice Class",
+    "durationMinutes": 50,
+    "targetTestId": "fast-nuces",
+    "lessonId": "lesson-fast-percentages",
+    "worksheetId": "worksheet-percentages-ratios",
+    "assignmentId": "assignment-fast-quant-1",
+    "skillIds": ["quantitative-reasoning"],
+    "agenda": ["5 min formula warmup", "10 min percentage base-value explanation", "15 min guided examples", "10 min timed worksheet", "10 min review and homework"],
+    "teacherNotes": "Force students to write original, change and final value before solving. This quickly exposes the base-value mistake.",
+    "homework": "Complete FAST Quant Speed Assignment and revise the percentage formulas in the formula bank.",
+    "followUpText": "Today we practised FAST percentage questions. Revise the base-value method, complete the worksheet and submit the speed assignment."
+  },
+  {
+    "id": "teacher-gat-analytical-class",
+    "title": "GAT Analytical Assumptions Class",
+    "classType": "Reasoning Class",
+    "durationMinutes": 55,
+    "targetTestId": "gat-general",
+    "lessonId": "lesson-gat-assumptions",
+    "worksheetId": "worksheet-analytical-arrangements",
+    "assignmentId": "assignment-nat-mixed-1",
+    "skillIds": ["logical-reasoning", "analytical-reasoning"],
+    "agenda": ["5 min argument structure recap", "15 min assumption method", "15 min guided elimination", "10 min short reasoning drill", "10 min error-log reflection"],
+    "teacherNotes": "Train students to separate evidence, conclusion and hidden assumption. Discourage answer choices that are true but unnecessary.",
+    "homework": "Attempt the NAT/GAT mixed reasoning assignment and write one assumption error in the error log.",
+    "followUpText": "Today we studied assumptions in reasoning. Revise evidence-conclusion links and complete the assigned reasoning practice."
+  }
+]

@@ -70,5 +70,11 @@
     "version": "V12",
     "date": "2026-06-26",
     "summary": "Added lesson library foundation with concept, example, strategy, mistake and connected practice links."
+  },
+  {
+    "id": "change-v13",
+    "version": "V13",
+    "date": "2026-06-26",
+    "summary": "Added teacher classroom toolkit with class agendas, connected lessons, worksheets, assignments and follow-up messages."
   }
 ]

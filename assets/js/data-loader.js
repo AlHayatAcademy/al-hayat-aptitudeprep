@@ -39,7 +39,8 @@
     errorLogPrompts: "error-log-prompts.json",
     premiumNotes: "premium-notes.json",
     resultInsights: "result-insights.json",
-    lessons: "lessons.json"
+    lessons: "lessons.json",
+    teacherToolkit: "teacher-toolkit.json"
   };
 
   async function loadJSON(file) {

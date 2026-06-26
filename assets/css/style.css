@@ -591,6 +591,11 @@ main {
   padding: 0.75rem 0.85rem;
 }
 
+.teacher-card .tag-row span {
+  background: #eef8f6;
+  color: #11605a;
+}
+
 .accordion-list {
   display: grid;
   gap: 0.8rem;

@@ -51,8 +51,16 @@
     "id": "roadmap-v13",
     "phase": "V13",
     "title": "Teacher Classroom Toolkit",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add classroom-ready lesson plans, attendance-style task flow and printable class packs.",
-    "nextActions": ["Create teacher toolkit data", "Add class plan page", "Connect assignments and worksheets"]
+    "nextActions": ["Use class plans", "Expand teacher notes", "Connect future printable packs"]
+  },
+  {
+    "id": "roadmap-v14",
+    "phase": "V14",
+    "title": "Parent Guidance Layer",
+    "status": "Next",
+    "focus": "Add parent-facing guidance, progress interpretation and trial-class decision support.",
+    "nextActions": ["Create parent guide data", "Add parent guide page", "Connect results report and trial class"]
   }
 ]
