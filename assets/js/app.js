@@ -68,6 +68,7 @@
       "admissions-timeline": renderAdmissionsTimeline,
       "download-center": renderDownloadCenter,
       "question-review": renderQuestionReview,
+      "test-routes": renderTestRoutes,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -125,6 +126,7 @@
             ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"],
             ["Download Center", "Print packs and checklists", "download-center.html"],
             ["Question Review", "Wrong-answer patterns", "question-review.html"],
+            ["Test Routes", "Connected preparation pathways", "test-routes.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -177,6 +179,7 @@
           ${navLink("Timeline", "admissions-timeline.html")}
           ${navLink("Downloads", "download-center.html")}
           ${navLink("Review", "question-review.html")}
+          ${navLink("Routes", "test-routes.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -219,6 +222,7 @@
         ${actionCard("Timeline", "Plan preparation by admission season.", "admissions-timeline.html")}
         ${actionCard("Downloads", "Open printable packs and checklists.", "download-center.html")}
         ${actionCard("Question Review", "Study wrong-answer patterns.", "question-review.html")}
+        ${actionCard("Test Routes", "Follow connected test pathways.", "test-routes.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1002,6 +1006,42 @@
     wireSimpleCardFilter("#reviewCategory", "#reviewSearch", "[data-question-review]");
   }
 
+  function renderTestRoutes(data) {
+    const categories = [...new Set(data.testRoutes.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Test Routes", "Connected Preparation Pathways", "Choose a test family and move through lessons, practice, mocks, resources, timelines and review in one clear sequence.")}
+      <section class="stat-grid">
+        ${statCard(data.testRoutes.length, "Routes")}
+        ${statCard(new Set(data.testRoutes.flatMap((item) => item.targetTestIds)).size, "Linked Tests")}
+        ${statCard(new Set(data.testRoutes.flatMap((item) => item.prioritySkills)).size, "Core Skills")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Route
+          <select id="routeCategory">
+            <option value="all">All routes</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="routeSearch" type="search" placeholder="Search MDCAT, FAST, NAT, IELTS...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>How To Use Routes</h2>
+        <p>Start with the route nearest to your admission goal, then follow the connected sequence: diagnostic, lesson, practice, mock, review and timeline. More route records can be added in one JSON file.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("diagnostic.html")}">Take Diagnostic</a>
+          <a class="btn secondary small" href="${url("choose-test.html")}">Choose My Test</a>
+          <a class="btn ghost small" href="${url("book-trial-class.html")}">Book Trial</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.testRoutes.map((item) => testRouteCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#routeCategory", "#routeSearch", "[data-test-route]");
+  }
+
   function renderStudyPlans(data) {
     app.innerHTML = `
       ${pageHero("Study Plans", "Roadmaps For Focused Preparation", "Keep test-wise weekly or monthly plans in JSON and connect them to practice and mocks.")}
@@ -1755,6 +1795,47 @@
         <p class="connected-line">Error-log prompt: ${escapeHTML(prompt?.title || item.errorLogPromptId)}</p>
         <div class="button-row">
           ${item.revisionLinks.map((link, index) => `<a class="btn ${index === 0 ? "primary" : "ghost"} small" href="${url(link)}">Revision ${index + 1}</a>`).join("")}
+        </div>
+      </article>
+    `;
+  }
+
+  function testRouteCard(item, data) {
+    const tests = item.targetTestIds.map((id) => findName(data.tests, id)).join(", ");
+    const skills = item.prioritySkills.map((id) => findName(data.skills, id)).join(", ");
+    const subjects = item.prioritySubjects.map((id) => findName(data.subjects, id)).join(", ");
+    const lessons = item.lessonIds.map((id) => data.lessons.find((entry) => entry.id === id)?.title || id).join(", ");
+    const mocks = item.mockIds.map((id) => data.mocks.find((entry) => entry.id === id)?.title || id).join(", ");
+    const resources = item.resourceIds.map((id) => data.resources.find((entry) => entry.id === id)?.title || id).join(", ");
+    const timeline = data.admissionsTimelines.find((entry) => entry.id === item.timelineId);
+    const questionSets = item.questionSetIds.map((id) => data.questionSets.find((entry) => entry.id === id)?.title || id).join(", ");
+    const primaryTest = item.targetTestIds[0] || "";
+    return `
+      <article class="feature-card route-card" data-test-route data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.audience)}</p>
+        <p class="connected-line">Target tests: ${escapeHTML(tests)}</p>
+        <p><strong>Priority skills:</strong> ${escapeHTML(skills)}</p>
+        <p><strong>Priority subjects:</strong> ${escapeHTML(subjects)}</p>
+        <div class="lesson-block">
+          <h3>Success Map</h3>
+          <ol class="clean-list">${item.successMap.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <details class="mini-details">
+          <summary>Connected Content</summary>
+          <p><strong>Lessons:</strong> ${escapeHTML(lessons)}</p>
+          <p><strong>Mocks:</strong> ${escapeHTML(mocks)}</p>
+          <p><strong>Resources:</strong> ${escapeHTML(resources)}</p>
+          <p><strong>Timeline:</strong> ${escapeHTML(timeline?.title || item.timelineId)}</p>
+          <p><strong>Question sets:</strong> ${escapeHTML(questionSets)}</p>
+        </details>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(`practice.html?test=${primaryTest}`)}">${escapeHTML(item.ctaText)}</a>
+          <a class="btn secondary small" href="${url("lessons.html")}">Lessons</a>
+          <a class="btn ghost small" href="${url("mock-tests.html")}">Mocks</a>
+          <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
+          <a class="btn ghost small" href="${url("book-trial-class.html")}">Trial</a>
         </div>
       </article>
     `;

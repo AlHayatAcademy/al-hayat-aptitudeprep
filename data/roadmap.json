@@ -91,8 +91,16 @@
     "id": "roadmap-v18",
     "phase": "V18",
     "title": "Test Route Landing Pages",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add dedicated route pages for major tests with lessons, practice, mocks, notes and timelines.",
-    "nextActions": ["Create route data", "Add route page", "Connect tests and timelines"]
+    "nextActions": ["Use route hub", "Expand route records", "Add individual deep pages later"]
+  },
+  {
+    "id": "roadmap-v19",
+    "phase": "V19",
+    "title": "Student Dashboard",
+    "status": "Next",
+    "focus": "Add one dashboard that summarises progress, routes, lessons, mocks, downloads and next actions.",
+    "nextActions": ["Create dashboard page", "Connect local progress", "Show route-based next steps"]
   }
 ]
