@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 27 static website for GitHub Pages.
+Version 28 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -31,6 +31,7 @@ Version 27 static website for GitHub Pages.
 - Topic Study page with focused concept cards linked from MCQ practice.
 - Weak Topic Repair Paths page connecting weak topics to study cards, practice, flashcards/formulas and review.
 - Route Tasks page with daily task flows by selected test route.
+- Browser-saved completion tracking for route tasks.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -63,6 +64,7 @@ Version 27 static website for GitHub Pages.
 - Practice Study Topic links now open focused topic cards with English and Urdu support.
 - Repair paths connect weak-topic signals to study topic cards, practice drills, revision tools and question review.
 - Route tasks connect the selected route to daily study, practice, review, mock and resource actions.
+- Dashboard now shows selected-route task completion progress.
 
 ## How To Use
 

@@ -171,8 +171,16 @@
     "id": "roadmap-v28",
     "phase": "V28",
     "title": "Task Completion Tracker",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add browser-saved completion tracking for route tasks and daily study routines.",
-    "nextActions": ["Add task status storage", "Show completion summary", "Connect dashboard signals"]
+    "nextActions": ["Use task checkboxes", "Review dashboard progress", "Expand route tasks"]
+  },
+  {
+    "id": "roadmap-v29",
+    "phase": "V29",
+    "title": "Student Notes Layer",
+    "status": "Next",
+    "focus": "Add browser-saved student notes connected to topics, route tasks and mistake review.",
+    "nextActions": ["Create notes interface", "Store notes locally", "Connect notes to review pages"]
   }
 ]

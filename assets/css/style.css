@@ -672,6 +672,11 @@ main {
   border-top: 4px solid var(--green);
 }
 
+.route-task-card.done {
+  border-color: #9fd9b2;
+  background: #f4fbf6;
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

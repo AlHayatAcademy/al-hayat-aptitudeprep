@@ -1,5 +1,10 @@
 [
   {
+    "version": "V28",
+    "date": "2026-06-26",
+    "summary": "Added browser-saved route-task completion tracking with task checkboxes, reset control and dashboard progress signal."
+  },
+  {
     "version": "V27",
     "date": "2026-06-26",
     "summary": "Added route-based daily task flows connected to dashboard route selection, study plans, practice, mocks, review and resources."

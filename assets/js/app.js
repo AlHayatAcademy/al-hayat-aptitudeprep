@@ -95,6 +95,7 @@
     wireTrialForm();
     wireShareTools();
     wireDailyChecklist();
+    wireRouteTaskTracker();
   }
 
   function headerHTML() {
@@ -773,12 +774,18 @@
     const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
     const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
     const visibleTasks = data.routeTasks.filter((item) => !selectedRoute || item.routeId === selectedRoute.id);
+    const routeTaskStatus = readJSON("ah-route-task-status", {});
+    const visibleTaskTotal = visibleTasks.reduce((sum, item) => sum + item.tasks.length, 0);
+    const visibleTaskDone = visibleTasks.reduce((sum, item) => {
+      return sum + item.tasks.filter((task, index) => routeTaskStatus[`${item.id}-${index}`]).length;
+    }, 0);
     app.innerHTML = `
       ${pageHero("Route Tasks", "Daily Work By Test Route", "Choose a preparation route and follow a short daily task flow connected to study plans, practice, mocks, review and resources.")}
       <section class="stat-grid">
         ${statCard(data.routeTasks.length, "Task Flows")}
         ${statCard(new Set(data.routeTasks.map((item) => item.routeId)).size, "Routes")}
         ${statCard(data.routeTasks.reduce((sum, item) => sum + item.tasks.length, 0), "Daily Tasks")}
+        ${statCard(`${visibleTaskDone}/${visibleTaskTotal}`, "Route Done")}
       </section>
       <section class="toolbar-panel">
         <label>My Route
@@ -797,10 +804,11 @@
           <a class="btn primary small" href="${url("dashboard.html")}">Dashboard</a>
           <a class="btn secondary small" href="${url("study-plans.html")}">Study Plans</a>
           <a class="btn ghost small" href="${url("test-routes.html")}">Route Details</a>
+          <button class="btn ghost small" type="button" id="resetRouteTasks">Reset Route Tasks</button>
         </div>
       </section>
       <section class="card-grid lesson-grid">
-        ${visibleTasks.map((item) => routeTaskCard(item, data)).join("") || `<div class="empty-state"><h2>No task flow found</h2><p>Add this route in <code>data/route-tasks.json</code>.</p></div>`}
+        ${visibleTasks.map((item) => routeTaskCard(item, data, routeTaskStatus)).join("") || `<div class="empty-state"><h2>No task flow found</h2><p>Add this route in <code>data/route-tasks.json</code>.</p></div>`}
       </section>
     `;
     wireSimpleCardFilter(null, "#routeTaskSearch", "[data-route-task]");
@@ -1276,8 +1284,14 @@
     const diagnostic = readJSON("ah-diagnostic-result", null);
     const mastered = readJSON("ah-flashcard-mastered", {});
     const errors = readJSON("ah-error-log", []);
+    const routeTaskStatus = readJSON("ah-route-task-status", {});
     const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
     const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const selectedRouteTasks = data.routeTasks.filter((item) => item.routeId === selectedRoute?.id);
+    const selectedRouteTaskTotal = selectedRouteTasks.reduce((sum, item) => sum + item.tasks.length, 0);
+    const selectedRouteTaskDone = selectedRouteTasks.reduce((sum, item) => {
+      return sum + item.tasks.filter((task, index) => routeTaskStatus[`${item.id}-${index}`]).length;
+    }, 0);
     const practiceTotals = Object.values(practice).reduce((totals, item) => {
       totals.attempts += item.attempts || 0;
       totals.correct += item.correct || 0;
@@ -1307,6 +1321,7 @@
         ${statCard(diagnostic ? `${diagnostic.score}/${diagnostic.total}` : "None", "Diagnostic")}
         ${statCard(masteredCount, "Flashcards Mastered")}
         ${statCard(errors.length, "Logged Mistakes")}
+        ${statCard(`${selectedRouteTaskDone}/${selectedRouteTaskTotal}`, "Route Tasks")}
       </section>
       <section class="toolbar-panel">
         <label>My Route
@@ -1339,6 +1354,7 @@
           ${reportSignal("Result Insight", insight.message)}
           ${reportSignal("Weak Topics", weakTopics.length ? weakTopics.map((item) => `${findName(data.topics, item.topicId)} (${item.accuracy}%)`).join(", ") : "No weak-topic data yet.")}
           ${reportSignal("Latest Mock", latestMock ? `${latestMock.title}: ${mockAccuracy}%` : "No mock attempt yet.")}
+          ${reportSignal("Route Task Progress", selectedRouteTaskTotal ? `${selectedRouteTaskDone} of ${selectedRouteTaskTotal} daily tasks completed.` : "No route tasks available yet.")}
         </aside>
       </section>
       <section class="card-grid">
@@ -2265,16 +2281,30 @@
     `;
   }
 
-  function routeTaskCard(item, data) {
+  function routeTaskCard(item, data, status = {}) {
     const route = data.testRoutes.find((entry) => entry.id === item.routeId);
+    const doneCount = item.tasks.filter((task, index) => status[`${item.id}-${index}`]).length;
+    const allDone = item.tasks.length > 0 && doneCount === item.tasks.length;
     return `
-      <article class="feature-card lesson-card route-task-card" data-route-task id="${escapeHTML(item.id)}">
-        <p class="eyebrow">${escapeHTML(item.dayLabel)} • ${escapeHTML(route?.title || item.routeId)}</p>
+      <article class="feature-card lesson-card route-task-card ${allDone ? "done" : ""}" data-route-task data-route-task-card="${escapeHTML(item.id)}" id="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(item.dayLabel)} • ${escapeHTML(route?.title || item.routeId)} • ${doneCount}/${item.tasks.length} done</p>
         <h2>${escapeHTML(item.title)}</h2>
         <p>${escapeHTML(item.goal)}</p>
         <div class="lesson-block">
           <h3>Today’s Tasks</h3>
-          <ol class="clean-list">${item.tasks.map((task) => `<li><strong>${escapeHTML(task.time)}</strong> ${escapeHTML(task.action)}</li>`).join("")}</ol>
+          <div class="checklist-panel">
+            ${item.tasks.map((task, index) => {
+              const taskKey = `${item.id}-${index}`;
+              return `
+                <div class="daily-task ${status[taskKey] ? "done" : ""}" data-route-task-item="${escapeHTML(taskKey)}">
+                  <label>
+                    <input type="checkbox" data-route-task-check="${escapeHTML(taskKey)}" ${status[taskKey] ? "checked" : ""}>
+                    <span><strong>${escapeHTML(task.time)}</strong><br>${escapeHTML(task.action)}</span>
+                  </label>
+                </div>
+              `;
+            }).join("")}
+          </div>
         </div>
         <div class="lesson-block">
           <h3>Completion Check</h3>
@@ -2613,6 +2643,46 @@
         const card = document.querySelector(`[data-daily-task="${control.dataset.dailyCheck}"]`);
         if (card) card.classList.remove("done");
       });
+    });
+  }
+
+  function wireRouteTaskTracker() {
+    const controls = document.querySelectorAll("[data-route-task-check]");
+    if (!controls.length) return;
+    const key = "ah-route-task-status";
+    const read = () => readJSON(key, {});
+    const write = (value) => localStorage.setItem(key, JSON.stringify(value));
+    const syncCard = (taskId) => {
+      const card = document.querySelector(`[data-route-task-card="${taskId}"]`);
+      if (!card) return;
+      const cardControls = card.querySelectorAll("[data-route-task-check]");
+      const doneCount = [...cardControls].filter((control) => control.checked).length;
+      card.classList.toggle("done", cardControls.length > 0 && doneCount === cardControls.length);
+      const eyebrow = card.querySelector(".eyebrow");
+      if (eyebrow) {
+        eyebrow.textContent = eyebrow.textContent.replace(/\d+\/\d+ done$/, `${doneCount}/${cardControls.length} done`);
+      }
+    };
+    controls.forEach((control) => {
+      control.addEventListener("change", () => {
+        const current = read();
+        current[control.dataset.routeTaskCheck] = control.checked;
+        write(current);
+        const item = document.querySelector(`[data-route-task-item="${control.dataset.routeTaskCheck}"]`);
+        if (item) item.classList.toggle("done", control.checked);
+        syncCard(control.dataset.routeTaskCheck.replace(/-\d+$/, ""));
+      });
+    });
+    document.querySelector("#resetRouteTasks")?.addEventListener("click", () => {
+      const current = read();
+      controls.forEach((control) => {
+        current[control.dataset.routeTaskCheck] = false;
+        control.checked = false;
+        const item = document.querySelector(`[data-route-task-item="${control.dataset.routeTaskCheck}"]`);
+        if (item) item.classList.remove("done");
+        syncCard(control.dataset.routeTaskCheck.replace(/-\d+$/, ""));
+      });
+      write(current);
     });
   }
 
