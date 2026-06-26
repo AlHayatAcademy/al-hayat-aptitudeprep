@@ -1,0 +1,110 @@
+[
+  {
+    "id": "note-mdcat-biology-cell",
+    "title": "MDCAT Biology: Cell Structure Preview",
+    "resourceId": "mdcat-biology-preview",
+    "testIds": ["mdcat", "nmdcat", "nums-mdcat"],
+    "subjectId": "biology",
+    "topicIds": ["cell-biology"],
+    "access": "Limited Preview",
+    "price": "Rs. ___",
+    "summary": "A compact sample of how premium notes will explain concepts, exam traps and MCQ strategy.",
+    "previewSections": [
+      {
+        "heading": "Core Concept",
+        "body": "The cell is the basic structural and functional unit of life. In entry tests, cell questions usually check organelle function, membrane structure, enzyme activity and comparison between prokaryotic and eukaryotic cells."
+      },
+      {
+        "heading": "Exam Trap",
+        "body": "Do not confuse mitochondria with ribosomes. Mitochondria relate to ATP production, while ribosomes relate to protein synthesis."
+      },
+      {
+        "heading": "Sample MCQ",
+        "body": "Which organelle is directly linked with protein synthesis? Answer: Ribosome."
+      }
+    ],
+    "premiumIncludes": ["Full chapter map", "Topic-wise MCQs", "Solved explanations", "High-yield diagrams list"],
+    "whatsappText": "Assalamualaikum, I want MDCAT Biology premium notes preview and purchase details."
+  },
+  {
+    "id": "note-fast-percentages",
+    "title": "FAST Mathematics: Percentages Preview",
+    "resourceId": "fast-math-formula-sheet",
+    "testIds": ["fast-nuces", "nust-net", "nat"],
+    "subjectId": "mathematics",
+    "topicIds": ["percentages", "ratios"],
+    "access": "Open Preview",
+    "price": "Free Starter",
+    "summary": "A short preview of formula use, exam shortcuts and common percentage mistakes.",
+    "previewSections": [
+      {
+        "heading": "Core Formula",
+        "body": "Percentage change = change divided by original value multiplied by 100. Always compare with the original value, not the final value."
+      },
+      {
+        "heading": "Exam Shortcut",
+        "body": "For a 20% increase followed by a 20% decrease, the answer is not zero. Use 100 -> 120 -> 96, so the net result is a 4% decrease."
+      },
+      {
+        "heading": "Sample MCQ",
+        "body": "A value rises from 80 to 100. Percentage increase = 20/80 x 100 = 25%."
+      }
+    ],
+    "premiumIncludes": ["FAST-style drills", "Timed worksheet", "Mistake checklist", "Formula revision set"],
+    "whatsappText": "Assalamualaikum, I want guidance about FAST mathematics notes."
+  },
+  {
+    "id": "note-nat-gat-analytical",
+    "title": "NAT/GAT Analytical Reasoning Preview",
+    "resourceId": "nat-gat-verbal-notes",
+    "testIds": ["nat", "gat-general", "hat"],
+    "subjectId": "analytical-iq",
+    "topicIds": ["arrangements", "grouping-logic", "conditional-reasoning"],
+    "access": "Limited Preview",
+    "price": "Rs. ___",
+    "summary": "A sample note showing how analytical reasoning should be converted into symbols, tables and elimination.",
+    "previewSections": [
+      {
+        "heading": "Core Method",
+        "body": "Read the fixed conditions first, then create a clean table. Mark definite positions before testing flexible clues."
+      },
+      {
+        "heading": "Exam Trap",
+        "body": "Students often solve from memory after one clue. In analytical reasoning, every new condition can change the arrangement."
+      },
+      {
+        "heading": "Sample MCQ",
+        "body": "If A is before B and B is before C, then A must be before C. This is a definite inference."
+      }
+    ],
+    "premiumIncludes": ["Arrangement templates", "Grouping drills", "Solved sets", "Timed practice plan"],
+    "whatsappText": "Assalamualaikum, I want NAT/GAT analytical reasoning premium notes details."
+  },
+  {
+    "id": "note-gre-vocab",
+    "title": "GRE/SAT Vocabulary In Context Preview",
+    "resourceId": "gre-vocab-preview",
+    "testIds": ["gre", "sat", "gat-general"],
+    "subjectId": "english",
+    "topicIds": ["synonyms-in-context", "antonyms", "context-clues"],
+    "access": "Limited Preview",
+    "price": "Rs. ___",
+    "summary": "A sample vocabulary note built around context, contrast signals and exam-style sentence logic.",
+    "previewSections": [
+      {
+        "heading": "Core Method",
+        "body": "Do not memorise only the dictionary meaning. Look for contrast words, cause-effect signals and tone clues in the sentence."
+      },
+      {
+        "heading": "Exam Trap",
+        "body": "A familiar word may be used in an unfamiliar context. The sentence meaning should control the answer."
+      },
+      {
+        "heading": "Sample MCQ",
+        "body": "Although the task looked simple, it was actually arduous. Arduous means difficult and tiring."
+      }
+    ],
+    "premiumIncludes": ["Advanced word bank", "Synonyms in context", "Antonym drills", "Sentence completion practice"],
+    "whatsappText": "Assalamualaikum, I want GRE/SAT vocabulary premium notes details."
+  }
+]

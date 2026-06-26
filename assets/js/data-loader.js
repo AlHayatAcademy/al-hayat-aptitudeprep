@@ -36,7 +36,8 @@
     questionSets: "question-sets.json",
     diagnosticQuiz: "diagnostic-quiz.json",
     flashcards: "flashcards.json",
-    errorLogPrompts: "error-log-prompts.json"
+    errorLogPrompts: "error-log-prompts.json",
+    premiumNotes: "premium-notes.json"
   };
 
   async function loadJSON(file) {

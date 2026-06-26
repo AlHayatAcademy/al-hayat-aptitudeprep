@@ -60,6 +60,7 @@
       diagnostic: renderDiagnostic,
       flashcards: renderFlashcards,
       "error-log": renderErrorLog,
+      "premium-notes": renderPremiumNotes,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -109,6 +110,7 @@
             ["Diagnostic Test", "Find strengths and weak areas", "diagnostic.html"],
             ["Flashcards", "Revise core items fast", "flashcards.html"],
             ["Error Log", "Track repeated mistakes", "error-log.html"],
+            ["Premium Notes", "Preview and purchase notes", "premium-notes.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -153,6 +155,7 @@
           ${navLink("Daily Plan", "daily-plan.html")}
           ${navLink("Diagnostic", "diagnostic.html")}
           ${navLink("Flashcards", "flashcards.html")}
+          ${navLink("Premium Notes", "premium-notes.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -187,6 +190,7 @@
         ${actionCard("Practice", "Attempt tagged sample MCQs with instant feedback.", "practice.html")}
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
+        ${actionCard("Premium Notes", "Open structured note previews.", "premium-notes.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -698,6 +702,28 @@
       </section>
     `;
     wireErrorLog(data);
+  }
+
+  function renderPremiumNotes(data) {
+    const subjects = [...new Set(data.premiumNotes.map((item) => findName(data.subjects, item.subjectId)))].sort();
+    app.innerHTML = `
+      ${pageHero("Premium Notes", "Structured Previews And Purchase Flow", "Preview selected notes before purchase. Each note is connected to tests, subjects, topics and WhatsApp guidance.")}
+      <section class="toolbar-panel">
+        <label>Subject
+          <select id="premiumSubject">
+            <option value="all">All subjects</option>
+            ${subjects.map((subject) => `<option value="${escapeHTML(subject)}">${escapeHTML(subject)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="premiumSearch" type="search" placeholder="Search MDCAT, FAST, vocabulary, biology...">
+        </label>
+      </section>
+      <section class="card-grid note-grid">
+        ${data.premiumNotes.map((note) => premiumNoteCard(note, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#premiumSubject", "#premiumSearch", "[data-premium-note]");
   }
 
   function renderStudyPlans(data) {
@@ -1233,6 +1259,39 @@
         <p class="connected-line">Correction: ${escapeHTML(item.correctionPrompt)}</p>
         <p>Related skills: ${escapeHTML(skills)}</p>
         <a class="btn secondary small" href="${url(item.actionLink)}">Open Action</a>
+      </article>
+    `;
+  }
+
+  function premiumNoteCard(note, data) {
+    const subject = findName(data.subjects, note.subjectId);
+    const tests = note.testIds.map((id) => findName(data.tests, id)).join(", ");
+    const topics = note.topicIds.map((id) => findName(data.topics, id)).join(", ");
+    const message = encodeURIComponent(note.whatsappText);
+    return `
+      <article class="feature-card note-card" data-premium-note data-category="${escapeHTML(subject)}">
+        <p class="eyebrow">${escapeHTML(note.access)} • ${escapeHTML(subject)}</p>
+        <h2>${escapeHTML(note.title)}</h2>
+        <p>${escapeHTML(note.summary)}</p>
+        <p class="price">${escapeHTML(note.price)}</p>
+        <p class="connected-line">Tests: ${escapeHTML(tests)}</p>
+        <p>Topics: ${escapeHTML(topics)}</p>
+        <div class="note-preview">
+          ${note.previewSections.map((section) => `
+            <section>
+              <h3>${escapeHTML(section.heading)}</h3>
+              <p>${escapeHTML(section.body)}</p>
+            </section>
+          `).join("")}
+        </div>
+        <details class="mini-details">
+          <summary>Premium Includes</summary>
+          <ul>${note.premiumIncludes.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>
+        </details>
+        <div class="button-row">
+          <a class="btn primary small" href="https://wa.me/${WHATSAPP_NUMBER}?text=${message}" target="_blank" rel="noopener">Ask / Purchase on WhatsApp</a>
+          <a class="btn ghost small" href="${url(`resources.html#${note.resourceId}`)}">Related Resource</a>
+        </div>
       </article>
     `;
   }

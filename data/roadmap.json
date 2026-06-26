@@ -27,8 +27,16 @@
     "id": "roadmap-v10",
     "phase": "V10",
     "title": "Premium Notes Preview System",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Turn resource previews into fuller web-based sample notes with purchase flow.",
-    "nextActions": ["Add real prices", "Add sample pages", "Connect PDF download placeholders"]
+    "nextActions": ["Add real prices", "Add more note previews", "Connect PDF download placeholders"]
+  },
+  {
+    "id": "roadmap-v11",
+    "phase": "V11",
+    "title": "Student Result Experience",
+    "status": "Next",
+    "focus": "Improve progress, score interpretation and weak-topic suggestions.",
+    "nextActions": ["Add weak-topic summaries", "Improve mock review", "Create parent-friendly report view"]
   }
 ]

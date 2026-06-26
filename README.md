@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 9 static website for GitHub Pages.
+Version 10 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -13,6 +13,7 @@ Version 9 static website for GitHub Pages.
 - Roadmap, Changelog, Contributor Guide and Question Bank pages.
 - Vocabulary Bank, Formula Bank and Question Sets pages.
 - Diagnostic Test, Flashcards and Error Log pages.
+- Premium Notes Preview page with test, subject, topic and WhatsApp purchase links.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -27,6 +28,7 @@ Version 9 static website for GitHub Pages.
 - Site management tools for tracking versions, content quality and question-bank expansion targets.
 - First real content-bank expansion for words, formulas and curated starter drills.
 - Browser-saved diagnostic result, flashcard mastery and student error log.
+- Structured note previews connected to existing premium resource cards.
 
 ## How To Use
 
@@ -71,5 +73,6 @@ http://localhost:8080/
 - Add diagnostic items in `data/diagnostic-quiz.json`.
 - Add flashcards in `data/flashcards.json`.
 - Add mistake prompts in `data/error-log-prompts.json`.
+- Add premium note previews in `data/premium-notes.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

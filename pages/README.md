@@ -28,6 +28,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `diagnostic.html`
 - `flashcards.html`
 - `error-log.html`
+- `premium-notes.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`

@@ -67,7 +67,8 @@
       ...(data.questionSets || []).map((item) => record("Question Set", item.title, `${item.purpose} ${item.skillIds.join(" ")}`, "question-sets.html")),
       ...(data.diagnosticQuiz || []).map((item) => record("Diagnostic", item.stem, `${item.difficulty} ${item.levelSignal} ${item.skillId} ${item.topicId}`, "diagnostic.html")),
       ...(data.flashcards || []).map((item) => record("Flashcard", item.front, `${item.back} ${item.category} ${item.level} ${item.skillId}`, "flashcards.html")),
-      ...(data.errorLogPrompts || []).map((item) => record("Error Log Prompt", item.title, `${item.category} ${item.diagnosis} ${item.correctionPrompt}`, "error-log.html"))
+      ...(data.errorLogPrompts || []).map((item) => record("Error Log Prompt", item.title, `${item.category} ${item.diagnosis} ${item.correctionPrompt}`, "error-log.html")),
+      ...(data.premiumNotes || []).map((item) => record("Premium Note", item.title, `${item.access} ${item.summary} ${item.previewSections.map((section) => `${section.heading} ${section.body}`).join(" ")} ${item.premiumIncludes.join(" ")}`, "premium-notes.html"))
     ];
   }
 

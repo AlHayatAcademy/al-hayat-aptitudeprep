@@ -52,5 +52,11 @@
     "version": "V9",
     "date": "2026-06-26",
     "summary": "Added diagnostic test, flashcards and browser-saved error log for stronger student self-assessment."
+  },
+  {
+    "id": "change-v10",
+    "version": "V10",
+    "date": "2026-06-26",
+    "summary": "Added premium notes preview page with structured sample notes, related resources and WhatsApp purchase flow."
   }
 ]
