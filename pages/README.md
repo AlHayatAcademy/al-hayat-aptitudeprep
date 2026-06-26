@@ -12,6 +12,9 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `compare.html`
 - `glossary.html`
 - `choose-test.html`
+- `strategies.html`
+- `mistakes.html`
+- `daily-plan.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`

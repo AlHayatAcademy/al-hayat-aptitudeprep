@@ -1,0 +1,56 @@
+[
+  {
+    "id": "strategy-vocab-context",
+    "title": "Vocabulary Through Context",
+    "category": "Verbal",
+    "skillId": "vocabulary",
+    "bestFor": ["mdcat", "nat", "gat-general", "sat", "gre"],
+    "steps": ["Read the full sentence before looking at options.", "Identify positive or negative tone.", "Eliminate options that do not fit the context.", "Review the root or word family after answering."],
+    "quickTip": "Do not memorize isolated meanings only; learn how the word behaves in a sentence."
+  },
+  {
+    "id": "strategy-reading-evidence",
+    "title": "Evidence-Based Reading",
+    "category": "Verbal",
+    "skillId": "reading-comprehension",
+    "bestFor": ["ielts", "toefl", "sat", "gre", "gat-general"],
+    "steps": ["Skim the passage for structure.", "Underline the main claim mentally.", "Match every answer with textual evidence.", "Avoid options that are true but not supported by the passage."],
+    "quickTip": "The best reading answer is not the most attractive option; it is the most supported option."
+  },
+  {
+    "id": "strategy-quant-speed",
+    "title": "Quantitative Speed With Accuracy",
+    "category": "Quantitative",
+    "skillId": "quantitative-reasoning",
+    "bestFor": ["fast-nuces", "nust-net", "ecat", "nat", "gat-general"],
+    "steps": ["Revise formulas before timed practice.", "Solve first without looking at options when possible.", "Use options for estimation only after understanding the problem.", "Keep a separate mistake notebook for repeated patterns."],
+    "quickTip": "Speed grows from repeated correct method, not from random shortcuts."
+  },
+  {
+    "id": "strategy-analytical-diagram",
+    "title": "Analytical Reasoning Diagrams",
+    "category": "Reasoning",
+    "skillId": "analytical-reasoning",
+    "bestFor": ["fast-nuces", "nust-net", "gat-general", "hat", "lsat"],
+    "steps": ["Translate each rule into a short symbol.", "Draw positions, groups or slots.", "Mark fixed information first.", "Test each option against the diagram."],
+    "quickTip": "A small diagram prevents mental overload in arrangement and grouping questions."
+  },
+  {
+    "id": "strategy-mock-review",
+    "title": "Mock-Test Review Method",
+    "category": "Mocks",
+    "skillId": "general-awareness",
+    "bestFor": ["mdcat", "fast-nuces", "nust-net", "nat", "gat-general", "lat"],
+    "steps": ["Attempt the mock under time pressure.", "Mark wrong answers by topic.", "Separate careless mistakes from concept gaps.", "Repeat weak topics before the next mock."],
+    "quickTip": "The real value of a mock starts after submission, during review."
+  },
+  {
+    "id": "strategy-writing-outline",
+    "title": "Fast Essay Outline",
+    "category": "Writing",
+    "skillId": "writing",
+    "bestFor": ["lat", "ielts", "toefl", "gre", "sat"],
+    "steps": ["Write a one-line thesis.", "List two or three supporting ideas.", "Add one example for each idea.", "Write a short conclusion that returns to the thesis."],
+    "quickTip": "A clear outline saves time and prevents weak, scattered writing."
+  }
+]

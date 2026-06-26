@@ -44,6 +44,9 @@
       compare: renderCompare,
       glossary: renderGlossary,
       choose: renderChooseTest,
+      strategies: renderStrategies,
+      mistakes: renderMistakes,
+      "daily-plan": renderDailyPlan,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -61,6 +64,7 @@
     wireResourceFilters();
     wireTrialForm();
     wireShareTools();
+    wireDailyChecklist();
   }
 
   function headerHTML() {
@@ -91,6 +95,9 @@
             ["Choose My Test", "Find the right route", "choose-test.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
+            ["Strategies", "How to solve smarter", "strategies.html"],
+            ["Daily Plan", "Today’s study checklist", "daily-plan.html"],
+            ["Common Mistakes", "Avoid repeated errors", "mistakes.html"],
             ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
@@ -117,6 +124,7 @@
           ${navLink("Share", "share.html")}
           ${navLink("FAQ", "faq.html")}
           ${navLink("Glossary", "glossary.html")}
+          ${navLink("Daily Plan", "daily-plan.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -149,6 +157,7 @@
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
+        ${actionCard("Daily Plan", "Follow a practical study checklist.", "daily-plan.html")}
       </section>
       <section class="stat-grid" aria-label="Version 3 platform snapshot">
         ${statCard(data.tests.length, "Tests")}
@@ -335,6 +344,75 @@
         <div class="button-row">
           <a class="btn primary" href="${url("book-trial-class.html")}">Book Trial Class</a>
           <a class="btn secondary" href="${url("compare.html")}">Compare Tests</a>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderStrategies(data) {
+    const categories = [...new Set(data.strategies.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Strategies", "Exam Strategies That Students Can Apply", "Use these compact strategies for vocabulary, reading, quantitative reasoning, analytical reasoning, mocks and writing.")}
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="strategyCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="strategySearch" type="search" placeholder="Search strategy, skill, test...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.strategies.map((item) => strategyCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#strategyCategory", "#strategySearch", "[data-strategy-card]");
+  }
+
+  function renderMistakes(data) {
+    const categories = [...new Set(data.commonMistakes.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Common Mistakes", "Avoid The Errors That Waste Preparation Time", "Each card names a common student mistake and gives a direct correction method.")}
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="mistakeCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="mistakeSearch" type="search" placeholder="Search mistakes...">
+        </label>
+      </section>
+      <section class="card-grid">
+        ${data.commonMistakes.map((item) => mistakeCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#mistakeCategory", "#mistakeSearch", "[data-mistake-card]");
+  }
+
+  function renderDailyPlan(data) {
+    const completed = JSON.parse(localStorage.getItem("ah-daily-checklist") || "{}");
+    const totalMinutes = data.dailyChecklist.reduce((sum, item) => sum + item.minutes, 0);
+    const doneCount = data.dailyChecklist.filter((item) => completed[item.id]).length;
+    app.innerHTML = `
+      ${pageHero("Daily Plan", "A Practical Study Checklist For Today", "Mark tasks complete in this browser and use the links to jump directly into practice.")}
+      <section class="stat-grid">
+        ${statCard(data.dailyChecklist.length, "Daily Tasks")}
+        ${statCard(totalMinutes, "Minutes")}
+        ${statCard(doneCount, "Completed")}
+      </section>
+      <section class="checklist-panel">
+        ${data.dailyChecklist.map((item) => dailyTaskCard(item, completed[item.id])).join("")}
+      </section>
+      <section class="content-band">
+        <h2>How to use this plan</h2>
+        <p>Complete the checklist before moving to random practice. Short daily consistency is better than occasional long sessions without review.</p>
+        <div class="button-row">
+          <button class="btn ghost" id="resetDailyChecklist" type="button">Reset Today</button>
+          <a class="btn primary" href="${url("progress.html")}">View Progress</a>
         </div>
       </section>
     `;
@@ -640,6 +718,49 @@
     `;
   }
 
+  function strategyCard(item, data) {
+    const tests = item.bestFor.map((id) => findName(data.tests, id)).join(", ");
+    const skill = findName(data.skills, item.skillId);
+    return `
+      <article class="feature-card" data-strategy-card data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(skill)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <ol class="clean-list">${item.steps.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        <p class="connected-line">Quick tip: ${escapeHTML(item.quickTip)}</p>
+        <p>Best for: ${escapeHTML(tests)}</p>
+      </article>
+    `;
+  }
+
+  function mistakeCard(item, data) {
+    const skills = item.relatedSkillIds.map((id) => findName(data.skills, id)).join(", ");
+    return `
+      <article class="feature-card" data-mistake-card data-category="${escapeHTML(item.category)}">
+        <p class="eyebrow">${escapeHTML(item.category)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p><strong>Problem:</strong> ${escapeHTML(item.problem)}</p>
+        <p class="connected-line">Fix: ${escapeHTML(item.fix)}</p>
+        <p>Related skills: ${escapeHTML(skills)}</p>
+      </article>
+    `;
+  }
+
+  function dailyTaskCard(item, completed) {
+    return `
+      <article class="daily-task ${completed ? "done" : ""}" data-daily-task="${item.id}">
+        <label>
+          <input type="checkbox" data-daily-check="${item.id}" ${completed ? "checked" : ""}>
+          <span>
+            <strong>${escapeHTML(item.title)}</strong>
+            <small>${escapeHTML(item.category)} • ${item.minutes} minutes</small>
+          </span>
+        </label>
+        <p>${escapeHTML(item.task)}</p>
+        <a class="text-link" href="${url(item.link)}">Open task</a>
+      </article>
+    `;
+  }
+
   function testCard(test, data) {
     const skills = test.skillIds.map((id) => findName(data.skills, id)).join(", ");
     const subjects = test.subjectIds.map((id) => findName(data.subjects, id)).join(", ");
@@ -764,6 +885,48 @@
         if (status) status.textContent = "Copy failed. Select and copy the link manually.";
       }
     });
+  }
+
+  function wireDailyChecklist() {
+    const controls = document.querySelectorAll("[data-daily-check]");
+    if (!controls.length) return;
+    const key = "ah-daily-checklist";
+    const read = () => JSON.parse(localStorage.getItem(key) || "{}");
+    const write = (value) => localStorage.setItem(key, JSON.stringify(value));
+    controls.forEach((control) => {
+      control.addEventListener("change", () => {
+        const current = read();
+        current[control.dataset.dailyCheck] = control.checked;
+        write(current);
+        const card = document.querySelector(`[data-daily-task="${control.dataset.dailyCheck}"]`);
+        if (card) card.classList.toggle("done", control.checked);
+      });
+    });
+    document.querySelector("#resetDailyChecklist")?.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      controls.forEach((control) => {
+        control.checked = false;
+        const card = document.querySelector(`[data-daily-task="${control.dataset.dailyCheck}"]`);
+        if (card) card.classList.remove("done");
+      });
+    });
+  }
+
+  function wireSimpleCardFilter(categorySelector, searchSelector, cardSelector) {
+    const category = document.querySelector(categorySelector);
+    const search = document.querySelector(searchSelector);
+    if (!category || !search) return;
+    const filter = () => {
+      const selected = category.value;
+      const term = search.value.trim().toLowerCase();
+      document.querySelectorAll(cardSelector).forEach((card) => {
+        const categoryOk = selected === "all" || card.dataset.category === selected;
+        const textOk = !term || card.textContent.toLowerCase().includes(term);
+        card.hidden = !(categoryOk && textOk);
+      });
+    };
+    category.addEventListener("change", filter);
+    search.addEventListener("input", filter);
   }
 
   function wireAccordions() {

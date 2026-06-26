@@ -20,7 +20,10 @@
     pathways: "pathways.json",
     testFormats: "test-formats.json",
     glossary: "glossary.json",
-    decisionGuide: "decision-guide.json"
+    decisionGuide: "decision-guide.json",
+    strategies: "strategies.json",
+    commonMistakes: "common-mistakes.json",
+    dailyChecklist: "daily-checklist.json"
   };
 
   async function loadJSON(file) {

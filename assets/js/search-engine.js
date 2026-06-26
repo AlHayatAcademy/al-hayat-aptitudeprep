@@ -51,7 +51,10 @@
       ...(data.announcements || []).map((item) => record("Announcement", item.title, `${item.type} ${item.message}`, "index.html")),
       ...(data.testFormats || []).map((item) => record("Test Format", item.title, `${item.sections.join(" ")} ${item.questionStyle} ${item.bestStrategy}`, "compare.html")),
       ...(data.glossary || []).map((item) => record("Glossary", item.term, `${item.category} ${item.definition} ${item.example}`, "glossary.html")),
-      ...(data.decisionGuide || []).map((item) => record("Decision Guide", item.question, `${item.recommendation} ${item.testIds.join(" ")}`, "choose-test.html"))
+      ...(data.decisionGuide || []).map((item) => record("Decision Guide", item.question, `${item.recommendation} ${item.testIds.join(" ")}`, "choose-test.html")),
+      ...(data.strategies || []).map((item) => record("Strategy", item.title, `${item.category} ${item.quickTip} ${item.steps.join(" ")}`, "strategies.html")),
+      ...(data.commonMistakes || []).map((item) => record("Common Mistake", item.title, `${item.category} ${item.problem} ${item.fix}`, "mistakes.html")),
+      ...(data.dailyChecklist || []).map((item) => record("Daily Checklist", item.title, `${item.category} ${item.task}`, "daily-plan.html"))
     ];
   }
 

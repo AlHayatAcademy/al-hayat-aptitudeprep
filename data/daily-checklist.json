@@ -1,0 +1,58 @@
+[
+  {
+    "id": "daily-vocab",
+    "title": "Vocabulary Drill",
+    "category": "Verbal",
+    "minutes": 15,
+    "task": "Revise 10 words with synonym, antonym and one sentence.",
+    "link": "practice.html?skill=vocabulary"
+  },
+  {
+    "id": "daily-grammar",
+    "title": "Grammar Accuracy",
+    "category": "Verbal",
+    "minutes": 10,
+    "task": "Solve 5 grammar or sentence-correction questions and review the rule.",
+    "link": "practice.html?skill=grammar"
+  },
+  {
+    "id": "daily-quant",
+    "title": "Quantitative Practice",
+    "category": "Quantitative",
+    "minutes": 20,
+    "task": "Solve one small set from percentages, ratios, averages or algebra.",
+    "link": "practice.html?skill=quantitative-reasoning"
+  },
+  {
+    "id": "daily-reasoning",
+    "title": "Reasoning Set",
+    "category": "Reasoning",
+    "minutes": 15,
+    "task": "Solve one analytical or logical reasoning set using a diagram or rule list.",
+    "link": "practice.html?skill=analytical-reasoning"
+  },
+  {
+    "id": "daily-subject",
+    "title": "Subject Concept",
+    "category": "Subject",
+    "minutes": 25,
+    "task": "Revise one science, math, computer or GK concept and attempt related MCQs.",
+    "link": "subjects.html"
+  },
+  {
+    "id": "daily-mock",
+    "title": "Mini Mock or Review",
+    "category": "Mocks",
+    "minutes": 20,
+    "task": "Attempt a mini mock or review mistakes from your previous mock.",
+    "link": "mock-tests.html"
+  },
+  {
+    "id": "daily-progress",
+    "title": "Progress Check",
+    "category": "Review",
+    "minutes": 5,
+    "task": "Check topic accuracy and choose one weak area for tomorrow.",
+    "link": "progress.html"
+  }
+]

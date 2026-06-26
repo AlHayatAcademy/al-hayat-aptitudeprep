@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mistake-reading-too-fast",
+    "title": "Reading the Question Too Fast",
+    "category": "Practice Habits",
+    "problem": "Students often answer what they expected the question to ask, not what it actually asks.",
+    "fix": "Circle or mentally mark command words such as nearest, opposite, except, best, main and inference.",
+    "relatedSkillIds": ["reading-comprehension", "vocabulary", "logical-reasoning"]
+  },
+  {
+    "id": "mistake-ignoring-time",
+    "title": "Ignoring Time Until the Final Week",
+    "category": "Mock Tests",
+    "problem": "Accuracy may look good in untimed practice but collapse during timed exams.",
+    "fix": "Add short timed sets from the beginning, then move to section mocks and full mocks.",
+    "relatedSkillIds": ["quantitative-reasoning", "analytical-reasoning", "spatial-iq"]
+  },
+  {
+    "id": "mistake-formula-without-concept",
+    "title": "Using Formulas Without Concept",
+    "category": "Quantitative",
+    "problem": "Students memorize formulas but fail when the wording changes.",
+    "fix": "After each formula, solve one direct question and one word problem using the same idea.",
+    "relatedSkillIds": ["quantitative-reasoning", "science-concepts", "data-interpretation"]
+  },
+  {
+    "id": "mistake-no-review",
+    "title": "Practising Without Reviewing Mistakes",
+    "category": "Practice Habits",
+    "problem": "The same wrong pattern repeats because the student moves to new questions too quickly.",
+    "fix": "Write every repeated mistake under topic, reason and correct method.",
+    "relatedSkillIds": ["vocabulary", "grammar", "quantitative-reasoning", "analytical-reasoning"]
+  },
+  {
+    "id": "mistake-random-vocab",
+    "title": "Random Vocabulary Memorization",
+    "category": "Verbal",
+    "problem": "Students memorize lists but cannot use words in context.",
+    "fix": "Learn each word with one sentence, one synonym, one antonym and one related word.",
+    "relatedSkillIds": ["vocabulary", "sentence-completion", "reading-comprehension"]
+  },
+  {
+    "id": "mistake-late-mocks",
+    "title": "Starting Mocks Too Late",
+    "category": "Mock Tests",
+    "problem": "Students wait until the syllabus is perfect, then discover timing and stamina problems too late.",
+    "fix": "Start mini mocks early. Full mocks can come later, but timed exposure should begin now.",
+    "relatedSkillIds": ["quantitative-reasoning", "reading-comprehension", "analytical-reasoning"]
+  }
+]

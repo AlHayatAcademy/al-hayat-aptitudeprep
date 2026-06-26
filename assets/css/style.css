@@ -334,7 +334,8 @@ main {
 .result-card,
 .question-card,
 .stat-card,
-.announcement-card {
+.announcement-card,
+.daily-task {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
@@ -377,6 +378,7 @@ main {
 .result-card,
 .question-card,
 .announcement-card,
+.daily-task,
 .content-band,
 .toolbar-panel,
 .form-shell,
@@ -422,6 +424,53 @@ main {
 .announcement-card p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.checklist-panel {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.daily-task {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.daily-task label {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.daily-task input {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.25rem;
+  accent-color: var(--green);
+}
+
+.daily-task small {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.daily-task p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.daily-task.done {
+  border-color: #9fd9b2;
+  background: #f0fbf3;
+}
+
+.daily-task.done strong {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #7bbf91;
 }
 
 .accordion-list {
