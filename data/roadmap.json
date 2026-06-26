@@ -99,8 +99,16 @@
     "id": "roadmap-v19",
     "phase": "V19",
     "title": "Student Dashboard",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add one dashboard that summarises progress, routes, lessons, mocks, downloads and next actions.",
-    "nextActions": ["Create dashboard page", "Connect local progress", "Show route-based next steps"]
+    "nextActions": ["Use dashboard", "Review route selection", "Expand dashboard actions"]
+  },
+  {
+    "id": "roadmap-v20",
+    "phase": "V20",
+    "title": "Test-Specific Deep Pages",
+    "status": "Next",
+    "focus": "Add individual pages for major tests such as MDCAT, FAST, NAT and GAT with route-specific content.",
+    "nextActions": ["Create deep page templates", "Add test page data", "Connect route cards to deep pages"]
   }
 ]

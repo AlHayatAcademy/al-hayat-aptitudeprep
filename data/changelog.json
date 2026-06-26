@@ -1,5 +1,10 @@
 [
   {
+    "version": "V19",
+    "date": "2026-06-26",
+    "summary": "Added student dashboard with route selection, progress signals, local performance summary and next-action cards."
+  },
+  {
     "version": "V18",
     "date": "2026-06-26",
     "summary": "Added test route landing hub with connected pathways for medical, engineering, NAT/GAT and international preparation."

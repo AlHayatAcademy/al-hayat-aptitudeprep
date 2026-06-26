@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dashboard-start-diagnostic",
+    "title": "Start With Diagnostic",
+    "category": "Start",
+    "priority": "High",
+    "routeIds": ["route-medical-entry", "route-engineering-cs", "route-nat-gat", "route-international-tests"],
+    "summary": "Check current level before choosing heavy practice.",
+    "link": "diagnostic.html",
+    "buttonLabel": "Take Diagnostic"
+  },
+  {
+    "id": "dashboard-follow-route",
+    "title": "Follow Your Test Route",
+    "category": "Route",
+    "priority": "High",
+    "routeIds": ["route-medical-entry", "route-engineering-cs", "route-nat-gat", "route-international-tests"],
+    "summary": "Use the route hub to connect lessons, practice, mocks and timelines.",
+    "link": "test-routes.html",
+    "buttonLabel": "Open Routes"
+  },
+  {
+    "id": "dashboard-review-mistakes",
+    "title": "Repair Repeated Mistakes",
+    "category": "Review",
+    "priority": "Medium",
+    "routeIds": ["route-medical-entry", "route-engineering-cs", "route-nat-gat", "route-international-tests"],
+    "summary": "Use the question review and error log after every practice or mock session.",
+    "link": "question-review.html",
+    "buttonLabel": "Review Mistakes"
+  },
+  {
+    "id": "dashboard-print-pack",
+    "title": "Print A Study Pack",
+    "category": "Download",
+    "priority": "Medium",
+    "routeIds": ["route-medical-entry", "route-engineering-cs", "route-nat-gat"],
+    "summary": "Open printable worksheets, timelines and parent/teacher handouts.",
+    "link": "download-center.html",
+    "buttonLabel": "Open Downloads"
+  }
+]

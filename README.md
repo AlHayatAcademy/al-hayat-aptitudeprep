@@ -1,6 +1,6 @@
 # Al-Hayat AptitudePrep
 
-Version 18 static website for GitHub Pages.
+Version 19 static website for GitHub Pages.
 
 ## What Is Included
 
@@ -22,6 +22,7 @@ Version 18 static website for GitHub Pages.
 - Download Center page for printable packs, worksheets, handouts and checklists.
 - Question Review page for wrong-answer patterns, review methods and revision links.
 - Test Routes page with connected preparation pathways for major test families.
+- Student Dashboard page with route selection, progress signals and next actions.
 - Expandable desktop/mobile navigation.
 - JSON-driven content model in `/data`.
 - Working sample practice engine.
@@ -45,6 +46,7 @@ Version 18 static website for GitHub Pages.
 - Download center connected to worksheets, teacher toolkit, parent guide and timelines.
 - Question review connected to practice, error log, strategies, flashcards and results report.
 - Test routes connected to tests, lessons, mocks, resources, timelines and question sets.
+- Student dashboard connected to local progress, routes, lessons, mocks, downloads and results report.
 
 ## How To Use
 
@@ -98,5 +100,6 @@ http://localhost:8080/
 - Add download/print records in `data/download-center.json`.
 - Add question-review guides in `data/question-review.json`.
 - Add test-route pathways in `data/test-routes.json`.
+- Add dashboard action cards in `data/dashboard.json`.
 - Add individual deep pages later under `/pages`.
 - WhatsApp and email are configured in `assets/js/app.js`.

@@ -627,7 +627,21 @@ main {
 }
 
 .route-card {
-  border-top: 4px solid var(--navy);
+  border-top: 4px solid var(--ink);
+}
+
+.dashboard-card {
+  border-top: 4px solid var(--green);
+}
+
+.dashboard-current {
+  align-items: stretch;
+}
+
+.dashboard-current .side-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
 }
 
 @media print {

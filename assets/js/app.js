@@ -69,6 +69,7 @@
       "download-center": renderDownloadCenter,
       "question-review": renderQuestionReview,
       "test-routes": renderTestRoutes,
+      dashboard: renderDashboard,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -127,6 +128,7 @@
             ["Download Center", "Print packs and checklists", "download-center.html"],
             ["Question Review", "Wrong-answer patterns", "question-review.html"],
             ["Test Routes", "Connected preparation pathways", "test-routes.html"],
+            ["Dashboard", "Progress and next actions", "dashboard.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -180,6 +182,7 @@
           ${navLink("Downloads", "download-center.html")}
           ${navLink("Review", "question-review.html")}
           ${navLink("Routes", "test-routes.html")}
+          ${navLink("Dashboard", "dashboard.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -223,6 +226,7 @@
         ${actionCard("Downloads", "Open printable packs and checklists.", "download-center.html")}
         ${actionCard("Question Review", "Study wrong-answer patterns.", "question-review.html")}
         ${actionCard("Test Routes", "Follow connected test pathways.", "test-routes.html")}
+        ${actionCard("Dashboard", "See progress and next actions.", "dashboard.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1042,6 +1046,107 @@
     wireSimpleCardFilter("#routeCategory", "#routeSearch", "[data-test-route]");
   }
 
+  function renderDashboard(data) {
+    const practice = readJSON("ah-aptitude-progress", {});
+    const mocks = readJSON("ah-aptitude-mocks", []);
+    const diagnostic = readJSON("ah-diagnostic-result", null);
+    const mastered = readJSON("ah-flashcard-mastered", {});
+    const errors = readJSON("ah-error-log", []);
+    const selectedRouteId = localStorage.getItem("ah-selected-route") || data.testRoutes[0]?.id;
+    const selectedRoute = data.testRoutes.find((item) => item.id === selectedRouteId) || data.testRoutes[0];
+    const practiceTotals = Object.values(practice).reduce((totals, item) => {
+      totals.attempts += item.attempts || 0;
+      totals.correct += item.correct || 0;
+      return totals;
+    }, { attempts: 0, correct: 0 });
+    const practiceAccuracy = practiceTotals.attempts ? Math.round((practiceTotals.correct / practiceTotals.attempts) * 100) : 0;
+    const latestMock = mocks[0];
+    const mockAccuracy = latestMock?.total ? Math.round((latestMock.score / latestMock.total) * 100) : 0;
+    const masteredCount = Object.values(mastered).filter(Boolean).length;
+    const insight = findResultInsight(data.resultInsights, practiceAccuracy || mockAccuracy || 0);
+    const routeLessons = selectedRoute ? selectedRoute.lessonIds.map((id) => data.lessons.find((item) => item.id === id)).filter(Boolean) : [];
+    const routeMocks = selectedRoute ? selectedRoute.mockIds.map((id) => data.mocks.find((item) => item.id === id)).filter(Boolean) : [];
+    const routeResources = selectedRoute ? selectedRoute.resourceIds.map((id) => data.resources.find((item) => item.id === id)).filter(Boolean) : [];
+    const routeActions = data.dashboard.filter((item) => !selectedRoute || item.routeIds.includes(selectedRoute.id));
+    const weakTopics = Object.entries(practice)
+      .map(([topicId, item]) => ({ topicId, attempts: item.attempts || 0, correct: item.correct || 0, accuracy: item.attempts ? Math.round((item.correct / item.attempts) * 100) : 0 }))
+      .filter((item) => item.attempts > 0)
+      .sort((a, b) => a.accuracy - b.accuracy)
+      .slice(0, 3);
+
+    app.innerHTML = `
+      ${pageHero("Student Dashboard", "Progress, Route And Next Actions", "A browser-based preparation dashboard that connects the student route with local practice, mocks, lessons, downloads and review.")}
+      <section class="stat-grid">
+        ${statCard(practiceTotals.attempts, "Practice Attempts")}
+        ${statCard(`${practiceAccuracy}%`, "Practice Accuracy")}
+        ${statCard(latestMock ? `${latestMock.score}/${latestMock.total}` : "None", "Latest Mock")}
+        ${statCard(diagnostic ? `${diagnostic.score}/${diagnostic.total}` : "None", "Diagnostic")}
+        ${statCard(masteredCount, "Flashcards Mastered")}
+        ${statCard(errors.length, "Logged Mistakes")}
+      </section>
+      <section class="toolbar-panel">
+        <label>My Route
+          <select id="dashboardRoute">
+            ${data.testRoutes.map((route) => `<option value="${escapeHTML(route.id)}" ${route.id === selectedRoute?.id ? "selected" : ""}>${escapeHTML(route.title)}</option>`).join("")}
+          </select>
+        </label>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("practice.html")}">Continue Practice</a>
+          <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
+          <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
+        </div>
+      </section>
+      <section class="split-layout dashboard-current">
+        <section class="content-band">
+          <p class="eyebrow">${escapeHTML(insight.band)} Signal</p>
+          <h2>${escapeHTML(selectedRoute?.title || "Preparation Route")}</h2>
+          <p>${escapeHTML(selectedRoute?.audience || "Select a route to see connected preparation actions.")}</p>
+          <ol class="clean-list">${(selectedRoute?.successMap || insight.nextActions).map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ol>
+          <div class="button-row">
+            <a class="btn primary small" href="${url(`practice.html?test=${selectedRoute?.targetTestIds?.[0] || ""}`)}">Start Route Practice</a>
+            <a class="btn secondary small" href="${url("test-routes.html")}">Route Details</a>
+            <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
+          </div>
+        </section>
+        <aside class="side-panel">
+          <h2>Dashboard Signals</h2>
+          ${reportSignal("Result Insight", insight.message)}
+          ${reportSignal("Weak Topics", weakTopics.length ? weakTopics.map((item) => `${findName(data.topics, item.topicId)} (${item.accuracy}%)`).join(", ") : "No weak-topic data yet.")}
+          ${reportSignal("Latest Mock", latestMock ? `${latestMock.title}: ${mockAccuracy}%` : "No mock attempt yet.")}
+        </aside>
+      </section>
+      <section class="card-grid">
+        ${routeActions.map((item) => dashboardActionCard(item)).join("")}
+      </section>
+      <section class="split-layout">
+        <section class="table-wrap">
+          <h2>Route Content</h2>
+          <table>
+            <thead><tr><th>Type</th><th>Connected Items</th></tr></thead>
+            <tbody>
+              <tr><td>Lessons</td><td>${escapeHTML(routeLessons.map((item) => item.title).join(", ") || "Add lessons later")}</td></tr>
+              <tr><td>Mocks</td><td>${escapeHTML(routeMocks.map((item) => item.title).join(", ") || "Add mocks later")}</td></tr>
+              <tr><td>Resources</td><td>${escapeHTML(routeResources.map((item) => item.title).join(", ") || "Add resources later")}</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <aside class="side-panel">
+          <h2>Quick Links</h2>
+          <a class="text-link" href="${url("lessons.html")}">Open Lessons</a>
+          <a class="text-link" href="${url("question-sets.html")}">Open Question Sets</a>
+          <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
+          <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
+        </aside>
+      </section>
+    `;
+
+    document.querySelector("#dashboardRoute")?.addEventListener("change", (event) => {
+      localStorage.setItem("ah-selected-route", event.target.value);
+      renderDashboard(data);
+      wireAccordions();
+    });
+  }
+
   function renderStudyPlans(data) {
     app.innerHTML = `
       ${pageHero("Study Plans", "Roadmaps For Focused Preparation", "Keep test-wise weekly or monthly plans in JSON and connect them to practice and mocks.")}
@@ -1837,6 +1942,17 @@
           <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
           <a class="btn ghost small" href="${url("book-trial-class.html")}">Trial</a>
         </div>
+      </article>
+    `;
+  }
+
+  function dashboardActionCard(item) {
+    return `
+      <article class="feature-card dashboard-card">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.priority)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.summary)}</p>
+        <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
       </article>
     `;
   }

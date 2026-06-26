@@ -45,7 +45,8 @@
     admissionsTimelines: "admissions-timelines.json",
     downloadCenter: "download-center.json",
     questionReview: "question-review.json",
-    testRoutes: "test-routes.json"
+    testRoutes: "test-routes.json",
+    dashboard: "dashboard.json"
   };
 
   async function loadJSON(file) {
