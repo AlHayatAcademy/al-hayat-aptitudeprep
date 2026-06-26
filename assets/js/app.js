@@ -46,6 +46,7 @@
       reviews: renderReviews,
       media: renderMedia,
       share: renderShare,
+      faq: renderFAQ,
       about: renderAbout,
       contact: renderContact,
       trial: renderTrial,
@@ -54,6 +55,7 @@
     (routes[page] || renderHome)(data);
     wireAccordions();
     wireResourceButtons(data);
+    wireResourceFilters();
     wireTrialForm();
     wireShareTools();
   }
@@ -87,6 +89,7 @@
             ["Reviews", "Student feedback and success stories", "reviews.html"],
             ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
             ["Share", "Copy or send the website link", "share.html"],
+            ["FAQ", "Student questions and help", "faq.html"],
             ["About & Contact", "Mission, trust and contact details", "about.html"]
           ])}
           <a class="nav-cta" href="${url("book-trial-class.html")}">Book Trial</a>
@@ -106,6 +109,7 @@
           ${navLink("Search", "search.html")}
           ${navLink("Progress", "progress.html")}
           ${navLink("Share", "share.html")}
+          ${navLink("FAQ", "faq.html")}
           ${navLink("Contact", "contact.html")}
         </div>
       </footer>
@@ -137,6 +141,28 @@
         ${actionCard("Practice", "Attempt tagged sample MCQs with instant feedback.", "practice.html")}
         ${actionCard("Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html")}
         ${actionCard("Resources", "Preview notes and purchase premium resources.", "resources.html")}
+      </section>
+      <section class="stat-grid" aria-label="Version 3 platform snapshot">
+        ${statCard(data.tests.length, "Tests")}
+        ${statCard(data.skills.length, "Skills")}
+        ${statCard(data.topics.length, "Topics")}
+        ${statCard(data.questions.length, "Sample Questions")}
+        ${statCard(data.mocks.length, "Mock Structures")}
+        ${statCard(data.resources.length, "Resources")}
+      </section>
+      <section class="section-head">
+        <p class="eyebrow">Quick Start</p>
+        <h2>Choose A Student Pathway</h2>
+      </section>
+      <section class="card-grid">
+        ${data.pathways.map((pathway) => pathwayCard(pathway)).join("")}
+      </section>
+      <section class="section-head">
+        <p class="eyebrow">Updates</p>
+        <h2>Latest Announcements</h2>
+      </section>
+      <section class="announcement-strip">
+        ${data.announcements.map((item) => announcementCard(item)).join("")}
       </section>
       <section class="section-head">
         <p class="eyebrow">Expandable Structure</p>
@@ -197,8 +223,27 @@
   }
 
   function renderResources(data) {
+    const categories = [...new Set(data.resources.map((resource) => resource.category))].sort();
     app.innerHTML = `
       ${pageHero("Resources", "Free Resources And Premium Notes", "Show a limited preview first, then guide interested students to WhatsApp purchase or counselling.")}
+      <section class="toolbar-panel" aria-label="Resource filters">
+        <label>Category
+          <select id="resourceCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label>Access
+          <select id="resourceAccess">
+            <option value="all">All access types</option>
+            <option value="Open">Free / Open</option>
+            <option value="Limited Preview">Limited Preview</option>
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="resourceSearch" type="search" placeholder="Search notes, test, subject...">
+        </label>
+      </section>
       <section class="card-grid">
         ${data.resources.map((resource) => resourceCard(resource)).join("")}
       </section>
@@ -305,6 +350,49 @@
     `;
   }
 
+  function renderFAQ(data) {
+    const categories = [...new Set(data.faqs.map((faq) => faq.category))].sort();
+    app.innerHTML = `
+      ${pageHero("FAQ", "Student Questions And Help", "Clear answers about preparation routes, practice, mocks, resources, progress and trial classes.")}
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="faqCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="faqSearch" type="search" placeholder="Search FAQs...">
+        </label>
+      </section>
+      <section class="accordion-list" id="faqList">
+        ${data.faqs.map((faq) => faqCard(faq)).join("")}
+      </section>
+      <section class="content-band">
+        <h2>Need Direct Guidance?</h2>
+        <p>For a personal study route or trial class, use WhatsApp or the Book Trial Class form.</p>
+        <div class="button-row">
+          <a class="btn primary" href="${url("book-trial-class.html")}">Book Trial Class</a>
+          <a class="btn secondary" href="${url("contact.html")}">Contact</a>
+        </div>
+      </section>
+    `;
+
+    const category = app.querySelector("#faqCategory");
+    const search = app.querySelector("#faqSearch");
+    const filter = () => {
+      const selected = category.value;
+      const term = search.value.trim().toLowerCase();
+      app.querySelectorAll("[data-faq-card]").forEach((card) => {
+        const categoryOk = selected === "all" || card.dataset.category === selected;
+        const textOk = !term || card.textContent.toLowerCase().includes(term);
+        card.hidden = !(categoryOk && textOk);
+      });
+    };
+    category.addEventListener("change", filter);
+    search.addEventListener("input", filter);
+  }
+
   function renderAbout() {
     app.innerHTML = `
       ${pageHero("About", "A Connected Aptitude Learning System", "Al-Hayat AptitudePrep is designed as a clean, expandable preparation hub rather than disconnected pages.")}
@@ -384,6 +472,46 @@
     `;
   }
 
+  function statCard(value, label) {
+    return `<div class="stat-card"><strong>${value}</strong><span>${escapeHTML(label)}</span></div>`;
+  }
+
+  function pathwayCard(pathway) {
+    return `
+      <article class="feature-card">
+        <p class="eyebrow">Pathway</p>
+        <h2>${escapeHTML(pathway.title)}</h2>
+        <p>${escapeHTML(pathway.bestFor)}</p>
+        <ol class="clean-list">${pathway.steps.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        <a class="btn primary small" href="${url(pathway.primaryLink)}">Open Pathway</a>
+      </article>
+    `;
+  }
+
+  function announcementCard(item) {
+    return `
+      <article class="announcement-card">
+        <span>${escapeHTML(item.type)} • ${escapeHTML(item.date)}</span>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.message)}</p>
+      </article>
+    `;
+  }
+
+  function faqCard(faq) {
+    return `
+      <details class="accordion-card" data-faq-card data-category="${escapeHTML(faq.category)}">
+        <summary>
+          <span><strong>${escapeHTML(faq.question)}</strong><small>${escapeHTML(faq.category)}</small></span>
+          <span class="summary-icon">+</span>
+        </summary>
+        <div class="accordion-body">
+          <p>${escapeHTML(faq.answer)}</p>
+        </div>
+      </details>
+    `;
+  }
+
   function testCard(test, data) {
     const skills = test.skillIds.map((id) => findName(data.skills, id)).join(", ");
     const subjects = test.subjectIds.map((id) => findName(data.subjects, id)).join(", ");
@@ -424,7 +552,7 @@
     const isPremium = resource.type.toLowerCase().includes("premium");
     const message = encodeURIComponent(resource.whatsappText);
     return `
-      <article class="feature-card resource-card" id="${resource.id}">
+      <article class="feature-card resource-card" id="${resource.id}" data-resource-card data-category="${escapeHTML(resource.category)}" data-access="${escapeHTML(resource.access)}" data-search="${escapeHTML(`${resource.title} ${resource.category} ${resource.type} ${resource.access} ${resource.format} ${resource.testIds.join(" ")} ${resource.subjectIds.join(" ")}`.toLowerCase())}">
         <p class="eyebrow">${escapeHTML(resource.category)}</p>
         <h2>${escapeHTML(resource.title)}</h2>
         <p>${escapeHTML(resource.type)} • ${escapeHTML(resource.access)} • ${escapeHTML(resource.format)}</p>
@@ -452,6 +580,27 @@
       });
     });
     document.querySelector("[data-close-dialog]")?.addEventListener("click", () => dialog.close());
+  }
+
+  function wireResourceFilters() {
+    const category = document.querySelector("#resourceCategory");
+    const access = document.querySelector("#resourceAccess");
+    const search = document.querySelector("#resourceSearch");
+    if (!category || !access || !search) return;
+    const filter = () => {
+      const selectedCategory = category.value;
+      const selectedAccess = access.value;
+      const term = search.value.trim().toLowerCase();
+      document.querySelectorAll("[data-resource-card]").forEach((card) => {
+        const categoryOk = selectedCategory === "all" || card.dataset.category === selectedCategory;
+        const accessOk = selectedAccess === "all" || card.dataset.access === selectedAccess;
+        const searchOk = !term || card.dataset.search.includes(term);
+        card.hidden = !(categoryOk && accessOk && searchOk);
+      });
+    };
+    [category, access, search].forEach((control) => control.addEventListener("input", filter));
+    category.addEventListener("change", filter);
+    access.addEventListener("change", filter);
   }
 
   function wireTrialForm() {

@@ -14,7 +14,10 @@
     resources: "resources.json",
     studyPlans: "study-plans.json",
     reviews: "reviews.json",
-    media: "media.json"
+    media: "media.json",
+    faqs: "faqs.json",
+    announcements: "announcements.json",
+    pathways: "pathways.json"
   };
 
   async function loadJSON(file) {

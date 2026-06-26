@@ -45,7 +45,10 @@
       ...data.subjects.map((item) => record("Subject", item.name, item.description, `subjects.html#${item.id}`)),
       ...data.topics.map((item) => record("Topic", item.name, item.description, `practice.html?skill=${item.skillId}`)),
       ...data.resources.map((item) => record("Resource", item.title, `${item.category} ${item.type} ${item.access}`, `resources.html#${item.id}`)),
-      ...data.questions.map((item) => record("Question", item.stem, `${item.examStyle} ${item.difficulty}`, `practice.html?skill=${item.skillId}`))
+      ...data.questions.map((item) => record("Question", item.stem, `${item.examStyle} ${item.difficulty}`, `practice.html?skill=${item.skillId}`)),
+      ...(data.faqs || []).map((item) => record("FAQ", item.question, `${item.category} ${item.answer}`, "faq.html")),
+      ...(data.pathways || []).map((item) => record("Pathway", item.title, `${item.bestFor} ${item.steps.join(" ")}`, item.primaryLink)),
+      ...(data.announcements || []).map((item) => record("Announcement", item.title, `${item.type} ${item.message}`, "index.html"))
     ];
   }
 

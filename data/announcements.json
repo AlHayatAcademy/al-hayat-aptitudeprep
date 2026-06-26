@@ -1,0 +1,23 @@
+[
+  {
+    "id": "announcement-001",
+    "title": "Version 3 Live Structure",
+    "type": "Update",
+    "date": "2026-06-26",
+    "message": "The platform now includes expanded test routes, sample mocks, resources, FAQs, sharing tools and quick-start pathways."
+  },
+  {
+    "id": "announcement-002",
+    "title": "Trial Classes Open",
+    "type": "Admissions",
+    "date": "2026-06-26",
+    "message": "Students can book online or physical trial classes for MDCAT, FAST, NUST NET, NAT, GAT, IELTS and other tests."
+  },
+  {
+    "id": "announcement-003",
+    "title": "Premium Notes Preview",
+    "type": "Resources",
+    "date": "2026-06-26",
+    "message": "Premium notes cards now show limited previews and connect directly to WhatsApp purchase requests."
+  }
+]

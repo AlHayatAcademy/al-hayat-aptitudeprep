@@ -15,6 +15,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `reviews.html`
 - `media.html`
 - `share.html`
+- `faq.html`
 - `about.html`
 - `contact.html`
 - `search.html`

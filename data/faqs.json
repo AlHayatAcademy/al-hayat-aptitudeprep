@@ -1,0 +1,44 @@
+[
+  {
+    "id": "faq-001",
+    "category": "Getting Started",
+    "question": "How should I start preparation on Al-Hayat AptitudePrep?",
+    "answer": "Start from the Tests page if you already know your target exam. Start from the Skills page if you want to improve vocabulary, grammar, quantitative reasoning or analytical reasoning across many tests."
+  },
+  {
+    "id": "faq-002",
+    "category": "Practice",
+    "question": "Should I practise by test or by skill?",
+    "answer": "Use both. Test-wise practice keeps you close to the exam pattern, while skill-wise practice strengthens the common abilities used in several tests."
+  },
+  {
+    "id": "faq-003",
+    "category": "Mock Tests",
+    "question": "Are the mock tests complete official papers?",
+    "answer": "Version 3 contains sample mock structures. They are working models for timed practice, and full-length mocks can be expanded inside the JSON files later."
+  },
+  {
+    "id": "faq-004",
+    "category": "Resources",
+    "question": "How do premium notes work?",
+    "answer": "Each premium resource shows a limited preview. The purchase button opens WhatsApp with a prepared message so the student can ask for price and payment details."
+  },
+  {
+    "id": "faq-005",
+    "category": "Trial Class",
+    "question": "How can a student book a trial class?",
+    "answer": "Open the Book Trial Class page, fill in the student details, target test, preferred time and class mode, then submit the WhatsApp request."
+  },
+  {
+    "id": "faq-006",
+    "category": "Progress",
+    "question": "Where is progress saved?",
+    "answer": "Practice and mock progress is saved in the same browser through localStorage. It is useful for personal tracking on the same device."
+  },
+  {
+    "id": "faq-007",
+    "category": "Expansion",
+    "question": "Can more questions and tests be added later?",
+    "answer": "Yes. The site is JSON-driven, so new tests, skills, topics, resources, mocks and questions can be added without changing the basic structure."
+  }
+]

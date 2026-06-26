@@ -304,7 +304,8 @@ main {
 
 .quick-actions,
 .card-grid,
-.contact-grid {
+.contact-grid,
+.stat-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -322,11 +323,18 @@ main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.stat-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 1rem 0 0.5rem;
+}
+
 .action-card,
 .feature-card,
 .accordion-card,
 .result-card,
-.question-card {
+.question-card,
+.stat-card,
+.announcement-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
@@ -337,6 +345,24 @@ main {
   display: grid;
   gap: 0.35rem;
   padding: 1rem;
+}
+
+.stat-card {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.95rem;
+}
+
+.stat-card strong {
+  color: var(--blue);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .action-card span,
@@ -350,6 +376,7 @@ main {
 .feature-card,
 .result-card,
 .question-card,
+.announcement-card,
 .content-band,
 .toolbar-panel,
 .form-shell,
@@ -373,6 +400,28 @@ main {
 .section-head h2 {
   margin: 0;
   font-size: 1.65rem;
+}
+
+.announcement-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.announcement-card span {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.announcement-card h2 {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.announcement-card p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .accordion-list {
@@ -651,6 +700,10 @@ th {
   flex: 1 1 360px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .search-results {
   display: grid;
   gap: 0.75rem;
@@ -722,6 +775,8 @@ th {
   .card-grid,
   .compact-grid,
   .contact-grid,
+  .stat-grid,
+  .announcement-strip,
   .split-layout {
     grid-template-columns: 1fr;
   }

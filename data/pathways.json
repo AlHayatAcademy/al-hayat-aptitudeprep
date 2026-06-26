@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pathway-medical",
+    "title": "Medical Entry Starter",
+    "targetTestIds": ["mdcat", "nmdcat", "nums-mdcat"],
+    "bestFor": "FSc pre-medical students preparing for medical admission tests.",
+    "steps": ["Open the MDCAT test route.", "Practise Biology, Chemistry and Physics samples.", "Revise English vocabulary daily.", "Attempt the MDCAT Mini Mock."],
+    "primaryLink": "tests.html#medical-entry-tests"
+  },
+  {
+    "id": "pathway-engineering",
+    "title": "Engineering & CS Starter",
+    "targetTestIds": ["fast-nuces", "nust-net", "ecat"],
+    "bestFor": "Students preparing for FAST, NUST NET, ECAT, PIEAS, GIKI or CS admission tests.",
+    "steps": ["Start with quantitative reasoning.", "Practise algebra, percentages and ratios.", "Attempt IQ and analytical reasoning samples.", "Try FAST or NET sample mocks."],
+    "primaryLink": "tests.html#engineering-cs-tests"
+  },
+  {
+    "id": "pathway-general-aptitude",
+    "title": "General Aptitude Route",
+    "targetTestIds": ["nat", "usat", "gat-general", "hat"],
+    "bestFor": "Students preparing for NAT, USAT, GAT General and scholarship aptitude tests.",
+    "steps": ["Practise vocabulary and reading.", "Revise quantitative basics.", "Solve analytical reasoning sets.", "Attempt NAT or GAT mixed mock."],
+    "primaryLink": "tests.html#undergraduate-admission-tests"
+  },
+  {
+    "id": "pathway-law",
+    "title": "Law Admission Route",
+    "targetTestIds": ["lat", "law-gat", "lsat"],
+    "bestFor": "Students preparing for LAT, Law GAT or LSAT-style reasoning tests.",
+    "steps": ["Practise grammar and reading comprehension.", "Study logical reasoning assumptions.", "Write short essay outlines.", "Attempt the LAT sample mock."],
+    "primaryLink": "tests.html#law-admission-tests"
+  },
+  {
+    "id": "pathway-english",
+    "title": "English Proficiency Route",
+    "targetTestIds": ["ielts", "toefl", "pte"],
+    "bestFor": "Students preparing for IELTS, TOEFL or PTE.",
+    "steps": ["Start with reading main idea practice.", "Improve grammar accuracy.", "Practise essay structure.", "Use the IELTS sample mock."],
+    "primaryLink": "tests.html#english-proficiency-tests"
+  }
+]
