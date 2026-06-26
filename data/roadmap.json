@@ -114,6 +114,14 @@
   {
     "id": "roadmap-v21",
     "phase": "V21",
+    "title": "Practice Engine Controls",
+    "status": "Ready",
+    "focus": "Improve MCQ practice with attempt-first flow, answer reveal, explanations, Urdu support, next question and study topic controls.",
+    "nextActions": ["Use improved practice flow", "Add more Urdu explanations", "Connect more topic study panels"]
+  },
+  {
+    "id": "roadmap-v22",
+    "phase": "V22",
     "title": "Subject Chapter Maps",
     "status": "Next",
     "focus": "Add subject-wise chapter maps for Biology, Chemistry, Physics, Mathematics and English.",

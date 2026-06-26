@@ -5,7 +5,7 @@
       testId: filters.testId || params.get("test") || "all",
       skillId: filters.skillId || params.get("skill") || "all",
       subjectId: filters.subjectId || params.get("subject") || "all",
-      answers: {}
+      responses: {}
     };
 
     const testOptions = optionList(data.tests, "All tests");
@@ -53,7 +53,7 @@
     });
 
     mount.querySelector("#resetPractice").addEventListener("click", () => {
-      state.answers = {};
+      state.responses = {};
       render();
     });
 
@@ -68,47 +68,80 @@
 
     function render() {
       const questions = filteredQuestions();
-      const correct = Object.values(state.answers).filter(Boolean).length;
+      const attempted = Object.values(state.responses).filter((item) => item.attempted).length;
+      const correct = Object.values(state.responses).filter((item) => item.correct).length;
       mount.querySelector("#practiceStats").innerHTML = `
         ${metric("Questions", questions.length)}
-        ${metric("Answered", Object.keys(state.answers).length)}
+        ${metric("Attempted", attempted)}
         ${metric("Correct", correct)}
       `;
       mount.querySelector("#questionList").innerHTML = questions.length
-        ? questions.map(questionCard).join("")
+        ? questions.map((question, index) => questionCard(question, questions[index + 1])).join("")
         : `<div class="empty-state"><h2>No questions found</h2><p>Add matching records in <code>data/questions.json</code> or clear the filters.</p></div>`;
 
-      mount.querySelectorAll("[data-answer]").forEach((button) => {
+      mount.querySelectorAll("[data-select-answer]").forEach((button) => {
         button.addEventListener("click", () => {
           const question = data.questions.find((item) => item.id === button.dataset.question);
           const chosen = Number(button.dataset.answer);
-          state.answers[question.id] = chosen === question.answerIndex;
-          savePracticeAttempt(question, state.answers[question.id]);
+          const current = state.responses[question.id] || {};
+          if (current.attempted) return;
+          state.responses[question.id] = { ...current, chosen, attempted: false };
           render();
         });
       });
 
-      mount.querySelectorAll("[data-toggle-urdu]").forEach((button) => {
+      mount.querySelectorAll("[data-attempt-question]").forEach((button) => {
         button.addEventListener("click", () => {
-          const target = mount.querySelector(`#${button.dataset.toggleUrdu}`);
+          const question = data.questions.find((item) => item.id === button.dataset.attemptQuestion);
+          const current = state.responses[question.id] || {};
+          if (current.chosen === undefined || current.attempted) return;
+          const correct = current.chosen === question.answerIndex;
+          state.responses[question.id] = { ...current, attempted: true, correct };
+          savePracticeAttempt(question, correct);
+          render();
+        });
+      });
+
+      mount.querySelectorAll("[data-toggle-panel]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = mount.querySelector(`#${button.dataset.togglePanel}`);
           target.hidden = !target.hidden;
+        });
+      });
+
+      mount.querySelectorAll("[data-next-question]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = mount.querySelector(`#${button.dataset.nextQuestion}`);
+          target?.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
     }
 
-    function questionCard(question) {
-      const selected = state.answers[question.id];
-      const topic = data.topics.find((item) => item.id === question.topicId)?.name || question.topicId;
+    function questionCard(question, nextQuestion) {
+      const response = state.responses[question.id] || {};
+      const selected = response.chosen;
+      const attempted = Boolean(response.attempted);
+      const topicRecord = data.topics.find((item) => item.id === question.topicId);
+      const topic = topicRecord?.name || question.topicId;
       const optionButtons = question.options.map((option, index) => {
-        const isAnswer = index === question.answerIndex;
-        const resultClass = selected === undefined ? "" : isAnswer ? "correct" : "muted";
-        return `<button class="option ${resultClass}" data-question="${question.id}" data-answer="${index}" type="button">${escapeHTML(option)}</button>`;
+        const isSelected = selected === index;
+        const isAnswer = attempted && index === question.answerIndex;
+        const isWrongSelection = attempted && isSelected && index !== question.answerIndex;
+        const resultClass = [
+          isSelected ? "selected" : "",
+          isAnswer ? "correct" : "",
+          isWrongSelection ? "wrong" : "",
+          attempted && !isSelected && !isAnswer ? "muted" : ""
+        ].filter(Boolean).join(" ");
+        return `<button class="option ${resultClass}" data-question="${question.id}" data-answer="${index}" data-select-answer type="button" ${attempted ? "disabled" : ""}>${escapeHTML(option)}</button>`;
       }).join("");
-      const result = selected === undefined
-        ? `<p class="hint">Select one option to check your answer.</p>`
-        : `<p class="${selected ? "success-text" : "danger-text"}">${selected ? "Correct." : "Not correct yet."} ${escapeHTML(question.explanation)}</p>`;
+      const result = !attempted
+        ? `<p class="hint">${selected === undefined ? "Select one option, then click Attempt." : "Option selected. Click Attempt to check."}</p>`
+        : `<p class="${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct." : "Not correct."}</p>`;
+      const answerText = question.options[question.answerIndex];
+      const topicDescription = topicRecord?.description || "Review the connected topic, then return to practice.";
       return `
-        <article class="question-card">
+        <article class="question-card" id="practice-${question.id}">
           <div class="meta-row">
             <span>${escapeHTML(topic)}</span>
             <span>${escapeHTML(question.difficulty)}</span>
@@ -117,8 +150,29 @@
           <h2>${escapeHTML(question.stem)}</h2>
           <div class="options-grid">${optionButtons}</div>
           ${result}
-          <button class="btn ghost small" data-toggle-urdu="urdu-${question.id}" type="button">Urdu Explanation</button>
-          <p id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</p>
+          <div class="button-row practice-actions">
+            <button class="btn primary small" data-attempt-question="${question.id}" type="button" ${selected === undefined || attempted ? "disabled" : ""}>Attempt</button>
+            <button class="btn secondary small" data-toggle-panel="answer-${question.id}" type="button" ${attempted ? "" : "disabled"}>Show Answer</button>
+            <button class="btn ghost small" data-toggle-panel="explanation-${question.id}" type="button" ${attempted ? "" : "disabled"}>Explanation</button>
+            <button class="btn ghost small" data-toggle-panel="urdu-${question.id}" type="button" ${attempted ? "" : "disabled"}>اردو وضاحت</button>
+            <button class="btn ghost small" data-next-question="practice-${nextQuestion?.id || question.id}" type="button" ${nextQuestion ? "" : "disabled"}>Next Question</button>
+            <button class="btn ghost small" data-toggle-panel="topic-${question.id}" type="button">Study Topic</button>
+          </div>
+          <div id="answer-${question.id}" class="practice-panel answer-panel" hidden>
+            <strong>Answer:</strong> ${escapeHTML(answerText)}
+          </div>
+          <div id="explanation-${question.id}" class="practice-panel" hidden>
+            <strong>Explanation:</strong> ${escapeHTML(question.explanation)}
+          </div>
+          <div id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</div>
+          <div id="topic-${question.id}" class="practice-panel topic-panel" hidden>
+            <strong>${escapeHTML(topic)}</strong>
+            <p>${escapeHTML(topicDescription)}</p>
+            <div class="button-row">
+              <a class="btn secondary small" href="${rootUrl(`lessons.html`)}">Open Lessons</a>
+              <a class="btn ghost small" href="${rootUrl(`question-review.html`)}">Question Review</a>
+            </div>
+          </div>
         </article>
       `;
     }
@@ -138,6 +192,10 @@
 
   function metric(label, value) {
     return `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`;
+  }
+
+  function rootUrl(path) {
+    return window.AHData.rootUrl(path);
   }
 
   function savePracticeAttempt(question, correct) {

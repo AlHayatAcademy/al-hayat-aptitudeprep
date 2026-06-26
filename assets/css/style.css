@@ -860,8 +860,41 @@ textarea {
   background: #eaf8ef;
 }
 
+.option.wrong {
+  border-color: #f2a6a0;
+  background: #fff1f0;
+}
+
 .option.muted {
   opacity: 0.72;
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.practice-actions {
+  margin-top: 0.85rem;
+}
+
+.practice-panel {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #f8fbff;
+  padding: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.answer-panel {
+  border-left: 5px solid var(--green);
+}
+
+.topic-panel {
+  border-left: 5px solid var(--blue);
+}
+
+.topic-panel p {
+  margin: 0.35rem 0 0.65rem;
 }
 
 .success-text {
