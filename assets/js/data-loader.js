@@ -51,7 +51,8 @@
     chapterMaps: "chapter-maps.json",
     questionBankBuilder: "question-bank-builder.json",
     questionImportChecklist: "question-import-checklist.json",
-    topicStudy: "topic-study.json"
+    topicStudy: "topic-study.json",
+    repairPaths: "repair-paths.json"
   };
 
   async function loadJSON(file) {

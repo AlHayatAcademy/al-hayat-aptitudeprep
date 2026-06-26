@@ -1,0 +1,54 @@
+[
+  {
+    "id": "repair-vocab-context",
+    "topicId": "synonyms-in-context",
+    "skillId": "vocabulary",
+    "title": "Repair Vocabulary In Context",
+    "trigger": "Low accuracy in vocabulary-in-context or repeated word meaning mistakes.",
+    "errorPromptId": "error-vocab-001",
+    "studyLink": "topic-study.html?topic=synonyms-in-context",
+    "practiceLink": "practice.html?skill=vocabulary",
+    "flashcardLink": "flashcards.html",
+    "reviewLink": "question-review.html",
+    "steps": ["Review context clues and tone words.", "Attempt five vocabulary MCQs slowly.", "Write the repeated mistake in the error log.", "Revise flashcards before the next timed set."]
+  },
+  {
+    "id": "repair-percentages",
+    "topicId": "percentages",
+    "skillId": "quantitative-reasoning",
+    "title": "Repair Percentage Questions",
+    "trigger": "Weak percentage accuracy, especially increase, decrease and base-value questions.",
+    "errorPromptId": "error-formula-001",
+    "studyLink": "topic-study.html?topic=percentages",
+    "practiceLink": "practice.html?skill=quantitative-reasoning",
+    "flashcardLink": "formula-bank.html",
+    "reviewLink": "question-review.html",
+    "steps": ["Write the original value before solving.", "Calculate change separately.", "Attempt focused percentage practice.", "Review formula and unit mistakes after each set."]
+  },
+  {
+    "id": "repair-main-idea",
+    "topicId": "main-idea",
+    "skillId": "reading-comprehension",
+    "title": "Repair Main Idea Reading",
+    "trigger": "Repeatedly choosing true details instead of the central idea of a passage.",
+    "errorPromptId": "error-speed-001",
+    "studyLink": "topic-study.html?topic=main-idea",
+    "practiceLink": "practice.html?skill=reading-comprehension",
+    "flashcardLink": "flashcards.html",
+    "reviewLink": "question-review.html",
+    "steps": ["Read the first and final sentence carefully.", "State the passage purpose in one line.", "Reject options that are too narrow.", "Review wrong answers before attempting another passage."]
+  },
+  {
+    "id": "repair-cell-biology",
+    "topicId": "cell-biology",
+    "skillId": "science-concepts",
+    "title": "Repair Cell Biology Concepts",
+    "trigger": "Confusion between organelle names, functions and cell structure facts.",
+    "errorPromptId": "error-formula-001",
+    "studyLink": "topic-study.html?topic=cell-biology",
+    "practiceLink": "practice.html?subject=biology",
+    "flashcardLink": "chapter-maps.html",
+    "reviewLink": "question-review.html",
+    "steps": ["Review organelles by function, not only by name.", "Connect mitochondria with ATP and ribosomes with proteins.", "Attempt Biology practice questions.", "Use chapter maps to connect the weak topic with the wider chapter."]
+  }
+]

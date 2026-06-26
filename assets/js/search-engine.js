@@ -82,7 +82,8 @@
       ...(data.chapterMaps || []).map((item) => record("Chapter Map", item.title, `${item.examUse} ${item.chapterIds.join(" ")} ${item.studyOrder.join(" ")} ${item.teacherNote}`, "chapter-maps.html")),
       ...(data.questionBankBuilder || []).map((item) => record("Question Builder", item.title, `${item.category} ${item.priority} ${item.purpose} ${item.requiredFields.join(" ")} ${item.qualityChecks.join(" ")}`, "question-builder.html")),
       ...(data.questionImportChecklist || []).map((item) => record("Question Import", item.title, `${item.category} ${item.priority} ${item.purpose} ${item.steps.join(" ")} ${item.checks.join(" ")}`, "question-import.html")),
-      ...(data.topicStudy || []).map((item) => record("Topic Study", item.title, `${item.summary} ${item.keyPoints.join(" ")} ${item.workedExample} ${item.commonTrap} ${item.urduSummary}`, `topic-study.html?topic=${item.topicId}`))
+      ...(data.topicStudy || []).map((item) => record("Topic Study", item.title, `${item.summary} ${item.keyPoints.join(" ")} ${item.workedExample} ${item.commonTrap} ${item.urduSummary}`, `topic-study.html?topic=${item.topicId}`)),
+      ...(data.repairPaths || []).map((item) => record("Repair Path", item.title, `${item.trigger} ${item.steps.join(" ")} ${item.topicId} ${item.skillId}`, `repair-paths.html#${item.id}`))
     ];
   }
 

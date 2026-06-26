@@ -664,6 +664,10 @@ main {
   border-top: 4px solid var(--blue);
 }
 
+.repair-path-card {
+  border-top: 4px solid var(--danger);
+}
+
 .code-sample {
   overflow-x: auto;
   border: 1px solid var(--line);

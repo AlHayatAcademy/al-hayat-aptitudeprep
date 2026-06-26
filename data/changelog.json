@@ -1,5 +1,10 @@
 [
   {
+    "version": "V26",
+    "date": "2026-06-26",
+    "summary": "Added weak-topic repair paths connected to topic study, practice, revision tools, question review, dashboard and results report."
+  },
+  {
     "version": "V25",
     "date": "2026-06-26",
     "summary": "Added topic study page and data cards, with practice Study Topic links opening focused concept support."

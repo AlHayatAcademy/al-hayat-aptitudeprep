@@ -155,8 +155,16 @@
     "id": "roadmap-v26",
     "phase": "V26",
     "title": "Weak Topic Repair Paths",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add guided repair paths that connect weak topics to study cards, practice sets, flashcards and review.",
-    "nextActions": ["Create repair-path data", "Add repair-path page", "Connect dashboard and results report"]
+    "nextActions": ["Use repair paths", "Add more weak-topic routes", "Connect more result signals"]
+  },
+  {
+    "id": "roadmap-v27",
+    "phase": "V27",
+    "title": "Route-Based Daily Tasks",
+    "status": "Next",
+    "focus": "Add daily task flows by selected route so students know what to study each day.",
+    "nextActions": ["Create route-task data", "Add route-task page", "Connect dashboard and study plans"]
   }
 ]

@@ -75,6 +75,7 @@
       "question-builder": renderQuestionBuilder,
       "question-import": renderQuestionImport,
       "topic-study": renderTopicStudy,
+      "repair-paths": renderRepairPaths,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -139,6 +140,7 @@
             ["Question Builder", "MCQ templates and checks", "question-builder.html"],
             ["Question Import", "Batch import safety checks", "question-import.html"],
             ["Topic Study", "Focused topic explanations", "topic-study.html"],
+            ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -198,6 +200,7 @@
           ${navLink("Builder", "question-builder.html")}
           ${navLink("Import", "question-import.html")}
           ${navLink("Topic Study", "topic-study.html")}
+          ${navLink("Repair", "repair-paths.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -247,6 +250,7 @@
         ${actionCard("Question Builder", "Use MCQ templates and checks.", "question-builder.html")}
         ${actionCard("Question Import", "Validate batch MCQ uploads.", "question-import.html")}
         ${actionCard("Topic Study", "Review focused topic cards.", "topic-study.html")}
+        ${actionCard("Repair Paths", "Fix weak topics step by step.", "repair-paths.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -725,6 +729,42 @@
     wireSimpleCardFilter("#topicStudySubject", "#topicStudySearch", "[data-topic-study]");
   }
 
+  function renderRepairPaths(data) {
+    const skills = [...new Set(data.repairPaths.map((item) => findName(data.skills, item.skillId)))].filter(Boolean).sort();
+    app.innerHTML = `
+      ${pageHero("Repair Paths", "Weak Topic Recovery", "Use a guided path when practice, mocks or diagnostic results show a weak topic. Each path connects study, practice, flashcards and review.")}
+      <section class="stat-grid">
+        ${statCard(data.repairPaths.length, "Repair Paths")}
+        ${statCard(new Set(data.repairPaths.map((item) => item.topicId)).size, "Weak Topics")}
+        ${statCard(new Set(data.repairPaths.map((item) => item.skillId)).size, "Skills")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Skill
+          <select id="repairSkill">
+            <option value="all">All skills</option>
+            ${skills.map((skill) => `<option value="${escapeHTML(skill)}">${escapeHTML(skill)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="repairSearch" type="search" placeholder="Search vocabulary, percentages, biology...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>How To Use Repair Paths</h2>
+        <p>Open Results Report or Dashboard, identify the weak topic, then follow the matching path: study the topic, attempt focused practice, revise quick cards or formulas, and record the mistake pattern.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("results-report.html")}">Results Report</a>
+          <a class="btn secondary small" href="${url("dashboard.html")}">Dashboard</a>
+          <a class="btn ghost small" href="${url("error-log.html")}">Error Log</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.repairPaths.map((item) => repairPathCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#repairSkill", "#repairSearch", "[data-repair-path]");
+  }
+
   function renderVocabularyBank(data) {
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
     app.innerHTML = `
@@ -939,6 +979,7 @@
           <a class="btn primary small" href="${url("practice.html")}">Continue Practice</a>
           <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
           <a class="btn ghost small" href="${url("error-log.html")}">Update Error Log</a>
+          <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
         </div>
       </section>
       <section class="split-layout">
@@ -958,6 +999,7 @@
       </section>
       <section class="card-grid">
         ${resultActionCard("Daily Repair Plan", "Use the daily checklist after reviewing weak topics.", "daily-plan.html")}
+        ${resultActionCard("Repair Paths", "Follow guided steps for weak topics.", "repair-paths.html")}
         ${resultActionCard("Flashcard Revision", "Revise quick facts and mark cards as mastered.", "flashcards.html")}
         ${resultActionCard("Score Guide", "Understand your current band and target movement.", "score-guide.html")}
       </section>
@@ -1230,6 +1272,7 @@
           <a class="btn primary small" href="${url("practice.html")}">Continue Practice</a>
           <a class="btn secondary small" href="${url("mock-tests.html")}">Take Mock</a>
           <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
+          <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
         </div>
       </section>
       <section class="split-layout dashboard-current">
@@ -1271,6 +1314,7 @@
           <a class="text-link" href="${url("lessons.html")}">Open Lessons</a>
           <a class="text-link" href="${url("question-sets.html")}">Open Question Sets</a>
           <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
+          <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
           <a class="text-link" href="${url("book-trial-class.html")}">Book Trial Class</a>
         </aside>
       </section>
@@ -2316,6 +2360,31 @@
           <a class="btn primary small" href="${url(item.practiceLink)}">Practise Topic</a>
           <a class="btn secondary small" href="${url("question-review.html")}">Review Mistakes</a>
           <a class="btn ghost small" href="${url("chapter-maps.html")}">Chapter Map</a>
+        </div>
+      </article>
+    `;
+  }
+
+  function repairPathCard(item, data) {
+    const topic = data.topics.find((entry) => entry.id === item.topicId);
+    const skill = data.skills.find((entry) => entry.id === item.skillId);
+    const errorPrompt = data.errorLogPrompts.find((entry) => entry.id === item.errorPromptId);
+    const skillName = skill?.name || "General Skill";
+    return `
+      <article class="feature-card lesson-card repair-path-card" data-repair-path data-category="${escapeHTML(skillName)}" id="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(skillName)} • ${escapeHTML(topic?.name || item.topicId)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.trigger)}</p>
+        <div class="lesson-block">
+          <h3>Repair Steps</h3>
+          <ol class="clean-list">${item.steps.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <p class="danger-note"><strong>Error signal:</strong> ${escapeHTML(errorPrompt?.title || "Weak-topic pattern")} — ${escapeHTML(errorPrompt?.correctionPrompt || "Record the repeated mistake and correct it before the next timed set.")}</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(item.studyLink)}">Study Topic</a>
+          <a class="btn secondary small" href="${url(item.practiceLink)}">Practice</a>
+          <a class="btn ghost small" href="${url(item.flashcardLink)}">Revise</a>
+          <a class="btn ghost small" href="${url(item.reviewLink)}">Review</a>
         </div>
       </article>
     `;
