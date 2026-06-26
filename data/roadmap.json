@@ -107,8 +107,16 @@
     "id": "roadmap-v20",
     "phase": "V20",
     "title": "Test-Specific Deep Pages",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add individual pages for major tests such as MDCAT, FAST, NAT and GAT with route-specific content.",
-    "nextActions": ["Create deep page templates", "Add test page data", "Connect route cards to deep pages"]
+    "nextActions": ["Use test-page hub", "Expand deep-page records", "Add individual URLs later"]
+  },
+  {
+    "id": "roadmap-v21",
+    "phase": "V21",
+    "title": "Subject Chapter Maps",
+    "status": "Next",
+    "focus": "Add subject-wise chapter maps for Biology, Chemistry, Physics, Mathematics and English.",
+    "nextActions": ["Create chapter map data", "Add chapter map page", "Connect chapters to practice and lessons"]
   }
 ]

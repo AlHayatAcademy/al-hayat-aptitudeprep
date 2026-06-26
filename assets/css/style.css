@@ -644,6 +644,10 @@ main {
   gap: 0.65rem;
 }
 
+.test-page-card {
+  border-top: 4px solid var(--blue);
+}
+
 @media print {
   .site-header,
   .site-footer,

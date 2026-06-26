@@ -46,7 +46,8 @@
     downloadCenter: "download-center.json",
     questionReview: "question-review.json",
     testRoutes: "test-routes.json",
-    dashboard: "dashboard.json"
+    dashboard: "dashboard.json",
+    testPages: "test-pages.json"
   };
 
   async function loadJSON(file) {

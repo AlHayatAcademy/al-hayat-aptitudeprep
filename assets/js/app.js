@@ -70,6 +70,7 @@
       "question-review": renderQuestionReview,
       "test-routes": renderTestRoutes,
       dashboard: renderDashboard,
+      "test-pages": renderTestPages,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -129,6 +130,7 @@
             ["Question Review", "Wrong-answer patterns", "question-review.html"],
             ["Test Routes", "Connected preparation pathways", "test-routes.html"],
             ["Dashboard", "Progress and next actions", "dashboard.html"],
+            ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -183,6 +185,7 @@
           ${navLink("Review", "question-review.html")}
           ${navLink("Routes", "test-routes.html")}
           ${navLink("Dashboard", "dashboard.html")}
+          ${navLink("Test Pages", "test-pages.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -227,6 +230,7 @@
         ${actionCard("Question Review", "Study wrong-answer patterns.", "question-review.html")}
         ${actionCard("Test Routes", "Follow connected test pathways.", "test-routes.html")}
         ${actionCard("Dashboard", "See progress and next actions.", "dashboard.html")}
+        ${actionCard("Test Pages", "Open dedicated test pages.", "test-pages.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1147,6 +1151,45 @@
     });
   }
 
+  function renderTestPages(data) {
+    const categories = [...new Set(data.testPages.map((item) => {
+      const test = data.tests.find((entry) => entry.id === item.testId);
+      return findName(data.groups, test?.groupId || "");
+    }))].filter(Boolean).sort();
+    app.innerHTML = `
+      ${pageHero("Test Pages", "Dedicated Preparation Pages", "Open focused pages for major tests. Each page record connects exam focus, route, lessons, mocks, resources, question sets and timeline.")}
+      <section class="stat-grid">
+        ${statCard(data.testPages.length, "Deep Pages")}
+        ${statCard(new Set(data.testPages.map((item) => item.routeId)).size, "Routes")}
+        ${statCard(new Set(data.testPages.flatMap((item) => item.seoKeywords)).size, "SEO Keywords")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Test Family
+          <select id="testPageCategory">
+            <option value="all">All families</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="testPageSearch" type="search" placeholder="Search MDCAT, FAST, NAT, GAT...">
+        </label>
+      </section>
+      <section class="content-band">
+        <h2>Deep Page Model</h2>
+        <p>These are structured test landing pages inside one GitHub Pages file. Later, the same JSON can be used to generate separate URLs for each major test.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("test-routes.html")}">Open Routes</a>
+          <a class="btn secondary small" href="${url("practice.html")}">Practice</a>
+          <a class="btn ghost small" href="${url("book-trial-class.html")}">Book Trial</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.testPages.map((item) => testPageCard(item, data)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#testPageCategory", "#testPageSearch", "[data-test-page]");
+  }
+
   function renderStudyPlans(data) {
     app.innerHTML = `
       ${pageHero("Study Plans", "Roadmaps For Focused Preparation", "Keep test-wise weekly or monthly plans in JSON and connect them to practice and mocks.")}
@@ -1939,6 +1982,7 @@
           <a class="btn primary small" href="${url(`practice.html?test=${primaryTest}`)}">${escapeHTML(item.ctaText)}</a>
           <a class="btn secondary small" href="${url("lessons.html")}">Lessons</a>
           <a class="btn ghost small" href="${url("mock-tests.html")}">Mocks</a>
+          <a class="btn ghost small" href="${url("test-pages.html")}">Test Pages</a>
           <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
           <a class="btn ghost small" href="${url("book-trial-class.html")}">Trial</a>
         </div>
@@ -1953,6 +1997,48 @@
         <h2>${escapeHTML(item.title)}</h2>
         <p>${escapeHTML(item.summary)}</p>
         <a class="btn secondary small" href="${url(item.link)}">${escapeHTML(item.buttonLabel)}</a>
+      </article>
+    `;
+  }
+
+  function testPageCard(item, data) {
+    const test = data.tests.find((entry) => entry.id === item.testId);
+    const groupName = findName(data.groups, test?.groupId || "");
+    const route = data.testRoutes.find((entry) => entry.id === item.routeId);
+    const lessons = item.starterLessonIds.map((id) => data.lessons.find((entry) => entry.id === id)?.title || id).join(", ");
+    const mocks = item.starterMockIds.map((id) => data.mocks.find((entry) => entry.id === id)?.title || id).join(", ");
+    const resources = item.resourceIds.map((id) => data.resources.find((entry) => entry.id === id)?.title || id).join(", ");
+    const sets = item.questionSetIds.map((id) => data.questionSets.find((entry) => entry.id === id)?.title || id).join(", ");
+    const timeline = data.admissionsTimelines.find((entry) => entry.id === item.timelineId);
+    return `
+      <article class="feature-card lesson-card test-page-card" id="${escapeHTML(item.id)}" data-test-page data-category="${escapeHTML(groupName)}">
+        <p class="eyebrow">${escapeHTML(groupName)} • ${escapeHTML(test?.name || item.testId)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.hero)}</p>
+        <p class="connected-line">Route: ${escapeHTML(route?.title || item.routeId)}</p>
+        <div class="lesson-block">
+          <h3>Exam Focus</h3>
+          <ul class="clean-list">${item.examFocus.map((focus) => `<li>${escapeHTML(focus)}</li>`).join("")}</ul>
+        </div>
+        <div class="lesson-block">
+          <h3>Starter Weekly Plan</h3>
+          <ol class="clean-list">${item.weeklyPlan.map((step) => `<li>${escapeHTML(step)}</li>`).join("")}</ol>
+        </div>
+        <details class="mini-details">
+          <summary>Connected Content</summary>
+          <p><strong>Lessons:</strong> ${escapeHTML(lessons)}</p>
+          <p><strong>Mocks:</strong> ${escapeHTML(mocks)}</p>
+          <p><strong>Resources:</strong> ${escapeHTML(resources)}</p>
+          <p><strong>Question sets:</strong> ${escapeHTML(sets)}</p>
+          <p><strong>Timeline:</strong> ${escapeHTML(timeline?.title || item.timelineId)}</p>
+          <p><strong>SEO keywords:</strong> ${escapeHTML(item.seoKeywords.join(", "))}</p>
+        </details>
+        <div class="button-row">
+          <a class="btn primary small" href="${url(`practice.html?test=${item.testId}`)}">Start Practice</a>
+          <a class="btn secondary small" href="${url("mock-tests.html")}">Mock Tests</a>
+          <a class="btn ghost small" href="${url("resources.html")}">Resources</a>
+          <a class="btn ghost small" href="${url("admissions-timeline.html")}">Timeline</a>
+        </div>
       </article>
     `;
   }

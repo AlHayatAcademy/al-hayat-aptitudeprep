@@ -77,7 +77,8 @@
       ...(data.downloadCenter || []).map((item) => record("Download", item.title, `${item.category} ${item.audience} ${item.format} ${item.includes.join(" ")} ${item.printNote}`, "download-center.html")),
       ...(data.questionReview || []).map((item) => record("Question Review", item.title, `${item.category} ${item.wrongAnswerPattern} ${item.reviewMethod} ${item.questionIds.join(" ")} ${item.revisionLinks.join(" ")}`, "question-review.html")),
       ...(data.testRoutes || []).map((item) => record("Test Route", item.title, `${item.category} ${item.audience} ${item.targetTestIds.join(" ")} ${item.prioritySkills.join(" ")} ${item.prioritySubjects.join(" ")} ${item.successMap.join(" ")}`, "test-routes.html")),
-      ...(data.dashboard || []).map((item) => record("Dashboard", item.title, `${item.category} ${item.priority} ${item.summary} ${item.routeIds.join(" ")}`, "dashboard.html"))
+      ...(data.dashboard || []).map((item) => record("Dashboard", item.title, `${item.category} ${item.priority} ${item.summary} ${item.routeIds.join(" ")}`, "dashboard.html")),
+      ...(data.testPages || []).map((item) => record("Test Page", item.title, `${item.hero} ${item.examFocus.join(" ")} ${item.weeklyPlan.join(" ")} ${item.seoKeywords.join(" ")} ${item.testId}`, "test-pages.html"))
     ];
   }
 

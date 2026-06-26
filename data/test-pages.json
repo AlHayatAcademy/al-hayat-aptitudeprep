@@ -1,0 +1,62 @@
+[
+  {
+    "id": "page-mdcat",
+    "testId": "mdcat",
+    "routeId": "route-medical-entry",
+    "title": "MDCAT Preparation Page",
+    "hero": "Biology, Chemistry, Physics, English and reasoning in one connected medical-entry plan.",
+    "examFocus": ["High-yield science concepts", "English vocabulary and grammar", "Timed MCQ accuracy", "Error-log based revision"],
+    "starterLessonIds": ["lesson-mdcat-cell-basics"],
+    "starterMockIds": ["mdcat-mini-mock", "mdcat-science-mock"],
+    "resourceIds": ["mdcat-biology-preview", "mdcat-english-vocab"],
+    "questionSetIds": ["set-mdcat-english-starter", "set-science-foundation"],
+    "timelineId": "timeline-mdcat-90",
+    "weeklyPlan": ["Day 1: Diagnostic and Biology review", "Day 2: Chemistry and Physics formulas", "Day 3: English vocabulary and grammar", "Day 4: Mixed practice and error review"],
+    "seoKeywords": ["MDCAT preparation", "MDCAT biology", "MDCAT English", "medical entry test"]
+  },
+  {
+    "id": "page-fast",
+    "testId": "fast-nuces",
+    "routeId": "route-engineering-cs",
+    "title": "FAST NUCES Preparation Page",
+    "hero": "Math, quantitative reasoning, analytical reasoning, IQ and English for FAST admission preparation.",
+    "examFocus": ["Advanced math speed", "Percentages, ratios and algebra", "Analytical and IQ patterns", "Timed section practice"],
+    "starterLessonIds": ["lesson-fast-percentages"],
+    "starterMockIds": ["fast-quant-section-mock"],
+    "resourceIds": ["fast-math-formula-sheet", "engineering-starter-pack"],
+    "questionSetIds": ["set-fast-quant-starter"],
+    "timelineId": "timeline-fast-net-45",
+    "weeklyPlan": ["Day 1: Math foundations", "Day 2: Quantitative drills", "Day 3: Analytical and IQ practice", "Day 4: FAST section mock and review"],
+    "seoKeywords": ["FAST entry test", "FAST NUCES preparation", "FAST math", "FAST analytical reasoning"]
+  },
+  {
+    "id": "page-nat",
+    "testId": "nat",
+    "routeId": "route-nat-gat",
+    "title": "NAT Preparation Page",
+    "hero": "Verbal, analytical, quantitative and subject-linked aptitude practice for NAT admission routes.",
+    "examFocus": ["Verbal reasoning", "Quantitative basics", "Analytical arrangements", "Mixed timed practice"],
+    "starterLessonIds": ["lesson-fast-percentages", "lesson-gat-assumptions"],
+    "starterMockIds": ["nat-mixed-mock"],
+    "resourceIds": ["nat-gat-verbal-notes"],
+    "questionSetIds": ["set-gat-mixed-starter"],
+    "timelineId": "timeline-nat-gat-30",
+    "weeklyPlan": ["Week 1: Diagnostic and verbal repair", "Week 2: Quantitative and analytical practice", "Week 3: Mixed question sets", "Week 4: Mock review and final revision"],
+    "seoKeywords": ["NAT preparation", "NAT verbal", "NAT analytical", "NAT quantitative"]
+  },
+  {
+    "id": "page-gat-general",
+    "testId": "gat-general",
+    "routeId": "route-nat-gat",
+    "title": "GAT General Preparation Page",
+    "hero": "Verbal, quantitative and analytical reasoning for graduate admission and scholarship testing.",
+    "examFocus": ["Vocabulary in context", "Reading comprehension", "Quantitative reasoning", "Assumptions and logical reasoning"],
+    "starterLessonIds": ["lesson-gat-assumptions", "lesson-gre-context-vocab"],
+    "starterMockIds": ["gat-general-sample"],
+    "resourceIds": ["nat-gat-verbal-notes", "gre-vocab-preview"],
+    "questionSetIds": ["set-gat-mixed-starter"],
+    "timelineId": "timeline-nat-gat-30",
+    "weeklyPlan": ["Week 1: Diagnostic and vocabulary", "Week 2: Analytical reasoning", "Week 3: Quantitative drills", "Week 4: Full pattern mock review"],
+    "seoKeywords": ["GAT General preparation", "GAT verbal", "GAT analytical", "GAT quantitative"]
+  }
+]

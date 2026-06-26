@@ -1,5 +1,10 @@
 [
   {
+    "version": "V20",
+    "date": "2026-06-26",
+    "summary": "Added test-specific page hub with deep-page records for MDCAT, FAST, NAT and GAT connected to routes and study content."
+  },
+  {
     "version": "V19",
     "date": "2026-06-26",
     "summary": "Added student dashboard with route selection, progress signals, local performance summary and next-action cards."
