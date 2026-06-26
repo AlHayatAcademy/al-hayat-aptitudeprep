@@ -227,8 +227,16 @@
     "id": "roadmap-v35",
     "phase": "V35",
     "title": "Student Remedial Homework",
-    "status": "Next",
+    "status": "Ready",
     "focus": "Add student-facing remedial homework sets after teacher-led class recovery.",
-    "nextActions": ["Create remedial-homework page", "Add homework data", "Connect class remedial plan"]
+    "nextActions": ["Use remedial homework tasks", "Track homework completion", "Connect homework to notes and revision"]
+  },
+  {
+    "id": "roadmap-v36",
+    "phase": "V36",
+    "title": "Homework Review Report",
+    "status": "Next",
+    "focus": "Add a review report for remedial homework completion and follow-up decisions.",
+    "nextActions": ["Create homework-review page", "Summarise completion", "Connect teacher and parent reports"]
   }
 ]

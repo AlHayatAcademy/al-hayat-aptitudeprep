@@ -59,7 +59,8 @@
     weeklySummary: "weekly-summary.json",
     parentWeeklyReport: "parent-weekly-report.json",
     teacherWeeklyReport: "teacher-weekly-report.json",
-    classRemedialPlan: "class-remedial-plan.json"
+    classRemedialPlan: "class-remedial-plan.json",
+    remedialHomework: "remedial-homework.json"
   };
 
   async function loadJSON(file) {

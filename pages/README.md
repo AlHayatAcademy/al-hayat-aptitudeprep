@@ -51,6 +51,7 @@ The main public GitHub Pages files are at the repository root for clean URLs:
 - `parent-weekly-report.html`
 - `teacher-weekly-report.html`
 - `class-remedial-plan.html`
+- `remedial-homework.html`
 - `study-plans.html`
 - `progress.html`
 - `book-trial-class.html`

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "homework-weak-topic",
+    "category": "Weak Topic",
+    "estimatedTime": "15 minutes",
+    "title": "Redo One Weak Topic",
+    "studentTask": "Study the assigned topic card, then attempt two similar questions without checking the answer first.",
+    "completionChecks": [
+      "I can explain the concept in my own words.",
+      "I attempted the questions before seeing the answer.",
+      "I wrote one mistake to avoid next time."
+    ],
+    "primaryLink": "topic-study.html",
+    "primaryLabel": "Open Topic Study",
+    "supportLink": "practice.html",
+    "supportLabel": "Practice"
+  },
+  {
+    "id": "homework-error-correction",
+    "category": "Error Correction",
+    "estimatedTime": "10 minutes",
+    "title": "Correct One Saved Mistake",
+    "studentTask": "Choose one saved mistake, write the corrected rule, and solve one fresh question using that rule.",
+    "completionChecks": [
+      "I identified why my first answer was wrong.",
+      "I wrote the corrected rule clearly.",
+      "I solved one new question using the corrected rule."
+    ],
+    "primaryLink": "error-log.html",
+    "primaryLabel": "Open Error Log",
+    "supportLink": "question-review.html",
+    "supportLabel": "Review Pattern"
+  },
+  {
+    "id": "homework-revision-explain",
+    "category": "Revision",
+    "estimatedTime": "10 minutes",
+    "title": "Explain One Revision Item",
+    "studentTask": "Pick one pending revision queue item and explain it aloud or in a saved student note.",
+    "completionChecks": [
+      "I selected one pending revision item.",
+      "I explained the answer without looking.",
+      "I saved a short note or marked the queue item complete."
+    ],
+    "primaryLink": "revision-queue.html",
+    "primaryLabel": "Open Queue",
+    "supportLink": "student-notes.html",
+    "supportLabel": "Save Note"
+  }
+]

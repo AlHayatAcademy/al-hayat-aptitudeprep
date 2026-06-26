@@ -83,6 +83,7 @@
       "parent-weekly-report": renderParentWeeklyReport,
       "teacher-weekly-report": renderTeacherWeeklyReport,
       "class-remedial-plan": renderClassRemedialPlan,
+      "remedial-homework": renderRemedialHomework,
       "study-plans": renderStudyPlans,
       progress: renderProgress,
       reviews: renderReviews,
@@ -104,6 +105,7 @@
     wireRouteTaskTracker();
     wireStudentNotes();
     wireRevisionQueue();
+    wireRemedialHomework();
   }
 
   function headerHTML() {
@@ -158,6 +160,7 @@
             ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
             ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
             ["Class Remedial Plan", "Run weak-area class plans", "class-remedial-plan.html"],
+            ["Remedial Homework", "Student weak-area homework", "remedial-homework.html"],
             ["Compare Tests", "Formats, sections and strategies", "compare.html"],
             ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
             ["Strategies", "How to solve smarter", "strategies.html"],
@@ -225,6 +228,7 @@
           ${navLink("Parent Report", "parent-weekly-report.html")}
           ${navLink("Teacher Report", "teacher-weekly-report.html")}
           ${navLink("Remedial Plan", "class-remedial-plan.html")}
+          ${navLink("Homework", "remedial-homework.html")}
           ${navLink("Score Guide", "score-guide.html")}
           ${navLink("Roadmap", "roadmap.html")}
           ${navLink("Vocabulary", "vocabulary-bank.html")}
@@ -282,6 +286,7 @@
         ${actionCard("Parent Weekly Report", "Share progress with parents.", "parent-weekly-report.html")}
         ${actionCard("Teacher Weekly Report", "Plan remedial class follow-up.", "teacher-weekly-report.html")}
         ${actionCard("Class Remedial Plan", "Run weak-area class recovery sessions.", "class-remedial-plan.html")}
+        ${actionCard("Remedial Homework", "Complete follow-up weak-area tasks.", "remedial-homework.html")}
         ${actionCard("Choose Test", "Find the best route for your goal.", "choose-test.html")}
         ${actionCard("Diagnostic", "Check your current level quickly.", "diagnostic.html")}
         ${actionCard("Flashcards", "Revise words, formulas and rules.", "flashcards.html")}
@@ -1125,6 +1130,7 @@
         <div class="button-row">
           <button class="btn primary small" type="button" data-copy-link="${escapeHTML(planText)}">Copy Remedial Plan</button>
           <a class="btn secondary small" href="${url("teacher-weekly-report.html")}">Teacher Report</a>
+          <a class="btn ghost small" href="${url("remedial-homework.html")}">Student Homework</a>
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
           <a class="btn ghost small" href="${url("revision-queue.html")}">Revision Queue</a>
         </div>
@@ -1153,6 +1159,50 @@
         <pre class="code-sample"><code>${escapeHTML(planText)}</code></pre>
       </section>
     `;
+  }
+
+  function renderRemedialHomework(data) {
+    const signals = getWeeklySignals(data);
+    const status = readJSON("ah-remedial-homework-status", {});
+    const doneCount = data.remedialHomework.filter((item) => status[item.id]).length;
+    const categories = [...new Set(data.remedialHomework.map((item) => item.category))].sort();
+    app.innerHTML = `
+      ${pageHero("Remedial Homework", "Student Follow-Up After Class", "Complete short weak-area homework tasks after remedial class so corrections become independent habits.")}
+      <section class="stat-grid">
+        ${statCard(data.remedialHomework.length, "Homework Tasks")}
+        ${statCard(doneCount, "Completed")}
+        ${statCard(data.remedialHomework.length - doneCount, "Remaining")}
+        ${statCard(`${signals.practiceAccuracy}%`, "Practice Accuracy")}
+        ${statCard(signals.errorCount, "Saved Errors")}
+        ${statCard(`${signals.revisionDone}/${signals.revisionTotal}`, "Revision")}
+      </section>
+      <section class="toolbar-panel">
+        <label>Category
+          <select id="homeworkCategory">
+            <option value="all">All categories</option>
+            ${categories.map((category) => `<option value="${escapeHTML(category)}">${escapeHTML(category)}</option>`).join("")}
+          </select>
+        </label>
+        <label class="search-field">Search
+          <input id="homeworkSearch" type="search" placeholder="Search weak topic, error, revision, task...">
+        </label>
+        <button class="btn ghost small" type="button" id="resetRemedialHomework">Reset Homework</button>
+      </section>
+      <section class="content-band">
+        <h2>How To Complete</h2>
+        <p>Do the shortest correction task first, then one independent practice attempt, then one explanation note. Mark a task complete only when you can explain the correction without help.</p>
+        <div class="button-row">
+          <a class="btn primary small" href="${url("class-remedial-plan.html")}">Class Remedial Plan</a>
+          <a class="btn secondary small" href="${url("practice.html")}">Practice</a>
+          <a class="btn ghost small" href="${url("student-notes.html")}">Student Notes</a>
+          <a class="btn ghost small" href="${url("revision-queue.html")}">Revision Queue</a>
+        </div>
+      </section>
+      <section class="card-grid lesson-grid">
+        ${data.remedialHomework.map((item) => remedialHomeworkCard(item, status)).join("")}
+      </section>
+    `;
+    wireSimpleCardFilter("#homeworkCategory", "#homeworkSearch", "[data-remedial-homework]");
   }
 
   function renderVocabularyBank(data) {
@@ -1688,6 +1738,7 @@
           <a class="btn ghost small" href="${url("results-report.html")}">Full Report</a>
           <a class="btn ghost small" href="${url("repair-paths.html")}">Repair Paths</a>
           <a class="btn ghost small" href="${url("class-remedial-plan.html")}">Remedial Plan</a>
+          <a class="btn ghost small" href="${url("remedial-homework.html")}">Homework</a>
           <a class="btn ghost small" href="${url("route-tasks.html")}">Today Tasks</a>
           <a class="btn ghost small" href="${url("weekly-summary.html")}">Weekly Summary</a>
           <a class="btn ghost small" href="${url("parent-weekly-report.html")}">Parent Report</a>
@@ -1738,6 +1789,7 @@
           <a class="text-link" href="${url("download-center.html")}">Open Download Center</a>
           <a class="text-link" href="${url("repair-paths.html")}">Open Repair Paths</a>
           <a class="text-link" href="${url("class-remedial-plan.html")}">Open Remedial Plan</a>
+          <a class="text-link" href="${url("remedial-homework.html")}">Open Remedial Homework</a>
           <a class="text-link" href="${url("route-tasks.html")}">Open Route Tasks</a>
           <a class="text-link" href="${url("student-notes.html")}">Open Student Notes</a>
           <a class="text-link" href="${url("revision-queue.html")}">Open Revision Queue</a>
@@ -2957,6 +3009,28 @@
     return lines.join("\n");
   }
 
+  function remedialHomeworkCard(item, status) {
+    return `
+      <article class="feature-card lesson-card remedial-homework-card ${status[item.id] ? "done" : ""}" data-remedial-homework data-category="${escapeHTML(item.category)}" data-homework-card="${escapeHTML(item.id)}">
+        <p class="eyebrow">${escapeHTML(item.category)} • ${escapeHTML(item.estimatedTime)}</p>
+        <h2>${escapeHTML(item.title)}</h2>
+        <p>${escapeHTML(item.studentTask)}</p>
+        <div class="lesson-block">
+          <h3>Completion Checks</h3>
+          <ul class="clean-list">${item.completionChecks.map((check) => `<li>${escapeHTML(check)}</li>`).join("")}</ul>
+        </div>
+        <label class="check-row">
+          <input type="checkbox" data-homework-check="${escapeHTML(item.id)}" ${status[item.id] ? "checked" : ""}>
+          Mark homework complete
+        </label>
+        <div class="button-row">
+          <a class="btn secondary small" href="${url(item.primaryLink)}">${escapeHTML(item.primaryLabel)}</a>
+          <a class="btn ghost small" href="${url(item.supportLink)}">${escapeHTML(item.supportLabel)}</a>
+        </div>
+      </article>
+    `;
+  }
+
   function testPageCard(item, data) {
     const test = data.tests.find((entry) => entry.id === item.testId);
     const groupName = findName(data.groups, test?.groupId || "");
@@ -3384,6 +3458,31 @@
       controls.forEach((control) => {
         control.checked = false;
         const card = document.querySelector(`[data-revision-card="${control.dataset.revisionCheck}"]`);
+        if (card) card.classList.remove("done");
+      });
+    });
+  }
+
+  function wireRemedialHomework() {
+    const controls = document.querySelectorAll("[data-homework-check]");
+    if (!controls.length) return;
+    const key = "ah-remedial-homework-status";
+    const read = () => readJSON(key, {});
+    const write = (value) => localStorage.setItem(key, JSON.stringify(value));
+    controls.forEach((control) => {
+      control.addEventListener("change", () => {
+        const current = read();
+        current[control.dataset.homeworkCheck] = control.checked;
+        write(current);
+        const card = document.querySelector(`[data-homework-card="${control.dataset.homeworkCheck}"]`);
+        if (card) card.classList.toggle("done", control.checked);
+      });
+    });
+    document.querySelector("#resetRemedialHomework")?.addEventListener("click", () => {
+      localStorage.removeItem(key);
+      controls.forEach((control) => {
+        control.checked = false;
+        const card = document.querySelector(`[data-homework-card="${control.dataset.homeworkCheck}"]`);
         if (card) card.classList.remove("done");
       });
     });

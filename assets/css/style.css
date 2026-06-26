@@ -1214,3 +1214,7 @@ th {
 .remedial-plan-card {
   border-top: 4px solid var(--gold);
 }
+
+.remedial-homework-card {
+  border-top: 4px solid var(--green);
+}
