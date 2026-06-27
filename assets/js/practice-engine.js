@@ -1,6 +1,6 @@
 (function () {
-  const QUESTION_PAGE_SIZE = 10;
-  const VOCAB_STUDY_PAGE_SIZE = 6;
+  const PAGE_SIZE = 10;
+  const RESPONSE_STORAGE_KEY = "ah-practice-responses-v2";
 
   function initPracticeEngine(data, mount, filters = {}) {
     const params = new URLSearchParams(window.location.search);
@@ -8,62 +8,48 @@
       testId: filters.testId || params.get("test") || "all",
       skillId: filters.skillId || params.get("skill") || "all",
       subjectId: filters.subjectId || params.get("subject") || "all",
+      mode: params.get("mode") === "quiz" ? "quiz" : "set",
+      questionPage: Math.max(1, Number(params.get("set")) || 1),
+      quizIndex: 0,
       vocabLevel: "all",
       vocabQuery: "",
       vocabPage: 1,
-      questionPage: Number(params.get("page") || 1),
-      practiceMode: params.get("mode") === "quiz" ? "quiz" : "set",
-      quizIndex: 0,
-      responses: {}
+      responses: readResponses()
     };
-
-    const testOptions = optionList(data.tests, "All tests");
-    const skillOptions = optionList(data.skills, "All skills");
-    const subjectOptions = optionList(data.subjects, "All subjects");
 
     mount.innerHTML = `
       <section class="page-hero compact">
         <div>
           <p class="eyebrow">Practice Engine</p>
           <h1>Practice by Test, Skill or Subject</h1>
-          <p>Use focused 10-question sets for practice, or switch to one-by-one quiz mode for exam-like flow.</p>
+          <p>Work through focused 10-question sets, or switch to Quiz Mode for one question at a time.</p>
         </div>
       </section>
-      <section class="toolbar-panel" aria-label="Practice filters">
-        <label>Test <select id="practiceTest">${testOptions}</select></label>
-        <label>Skill <select id="practiceSkill">${skillOptions}</select></label>
-        <label>Subject <select id="practiceSubject">${subjectOptions}</select></label>
-        <button class="btn primary" id="resetPractice" type="button">Reset Answers</button>
+      <section class="toolbar-panel practice-filter-bar" aria-label="Practice filters">
+        <label>Test <select id="practiceTest">${optionList(data.tests, "All tests")}</select></label>
+        <label>Skill <select id="practiceSkill">${optionList(data.skills, "All skills")}</select></label>
+        <label>Subject <select id="practiceSubject">${optionList(data.subjects, "All subjects")}</select></label>
+        <button class="btn secondary" id="resetPractice" type="button">Reset filtered answers</button>
       </section>
       <section id="practiceVocabularyBank" class="vocabulary-study-panel" hidden></section>
-      <section class="split-layout">
-        <aside class="side-panel">
-          <h2>Practice Summary</h2>
-          <div id="practiceStats" class="metric-stack"></div>
-        </aside>
-        <div class="practice-main-panel">
-          <section class="practice-mode-panel" aria-label="Practice mode">
-            <div>
-              <p class="eyebrow">Hybrid Practice</p>
-              <h2 id="practiceModeTitle">Practice Set</h2>
-              <p id="practiceModeHelp">Twenty MCQs are shown at a time for manageable topic practice.</p>
-            </div>
-            <div class="segmented-control" role="tablist" aria-label="Choose practice mode">
-              <button class="segment" type="button" data-practice-mode="set">10-MCQ Set</button>
-              <button class="segment" type="button" data-practice-mode="quiz">Quiz Mode</button>
-            </div>
-          </section>
-          <div id="questionPagerTop"></div>
-          <div id="questionList" class="question-list"></div>
-          <div id="questionPagerBottom"></div>
+      <section class="practice-overview" aria-labelledby="practiceSummaryTitle">
+        <div class="practice-overview-heading">
+          <p class="eyebrow">Your Progress</p>
+          <h2 id="practiceSummaryTitle">Practice Summary</h2>
         </div>
+        <div id="practiceStats" class="practice-metric-grid"></div>
+      </section>
+      <section id="practiceWorkspace" class="practice-workspace">
+        <div id="practiceSetHeader"></div>
+        <nav id="questionPaginationTop" class="question-pagination" aria-label="Question sets"></nav>
+        <div id="questionList" class="question-list"></div>
+        <nav id="questionPaginationBottom" class="question-pagination" aria-label="Question sets"></nav>
       </section>
     `;
 
     const testSelect = mount.querySelector("#practiceTest");
     const skillSelect = mount.querySelector("#practiceSkill");
     const subjectSelect = mount.querySelector("#practiceSubject");
-
     testSelect.value = state.testId;
     skillSelect.value = state.skillId;
     subjectSelect.value = state.subjectId;
@@ -76,12 +62,17 @@
         state.questionPage = 1;
         state.quizIndex = 0;
         state.vocabPage = 1;
+        syncUrl();
         render();
       });
     });
 
     mount.querySelector("#resetPractice").addEventListener("click", () => {
-      state.responses = {};
+      const questions = filteredQuestions();
+      const attempted = questions.filter((question) => state.responses[question.id]?.attempted).length;
+      if (!attempted || !window.confirm(`Reset answers for ${attempted} attempted question${attempted === 1 ? "" : "s"} in the current filters?`)) return;
+      questions.forEach((question) => delete state.responses[question.id]);
+      saveResponses(state.responses);
       render();
     });
 
@@ -100,229 +91,235 @@
     });
 
     mount.addEventListener("click", (event) => {
-      const modeButton = event.target.closest("[data-practice-mode]");
-      if (modeButton) {
-        state.practiceMode = modeButton.dataset.practiceMode;
-        state.quizIndex = 0;
-        render();
-        return;
-      }
-
-      const qPageButton = event.target.closest("[data-question-page]");
-      if (qPageButton && !qPageButton.disabled) {
-        state.questionPage = Number(qPageButton.dataset.questionPage);
-        state.quizIndex = 0;
-        render();
-        mount.querySelector("#questionList")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-
-      const quizMove = event.target.closest("[data-quiz-move]");
-      if (quizMove && !quizMove.disabled) {
-        moveQuiz(Number(quizMove.dataset.quizMove));
-        return;
-      }
-
-      const pageButton = event.target.closest("[data-study-vocab-page]");
-      if (pageButton && !pageButton.disabled) {
-        state.vocabPage = Number(pageButton.dataset.studyVocabPage);
+      const studyPageButton = event.target.closest("[data-study-vocab-page]");
+      if (studyPageButton && !studyPageButton.disabled) {
+        state.vocabPage = Number(studyPageButton.dataset.studyVocabPage);
         renderVocabularyStudyResults();
         return;
       }
 
       const speechButton = event.target.closest("[data-study-pronounce]");
-      if (speechButton) pronounceWord(speechButton.dataset.studyPronounce, speechButton.dataset.voiceLocale);
+      if (speechButton) {
+        pronounceWord(speechButton.dataset.studyPronounce, speechButton.dataset.voiceLocale);
+        return;
+      }
+
+      const modeButton = event.target.closest("[data-practice-mode]");
+      if (modeButton) {
+        state.mode = modeButton.dataset.practiceMode;
+        state.quizIndex = state.mode === "quiz" ? firstUnansweredIndex(currentSetQuestions(), state.responses) : 0;
+        syncUrl();
+        render({ focus: true });
+        return;
+      }
+
+      const pageButton = event.target.closest("[data-question-page]");
+      if (pageButton && !pageButton.disabled) {
+        state.questionPage = Number(pageButton.dataset.questionPage);
+        state.quizIndex = state.mode === "quiz" ? firstUnansweredIndex(currentSetQuestions(), state.responses) : 0;
+        syncUrl();
+        render({ focus: true, scroll: true });
+        return;
+      }
+
+      const quizButton = event.target.closest("[data-quiz-step]");
+      if (quizButton && !quizButton.disabled) {
+        const questions = filteredQuestions();
+        const setQuestions = questions.slice((state.questionPage - 1) * PAGE_SIZE, state.questionPage * PAGE_SIZE);
+        state.quizIndex = clamp(state.quizIndex + Number(quizButton.dataset.quizStep), 0, setQuestions.length - 1);
+        render({ focus: true, scroll: true });
+        return;
+      }
+
+      const answerButton = event.target.closest("[data-select-answer]");
+      if (answerButton) {
+        answerQuestion(answerButton.dataset.question, Number(answerButton.dataset.answer));
+        return;
+      }
+
+      const toggleButton = event.target.closest("[data-toggle-panel]");
+      if (toggleButton) {
+        const target = mount.querySelector(`#${toggleButton.dataset.togglePanel}`);
+        if (!target) return;
+        target.hidden = !target.hidden;
+        toggleButton.setAttribute("aria-expanded", String(!target.hidden));
+        return;
+      }
+
+      const nextQuestionButton = event.target.closest("[data-next-question]");
+      if (nextQuestionButton) {
+        const target = mount.querySelector(`#${nextQuestionButton.dataset.nextQuestion}`);
+        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+        target?.focus({ preventScroll: true });
+        return;
+      }
+
+      const resetSetButton = event.target.closest("[data-reset-set]");
+      if (resetSetButton) {
+        currentSetQuestions().forEach((question) => delete state.responses[question.id]);
+        saveResponses(state.responses);
+        state.quizIndex = 0;
+        render({ focus: true });
+        return;
+      }
+
+      const retryButton = event.target.closest("[data-retry-incorrect]");
+      if (retryButton) {
+        currentSetQuestions().forEach((question) => {
+          if (state.responses[question.id]?.attempted && !state.responses[question.id]?.correct) delete state.responses[question.id];
+        });
+        saveResponses(state.responses);
+        state.mode = "quiz";
+        state.quizIndex = Math.max(0, currentSetQuestions().findIndex((question) => !state.responses[question.id]?.attempted));
+        syncUrl();
+        render({ focus: true });
+      }
     });
 
     function filteredQuestions() {
       return data.questions.filter((question) => {
-        const testOk = state.testId === "all" || question.testIds.includes(state.testId);
+        const testOk = state.testId === "all" || (question.testIds || []).includes(state.testId);
         const skillOk = state.skillId === "all" || question.skillId === state.skillId;
         const subjectOk = state.subjectId === "all" || question.subjectId === state.subjectId;
         return question.status === "published" && testOk && skillOk && subjectOk;
       });
     }
 
-    function render() {
+    function currentSetQuestions() {
       const questions = filteredQuestions();
-      const totalPages = Math.max(1, Math.ceil(questions.length / QUESTION_PAGE_SIZE));
-      state.questionPage = Math.min(Math.max(1, state.questionPage), totalPages);
-      const pageStart = (state.questionPage - 1) * QUESTION_PAGE_SIZE;
-      const pageQuestions = questions.slice(pageStart, pageStart + QUESTION_PAGE_SIZE);
-      state.quizIndex = Math.min(Math.max(0, state.quizIndex), Math.max(0, pageQuestions.length - 1));
+      const start = (state.questionPage - 1) * PAGE_SIZE;
+      return questions.slice(start, start + PAGE_SIZE);
+    }
 
-      const filteredIds = new Set(questions.map((item) => item.id));
-      const filteredResponses = Object.entries(state.responses).filter(([id]) => filteredIds.has(id)).map(([, value]) => value);
-      const attempted = filteredResponses.filter((item) => item.attempted).length;
-      const correct = filteredResponses.filter((item) => item.correct).length;
+    function answerQuestion(questionId, chosen) {
+      const question = data.questions.find((item) => item.id === questionId);
+      if (!question || state.responses[question.id]?.attempted) return;
+      const correct = chosen === question.answerIndex;
+      state.responses[question.id] = {
+        chosen,
+        attempted: true,
+        correct,
+        answeredAt: new Date().toISOString()
+      };
+      saveResponses(state.responses);
+      savePracticeAttempt(question, correct);
+      render();
+      requestAnimationFrame(() => mount.querySelector(`#result-${cssEscape(question.id)}`)?.focus({ preventScroll: true }));
+    }
 
+    function render(options = {}) {
+      const questions = filteredQuestions();
+      const totalPages = Math.max(1, Math.ceil(questions.length / PAGE_SIZE));
+      state.questionPage = clamp(state.questionPage, 1, totalPages);
+      const start = (state.questionPage - 1) * PAGE_SIZE;
+      const setQuestions = questions.slice(start, start + PAGE_SIZE);
+      state.quizIndex = clamp(state.quizIndex, 0, Math.max(0, setQuestions.length - 1));
+
+      renderStats(questions);
+      renderVocabularyStudyBank();
+      renderSetHeader(questions, setQuestions, start, totalPages);
+
+      const visibleQuestions = state.mode === "quiz" ? setQuestions.slice(state.quizIndex, state.quizIndex + 1) : setQuestions;
+      mount.querySelector("#questionList").innerHTML = visibleQuestions.length
+        ? visibleQuestions.map((question) => {
+            const setIndex = setQuestions.findIndex((item) => item.id === question.id);
+            const overallIndex = start + setIndex;
+            const nextQuestion = state.mode === "set" ? setQuestions[setIndex + 1] : null;
+            return questionCard(question, nextQuestion, overallIndex, questions.length, setIndex, setQuestions.length);
+          }).join("")
+        : `<div class="empty-state"><h2>No questions found</h2><p>Try broader filters or choose another test, skill or subject.</p></div>`;
+
+      const pagination = questions.length ? paginationMarkup(totalPages) : "";
+      mount.querySelector("#questionPaginationTop").innerHTML = pagination;
+      mount.querySelector("#questionPaginationBottom").innerHTML = pagination;
+
+      if (options.scroll) mount.querySelector("#practiceWorkspace")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (options.focus) requestAnimationFrame(focusPracticeHeading);
+    }
+
+    function renderStats(questions) {
+      const responses = questions.map((question) => state.responses[question.id]).filter((response) => response?.attempted);
+      const correct = responses.filter((response) => response.correct).length;
+      const wrong = responses.length - correct;
       mount.querySelector("#practiceStats").innerHTML = `
         ${metric("Published MCQs", questions.length)}
-        ${state.skillId === "vocabulary" ? metric("Ready words", data.vocabularyBank?.length || 0) : ""}
+        ${state.skillId === "vocabulary" ? metric("Ready-to-learn words", data.vocabularyBank?.length || 0) : ""}
         ${state.skillId === "vocabulary" ? metric("Master curriculum", data.vocabularyRelease?.curriculumTotal || data.vocabularyBank?.length || 0) : ""}
-        ${metric("Attempted", attempted)}
+        ${metric("Attempted", responses.length)}
         ${metric("Correct", correct)}
+        ${metric("Wrong", wrong)}
       `;
-
-      renderVocabularyStudyBank();
-      renderPracticeModeHeader(questions, pageQuestions);
-      renderQuestionArea(questions, pageQuestions, pageStart, totalPages);
-      bindQuestionButtons();
     }
 
-    function renderPracticeModeHeader(questions, pageQuestions) {
-      const title = state.practiceMode === "quiz" ? "Quiz Mode" : "Practice Set";
-      const help = state.practiceMode === "quiz"
-        ? "One MCQ is shown at a time. Use this when you want exam-like focus."
-        : "Twenty MCQs are shown at a time. Use this for easy topic practice and quick review.";
-      mount.querySelector("#practiceModeTitle").textContent = title;
-      mount.querySelector("#practiceModeHelp").textContent = questions.length
-        ? `${help} Current set: ${pageQuestions.length} question${pageQuestions.length === 1 ? "" : "s"}.`
-        : "No matching questions are available for these filters.";
-      mount.querySelectorAll("[data-practice-mode]").forEach((button) => {
-        const active = button.dataset.practiceMode === state.practiceMode;
-        button.classList.toggle("active", active);
-        button.setAttribute("aria-selected", String(active));
-      });
-    }
+    function renderSetHeader(questions, setQuestions, start, totalPages) {
+      const attempted = setQuestions.filter((question) => state.responses[question.id]?.attempted).length;
+      const correct = setQuestions.filter((question) => state.responses[question.id]?.correct).length;
+      const wrong = attempted - correct;
+      const percent = setQuestions.length ? Math.round((attempted / setQuestions.length) * 100) : 0;
+      const complete = setQuestions.length && attempted === setQuestions.length;
+      const showingEnd = Math.min(start + setQuestions.length, questions.length);
 
-    function renderQuestionArea(questions, pageQuestions, pageStart, totalPages) {
-      const top = mount.querySelector("#questionPagerTop");
-      const bottom = mount.querySelector("#questionPagerBottom");
-      const list = mount.querySelector("#questionList");
-
-      if (!questions.length) {
-        top.innerHTML = "";
-        bottom.innerHTML = "";
-        list.innerHTML = `<div class="empty-state"><h2>No questions found</h2><p>Add matching records in <code>data/questions.json</code> or clear the filters.</p></div>`;
-        return;
-      }
-
-      if (state.practiceMode === "quiz") {
-        const current = pageQuestions[state.quizIndex];
-        const previousQuestion = pageQuestions[state.quizIndex - 1];
-        const nextQuestion = pageQuestions[state.quizIndex + 1];
-        top.innerHTML = quizControls(questions.length, pageQuestions.length, pageStart);
-        bottom.innerHTML = quizControls(questions.length, pageQuestions.length, pageStart, true);
-        list.innerHTML = current ? questionCard(current, nextQuestion, previousQuestion, true) : "";
-        return;
-      }
-
-      const visibleStart = pageStart + 1;
-      const visibleEnd = pageStart + pageQuestions.length;
-      const pager = questionPagination(questions.length, visibleStart, visibleEnd, totalPages);
-      top.innerHTML = pager;
-      bottom.innerHTML = pager;
-      list.innerHTML = pageQuestions.map((question, index) => questionCard(question, pageQuestions[index + 1], pageQuestions[index - 1], false)).join("");
-    }
-
-    function questionPagination(total, start, end, totalPages) {
-      if (!total) return "";
-      return `
-        <nav class="practice-pagination" aria-label="Question pages">
-          <p>Showing <strong>${start}–${end}</strong> of <strong>${total}</strong> questions • Page ${state.questionPage} of ${totalPages}</p>
-          <div class="pagination-bar compact-pages">
-            <button class="btn ghost small" type="button" data-question-page="${state.questionPage - 1}" ${state.questionPage === 1 ? "disabled" : ""}>← Previous</button>
-            ${pageNumberButtons(totalPages)}
-            <button class="btn ghost small" type="button" data-question-page="${state.questionPage + 1}" ${state.questionPage === totalPages ? "disabled" : ""}>Next →</button>
+      mount.querySelector("#practiceSetHeader").innerHTML = `
+        <header class="practice-set-header">
+          <div>
+            <p class="eyebrow">${state.mode === "quiz" ? "Set-wise Quiz" : "Guided Practice"}</p>
+            <h2 class="practice-set-heading" tabindex="-1">Set ${state.questionPage} of ${totalPages}</h2>
+            <p class="practice-progress-copy">${questions.length ? `Showing ${start + 1}-${showingEnd} of ${questions.length} questions` : "No matching questions"}</p>
           </div>
-        </nav>
-      `;
-    }
-
-    function pageNumberButtons(totalPages) {
-      const pages = visiblePageNumbers(state.questionPage, totalPages);
-      return pages.map((page) => page === "…"
-        ? `<span class="page-ellipsis">…</span>`
-        : `<button class="page-number ${page === state.questionPage ? "active" : ""}" type="button" data-question-page="${page}" aria-current="${page === state.questionPage ? "page" : "false"}">${page}</button>`
-      ).join("");
-    }
-
-    function visiblePageNumbers(current, total) {
-      if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1);
-      const set = new Set([1, total, current, current - 1, current + 1]);
-      if (current <= 3) [2, 3, 4].forEach((page) => set.add(page));
-      if (current >= total - 2) [total - 3, total - 2, total - 1].forEach((page) => set.add(page));
-      const sorted = [...set].filter((page) => page >= 1 && page <= total).sort((a, b) => a - b);
-      const output = [];
-      sorted.forEach((page, index) => {
-        if (index && page - sorted[index - 1] > 1) output.push("…");
-        output.push(page);
-      });
-      return output;
-    }
-
-    function quizControls(total, setTotal, pageStart, bottom = false) {
-      const overall = pageStart + state.quizIndex + 1;
-      const totalPages = Math.max(1, Math.ceil(total / QUESTION_PAGE_SIZE));
-      const atFirstInSet = state.quizIndex === 0;
-      const atLastInSet = state.quizIndex >= setTotal - 1;
-      return `
-        <nav class="practice-pagination quiz-pagination ${bottom ? "bottom" : ""}" aria-label="Quiz navigation">
-          <p>Question <strong>${state.quizIndex + 1}</strong> of <strong>${setTotal}</strong> in this set • Overall ${overall} of ${total}</p>
-          <div class="pagination-bar compact-pages">
-            <button class="btn ghost small" type="button" data-question-page="${state.questionPage - 1}" ${state.questionPage === 1 && atFirstInSet ? "disabled" : ""}>← Previous Set</button>
-            <button class="btn secondary small" type="button" data-quiz-move="-1" ${state.questionPage === 1 && atFirstInSet ? "disabled" : ""}>← Previous</button>
-            <span>Set ${state.questionPage} of ${totalPages}</span>
-            <button class="btn primary small" type="button" data-quiz-move="1" ${state.questionPage === totalPages && atLastInSet ? "disabled" : ""}>Next →</button>
-            <button class="btn ghost small" type="button" data-question-page="${state.questionPage + 1}" ${state.questionPage === totalPages ? "disabled" : ""}>Next Set →</button>
+          <div class="practice-mode-switch" role="group" aria-label="Practice mode">
+            <button type="button" data-practice-mode="set" aria-pressed="${state.mode === "set"}" class="${state.mode === "set" ? "active" : ""}">Practice Set</button>
+            <button type="button" data-practice-mode="quiz" aria-pressed="${state.mode === "quiz"}" class="${state.mode === "quiz" ? "active" : ""}">Quiz Mode</button>
           </div>
-        </nav>
+        </header>
+        <div class="set-progress-panel">
+          <div class="set-progress-labels">
+            <strong>${attempted} of ${setQuestions.length} attempted</strong>
+            <span>${correct} correct${wrong ? ` • ${wrong} wrong` : ""}</span>
+          </div>
+          <progress max="${setQuestions.length || 1}" value="${attempted}">${percent}%</progress>
+          <button class="btn ghost small" type="button" data-reset-set ${attempted ? "" : "disabled"}>Reset this set</button>
+        </div>
+        ${state.mode === "quiz" && setQuestions.length ? `
+          <div class="quiz-stepper" aria-label="Quiz question navigation">
+            <button class="btn secondary small" type="button" data-quiz-step="-1" ${state.quizIndex === 0 ? "disabled" : ""}>&larr; Previous question</button>
+            <strong>Question ${state.quizIndex + 1} of ${setQuestions.length}</strong>
+            <button class="btn secondary small" type="button" data-quiz-step="1" ${state.quizIndex === setQuestions.length - 1 ? "disabled" : ""}>Next question &rarr;</button>
+          </div>
+        ` : ""}
+        ${complete ? setCompletionMarkup(correct, wrong, setQuestions.length, totalPages) : ""}
       `;
     }
 
-    function moveQuiz(delta) {
-      const questions = filteredQuestions();
-      const totalPages = Math.max(1, Math.ceil(questions.length / QUESTION_PAGE_SIZE));
-      const pageStart = (state.questionPage - 1) * QUESTION_PAGE_SIZE;
-      const pageQuestions = questions.slice(pageStart, pageStart + QUESTION_PAGE_SIZE);
-      const nextIndex = state.quizIndex + delta;
-      if (nextIndex >= 0 && nextIndex < pageQuestions.length) {
-        state.quizIndex = nextIndex;
-      } else if (delta > 0 && state.questionPage < totalPages) {
-        state.questionPage += 1;
-        state.quizIndex = 0;
-      } else if (delta < 0 && state.questionPage > 1) {
-        state.questionPage -= 1;
-        const previousStart = (state.questionPage - 1) * QUESTION_PAGE_SIZE;
-        state.quizIndex = Math.max(0, questions.slice(previousStart, previousStart + QUESTION_PAGE_SIZE).length - 1);
-      }
-      render();
-      mount.querySelector("#questionList")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    function setCompletionMarkup(correct, wrong, total, totalPages) {
+      const score = Math.round((correct / total) * 100);
+      return `
+        <section class="set-complete" aria-label="Set complete">
+          <div>
+            <p class="eyebrow">Set Complete</p>
+            <h3>${correct} of ${total} correct <span>${score}%</span></h3>
+            <p>${score >= 80 ? "Strong result. Review any missed explanations before continuing." : "Review the missed questions, then retry them to strengthen recall."}</p>
+          </div>
+          <div class="button-row">
+            ${wrong ? `<button class="btn secondary small" type="button" data-retry-incorrect>Retry incorrect</button>` : ""}
+            ${state.questionPage < totalPages ? `<button class="btn primary small" type="button" data-question-page="${state.questionPage + 1}">Next set &rarr;</button>` : ""}
+          </div>
+        </section>
+      `;
     }
 
-    function bindQuestionButtons() {
-      mount.querySelectorAll("[data-select-answer]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const question = data.questions.find((item) => item.id === button.dataset.question);
-          if (!question) return;
-          const chosen = Number(button.dataset.answer);
-          const current = state.responses[question.id] || {};
-          if (current.attempted) return;
-          const correct = chosen === question.answerIndex;
-          state.responses[question.id] = { ...current, chosen, attempted: true, correct };
-          savePracticeAttempt(question, correct);
-          render();
-        });
-      });
-
-      mount.querySelectorAll("[data-toggle-panel]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const target = mount.querySelector(`#${button.dataset.togglePanel}`);
-          if (!target) return;
-          target.hidden = !target.hidden;
-          if (button.dataset.revealActions) {
-            button.textContent = target.hidden ? "Show Answer" : "Hide Answer Tools";
-          }
-        });
-      });
-
-      mount.querySelectorAll("[data-next-question]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const target = mount.querySelector(`#${button.dataset.nextQuestion}`);
-          target?.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      });
+    function paginationMarkup(totalPages) {
+      if (totalPages <= 1) return "";
+      const tokens = pageTokens(state.questionPage, totalPages);
+      return `
+        <button class="pagination-arrow" type="button" data-question-page="${state.questionPage - 1}" ${state.questionPage === 1 ? "disabled" : ""} aria-label="Previous question set">&larr; <span>Previous</span></button>
+        <div class="pagination-pages">
+          ${tokens.map((token) => token === "ellipsis"
+            ? `<span class="pagination-ellipsis" aria-hidden="true">...</span>`
+            : `<button type="button" data-question-page="${token}" class="pagination-page ${token === state.questionPage ? "active" : ""}" ${token === state.questionPage ? `aria-current="page"` : ""} aria-label="Question set ${token}">${token}</button>`
+          ).join("")}
+        </div>
+        <button class="pagination-arrow" type="button" data-question-page="${state.questionPage + 1}" ${state.questionPage === totalPages ? "disabled" : ""} aria-label="Next question set"><span>Next</span> &rarr;</button>
+      `;
     }
 
     function renderVocabularyStudyBank() {
@@ -333,31 +330,39 @@
       if (!panel.dataset.ready) {
         const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
         panel.innerHTML = `
-          <div class="section-head vocabulary-study-heading">
-            <div>
-              <p class="eyebrow">Vocabulary Study Bank</p>
-              <h2>Study Words Before The MCQs</h2>
-              <p>${data.vocabularyBank.length.toLocaleString()} reviewed learning records are available from the ${Number(data.vocabularyRelease?.curriculumTotal || data.vocabularyBank.length).toLocaleString()}-word curriculum. The question bank is counted separately.</p>
+          <details class="practice-study-support">
+            <summary>
+              <span>
+                <span class="eyebrow">Optional Study Support</span>
+                <strong>Review vocabulary before practising</strong>
+                <small>${data.vocabularyBank.length.toLocaleString()} ready-to-learn words available</small>
+              </span>
+              <span class="study-support-action">Open study words</span>
+            </summary>
+            <div class="study-support-body">
+              <div class="vocabulary-study-heading">
+                <p>Use this reference only when you need a refresher. For stronger learning, attempt the MCQs before checking a word.</p>
+                <div class="button-row">
+                  <a class="btn primary small" href="${rootUrl("vocabulary-bank.html?mode=learn")}">Start Daily Review</a>
+                  <a class="btn secondary small" href="${rootUrl("vocabulary-bank.html")}">Open Full Bank</a>
+                </div>
+              </div>
+              <div class="toolbar-panel vocabulary-study-toolbar">
+                <label>Level
+                  <select id="practiceVocabLevel">
+                    <option value="all">All levels</option>
+                    ${levels.map((level) => `<option value="${escapeHTML(level)}">${escapeHTML(level)}</option>`).join("")}
+                  </select>
+                </label>
+                <label class="search-field">Search
+                  <input id="practiceVocabSearch" type="search" placeholder="Search word or meaning...">
+                </label>
+              </div>
+              <p id="practiceVocabCount" class="connected-line" aria-live="polite"></p>
+              <div id="practiceVocabResults" class="vocabulary-mini-grid"></div>
+              <nav id="practiceVocabPagination" class="pagination-bar" aria-label="Vocabulary study pages"></nav>
             </div>
-            <div class="button-row">
-              <a class="btn primary small" href="${rootUrl("vocabulary-bank.html?mode=learn")}">Start Daily Review</a>
-              <a class="btn secondary small" href="${rootUrl("vocabulary-bank.html")}">Open Full Vocabulary Bank</a>
-            </div>
-          </div>
-          <div class="toolbar-panel vocabulary-study-toolbar">
-            <label>Level
-              <select id="practiceVocabLevel">
-                <option value="all">All levels</option>
-                ${levels.map((level) => `<option value="${escapeHTML(level)}">${escapeHTML(level)}</option>`).join("")}
-              </select>
-            </label>
-            <label class="search-field">Search
-              <input id="practiceVocabSearch" type="search" placeholder="Search word or meaning...">
-            </label>
-          </div>
-          <p id="practiceVocabCount" class="connected-line" aria-live="polite"></p>
-          <div id="practiceVocabResults" class="vocabulary-mini-grid"></div>
-          <nav id="practiceVocabPagination" class="pagination-bar" aria-label="Vocabulary study pages"></nav>
+          </details>
         `;
         panel.dataset.ready = "true";
       }
@@ -376,17 +381,18 @@
           .filter(Boolean).join(" ").toLowerCase();
         return levelOk && testOk && subjectOk && (!term || searchable.includes(term));
       });
-      const totalPages = Math.max(1, Math.ceil(filtered.length / VOCAB_STUDY_PAGE_SIZE));
-      state.vocabPage = Math.min(state.vocabPage, totalPages);
-      const start = (state.vocabPage - 1) * VOCAB_STUDY_PAGE_SIZE;
-      const visible = filtered.slice(start, start + VOCAB_STUDY_PAGE_SIZE);
+      const pageSize = 6;
+      const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+      state.vocabPage = clamp(state.vocabPage, 1, totalPages);
+      const start = (state.vocabPage - 1) * pageSize;
+      const visible = filtered.slice(start, start + pageSize);
       panel.querySelector("#practiceVocabCount").textContent = filtered.length
-        ? `Showing ${start + 1}–${start + visible.length} of ${filtered.length} study words`
+        ? `Showing ${start + 1}-${start + visible.length} of ${filtered.length} study words`
         : "No study words match these filters.";
       panel.querySelector("#practiceVocabResults").innerHTML = visible.length
         ? visible.map(vocabularyStudyCard).join("")
         : `<div class="empty-state"><h2>No study words found</h2><p>Clear a filter or try another search.</p></div>`;
-      panel.querySelector("#practiceVocabPagination").innerHTML = filtered.length > VOCAB_STUDY_PAGE_SIZE ? `
+      panel.querySelector("#practiceVocabPagination").innerHTML = filtered.length > pageSize ? `
         <button class="btn ghost small" type="button" data-study-vocab-page="${state.vocabPage - 1}" ${state.vocabPage === 1 ? "disabled" : ""}>Previous</button>
         <span>Page ${state.vocabPage} of ${totalPages}</span>
         <button class="btn ghost small" type="button" data-study-vocab-page="${state.vocabPage + 1}" ${state.vocabPage === totalPages ? "disabled" : ""}>Next</button>
@@ -414,17 +420,7 @@
       `;
     }
 
-    function pronounceWord(word, locale) {
-      if (!("speechSynthesis" in window) || !word) return;
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = locale || "en-US";
-      const voice = window.speechSynthesis.getVoices().find((item) => item.lang.toLowerCase().startsWith(utterance.lang.toLowerCase()));
-      if (voice) utterance.voice = voice;
-      window.speechSynthesis.speak(utterance);
-    }
-
-    function questionCard(question, nextQuestion, previousQuestion, isQuizMode) {
+    function questionCard(question, nextQuestion, overallIndex, totalQuestions, setIndex, setLength) {
       const response = state.responses[question.id] || {};
       const selected = response.chosen;
       const attempted = Boolean(response.attempted);
@@ -440,20 +436,15 @@
           isWrongSelection ? "wrong" : "",
           attempted && !isSelected && !isAnswer ? "muted" : ""
         ].filter(Boolean).join(" ");
-        return `<button class="option ${resultClass}" data-question="${question.id}" data-answer="${index}" data-select-answer type="button" ${attempted ? "disabled" : ""}>${escapeHTML(option)}</button>`;
+        return `<button class="option ${resultClass}" data-question="${escapeHTML(question.id)}" data-answer="${index}" data-select-answer type="button" ${attempted ? "disabled" : ""}><span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${escapeHTML(option)}</span></button>`;
       }).join("");
       const result = !attempted
-        ? `<p class="hint">Click one option to check your answer instantly.</p>`
-        : `<p class="${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct. Your selected answer is right." : "Not correct. Review the answer and explanation below."}</p>`;
+        ? `<p class="hint">Choose the best answer. Feedback appears immediately.</p>`
+        : `<p id="result-${escapeHTML(question.id)}" tabindex="-1" role="status" class="answer-result ${response.correct ? "success-text" : "danger-text"}">${response.correct ? "Correct." : "Not correct."} ${response.correct ? "Your answer matches the tested meaning." : "Review the correct answer and explanation before continuing."}</p>`;
       const answerText = question.options[question.answerIndex];
-      const quizNav = isQuizMode ? `
-        <div class="button-row practice-actions quiz-inline-actions">
-          <button class="btn ghost small" type="button" data-quiz-move="-1" ${!previousQuestion && state.questionPage === 1 ? "disabled" : ""}>← Previous</button>
-          <button class="btn primary small" type="button" data-quiz-move="1" ${!nextQuestion && state.questionPage >= Math.ceil(filteredQuestions().length / QUESTION_PAGE_SIZE) ? "disabled" : ""}>Next →</button>
-        </div>
-      ` : "";
       return `
-        <article class="question-card" id="practice-${question.id}">
+        <article class="question-card" id="practice-${escapeHTML(question.id)}" tabindex="-1">
+          <div class="question-position"><strong>${state.mode === "quiz" ? `Question ${setIndex + 1} of ${setLength}` : `Question ${overallIndex + 1} of ${totalQuestions}`}</strong><span>Set ${state.questionPage}</span></div>
           <div class="meta-row">
             <span>${escapeHTML(topic)}</span>
             <span>${escapeHTML(question.difficulty)}</span>
@@ -462,32 +453,60 @@
           <h2>${escapeHTML(question.stem)}</h2>
           <div class="options-grid">${optionButtons}</div>
           ${result}
-          <div class="button-row practice-actions">
-            <button class="btn secondary small" data-toggle-panel="answer-tools-${question.id}" data-reveal-actions="true" type="button">Show Answer</button>
-          </div>
-          <div id="answer-tools-${question.id}" class="practice-panel answer-tools" hidden>
+          ${attempted ? `
             <div class="button-row practice-actions">
-              <button class="btn ghost small" data-toggle-panel="answer-${question.id}" type="button">Correct Answer</button>
-              <button class="btn ghost small" data-toggle-panel="explanation-${question.id}" type="button">Explanation</button>
-              <button class="btn ghost small" data-toggle-panel="urdu-${question.id}" type="button">اردو وضاحت</button>
-              ${!isQuizMode ? `<button class="btn ghost small" data-next-question="practice-${nextQuestion?.id || question.id}" type="button" ${nextQuestion ? "" : "disabled"}>Next Question</button>` : ""}
-              <a class="btn ghost small" href="${rootUrl(`topic-study.html?topic=${question.topicId}`)}">Back To Topic</a>
-              <a class="btn ghost small" href="${rootUrl("index.html")}">Back To Home Page</a>
+              <button class="btn secondary small" data-toggle-panel="answer-tools-${escapeHTML(question.id)}" aria-expanded="false" type="button">Review answer and explanation</button>
+              ${state.mode === "set" && nextQuestion ? `<button class="btn ghost small" data-next-question="practice-${escapeHTML(nextQuestion.id)}" type="button">Next question &darr;</button>` : ""}
             </div>
-            <div id="answer-${question.id}" class="practice-panel answer-panel" hidden>
-              <strong>Correct Answer:</strong> ${escapeHTML(answerText)}
+            <div id="answer-tools-${escapeHTML(question.id)}" class="practice-panel answer-tools" hidden>
+              <p><strong>Correct answer:</strong> ${escapeHTML(answerText)}</p>
+              <p><strong>Explanation:</strong> ${escapeHTML(question.explanation || "Compare each option with the exact meaning required by the question.")}</p>
+              ${question.urduExplanation ? `<div class="urdu-note">${escapeHTML(question.urduExplanation)}</div>` : ""}
+              <div class="button-row practice-reference-links">
+                <a class="text-link" href="${rootUrl(`topic-study.html?topic=${question.topicId}`)}">Review this topic</a>
+              </div>
             </div>
-            <div id="explanation-${question.id}" class="practice-panel explanation-panel" hidden>
-              <strong>Explanation:</strong> ${fullExplanation(question, answerText)}
-            </div>
-            <div id="urdu-${question.id}" class="urdu-note" hidden>${escapeHTML(question.urduExplanation)}</div>
-          </div>
-          ${quizNav}
+          ` : ""}
         </article>
       `;
     }
 
+    function syncUrl() {
+      const url = new URL(window.location.href);
+      setUrlParam(url, "test", state.testId);
+      setUrlParam(url, "skill", state.skillId);
+      setUrlParam(url, "subject", state.subjectId);
+      if (state.mode === "quiz") url.searchParams.set("mode", "quiz");
+      else url.searchParams.delete("mode");
+      if (state.questionPage > 1) url.searchParams.set("set", String(state.questionPage));
+      else url.searchParams.delete("set");
+      window.history.replaceState({}, "", url);
+    }
+
+    function focusPracticeHeading() {
+      mount.querySelector(".practice-set-heading")?.focus({ preventScroll: true });
+    }
+
     render();
+  }
+
+  function pageTokens(current, total) {
+    if (total <= 7) return Array.from({ length: total }, (_, index) => index + 1);
+    const pages = new Set([1, total, current - 1, current, current + 1]);
+    if (current <= 3) [2, 3, 4].forEach((page) => pages.add(page));
+    if (current >= total - 2) [total - 3, total - 2, total - 1].forEach((page) => pages.add(page));
+    const sorted = [...pages].filter((page) => page >= 1 && page <= total).sort((a, b) => a - b);
+    const tokens = [];
+    sorted.forEach((page, index) => {
+      if (index && page - sorted[index - 1] > 1) tokens.push("ellipsis");
+      tokens.push(page);
+    });
+    return tokens;
+  }
+
+  function firstUnansweredIndex(questions, responses) {
+    const index = questions.findIndex((question) => !responses[question.id]?.attempted);
+    return index < 0 ? 0 : index;
   }
 
   function optionList(items, allLabel) {
@@ -497,28 +516,65 @@
   }
 
   function metric(label, value) {
-    return `<div class="metric"><strong>${Number(value).toLocaleString()}</strong><span>${label}</span></div>`;
+    return `<div class="metric"><strong>${Number(value).toLocaleString()}</strong><span>${escapeHTML(label)}</span></div>`;
+  }
+
+  function setUrlParam(url, key, value) {
+    if (!value || value === "all") url.searchParams.delete(key);
+    else url.searchParams.set(key, value);
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
   }
 
   function rootUrl(path) {
     return window.AHData.rootUrl(path);
   }
 
-  function savePracticeAttempt(question, correct) {
-    const key = "ah-aptitude-progress";
-    const current = JSON.parse(localStorage.getItem(key) || "{}");
-    const topic = current[question.topicId] || { attempts: 0, correct: 0 };
-    topic.attempts += 1;
-    topic.correct += correct ? 1 : 0;
-    current[question.topicId] = topic;
-    localStorage.setItem(key, JSON.stringify(current));
+  function readResponses() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(RESPONSE_STORAGE_KEY) || "{}");
+      return saved && typeof saved === "object" && !Array.isArray(saved) ? saved : {};
+    } catch {
+      return {};
+    }
   }
 
-  function fullExplanation(question, answerText) {
-    const explanation = escapeHTML(question.explanation || "Review the meaning, rule or logic used in the question, then compare each option with the exact demand of the stem.");
-    const answer = escapeHTML(answerText);
-    const example = escapeHTML(question.stem);
-    return `${explanation}<br><br><strong>Example:</strong> In this question, the correct choice is <strong>${answer}</strong>. Read the stem carefully, identify the tested concept, and remove options that do not match that concept. Stem: ${example}`;
+  function saveResponses(responses) {
+    try {
+      localStorage.setItem(RESPONSE_STORAGE_KEY, JSON.stringify(responses));
+    } catch {
+      // Practice remains usable when storage is unavailable.
+    }
+  }
+
+  function savePracticeAttempt(question, correct) {
+    const key = "ah-aptitude-progress";
+    try {
+      const current = JSON.parse(localStorage.getItem(key) || "{}");
+      const topic = current[question.topicId] || { attempts: 0, correct: 0 };
+      topic.attempts += 1;
+      topic.correct += correct ? 1 : 0;
+      current[question.topicId] = topic;
+      localStorage.setItem(key, JSON.stringify(current));
+    } catch {
+      // A blocked storage API should not block answering.
+    }
+  }
+
+  function pronounceWord(word, locale) {
+    if (!("speechSynthesis" in window) || !word) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = locale || "en-US";
+    const voice = window.speechSynthesis.getVoices().find((item) => item.lang.toLowerCase().startsWith(utterance.lang.toLowerCase()));
+    if (voice) utterance.voice = voice;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function cssEscape(value) {
+    return window.CSS?.escape ? window.CSS.escape(value) : String(value).replace(/[^a-zA-Z0-9_-]/g, "\\$&");
   }
 
   function escapeHTML(value) {
@@ -530,5 +586,5 @@
       .replaceAll("'", "&#039;");
   }
 
-  window.AHPractice = { initPracticeEngine };
+  window.AHPractice = { initPracticeEngine, pageTokens, firstUnansweredIndex };
 })();
