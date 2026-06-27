@@ -1,5 +1,5 @@
 (function () {
-  const QUESTION_PAGE_SIZE = 20;
+  const QUESTION_PAGE_SIZE = 10;
   const VOCAB_STUDY_PAGE_SIZE = 6;
 
   function initPracticeEngine(data, mount, filters = {}) {
@@ -26,7 +26,7 @@
         <div>
           <p class="eyebrow">Practice Engine</p>
           <h1>Practice by Test, Skill or Subject</h1>
-          <p>Use focused 20-question sets for practice, or switch to one-by-one quiz mode for exam-like flow.</p>
+          <p>Use focused 10-question sets for practice, or switch to one-by-one quiz mode for exam-like flow.</p>
         </div>
       </section>
       <section class="toolbar-panel" aria-label="Practice filters">
@@ -49,7 +49,7 @@
               <p id="practiceModeHelp">Twenty MCQs are shown at a time for manageable topic practice.</p>
             </div>
             <div class="segmented-control" role="tablist" aria-label="Choose practice mode">
-              <button class="segment" type="button" data-practice-mode="set">20-MCQ Set</button>
+              <button class="segment" type="button" data-practice-mode="set">10-MCQ Set</button>
               <button class="segment" type="button" data-practice-mode="quiz">Quiz Mode</button>
             </div>
           </section>
