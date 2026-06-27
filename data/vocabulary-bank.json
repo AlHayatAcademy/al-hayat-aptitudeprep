@@ -1,122 +1,3251 @@
 [
   {
-    "id": "vocab-concise",
-    "word": "concise",
-    "level": "Foundation",
-    "meaning": "brief but clear",
-    "synonyms": ["brief", "succinct", "compact"],
-    "antonyms": ["wordy", "lengthy", "verbose"],
-    "example": "The teacher gave a concise explanation before starting the test.",
-    "connectedTestIds": ["mdcat", "nat", "sat", "gat-general"]
-  },
-  {
-    "id": "vocab-meticulous",
-    "word": "meticulous",
-    "level": "Advanced",
-    "meaning": "showing great attention to detail",
-    "synonyms": ["careful", "precise", "thorough"],
-    "antonyms": ["careless", "negligent", "sloppy"],
-    "example": "A meticulous student checks each option before marking the answer.",
-    "connectedTestIds": ["gre", "sat", "gat-general"]
-  },
-  {
     "id": "vocab-accessible",
     "word": "accessible",
     "level": "Intermediate",
     "meaning": "easy to understand or reach",
-    "synonyms": ["understandable", "reachable", "available"],
-    "antonyms": ["obscure", "inaccessible", "unclear"],
+    "synonyms": [
+      "understandable",
+      "reachable",
+      "available"
+    ],
+    "antonyms": [
+      "obscure",
+      "inaccessible",
+      "unclear"
+    ],
     "example": "Good examples make a difficult concept accessible.",
-    "connectedTestIds": ["ielts", "toefl", "sat", "nat"]
+    "connectedTestIds": [
+      "ielts",
+      "toefl",
+      "sat",
+      "nat"
+    ],
+    "contentStatus": "legacy-live-review-required",
+    "review": {
+      "englishEditorialComplete": false,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-accumulate",
+    "word": "accumulate",
+    "level": "Advanced",
+    "meaning": "To collect or increase gradually over time.",
+    "synonyms": [
+      "collect",
+      "amass",
+      "build up"
+    ],
+    "antonyms": [
+      "disperse",
+      "dissipate"
+    ],
+    "example": "Dust can accumulate quickly on unused laboratory equipment.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "verb",
+    "sourceForms": [
+      "accumulate"
+    ],
+    "urduMeaning": "جمع کرنا یا بتدریج بڑھنا",
+    "pronunciation": {
+      "ipaUK": "/əˈkjuː.mjə.leɪt/",
+      "ipaUS": "/əˈkjuː.mjə.leɪt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/accumulate",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "accumulate evidence",
+      "accumulate wealth"
+    ],
+    "usageNotes": [
+      "May be transitive (accumulate evidence) or intransitive (dust accumulates)."
+    ],
+    "topicTags": [
+      "academic",
+      "process",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1",
+      "textbook-chips-modern-prose"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-agility",
+    "word": "agility",
+    "level": "Intermediate",
+    "meaning": "The ability to move, think, or respond quickly and easily.",
+    "synonyms": [
+      "nimbleness",
+      "dexterity",
+      "quickness"
+    ],
+    "antonyms": [
+      "clumsiness"
+    ],
+    "example": "The timed puzzle tested each candidate’s mental agility.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "lat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "agility"
+    ],
+    "urduMeaning": "چستی؛ پھرتی",
+    "pronunciation": {
+      "ipaUK": "/əˈdʒɪl.ə.ti/",
+      "ipaUS": "/əˈdʒɪl.ə.t̬i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/agility",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "mental agility",
+      "physical agility"
+    ],
+    "usageNotes": [
+      "Use mental agility when the speed and flexibility concern thought rather than movement."
+    ],
+    "topicTags": [
+      "ability",
+      "movement",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
     "id": "vocab-ambiguous",
     "word": "ambiguous",
     "level": "Intermediate",
-    "meaning": "having more than one possible meaning",
-    "synonyms": ["unclear", "vague", "uncertain"],
-    "antonyms": ["clear", "definite", "explicit"],
-    "example": "An ambiguous question should be reviewed before publication.",
-    "connectedTestIds": ["lat", "gat-general", "gre"]
+    "meaning": "Open to more than one interpretation, or not expressed clearly enough.",
+    "synonyms": [
+      "unclear",
+      "equivocal",
+      "vague"
+    ],
+    "antonyms": [
+      "unambiguous",
+      "explicit",
+      "clear"
+    ],
+    "example": "The notice was ambiguous, so students understood the deadline differently.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "ambiguous"
+    ],
+    "urduMeaning": "مبہم؛ ذو معنی",
+    "pronunciation": {
+      "ipaUK": "/æmˈbɪɡ.ju.əs/",
+      "ipaUS": "/æmˈbɪɡ.ju.əs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/ambiguous",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "ambiguous wording",
+      "ambiguous response"
+    ],
+    "usageNotes": [
+      "Ambiguous describes language or situations with competing interpretations; vague chiefly means lacking detail."
+    ],
+    "topicTags": [
+      "language",
+      "reasoning",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "nmdcat-list-1",
+      "site-seed"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
-    "id": "vocab-coherent",
-    "word": "coherent",
+    "id": "vocab-analysis",
+    "word": "analysis",
     "level": "Intermediate",
-    "meaning": "logical and well connected",
-    "synonyms": ["logical", "consistent", "connected"],
-    "antonyms": ["confused", "illogical", "disordered"],
-    "example": "A coherent essay presents ideas in a clear order.",
-    "connectedTestIds": ["ielts", "toefl", "lat", "gre"]
+    "meaning": "A careful examination of something by separating it into parts or features.",
+    "synonyms": [
+      "examination",
+      "study",
+      "investigation"
+    ],
+    "antonyms": [],
+    "example": "Her analysis separated the claim from the evidence used to support it.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "analysis"
+    ],
+    "urduMeaning": "تجزیہ",
+    "pronunciation": {
+      "ipaUK": "/əˈnæl.ə.sɪs/",
+      "ipaUS": "/əˈnæl.ə.sɪs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/analysis",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "data analysis",
+      "critical analysis"
+    ],
+    "usageNotes": [
+      "The regular plural is analyses, pronounced differently from analysis."
+    ],
+    "topicTags": [
+      "academic",
+      "reasoning",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
-    "id": "vocab-inference",
-    "word": "inference",
+    "id": "vocab-appropriate",
+    "word": "appropriate",
     "level": "Intermediate",
-    "meaning": "a conclusion drawn from evidence",
-    "synonyms": ["conclusion", "deduction", "interpretation"],
-    "antonyms": ["fact", "statement", "observation"],
-    "example": "The correct inference must be supported by the passage.",
-    "connectedTestIds": ["sat", "gre", "ielts", "lsat"]
-  },
-  {
-    "id": "vocab-plausible",
-    "word": "plausible",
-    "level": "Advanced",
-    "meaning": "seeming reasonable or believable",
-    "synonyms": ["believable", "reasonable", "credible"],
-    "antonyms": ["unlikely", "implausible", "unbelievable"],
-    "example": "A good distractor is plausible but still incorrect.",
-    "connectedTestIds": ["gre", "gmat", "gat-general"]
-  },
-  {
-    "id": "vocab-relevant",
-    "word": "relevant",
-    "level": "Foundation",
-    "meaning": "closely connected to the matter being discussed",
-    "synonyms": ["related", "applicable", "connected"],
-    "antonyms": ["irrelevant", "unrelated", "inapplicable"],
-    "example": "Only relevant evidence should be used in an argument.",
-    "connectedTestIds": ["lat", "ielts", "sat", "gat-general"]
+    "meaning": "Suitable or correct for a particular purpose, person, or situation.",
+    "synonyms": [
+      "suitable",
+      "fitting",
+      "proper"
+    ],
+    "antonyms": [
+      "inappropriate",
+      "unsuitable"
+    ],
+    "example": "A formal tone is appropriate for an application letter.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "appropriate"
+    ],
+    "urduMeaning": "موزوں؛ مناسب",
+    "pronunciation": {
+      "ipaUK": "/əˈprəʊ.pri.ət/",
+      "ipaUS": "/əˈproʊ.pri.ət/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/appropriate",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "appropriate response",
+      "appropriate method"
+    ],
+    "usageNotes": [
+      "As a verb, appropriate has a different stress and means to take or allocate; this record tests the adjective."
+    ],
+    "topicTags": [
+      "academic",
+      "usage",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
     "id": "vocab-assertion",
     "word": "assertion",
     "level": "Advanced",
     "meaning": "a confident statement or claim",
-    "synonyms": ["claim", "statement", "declaration"],
-    "antonyms": ["denial", "question", "doubt"],
+    "synonyms": [
+      "claim",
+      "statement",
+      "declaration"
+    ],
+    "antonyms": [
+      "denial",
+      "question",
+      "doubt"
+    ],
     "example": "The passage begins with an assertion about online learning.",
-    "connectedTestIds": ["gre", "lsat", "sat"]
+    "connectedTestIds": [
+      "gre",
+      "lsat",
+      "sat"
+    ],
+    "contentStatus": "legacy-live-review-required",
+    "review": {
+      "englishEditorialComplete": false,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
-    "id": "vocab-evaluate",
-    "word": "evaluate",
+    "id": "vocab-clarity",
+    "word": "clarity",
+    "level": "Challenge",
+    "meaning": "The quality of being clear, understandable, or easy to perceive.",
+    "synonyms": [
+      "clearness",
+      "lucidity",
+      "precision"
+    ],
+    "antonyms": [
+      "confusion",
+      "obscurity"
+    ],
+    "example": "The editor shortened the paragraph to improve its clarity.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "clarity"
+    ],
+    "urduMeaning": "وضاحت؛ صفائی",
+    "pronunciation": {
+      "ipaUK": "/ˈklær.ə.ti/",
+      "ipaUS": "/ˈkler.ə.t̬i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/clarity",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "clarity of thought",
+      "greater clarity"
+    ],
+    "usageNotes": [
+      "Clarity may refer to expression, thought, sound, or visual appearance."
+    ],
+    "topicTags": [
+      "language",
+      "communication",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-coherent",
+    "word": "coherent",
+    "level": "Intermediate",
+    "meaning": "Logical, consistent, and connected so that the whole is easy to understand.",
+    "synonyms": [
+      "logical",
+      "consistent",
+      "well-organized"
+    ],
+    "antonyms": [
+      "incoherent",
+      "disjointed"
+    ],
+    "example": "The witness gave a coherent account of the sequence of events.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gmat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "coherent"
+    ],
+    "urduMeaning": "مربوط؛ با ربط",
+    "pronunciation": {
+      "ipaUK": "/kəʊˈhɪə.rənt/",
+      "ipaUS": "/koʊˈhɪr.ənt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/coherent",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "coherent argument",
+      "coherent account"
+    ],
+    "usageNotes": [
+      "Coherent emphasizes meaningful connection among parts, not merely grammatical correctness."
+    ],
+    "topicTags": [
+      "reasoning",
+      "communication",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-10"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-commodious",
+    "word": "commodious",
+    "level": "Advanced",
+    "meaning": "Having plenty of space, especially in a room, house, or vehicle.",
+    "synonyms": [
+      "spacious",
+      "roomy",
+      "ample"
+    ],
+    "antonyms": [
+      "cramped"
+    ],
+    "example": "The new reading room is commodious enough for several study groups.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "commodious"
+    ],
+    "urduMeaning": "کشادہ؛ فراخ",
+    "pronunciation": {
+      "ipaUK": "/kəˈməʊ.di.əs/",
+      "ipaUS": "/kəˈmoʊ.di.əs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/commodious",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "commodious room",
+      "commodious house"
+    ],
+    "usageNotes": [
+      "Formal and relatively uncommon; do not treat convenient as an exact synonym in modern usage."
+    ],
+    "topicTags": [
+      "description",
+      "advanced",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-2",
+      "textbook-chips-modern-prose"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-compassion",
+    "word": "compassion",
+    "level": "Advanced",
+    "meaning": "Sympathetic concern for another’s suffering, together with a wish to help.",
+    "synonyms": [
+      "sympathy",
+      "mercy",
+      "humanity"
+    ],
+    "antonyms": [
+      "callousness",
+      "cruelty"
+    ],
+    "example": "The physician spoke with compassion to the worried family.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "compassion"
+    ],
+    "urduMeaning": "ہمدردی؛ رحم دلی",
+    "pronunciation": {
+      "ipaUK": "/kəmˈpæʃ.ən/",
+      "ipaUS": "/kəmˈpæʃ.ən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/compassion",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "show compassion",
+      "deep compassion"
+    ],
+    "usageNotes": [
+      "Compassion normally implies concern prompted by suffering; empathy is the ability to understand another’s feelings."
+    ],
+    "topicTags": [
+      "character",
+      "emotion",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-2",
+      "textbook-english-10"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-concise",
+    "word": "concise",
     "level": "Foundation",
-    "meaning": "to judge or assess carefully",
-    "synonyms": ["assess", "judge", "measure"],
-    "antonyms": ["ignore", "neglect", "guess"],
-    "example": "Evaluate every option before choosing the answer.",
-    "connectedTestIds": ["mdcat", "nat", "ielts", "gat-general"]
+    "meaning": "brief but clear",
+    "synonyms": [
+      "brief",
+      "succinct",
+      "compact"
+    ],
+    "antonyms": [
+      "wordy",
+      "lengthy",
+      "verbose"
+    ],
+    "example": "The teacher gave a concise explanation before starting the test.",
+    "connectedTestIds": [
+      "mdcat",
+      "nat",
+      "sat",
+      "gat-general"
+    ],
+    "contentStatus": "legacy-live-review-required",
+    "review": {
+      "englishEditorialComplete": false,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-conclusion",
+    "word": "conclusion",
+    "level": "Intermediate",
+    "meaning": "A judgment or decision reached after considering information or reasoning.",
+    "synonyms": [
+      "finding",
+      "judgment",
+      "deduction"
+    ],
+    "antonyms": [],
+    "example": "The available evidence supports a different conclusion.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "conclusion"
+    ],
+    "urduMeaning": "نتیجہ؛ اخذ کردہ فیصلہ",
+    "pronunciation": {
+      "ipaUK": "/kənˈkluː.ʒən/",
+      "ipaUS": "/kənˈkluː.ʒən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/conclusion",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "reach a conclusion",
+      "logical conclusion"
+    ],
+    "usageNotes": [
+      "This record tests the reasoning sense, not merely the final part of a text or event."
+    ],
+    "topicTags": [
+      "reasoning",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-connotation",
+    "word": "connotation",
+    "level": "Advanced",
+    "meaning": "An associated or suggested meaning that a word carries beyond its direct meaning.",
+    "synonyms": [
+      "association",
+      "implication",
+      "overtone"
+    ],
+    "antonyms": [
+      "denotation"
+    ],
+    "example": "In this context, the word inexpensive has a more positive connotation than cheap.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "connotation"
+    ],
+    "urduMeaning": "ضمنی یا تاثراتی مفہوم",
+    "pronunciation": {
+      "ipaUK": "/ˌkɒn.əˈteɪ.ʃən/",
+      "ipaUS": "/ˌkɑː.nəˈteɪ.ʃən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/connotation",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "positive connotation",
+      "negative connotation"
+    ],
+    "usageNotes": [
+      "Denotation is direct reference; connotation is the idea or feeling associated with it."
+    ],
+    "topicTags": [
+      "language",
+      "semantics",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-2",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
     "id": "vocab-contradict",
     "word": "contradict",
     "level": "Intermediate",
-    "meaning": "to say the opposite of something",
-    "synonyms": ["oppose", "deny", "conflict"],
-    "antonyms": ["confirm", "support", "agree"],
-    "example": "An option is wrong if it contradicts the passage.",
-    "connectedTestIds": ["sat", "gre", "ielts", "lsat"]
+    "meaning": "To state the opposite of a claim, or to be inconsistent with it.",
+    "synonyms": [
+      "deny",
+      "dispute",
+      "conflict with"
+    ],
+    "antonyms": [
+      "confirm",
+      "support"
+    ],
+    "example": "The second measurement appeared to contradict the first result.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gmat",
+      "gre"
+    ],
+    "partOfSpeech": "verb",
+    "sourceForms": [
+      "contradict"
+    ],
+    "urduMeaning": "تردید کرنا؛ خلاف ہونا",
+    "pronunciation": {
+      "ipaUK": "/ˌkɒn.trəˈdɪkt/",
+      "ipaUS": "/ˌkɑːn.trəˈdɪkt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/contradict",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "contradict a claim",
+      "directly contradict"
+    ],
+    "usageNotes": [
+      "A person contradicts a statement; evidence may contradict a statement by being inconsistent with it."
+    ],
+    "topicTags": [
+      "reasoning",
+      "argument",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-deduction",
+    "word": "deduction",
+    "level": "Intermediate",
+    "meaning": "A conclusion reached by applying reasoning to known facts or evidence.",
+    "synonyms": [
+      "inference",
+      "conclusion"
+    ],
+    "antonyms": [],
+    "example": "From the wet footprints, the detective made a reasonable deduction.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "deduction"
+    ],
+    "urduMeaning": "استنباط؛ اخذ کردہ نتیجہ",
+    "pronunciation": {
+      "ipaUK": "/dɪˈdʌk.ʃən/",
+      "ipaUS": "/dɪˈdʌk.ʃən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/deduction",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "logical deduction",
+      "make a deduction"
+    ],
+    "usageNotes": [
+      "This record tests the reasoning sense, not an amount subtracted from money."
+    ],
+    "topicTags": [
+      "reasoning",
+      "logic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-desultory",
+    "word": "desultory",
+    "level": "Advanced",
+    "meaning": "Lacking a clear plan, steady progress, or sustained purpose.",
+    "synonyms": [
+      "aimless",
+      "haphazard",
+      "disconnected"
+    ],
+    "antonyms": [
+      "systematic",
+      "purposeful"
+    ],
+    "example": "Their desultory discussion ended without a decision.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "desultory"
+    ],
+    "urduMeaning": "بے ربط؛ بے مقصد",
+    "pronunciation": {
+      "ipaUK": "/ˈdes.əl.tər.i/",
+      "ipaUS": "/ˈdes.əl.tɔːr.i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/desultory",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "desultory conversation",
+      "desultory effort"
+    ],
+    "usageNotes": [
+      "Formal; it often describes activity or conversation that moves without direction or commitment."
+    ],
+    "topicTags": [
+      "advanced",
+      "description",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-2",
+      "textbook-chips-modern-prose"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-erosion",
+    "word": "erosion",
+    "level": "Intermediate",
+    "meaning": "The gradual wearing away or loss of material, strength, value, or support.",
+    "synonyms": [
+      "wearing away",
+      "deterioration",
+      "attrition"
+    ],
+    "antonyms": [
+      "preservation",
+      "restoration"
+    ],
+    "example": "Repeated flooding accelerated the erosion of the riverbank.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "erosion"
+    ],
+    "urduMeaning": "کٹاؤ؛ تدریجی زوال",
+    "pronunciation": {
+      "ipaUK": "/ɪˈrəʊ.ʒən/",
+      "ipaUS": "/ɪˈroʊ.ʒən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/erosion",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "soil erosion",
+      "erosion of trust"
+    ],
+    "usageNotes": [
+      "It can be physical, as with soil, or figurative, as with rights or confidence."
+    ],
+    "topicTags": [
+      "environment",
+      "change",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-evaluate",
+    "word": "evaluate",
+    "level": "Foundation",
+    "meaning": "To judge the quality, value, importance, or effectiveness of something.",
+    "synonyms": [
+      "assess",
+      "appraise",
+      "judge"
+    ],
+    "antonyms": [],
+    "example": "Students must evaluate each source before using it as evidence.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gmat",
+      "gre"
+    ],
+    "partOfSpeech": "verb",
+    "sourceForms": [
+      "evaluate"
+    ],
+    "urduMeaning": "جانچنا؛ قدر متعین کرنا",
+    "pronunciation": {
+      "ipaUK": "/ɪˈvæl.ju.eɪt/",
+      "ipaUS": "/ɪˈvæl.ju.eɪt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/evaluate",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "evaluate evidence",
+      "evaluate performance"
+    ],
+    "usageNotes": [
+      "Evaluation requires criteria; it is more systematic than an unsupported guess."
+    ],
+    "topicTags": [
+      "academic",
+      "reasoning",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-evidence",
+    "word": "evidence",
+    "level": "Intermediate",
+    "meaning": "Facts, observations, or information used to support or challenge a claim.",
+    "synonyms": [
+      "proof",
+      "indication",
+      "testimony"
+    ],
+    "antonyms": [],
+    "example": "The report presents evidence that attendance has improved.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "evidence"
+    ],
+    "urduMeaning": "ثبوت؛ شواہد",
+    "pronunciation": {
+      "ipaUK": "/ˈev.ɪ.dəns/",
+      "ipaUS": "/ˈev.ə.dəns/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/evidence",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "strong evidence",
+      "supporting evidence"
+    ],
+    "usageNotes": [
+      "Usually uncountable in standard English: use evidence or pieces of evidence, not evidences in ordinary academic prose."
+    ],
+    "topicTags": [
+      "reasoning",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-figurative",
+    "word": "figurative",
+    "level": "Advanced",
+    "meaning": "Using words imaginatively rather than in their ordinary literal sense.",
+    "synonyms": [
+      "metaphorical",
+      "symbolic",
+      "nonliteral"
+    ],
+    "antonyms": [
+      "literal"
+    ],
+    "example": "Calling the library a treasure house is figurative language.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "figurative"
+    ],
+    "urduMeaning": "مجازی؛ استعاراتی",
+    "pronunciation": {
+      "ipaUK": "/ˈfɪɡ.ər.ə.tɪv/",
+      "ipaUS": "/ˈfɪɡ.jɚ.ə.t̬ɪv/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/figurative",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "figurative language",
+      "figurative expression"
+    ],
+    "usageNotes": [
+      "A figurative expression should not be interpreted as a direct factual statement."
+    ],
+    "topicTags": [
+      "language",
+      "literature",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-gratification",
+    "word": "gratification",
+    "level": "Advanced",
+    "meaning": "Pleasure or satisfaction gained when a desire or need is fulfilled.",
+    "synonyms": [
+      "satisfaction",
+      "pleasure",
+      "fulfilment"
+    ],
+    "antonyms": [
+      "dissatisfaction",
+      "disappointment"
+    ],
+    "example": "Completing the difficult project brought lasting gratification.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "gratification"
+    ],
+    "urduMeaning": "تسکین؛ اطمینان",
+    "pronunciation": {
+      "ipaUK": "/ˌɡræt.ɪ.fɪˈkeɪ.ʃən/",
+      "ipaUS": "/ˌɡræt̬.ə.fəˈkeɪ.ʃən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/gratification",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "instant gratification",
+      "personal gratification"
+    ],
+    "usageNotes": [
+      "Often used in the contrast between immediate pleasure and a later, larger benefit."
+    ],
+    "topicTags": [
+      "emotion",
+      "character",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-humility",
+    "word": "humility",
+    "level": "Advanced",
+    "meaning": "The quality of being modest and not considering oneself superior to others.",
+    "synonyms": [
+      "modesty",
+      "humbleness",
+      "unpretentiousness"
+    ],
+    "antonyms": [
+      "arrogance",
+      "pride"
+    ],
+    "example": "She accepted the correction with humility and revised her answer.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "humility"
+    ],
+    "urduMeaning": "انکساری؛ عاجزی",
+    "pronunciation": {
+      "ipaUK": "/hjuːˈmɪl.ə.ti/",
+      "ipaUS": "/hjuːˈmɪl.ə.t̬i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/humility",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "show humility",
+      "intellectual humility"
+    ],
+    "usageNotes": [
+      "Humility does not mean lack of ability or self-respect; it means an accurate, unboastful view of oneself."
+    ],
+    "topicTags": [
+      "character",
+      "ethics",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-implicit",
+    "word": "implicit",
+    "level": "Challenge",
+    "meaning": "Suggested or understood without being stated directly.",
+    "synonyms": [
+      "implied",
+      "unstated",
+      "unspoken"
+    ],
+    "antonyms": [
+      "explicit",
+      "stated"
+    ],
+    "example": "The proposal contains an implicit assumption that costs will remain stable.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "implicit"
+    ],
+    "urduMeaning": "مضمر؛ غیر صریح",
+    "pronunciation": {
+      "ipaUK": "/ɪmˈplɪs.ɪt/",
+      "ipaUS": "/ɪmˈplɪs.ɪt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/implicit",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "implicit assumption",
+      "implicit meaning"
+    ],
+    "usageNotes": [
+      "In implicit trust, the word can also mean complete or unquestioning; this record tests the unstated sense."
+    ],
+    "topicTags": [
+      "language",
+      "reasoning",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-chips-modern-prose",
+      "textbook-english-10"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-impostor",
+    "word": "impostor",
+    "level": "Intermediate",
+    "meaning": "A person who deceives others by pretending to be someone they are not.",
+    "synonyms": [
+      "fraud",
+      "pretender",
+      "deceiver"
+    ],
+    "antonyms": [],
+    "example": "The guard identified the impostor before any records were released.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "lat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "imposter",
+      "impostor"
+    ],
+    "urduMeaning": "جعل ساز؛ بھیس بدل کر دھوکا دینے والا",
+    "pronunciation": {
+      "ipaUK": "/ɪmˈpɒs.tər/",
+      "ipaUS": "/ɪmˈpɑː.stɚ/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/impostor",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "impostor syndrome",
+      "expose an impostor"
+    ],
+    "usageNotes": [
+      "Impostor is the traditional spelling; imposter is an accepted variant. This sense is a deceptive person, not the psychological term impostor syndrome."
+    ],
+    "topicTags": [
+      "people",
+      "deception",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-infer",
+    "word": "infer",
+    "level": "Advanced",
+    "meaning": "To reach a conclusion from evidence or clues rather than from an explicit statement.",
+    "synonyms": [
+      "deduce",
+      "conclude",
+      "reason"
+    ],
+    "antonyms": [
+      "state explicitly"
+    ],
+    "example": "From the repeated delays, the committee inferred that the schedule was unrealistic.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "verb",
+    "sourceForms": [
+      "infer",
+      "inferred"
+    ],
+    "urduMeaning": "قرائن سے نتیجہ اخذ کرنا",
+    "pronunciation": {
+      "ipaUK": "/ɪnˈfɜːr/",
+      "ipaUS": "/ɪnˈfɝː/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/infer",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "infer from evidence",
+      "reasonably infer"
+    ],
+    "usageNotes": [
+      "The reader infers; a fact implies. Avoid using infer when imply is intended."
+    ],
+    "topicTags": [
+      "reasoning",
+      "reading",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-inference",
+    "word": "inference",
+    "level": "Intermediate",
+    "meaning": "A conclusion formed from evidence and reasoning rather than from a direct statement.",
+    "synonyms": [
+      "deduction",
+      "conclusion",
+      "interpretation"
+    ],
+    "antonyms": [],
+    "example": "Her inference was based on the pattern in all four results.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gmat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "inference"
+    ],
+    "urduMeaning": "استنباط؛ قرائن سے اخذ کردہ نتیجہ",
+    "pronunciation": {
+      "ipaUK": "/ˈɪn.fər.əns/",
+      "ipaUS": "/ˈɪn.fɚ.əns/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/inference",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "draw an inference",
+      "reasonable inference"
+    ],
+    "usageNotes": [
+      "An inference may be well supported or weak; it is not automatically a proven fact."
+    ],
+    "topicTags": [
+      "reasoning",
+      "logic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-integrity",
+    "word": "integrity",
+    "level": "Advanced",
+    "meaning": "Honesty and firm adherence to sound moral principles.",
+    "synonyms": [
+      "honesty",
+      "uprightness",
+      "probity"
+    ],
+    "antonyms": [
+      "dishonesty",
+      "corruption"
+    ],
+    "example": "Academic integrity requires students to acknowledge every source they use.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "integrity"
+    ],
+    "urduMeaning": "دیانت داری؛ اصول پسندی",
+    "pronunciation": {
+      "ipaUK": "/ɪnˈteɡ.rə.ti/",
+      "ipaUS": "/ɪnˈteɡ.rə.t̬i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/integrity",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "personal integrity",
+      "academic integrity"
+    ],
+    "usageNotes": [
+      "The word also means wholeness or structural soundness; this record tests the moral sense."
+    ],
+    "topicTags": [
+      "character",
+      "ethics",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-interpretation",
+    "word": "interpretation",
+    "level": "Intermediate",
+    "meaning": "An explanation or understanding of the meaning of something.",
+    "synonyms": [
+      "explanation",
+      "reading",
+      "understanding"
+    ],
+    "antonyms": [],
+    "example": "The graph supports her interpretation of the recent trend.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "interpretation"
+    ],
+    "urduMeaning": "تشریح؛ تعبیر",
+    "pronunciation": {
+      "ipaUK": "/ɪnˌtɜː.prɪˈteɪ.ʃən/",
+      "ipaUS": "/ɪnˌtɝː.prəˈteɪ.ʃən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/interpretation",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "interpretation of data",
+      "plausible interpretation"
+    ],
+    "usageNotes": [
+      "Different interpretations may be reasonable when a text or result permits more than one supported reading."
+    ],
+    "topicTags": [
+      "reasoning",
+      "language",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-intervention",
+    "word": "intervention",
+    "level": "Advanced",
+    "meaning": "An action taken to influence, improve, or prevent the worsening of a situation.",
+    "synonyms": [
+      "involvement",
+      "mediation",
+      "action"
+    ],
+    "antonyms": [
+      "nonintervention"
+    ],
+    "example": "Early intervention prevented the small dispute from becoming serious.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "intervention"
+    ],
+    "urduMeaning": "مداخلت؛ اصلاحی اقدام",
+    "pronunciation": {
+      "ipaUK": "/ˌɪn.təˈven.ʃən/",
+      "ipaUS": "/ˌɪn.t̬ɚˈven.ʃən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/intervention",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "early intervention",
+      "medical intervention"
+    ],
+    "usageNotes": [
+      "The effect may be helpful or unwelcome depending on context; do not assume the word itself is positive."
+    ],
+    "topicTags": [
+      "action",
+      "policy",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "nmdcat-list-3",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-meticulous",
+    "word": "meticulous",
+    "level": "Advanced",
+    "meaning": "Extremely careful and attentive to every detail.",
+    "synonyms": [
+      "careful",
+      "thorough",
+      "painstaking"
+    ],
+    "antonyms": [
+      "careless",
+      "sloppy"
+    ],
+    "example": "The researcher kept meticulous records of every measurement.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "meticulous"
+    ],
+    "urduMeaning": "نہایت محتاط؛ باریک بین",
+    "pronunciation": {
+      "ipaUK": "/məˈtɪk.jə.ləs/",
+      "ipaUS": "/məˈtɪk.jə.ləs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/meticulous",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "meticulous records",
+      "meticulous preparation"
+    ],
+    "usageNotes": [
+      "Usually approving, though context can imply excessive concern with detail."
+    ],
+    "topicTags": [
+      "character",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-objective",
+    "word": "objective",
+    "level": "Advanced",
+    "meaning": "Based on observable facts rather than personal feelings or preferences.",
+    "synonyms": [
+      "impartial",
+      "unbiased",
+      "factual"
+    ],
+    "antonyms": [
+      "subjective",
+      "biased"
+    ],
+    "example": "The panel used a scoring guide to make the assessment more objective.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "objective"
+    ],
+    "urduMeaning": "معروضی؛ غیر جانب دار",
+    "pronunciation": {
+      "ipaUK": "/əbˈdʒek.tɪv/",
+      "ipaUS": "/əbˈdʒek.tɪv/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/objective",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "objective assessment",
+      "objective evidence"
+    ],
+    "usageNotes": [
+      "Objective can also be a noun meaning goal; this record tests the adjective."
+    ],
+    "topicTags": [
+      "reasoning",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-pensive",
+    "word": "pensive",
+    "level": "Advanced",
+    "meaning": "Quietly and seriously thoughtful, often with a slightly sad expression.",
+    "synonyms": [
+      "thoughtful",
+      "reflective",
+      "contemplative"
+    ],
+    "antonyms": [
+      "unreflective"
+    ],
+    "example": "He grew pensive while considering the consequences of the decision.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "pensive"
+    ],
+    "urduMeaning": "محو فکر؛ غور میں ڈوبا ہوا",
+    "pronunciation": {
+      "ipaUK": "/ˈpen.sɪv/",
+      "ipaUS": "/ˈpen.sɪv/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/pensive",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "pensive mood",
+      "pensive expression"
+    ],
+    "usageNotes": [
+      "Pensive suggests absorbed, quiet thought; it does not simply mean sad."
+    ],
+    "topicTags": [
+      "emotion",
+      "description",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-4",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-perseverance",
+    "word": "perseverance",
+    "level": "Advanced",
+    "meaning": "Continued effort toward a goal despite difficulty, delay, or failure.",
+    "synonyms": [
+      "persistence",
+      "determination",
+      "tenacity"
+    ],
+    "antonyms": [
+      "irresolution",
+      "giving up"
+    ],
+    "example": "Her perseverance turned repeated errors into a reliable method.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "perseverance"
+    ],
+    "urduMeaning": "ثابت قدمی؛ مستقل مزاجی",
+    "pronunciation": {
+      "ipaUK": "/ˌpɜː.sɪˈvɪə.rəns/",
+      "ipaUS": "/ˌpɝː.səˈvɪr.əns/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/perseverance",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "show perseverance",
+      "perseverance in study"
+    ],
+    "usageNotes": [
+      "Perseverance is sustained action, while patience can involve calm waiting."
+    ],
+    "topicTags": [
+      "character",
+      "achievement",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-4",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-perspective",
+    "word": "perspective",
+    "level": "Advanced",
+    "meaning": "A particular way of viewing or understanding a subject.",
+    "synonyms": [
+      "viewpoint",
+      "outlook",
+      "standpoint"
+    ],
+    "antonyms": [],
+    "example": "Reading both accounts gave the class a broader perspective on the dispute.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "perspective"
+    ],
+    "urduMeaning": "نقطۂ نظر؛ زاویۂ نگاہ",
+    "pronunciation": {
+      "ipaUK": "/pəˈspek.tɪv/",
+      "ipaUS": "/pɚˈspek.tɪv/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/perspective",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "broader perspective",
+      "historical perspective"
+    ],
+    "usageNotes": [
+      "Perspective can also refer to apparent depth in art; this record tests the viewpoint sense."
+    ],
+    "topicTags": [
+      "reasoning",
+      "viewpoint",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-plausible",
+    "word": "plausible",
+    "level": "Advanced",
+    "meaning": "seeming reasonable or believable",
+    "synonyms": [
+      "believable",
+      "reasonable",
+      "credible"
+    ],
+    "antonyms": [
+      "unlikely",
+      "implausible",
+      "unbelievable"
+    ],
+    "example": "A good distractor is plausible but still incorrect.",
+    "connectedTestIds": [
+      "gre",
+      "gmat",
+      "gat-general"
+    ],
+    "contentStatus": "legacy-live-review-required",
+    "review": {
+      "englishEditorialComplete": false,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   },
   {
     "id": "vocab-precise",
     "word": "precise",
     "level": "Foundation",
-    "meaning": "exact and accurate",
-    "synonyms": ["exact", "accurate", "specific"],
-    "antonyms": ["vague", "rough", "unclear"],
-    "example": "Precise calculation reduces mistakes in quantitative tests.",
-    "connectedTestIds": ["fast-nuces", "nust-net", "sat", "gre"]
+    "meaning": "Exact, accurate, and clearly defined.",
+    "synonyms": [
+      "exact",
+      "accurate",
+      "specific"
+    ],
+    "antonyms": [
+      "imprecise",
+      "vague"
+    ],
+    "example": "The instructions specify the precise amount of water required.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "precise"
+    ],
+    "urduMeaning": "عین درست؛ ٹھیک ٹھیک",
+    "pronunciation": {
+      "ipaUK": "/prɪˈsaɪs/",
+      "ipaUS": "/prɪˈsaɪs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/precise",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "precise measurement",
+      "precise language"
+    ],
+    "usageNotes": [
+      "Precise stresses exactness; accurate stresses agreement with truth or the correct value."
+    ],
+    "topicTags": [
+      "academic",
+      "measurement",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-10"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-relevant",
+    "word": "relevant",
+    "level": "Foundation",
+    "meaning": "Directly connected with the subject or useful to the matter being considered.",
+    "synonyms": [
+      "pertinent",
+      "applicable",
+      "related"
+    ],
+    "antonyms": [
+      "irrelevant",
+      "unrelated"
+    ],
+    "example": "Include only the evidence relevant to the stated claim.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "relevant"
+    ],
+    "urduMeaning": "متعلقہ؛ موزوں",
+    "pronunciation": {
+      "ipaUK": "/ˈrel.ə.vənt/",
+      "ipaUS": "/ˈrel.ə.vənt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/relevant",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "relevant evidence",
+      "directly relevant"
+    ],
+    "usageNotes": [
+      "A fact can be true but irrelevant if it does not help address the question."
+    ],
+    "topicTags": [
+      "reasoning",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "site-seed",
+      "textbook-english-10",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-resource",
+    "word": "resource",
+    "level": "Intermediate",
+    "meaning": "A useful supply, asset, source of help, or means of achieving a purpose.",
+    "synonyms": [
+      "asset",
+      "supply",
+      "means"
+    ],
+    "antonyms": [],
+    "example": "The library provides a useful resource for independent study.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "resource",
+      "resources"
+    ],
+    "urduMeaning": "وسیلہ؛ کارآمد ذریعہ",
+    "pronunciation": {
+      "ipaUK": "/rɪˈzɔːs/",
+      "ipaUS": "/ˈriː.sɔːrs/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/resource",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "natural resource",
+      "learning resource"
+    ],
+    "usageNotes": [
+      "Usually countable in this sense; the source form resources is the regular plural."
+    ],
+    "topicTags": [
+      "academic",
+      "planning",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-robust",
+    "word": "robust",
+    "level": "Intermediate",
+    "meaning": "Strong, reliable, and unlikely to fail under demanding conditions.",
+    "synonyms": [
+      "strong",
+      "sturdy",
+      "resilient"
+    ],
+    "antonyms": [
+      "fragile",
+      "weak"
+    ],
+    "example": "The conclusion remained robust after the researchers changed the assumptions.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "lat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "robust"
+    ],
+    "urduMeaning": "مضبوط؛ قابل اعتماد",
+    "pronunciation": {
+      "ipaUK": "/rəʊˈbʌst/",
+      "ipaUS": "/roʊˈbʌst/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/robust",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "robust evidence",
+      "robust system"
+    ],
+    "usageNotes": [
+      "Sense changes with context: a robust person is strong and healthy; a robust method or system continues to work reliably."
+    ],
+    "topicTags": [
+      "academic",
+      "quality",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-significant",
+    "word": "significant",
+    "level": "Intermediate",
+    "meaning": "Important or large enough to deserve attention.",
+    "synonyms": [
+      "important",
+      "notable",
+      "substantial"
+    ],
+    "antonyms": [
+      "insignificant",
+      "negligible"
+    ],
+    "example": "The revised policy produced a significant improvement in attendance.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "significant"
+    ],
+    "urduMeaning": "اہم؛ قابل ذکر",
+    "pronunciation": {
+      "ipaUK": "/sɪɡˈnɪf.ɪ.kənt/",
+      "ipaUS": "/sɪɡˈnɪf.ə.kənt/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/significant",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "significant change",
+      "significant effect"
+    ],
+    "usageNotes": [
+      "In statistics, significant has a technical meaning and does not necessarily mean large or practically important."
+    ],
+    "topicTags": [
+      "academic",
+      "importance",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-solitary",
+    "word": "solitary",
+    "level": "Intermediate",
+    "meaning": "Alone or without companions; involving only one person or thing.",
+    "synonyms": [
+      "lone",
+      "isolated",
+      "single"
+    ],
+    "antonyms": [
+      "social",
+      "accompanied"
+    ],
+    "example": "A solitary lamp remained lit in the empty corridor.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "lat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "solitary"
+    ],
+    "urduMeaning": "تنہا؛ اکیلا",
+    "pronunciation": {
+      "ipaUK": "/ˈsɒl.ɪ.tər.i/",
+      "ipaUS": "/ˈsɑː.lə.ter.i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/solitary",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "solitary figure",
+      "solitary activity"
+    ],
+    "usageNotes": [
+      "Solitary describes being alone; it does not always imply loneliness or unhappiness."
+    ],
+    "topicTags": [
+      "description",
+      "people",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-english-09"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-specific",
+    "word": "specific",
+    "level": "Intermediate",
+    "meaning": "Clearly identified, exact, or limited to one particular thing.",
+    "synonyms": [
+      "particular",
+      "definite",
+      "precise"
+    ],
+    "antonyms": [
+      "general",
+      "unspecified"
+    ],
+    "example": "Support the claim with a specific example from the passage.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "specific"
+    ],
+    "urduMeaning": "مخصوص؛ خاص",
+    "pronunciation": {
+      "ipaUK": "/spəˈsɪf.ɪk/",
+      "ipaUS": "/spəˈsɪf.ɪk/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/specific",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "specific example",
+      "specific purpose"
+    ],
+    "usageNotes": [
+      "Specific contrasts with general; precise additionally emphasizes exactness."
+    ],
+    "topicTags": [
+      "academic",
+      "language",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-structure",
+    "word": "structure",
+    "level": "Intermediate",
+    "meaning": "The way in which the parts of something are arranged and connected.",
+    "synonyms": [
+      "organization",
+      "framework",
+      "arrangement"
+    ],
+    "antonyms": [],
+    "example": "The essay’s structure makes the progression of ideas easy to follow.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "structure"
+    ],
+    "urduMeaning": "ساخت؛ ترتیب",
+    "pronunciation": {
+      "ipaUK": "/ˈstrʌk.tʃər/",
+      "ipaUS": "/ˈstrʌk.tʃɚ/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/structure",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "sentence structure",
+      "organizational structure"
+    ],
+    "usageNotes": [
+      "It may describe a physical construction or an abstract arrangement; this record emphasizes arrangement."
+    ],
+    "topicTags": [
+      "academic",
+      "organization",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-subtle",
+    "word": "subtle",
+    "level": "Advanced",
+    "meaning": "Not immediately obvious or noticeable, but often important.",
+    "synonyms": [
+      "delicate",
+      "nuanced",
+      "understated"
+    ],
+    "antonyms": [
+      "obvious",
+      "blatant"
+    ],
+    "example": "A subtle change in tone revealed the speaker’s hesitation.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "subtle"
+    ],
+    "urduMeaning": "لطیف؛ غیر نمایاں",
+    "pronunciation": {
+      "ipaUK": "/ˈsʌt.əl/",
+      "ipaUS": "/ˈsʌt̬.əl/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/subtle",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "subtle difference",
+      "subtle hint"
+    ],
+    "usageNotes": [
+      "The b is silent. Subtle can also describe a clever, indirect method."
+    ],
+    "topicTags": [
+      "language",
+      "description",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-summary",
+    "word": "summary",
+    "level": "Advanced",
+    "meaning": "A short statement that presents the main points without most details.",
+    "synonyms": [
+      "outline",
+      "overview",
+      "synopsis"
+    ],
+    "antonyms": [],
+    "example": "The final paragraph gives a concise summary of the experiment.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "summary"
+    ],
+    "urduMeaning": "خلاصہ",
+    "pronunciation": {
+      "ipaUK": "/ˈsʌm.ər.i/",
+      "ipaUS": "/ˈsʌm.ɚ.i/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/summary",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "brief summary",
+      "summary of findings"
+    ],
+    "usageNotes": [
+      "A summary condenses the source; it should not introduce unsupported claims."
+    ],
+    "topicTags": [
+      "academic",
+      "reading",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-sustainable",
+    "word": "sustainable",
+    "level": "Advanced",
+    "meaning": "Able to continue over time without exhausting the resources or conditions needed for the future.",
+    "synonyms": [
+      "maintainable",
+      "viable",
+      "enduring"
+    ],
+    "antonyms": [
+      "unsustainable"
+    ],
+    "example": "The town adopted a sustainable plan for managing its water supply.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "sustainable"
+    ],
+    "urduMeaning": "پائیدار؛ دیرپا",
+    "pronunciation": {
+      "ipaUK": "/səˈsteɪ.nə.bəl/",
+      "ipaUS": "/səˈsteɪ.nə.bəl/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/sustainable",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "sustainable development",
+      "sustainable practice"
+    ],
+    "usageNotes": [
+      "The word may refer generally to what can continue, or specifically to environmental and social resource use."
+    ],
+    "topicTags": [
+      "environment",
+      "academic",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-technical",
+    "word": "technical",
+    "level": "Intermediate",
+    "meaning": "Relating to specialized knowledge, methods, or practical skills in a field.",
+    "synonyms": [
+      "specialized",
+      "specialist"
+    ],
+    "antonyms": [],
+    "example": "The manual explains each technical term before using it.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "technical"
+    ],
+    "urduMeaning": "فنی؛ تخصصی",
+    "pronunciation": {
+      "ipaUK": "/ˈtek.nɪ.kəl/",
+      "ipaUS": "/ˈtek.nɪ.kəl/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/technical",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "technical term",
+      "technical skill"
+    ],
+    "usageNotes": [
+      "Technical language may be precise for specialists but difficult for a general audience."
+    ],
+    "topicTags": [
+      "academic",
+      "technology",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-technology",
+    "word": "technology",
+    "level": "Intermediate",
+    "meaning": "The practical use of scientific knowledge, especially through tools, processes, and systems.",
+    "synonyms": [
+      "applied science",
+      "techniques"
+    ],
+    "antonyms": [],
+    "example": "New water-purification technology reduced the cost of treatment.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "technology"
+    ],
+    "urduMeaning": "ٹیکنالوجی؛ عملی سائنسی ذرائع",
+    "pronunciation": {
+      "ipaUK": "/tekˈnɒl.ə.dʒi/",
+      "ipaUS": "/tekˈnɑː.lə.dʒi/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/technology",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "digital technology",
+      "medical technology"
+    ],
+    "usageNotes": [
+      "Technology includes processes and systems, not only electronic devices."
+    ],
+    "topicTags": [
+      "science",
+      "technology",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-thrifty",
+    "word": "thrifty",
+    "level": "Advanced",
+    "meaning": "Careful to avoid wasting money or other resources.",
+    "synonyms": [
+      "frugal",
+      "economical",
+      "provident"
+    ],
+    "antonyms": [
+      "wasteful",
+      "extravagant"
+    ],
+    "example": "A thrifty household repairs useful items instead of replacing them immediately.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "thrifty"
+    ],
+    "urduMeaning": "کفایت شعار",
+    "pronunciation": {
+      "ipaUK": "/ˈθrɪf.ti/",
+      "ipaUS": "/ˈθrɪf.ti/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/thrifty",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "thrifty shopper",
+      "thrifty habits"
+    ],
+    "usageNotes": [
+      "Thrifty is generally approving; miserly suggests excessive unwillingness to spend."
+    ],
+    "topicTags": [
+      "character",
+      "resources",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-chips-modern-prose"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-traditional",
+    "word": "traditional",
+    "level": "Intermediate",
+    "meaning": "Following customs, beliefs, or methods established over a long period.",
+    "synonyms": [
+      "conventional",
+      "customary",
+      "established"
+    ],
+    "antonyms": [
+      "nontraditional",
+      "innovative"
+    ],
+    "example": "The craft combines a traditional pattern with modern materials.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "traditional"
+    ],
+    "urduMeaning": "روایتی",
+    "pronunciation": {
+      "ipaUK": "/trəˈdɪʃ.ən.əl/",
+      "ipaUS": "/trəˈdɪʃ.ən.əl/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/traditional",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "traditional method",
+      "traditional values"
+    ],
+    "usageNotes": [
+      "Traditional does not automatically mean old-fashioned or inferior; context determines the attitude."
+    ],
+    "topicTags": [
+      "culture",
+      "description",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-triumph",
+    "word": "triumph",
+    "level": "Intermediate",
+    "meaning": "A great success, achievement, or victory.",
+    "synonyms": [
+      "victory",
+      "success",
+      "achievement"
+    ],
+    "antonyms": [
+      "defeat",
+      "failure"
+    ],
+    "example": "Finishing the rescue safely was a triumph of careful planning.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "lat"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "triumph"
+    ],
+    "urduMeaning": "عظیم کامیابی؛ فتح",
+    "pronunciation": {
+      "ipaUK": "/ˈtraɪ.əmf/",
+      "ipaUS": "/ˈtraɪ.əmf/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/triumph",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "major triumph",
+      "personal triumph"
+    ],
+    "usageNotes": [
+      "As a verb, triumph means to achieve victory or success; this record tests the noun."
+    ],
+    "topicTags": [
+      "achievement",
+      "outcome",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-english-09",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-vision",
+    "word": "vision",
+    "level": "Challenge",
+    "meaning": "A clear and purposeful idea of what the future could or should be.",
+    "synonyms": [
+      "foresight",
+      "aspiration",
+      "outlook"
+    ],
+    "antonyms": [],
+    "example": "Her vision for the school placed equal emphasis on access and excellence.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "sat",
+      "gre"
+    ],
+    "partOfSpeech": "noun",
+    "sourceForms": [
+      "vision"
+    ],
+    "urduMeaning": "مستقبل کا واضح تصور؛ دور اندیشی",
+    "pronunciation": {
+      "ipaUK": "/ˈvɪʒ.ən/",
+      "ipaUS": "/ˈvɪʒ.ən/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/vision",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "long-term vision",
+      "clear vision"
+    ],
+    "usageNotes": [
+      "The word also refers to sight; this record tests the future-planning sense."
+    ],
+    "topicTags": [
+      "planning",
+      "leadership",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "awl-coxhead",
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
+  },
+  {
+    "id": "vocab-vulnerable",
+    "word": "vulnerable",
+    "level": "Advanced",
+    "meaning": "Open to physical or emotional harm, attack, or damaging influence.",
+    "synonyms": [
+      "exposed",
+      "susceptible",
+      "defenseless"
+    ],
+    "antonyms": [
+      "protected",
+      "secure",
+      "resistant"
+    ],
+    "example": "Young plants are especially vulnerable to sudden frost.",
+    "connectedTestIds": [
+      "mdcat",
+      "nmdcat",
+      "nat",
+      "gat-general",
+      "gre",
+      "sat"
+    ],
+    "partOfSpeech": "adjective",
+    "sourceForms": [
+      "vulnerable"
+    ],
+    "urduMeaning": "غیر محفوظ؛ نقصان کے خطرے سے دوچار",
+    "pronunciation": {
+      "ipaUK": "/ˈvʌl.nər.ə.bəl/",
+      "ipaUS": "/ˈvʌl.nɚ.ə.bəl/",
+      "sourceId": "cambridge-dictionary",
+      "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/vulnerable",
+      "status": "editorial-review-required",
+      "audioStrategy": [
+        "browser-speech-en-GB",
+        "browser-speech-en-US"
+      ]
+    },
+    "collocations": [
+      "vulnerable group",
+      "vulnerable to attack"
+    ],
+    "usageNotes": [
+      "Use vulnerable to for a particular threat and vulnerable because of for a cause or condition."
+    ],
+    "topicTags": [
+      "risk",
+      "description",
+      "vocabulary"
+    ],
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-5",
+      "textbook-english-09",
+      "textbook-english-11"
+    ],
+    "contentStatus": "english-reviewed",
+    "review": {
+      "englishEditorialComplete": true,
+      "urduHumanApproved": false,
+      "pronunciationHumanApproved": false
+    }
   }
 ]
