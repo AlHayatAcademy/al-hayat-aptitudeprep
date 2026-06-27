@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "generatedOn": "2026-06-27",
   "curriculumTotal": 3000,
-  "availableLearningRecords": 254,
-  "queuedEditorialReview": 2746,
-  "englishReviewedRecords": 250,
+  "availableLearningRecords": 354,
+  "queuedEditorialReview": 2646,
+  "englishReviewedRecords": 350,
   "fullyApprovedRecords": 0,
   "difficultyTargets": {
     "Foundation": 300,
@@ -382,9 +382,9 @@
   "curriculumFile": "vocabulary-curriculum.json",
   "learningFile": "vocabulary-bank.json",
   "latestRelease": {
-    "id": "vocabulary-batch-03",
+    "id": "vocabulary-batch-04",
     "wordsAdded": 100,
-    "availableAfterRelease": 254,
+    "availableAfterRelease": 354,
     "englishReviewed": true,
     "urduHumanApproved": false,
     "pronunciationHumanApproved": false
