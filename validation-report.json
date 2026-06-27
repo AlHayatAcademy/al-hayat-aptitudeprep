@@ -1,33 +1,27 @@
 {
-  "checks": {
-    "vocabularyRecords": true,
-    "uniqueVocabularyWords": true,
-    "fullBankPagination": true,
-    "fullBankLevelFilter": true,
-    "fullBankTestFilter": true,
-    "pronunciationControls": true,
-    "emptyAntonymsHidden": true,
-    "skillCardBankLink": true,
-    "practiceStudyPanel": true,
-    "practiceStudyPagination": true,
-    "practiceQuestionsRemainThree": true,
-    "searchDeepLinks": true,
-    "responsiveVocabularyCSS": true,
-    "trainerLoaded": true,
-    "separateTrainerProgress": true,
-    "adaptiveRecallModes": true,
-    "sessionModes": true,
-    "ratingControls": true,
-    "masteryRule": true,
-    "trainerApi": true,
-    "dailyReviewLinks": true,
-    "responsiveTrainerCSS": true,
-    "curriculumRegistered": true,
-    "curriculumUnique": true,
-    "curriculumDifficultyMix": true,
-    "curriculumBatches": true,
-    "liveRecordsIndexed": true,
-    "honestAvailabilityCopy": true
+  "old_questions": 17,
+  "new_questions": 254,
+  "merged_questions": 271,
+  "old_vocabulary_questions": 2,
+  "new_vocabulary_questions": 254,
+  "total_vocabulary_questions": 256,
+  "new_by_topic": {
+    "synonyms-in-context": 55,
+    "antonyms": 39,
+    "direct-synonyms": 54,
+    "contextual-meaning": 54,
+    "word-usage-precision": 54
   },
-  "errors": []
+  "new_answer_index_distribution": {
+    "0": 64,
+    "1": 64,
+    "2": 63,
+    "3": 63
+  },
+  "new_difficulty_distribution": {
+    "medium": 109,
+    "hard": 112,
+    "challenge": 14,
+    "easy": 19
+  }
 }
