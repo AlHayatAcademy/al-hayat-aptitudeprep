@@ -1,0 +1,24 @@
+{
+  "batch": 11,
+  "questions": 173,
+  "typeCounts": {
+    "Direct Synonym": 50,
+    "Meaning in Context": 60,
+    "Antonym": 40,
+    "Word Family": 23
+  },
+  "difficultyCounts": {
+    "easy": 17,
+    "medium": 61,
+    "hard": 69,
+    "challenge": 26
+  },
+  "answerPositions": {
+    "0": 44,
+    "1": 43,
+    "2": 43,
+    "3": 43
+  },
+  "assessedWords": 100,
+  "errors": []
+}

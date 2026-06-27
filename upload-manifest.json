@@ -1,9 +1,9 @@
 {
-  "release": "vocabulary-batch-10",
+  "release": "vocabulary-batch-11",
   "generatedOn": "2026-06-27",
-  "commitMessage": "Add reviewed vocabulary batch 10",
+  "commitMessage": "Add reviewed vocabulary batch 11",
   "filesToAdd": [
-    "data/questions-vocabulary-batch-10.json"
+    "data/questions-vocabulary-batch-11.json"
   ],
   "filesToReplace": [
     "assets/js/data-loader.js",
@@ -21,7 +21,8 @@
     "data/questions-vocabulary-batch-06.json",
     "data/questions-vocabulary-batch-07.json",
     "data/questions-vocabulary-batch-08.json",
-    "data/questions-vocabulary-batch-09.json"
+    "data/questions-vocabulary-batch-09.json",
+    "data/questions-vocabulary-batch-10.json"
   ],
   "quarantinedCurriculumEntries": [
     {
@@ -31,11 +32,11 @@
   ],
   "releaseCounts": {
     "newWords": 100,
-    "readyWordsAfterRelease": 954,
+    "readyWordsAfterRelease": 1054,
     "newMCQs": 173,
-    "textbookInformedOriginalExamples": 10,
-    "projectedLiveVocabularyMCQs": 1813,
+    "textbookInformedOriginalExamples": 18,
+    "projectedLiveVocabularyMCQs": 1986,
     "practiceSetSize": 10,
-    "projectedPracticeSets": 182
+    "projectedPracticeSets": 199
   }
 }
