@@ -2,11 +2,11 @@
   "status": "passed",
   "summary": {
     "newWords": 100,
-    "liveWordsAfterRelease": 454,
+    "liveWordsAfterRelease": 554,
     "newQuestions": 173,
     "assessedWords": 100,
-    "projectedVocabularyQuestionsInTestWorkspace": 695,
-    "textbookInformedOriginalExamples": 21,
+    "projectedVocabularyQuestionsInTestWorkspace": 868,
+    "textbookInformedOriginalExamples": 83,
     "recordLevels": {
       "Foundation": 10,
       "Intermediate": 35,
@@ -33,11 +33,11 @@
     ]
   },
   "checks": {
-    "previousBankIs354Words": true,
+    "previousBankIs454Words": true,
     "exactly100NewRecords": true,
     "noDuplicateNewWords": true,
     "noExistingWordOverwritten": true,
-    "bankHas454UniqueWords": true,
+    "bankHas554UniqueWords": true,
     "targetDifficultyMix": true,
     "completeEnglishTeachingFields": true,
     "originalExamplesUnique": true,
@@ -49,7 +49,7 @@
     "reviewGatesHonest": true,
     "usPronunciationCoverage": true,
     "curriculumStill3000": true,
-    "curriculumAvailability454": true,
+    "curriculumAvailability554": true,
     "releaseCountsCorrect": true,
     "exactly173Questions": true,
     "noDuplicateQuestionIds": true,

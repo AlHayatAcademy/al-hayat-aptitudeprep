@@ -1,0 +1,2393 @@
+[
+  {
+    "word": "neglect",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/neglect",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/neglect",
+      "avl-rank:1057",
+      "textbook-english-10:table-row-25"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bias",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bias",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bias",
+      "avl-rank:661"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "system",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/system",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/system",
+      "avl-rank:3"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "social",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/social",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/social",
+      "avl-rank:4"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "provide",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/provide",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/provide",
+      "avl-rank:5"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "however",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/however",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/however",
+      "avl-rank:6"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "result",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/result",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/result",
+      "avl-rank:9"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "include",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/include",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/include",
+      "avl-rank:10"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "information",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/information",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/information",
+      "avl-rank:16"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "effect",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/effect",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/effect",
+      "avl-rank:17"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adapting",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adapting",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adapting",
+      "textbook-english-10:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "addition",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/addition",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/addition",
+      "textbook-english-10:table-row-7"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adjusted",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adjusted",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adjusted",
+      "textbook-english-12:table-row-14"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "arranged",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/arranged",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/arranged",
+      "textbook-english-10:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "belated",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/belated",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/belated",
+      "textbook-english-09:vr-vocab-9e-096 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "blindness",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/blindness",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/blindness",
+      "textbook-english-12:table-row-5"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "blooming",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/blooming",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/blooming",
+      "textbook-english-10:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "border",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/border",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/border",
+      "textbook-english-10:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "botanist",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/botanist",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/botanist",
+      "textbook-english-10:table-row-2"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "brackish",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/brackish",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/brackish",
+      "textbook-english-10:table-row-7"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "brisk",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/brisk",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/brisk",
+      "textbook-english-10:table-row-5"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "burden",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/burden",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/burden",
+      "textbook-english-12:table-row-9"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bureau",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bureau",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bureau",
+      "textbook-english-09:vr-vocab-9e-079 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bustling",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bustling",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bustling",
+      "textbook-english-09:vr-vocab-9e-064 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "capital",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/capital",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/capital",
+      "textbook-english-12:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "capsule",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/capsule",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/capsule",
+      "textbook-english-12:table-row-15"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "career",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/career",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/career",
+      "textbook-english-12:table-row-2"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "choice",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/choice",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/choice",
+      "textbook-english-10:table-row-15"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "clue",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/clue",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/clue",
+      "textbook-english-10:table-row-13"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "coastal",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/coastal",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/coastal",
+      "textbook-english-11:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "combined",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/combined",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/combined",
+      "textbook-english-11:table-row-17"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "connect",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/connect",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/connect",
+      "textbook-english-11:table-row-19"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "countless",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/countless",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/countless",
+      "textbook-english-11:table-row-25"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "declared",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/declared",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/declared",
+      "textbook-english-11:table-row-7"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "deterred",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/deterred",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/deterred",
+      "textbook-english-10:table-row-2"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "devoid",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/devoid",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/devoid",
+      "textbook-english-09:vr-vocab-9e-002 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "dingy",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/dingy",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/dingy",
+      "textbook-english-11:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "eerie",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/eerie",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/eerie",
+      "textbook-english-10:table-row-9"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "estuary",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/estuary",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/estuary",
+      "textbook-english-12:table-row-3"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "foreign",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/foreign",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/foreign",
+      "textbook-english-12:table-row-13"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "freedom",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/freedom",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/freedom",
+      "textbook-english-11:table-row-4"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "generous",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/generous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/generous",
+      "textbook-english-12:table-row-2"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "greed",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/greed",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/greed",
+      "textbook-english-12:table-row-15"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "illusion",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/illusion",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/illusion",
+      "textbook-english-12:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "intently",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/intently",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/intently",
+      "textbook-english-09:vr-vocab-9e-037 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adult",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adult",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adult",
+      "avl-rank:1400",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "innocence",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/innocence",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/innocence",
+      "textbook-english-11-old:FYOLD-VOC-017",
+      "textbook-english-11:table-row-7"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11",
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "technician",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/technician",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/technician",
+      "textbook-english-11-old:FYOLD-VOC-052",
+      "textbook-english-11-old:FYOLD-VOC-053",
+      "textbook-english-11:table-row-10"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11",
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abhorred",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abhorred",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abhorred",
+      "textbook-chips-modern-prose:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accused",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accused",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accused",
+      "textbook-chips-modern-prose:table-row-26"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adjectival",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adjectival",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adjectival",
+      "textbook-english-11:table-row-5"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adventurous",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adventurous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adventurous",
+      "textbook-english-10:table-row-3"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adverbial",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adverbial",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adverbial",
+      "textbook-english-11:table-row-6"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "afflicted",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/afflicted",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/afflicted",
+      "textbook-chips-modern-prose:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "afterlife",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/afterlife",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/afterlife",
+      "textbook-english-12:table-row-12"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "alliteration",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/alliteration",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/alliteration",
+      "textbook-english-09:vr-vocab-9e-027 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "ambitious",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/ambitious",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/ambitious",
+      "textbook-chips-modern-prose:table-row-3"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aqueduct",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aqueduct",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aqueduct",
+      "textbook-chips-modern-prose:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "armistice",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/armistice",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/armistice",
+      "textbook-chips-modern-prose:table-row-5"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aromatic",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aromatic",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aromatic",
+      "textbook-english-09:vr-vocab-9e-066 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bedrock",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bedrock",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bedrock",
+      "textbook-english-09:vr-vocab-9e-054 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "beguiled",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/beguiled",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/beguiled",
+      "textbook-chips-modern-prose:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bequeath",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bequeath",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bequeath",
+      "textbook-chips-modern-prose:table-row-9"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "blunder",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/blunder",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/blunder",
+      "textbook-chips-modern-prose:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "boastful",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/boastful",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/boastful",
+      "textbook-chips-modern-prose:table-row-11"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "caution",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/caution",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/caution",
+      "textbook-chips-modern-prose:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "cherished",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/cherished",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/cherished",
+      "textbook-english-09:vr-vocab-9e-028 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "chivalry",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/chivalry",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/chivalry",
+      "textbook-chips-modern-prose:table-row-15"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "citizenship",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/citizenship",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/citizenship",
+      "textbook-english-11:table-row-5"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "collaborative",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/collaborative",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/collaborative",
+      "textbook-english-11:table-row-14"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "commendable",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/commendable",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/commendable",
+      "textbook-english-09:vr-vocab-9e-001 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "commercial",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/commercial",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/commercial",
+      "textbook-english-11:table-row-19"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "competition",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/competition",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/competition",
+      "textbook-english-11:table-row-4"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "complaint",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/complaint",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/complaint",
+      "textbook-chips-modern-prose:table-row-19"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "comprised",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/comprise",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/comprise",
+      "textbook-chips-modern-prose:table-row-17"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "congenial",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/congenial",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/congenial",
+      "textbook-chips-modern-prose:table-row-18"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "conscience",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/conscience",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/conscience",
+      "textbook-chips-modern-prose:table-row-19"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "consciousness",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/consciousness",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/consciousness",
+      "textbook-english-12:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "conservation",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/conservation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/conservation",
+      "textbook-english-10:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "contextual",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/contextual",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/contextual",
+      "textbook-english-10:table-row-12"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "continuous",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/continuous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/continuous",
+      "textbook-english-11:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "convenient",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/convenient",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/convenient",
+      "textbook-english-11:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "courteous",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/courteous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/courteous",
+      "textbook-chips-modern-prose:table-row-23"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "dauntless",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/dauntless",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/dauntless",
+      "textbook-chips-modern-prose:table-row-26"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "dedication",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/dedication",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/dedication",
+      "textbook-english-11:table-row-3"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "conceive",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/conceive",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/conceive",
+      "avl-rank:843",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "persistent",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/persistent",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/persistent",
+      "avl-rank:1015",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "refine",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/refine",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/refine",
+      "avl-rank:1200",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "concurrent",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/concurrent",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/concurrent",
+      "avl-rank:1514",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "incompatible",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/incompatible",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/incompatible",
+      "avl-rank:1516",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "unify",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/unify",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/unify",
+      "avl-rank:1518",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "inclination",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/inclination",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/inclination",
+      "avl-rank:1500",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bereavement",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bereavement",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bereavement",
+      "textbook-chips-modern-prose:table-row-16"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bewilderment",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bewilderment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bewilderment",
+      "textbook-chips-modern-prose:table-row-4"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "dilatoriness",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/dilatory",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/dilatory",
+      "textbook-chips-modern-prose:table-row-2"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "embellished",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/embellished",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/embellished",
+      "textbook-chips-modern-prose:table-row-9"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "envisaged",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/envisaged",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/envisaged",
+      "textbook-chips-modern-prose:table-row-11"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "indignation",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/indignation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/indignation",
+      "textbook-chips-modern-prose:table-row-21"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "reminiscence",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/reminiscence",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/reminiscence",
+      "textbook-chips-modern-prose:table-row-14"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "reverberating",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/reverberating",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/reverberating",
+      "textbook-chips-modern-prose:table-row-11"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  }
+]
