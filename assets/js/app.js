@@ -1421,6 +1421,7 @@
     };
     app.innerHTML = `
       ${pageHero("Vocabulary Bank", "Exam Words With Context", "Study meanings, synonyms, antonyms and example sentences connected to target tests.")}
+      <section id="vocabularyTrainer" class="vocabulary-trainer-mount"></section>
       <section class="toolbar-panel vocabulary-toolbar" aria-label="Vocabulary filters">
         <label>Level
           <select id="vocabLevel">
@@ -1450,6 +1451,9 @@
     const testSelect = app.querySelector("#vocabTest");
     const searchInput = app.querySelector("#vocabSearch");
     searchInput.value = state.query;
+    window.AHVocabularyTrainer?.init(data.vocabularyBank, app.querySelector("#vocabularyTrainer"), {
+      autoStart: params.get("mode") === "learn"
+    });
 
     function filteredVocabulary() {
       const term = state.query.trim().toLowerCase();
@@ -3624,7 +3628,10 @@
         ${includeActions ? `<div class="button-row">
           <a class="btn primary small" href="${url(`practice.html?skill=${skill.id}`)}">Practice This Skill</a>
           <a class="btn secondary small" href="${url(topicLink)}">Study Topics</a>
-          ${skill.id === "vocabulary" ? `<a class="btn secondary small" href="${url("vocabulary-bank.html")}">Vocabulary Bank</a>` : ""}
+          ${skill.id === "vocabulary" ? `
+            <a class="btn secondary small" href="${url("vocabulary-bank.html?mode=learn")}">Learn Vocabulary</a>
+            <a class="btn ghost small" href="${url("vocabulary-bank.html")}">Browse Bank</a>
+          ` : ""}
           <a class="btn ghost small" href="${url(mockLink)}">Open Mock</a>
         </div>` : ""}
       </article>

@@ -12,7 +12,16 @@
     "practiceStudyPagination": true,
     "practiceQuestionsRemainThree": true,
     "searchDeepLinks": true,
-    "responsiveVocabularyCSS": true
+    "responsiveVocabularyCSS": true,
+    "trainerLoaded": true,
+    "separateTrainerProgress": true,
+    "adaptiveRecallModes": true,
+    "sessionModes": true,
+    "ratingControls": true,
+    "masteryRule": true,
+    "trainerApi": true,
+    "dailyReviewLinks": true,
+    "responsiveTrainerCSS": true
   },
   "errors": []
 }

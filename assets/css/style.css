@@ -1605,6 +1605,247 @@ th {
   padding: 0.55rem 0.7rem;
 }
 
+.vocabulary-trainer-mount {
+  margin-bottom: 1.1rem;
+}
+
+.vocabulary-trainer-launch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid #b9cce1;
+  border-left: 5px solid var(--blue);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.vocabulary-trainer-launch h2,
+.vocabulary-trainer-launch p {
+  margin: 0;
+}
+
+.vocabulary-trainer-launch > div:first-child {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.trainer-launch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+}
+
+.trainer-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.trainer-stats > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+  padding: 0.6rem 0.75rem;
+}
+
+.trainer-stats strong {
+  color: var(--blue);
+  font-size: 1.3rem;
+}
+
+.trainer-stats span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.trainer-reset {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  text-decoration: underline;
+}
+
+.vocabulary-trainer {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f5f8fb;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.trainer-session-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.trainer-session-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trainer-session-bar span {
+  color: var(--muted);
+}
+
+.trainer-card {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid #c7d5e4;
+  border-radius: var(--radius);
+  background: white;
+  padding: clamp(1rem, 4vw, 2rem);
+}
+
+.trainer-card h2,
+.trainer-card p {
+  margin: 0;
+}
+
+.trainer-card h2 {
+  font-size: clamp(1.55rem, 4vw, 2.3rem);
+  line-height: 1.2;
+}
+
+.trainer-instruction {
+  color: var(--muted);
+}
+
+.trainer-answer-input {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 800;
+}
+
+.trainer-answer-input input {
+  font-size: 1.08rem;
+}
+
+.trainer-definition {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.trainer-rating-group {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  border: 0;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+
+.trainer-rating-group legend {
+  grid-column: 1 / -1;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.rating-button {
+  display: grid;
+  gap: 0.1rem;
+  min-height: 72px;
+  border: 1px solid;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 0.55rem;
+  font: inherit;
+  text-align: left;
+}
+
+.rating-button span {
+  font-size: 0.8rem;
+}
+
+.rating-button kbd {
+  justify-self: end;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.72rem;
+}
+
+.rating-button.again {
+  border-color: #efb0aa;
+  background: #fff1ef;
+  color: #8a241d;
+}
+
+.rating-button.hard {
+  border-color: #e8c675;
+  background: #fff8e2;
+  color: #704d00;
+}
+
+.rating-button.good {
+  border-color: #9fc4eb;
+  background: #eef6ff;
+  color: #123f82;
+}
+
+.rating-button.easy {
+  border-color: #95d2c9;
+  background: #edf9f7;
+  color: #155e55;
+}
+
+.rating-button:hover,
+.rating-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(29, 95, 209, 0.12);
+  transform: translateY(-1px);
+}
+
+.trainer-complete {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.trainer-complete h2,
+.trainer-complete p {
+  margin: 0;
+}
+
+.trainer-complete-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.trainer-complete-stats span {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+  padding: 0.7rem;
+}
+
+.trainer-complete-stats strong {
+  color: var(--blue);
+  font-size: 1.35rem;
+}
+
 .stars {
   color: var(--gold);
   font-size: 1.1rem;
@@ -1724,6 +1965,24 @@ th {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .vocabulary-trainer-launch {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .trainer-launch-actions {
+    justify-content: flex-start;
+  }
+
+  .trainer-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trainer-reset {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
   #app.has-study-sidebar > :not(.study-sidebar),
   .study-sidebar {
     grid-column: 1;
@@ -1820,6 +2079,16 @@ th {
   .vocabulary-grid,
   .vocabulary-mini-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trainer-rating-group,
+  .trainer-complete-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trainer-session-bar {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 

@@ -155,7 +155,10 @@
               <h2>Study Words Before The MCQs</h2>
               <p>The word bank and question bank are connected but counted separately. Three MCQs appear below because only three vocabulary questions are published.</p>
             </div>
-            <a class="btn secondary small" href="${rootUrl("vocabulary-bank.html")}">Open Full Vocabulary Bank</a>
+            <div class="button-row">
+              <a class="btn primary small" href="${rootUrl("vocabulary-bank.html?mode=learn")}">Start Daily Review</a>
+              <a class="btn secondary small" href="${rootUrl("vocabulary-bank.html")}">Open Full Vocabulary Bank</a>
+            </div>
           </div>
           <div class="toolbar-panel vocabulary-study-toolbar">
             <label>Level
