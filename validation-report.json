@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "vocabularyRecords": true,
+    "uniqueVocabularyWords": true,
+    "fullBankPagination": true,
+    "fullBankLevelFilter": true,
+    "fullBankTestFilter": true,
+    "pronunciationControls": true,
+    "emptyAntonymsHidden": true,
+    "skillCardBankLink": true,
+    "practiceStudyPanel": true,
+    "practiceStudyPagination": true,
+    "practiceQuestionsRemainThree": true,
+    "searchDeepLinks": true,
+    "responsiveVocabularyCSS": true
+  },
+  "errors": []
+}

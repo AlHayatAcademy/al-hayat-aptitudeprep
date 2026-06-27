@@ -1410,24 +1410,113 @@
 
   function renderVocabularyBank(data) {
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
+    const params = new URLSearchParams(window.location.search);
+    const connectedTestIds = [...new Set(data.vocabularyBank.flatMap((item) => item.connectedTestIds || []))];
+    const state = {
+      level: "all",
+      testId: "all",
+      query: params.get("q") || "",
+      page: 1,
+      pageSize: 18
+    };
     app.innerHTML = `
       ${pageHero("Vocabulary Bank", "Exam Words With Context", "Study meanings, synonyms, antonyms and example sentences connected to target tests.")}
-      <section class="toolbar-panel">
+      <section class="toolbar-panel vocabulary-toolbar" aria-label="Vocabulary filters">
         <label>Level
           <select id="vocabLevel">
             <option value="all">All levels</option>
             ${levels.map((level) => `<option value="${escapeHTML(level)}">${escapeHTML(level)}</option>`).join("")}
           </select>
         </label>
+        <label>Test
+          <select id="vocabTest">
+            <option value="all">All tests</option>
+            ${connectedTestIds.map((id) => `<option value="${escapeHTML(id)}">${escapeHTML(findName(data.tests, id))}</option>`).join("")}
+          </select>
+        </label>
         <label class="search-field">Search
           <input id="vocabSearch" type="search" placeholder="Search word, meaning, synonym...">
         </label>
       </section>
-      <section class="card-grid">
-        ${data.vocabularyBank.map((item) => vocabularyCard(item, data)).join("")}
+      <section class="vocabulary-summary" aria-live="polite">
+        <p id="vocabResultCount"></p>
+        <p class="hint">Urdu and pronunciation fields remain review-gated until specialist approval.</p>
       </section>
+      <section id="vocabResults" class="card-grid vocabulary-grid"></section>
+      <nav id="vocabPagination" class="pagination-bar" aria-label="Vocabulary pages"></nav>
     `;
-    wireSimpleCardFilter("#vocabLevel", "#vocabSearch", "[data-vocab-card]");
+
+    const levelSelect = app.querySelector("#vocabLevel");
+    const testSelect = app.querySelector("#vocabTest");
+    const searchInput = app.querySelector("#vocabSearch");
+    searchInput.value = state.query;
+
+    function filteredVocabulary() {
+      const term = state.query.trim().toLowerCase();
+      return data.vocabularyBank.filter((item) => {
+        const levelOk = state.level === "all" || item.level === state.level;
+        const testOk = state.testId === "all" || (item.connectedTestIds || []).includes(state.testId);
+        const searchable = [
+          item.word,
+          item.meaning,
+          item.partOfSpeech,
+          item.urduMeaning,
+          ...(item.synonyms || []),
+          ...(item.antonyms || []),
+          ...(item.collocations || [])
+        ].filter(Boolean).join(" ").toLowerCase();
+        return levelOk && testOk && (!term || searchable.includes(term));
+      });
+    }
+
+    function renderVocabularyResults() {
+      const filtered = filteredVocabulary();
+      const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+      state.page = Math.min(state.page, totalPages);
+      const start = (state.page - 1) * state.pageSize;
+      const visible = filtered.slice(start, start + state.pageSize);
+      app.querySelector("#vocabResultCount").textContent = filtered.length
+        ? `Showing ${start + 1}–${start + visible.length} of ${filtered.length} words`
+        : "No vocabulary records match these filters.";
+      app.querySelector("#vocabResults").innerHTML = visible.length
+        ? visible.map((item) => vocabularyCard(item, data)).join("")
+        : `<div class="empty-state"><h2>No words found</h2><p>Try a broader search or clear one of the filters.</p></div>`;
+      app.querySelector("#vocabPagination").innerHTML = filtered.length > state.pageSize ? `
+        <button class="btn ghost small" type="button" data-vocab-page="${state.page - 1}" ${state.page === 1 ? "disabled" : ""}>Previous</button>
+        <span>Page ${state.page} of ${totalPages}</span>
+        <button class="btn ghost small" type="button" data-vocab-page="${state.page + 1}" ${state.page === totalPages ? "disabled" : ""}>Next</button>
+      ` : "";
+      applyInterfaceIcons(app.querySelector("#vocabResults"));
+      applyInterfaceIcons(app.querySelector("#vocabPagination"));
+    }
+
+    levelSelect.addEventListener("change", () => {
+      state.level = levelSelect.value;
+      state.page = 1;
+      renderVocabularyResults();
+    });
+    testSelect.addEventListener("change", () => {
+      state.testId = testSelect.value;
+      state.page = 1;
+      renderVocabularyResults();
+    });
+    searchInput.addEventListener("input", () => {
+      state.query = searchInput.value;
+      state.page = 1;
+      renderVocabularyResults();
+    });
+    app.addEventListener("click", (event) => {
+      const pageButton = event.target.closest("[data-vocab-page]");
+      if (pageButton && !pageButton.disabled) {
+        state.page = Number(pageButton.dataset.vocabPage);
+        renderVocabularyResults();
+        app.querySelector("#vocabResultCount")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+      const speechButton = event.target.closest("[data-pronounce-word]");
+      if (speechButton) speakVocabularyWord(speechButton.dataset.pronounceWord, speechButton.dataset.voiceLocale);
+    });
+    renderVocabularyResults();
   }
 
   function renderFormulaBank(data) {
@@ -2520,18 +2609,56 @@
   }
 
   function vocabularyCard(item, data) {
-    const tests = item.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    const testNames = (item.connectedTestIds || []).map((id) => findName(data.tests, id));
+    const tests = testNames.slice(0, 4).join(", ");
+    const moreTests = testNames.length > 4 ? ` +${testNames.length - 4} more` : "";
+    const pronunciation = item.pronunciation || {};
+    const synonyms = item.synonyms || [];
+    const antonyms = item.antonyms || [];
+    const collocations = item.collocations || [];
+    const usageNotes = item.usageNotes || [];
     return `
-      <article class="feature-card" data-vocab-card data-category="${escapeHTML(item.level)}">
-        <p class="eyebrow">${escapeHTML(item.level)}</p>
+      <article class="feature-card vocabulary-card" data-vocab-card data-category="${escapeHTML(item.level)}">
+        <div class="vocabulary-card-heading">
+          <p class="eyebrow">${escapeHTML(item.level)}${item.partOfSpeech ? ` • ${escapeHTML(item.partOfSpeech)}` : ""}</p>
+          ${item.contentStatus === "english-reviewed" ? `<span class="review-pill">English reviewed</span>` : ""}
+        </div>
         <h2>${escapeHTML(item.word)}</h2>
-        <p>${escapeHTML(item.meaning)}</p>
-        <p><strong>Synonyms:</strong> ${escapeHTML(item.synonyms.join(", "))}</p>
-        <p><strong>Antonyms:</strong> ${escapeHTML(item.antonyms.join(", "))}</p>
-        <p class="connected-line">Example: ${escapeHTML(item.example)}</p>
-        <p>Connected tests: ${escapeHTML(tests)}</p>
+        ${(pronunciation.ipaUK || pronunciation.ipaUS) ? `
+          <div class="vocab-pronunciation">
+            ${pronunciation.ipaUK ? `<span><strong>UK</strong> ${escapeHTML(pronunciation.ipaUK)}</span>` : ""}
+            ${pronunciation.ipaUS ? `<span><strong>US</strong> ${escapeHTML(pronunciation.ipaUS)}</span>` : ""}
+          </div>
+          <div class="button-row vocab-audio-actions">
+            <button class="btn ghost small" type="button" data-pronounce-word="${escapeHTML(item.word)}" data-voice-locale="en-GB" aria-label="Pronounce ${escapeHTML(item.word)} in British English">Listen UK</button>
+            <button class="btn ghost small" type="button" data-pronounce-word="${escapeHTML(item.word)}" data-voice-locale="en-US" aria-label="Pronounce ${escapeHTML(item.word)} in American English">Listen US</button>
+          </div>
+        ` : ""}
+        <p class="vocab-meaning">${escapeHTML(item.meaning)}</p>
+        ${item.urduMeaning ? `<p class="vocab-urdu" lang="ur" dir="rtl"><strong>اردو:</strong> ${escapeHTML(item.urduMeaning)} <span>زیرِ جائزہ</span></p>` : ""}
+        ${synonyms.length ? `<p><strong>Synonyms:</strong> ${escapeHTML(synonyms.join(", "))}</p>` : ""}
+        ${antonyms.length ? `<p><strong>Antonyms:</strong> ${escapeHTML(antonyms.join(", "))}</p>` : ""}
+        <p class="vocab-example"><strong>Example:</strong> ${escapeHTML(item.example)}</p>
+        ${(collocations.length || usageNotes.length) ? `
+          <details class="mini-details">
+            <summary>Usage and collocations</summary>
+            ${collocations.length ? `<p><strong>Collocations:</strong> ${escapeHTML(collocations.join(", "))}</p>` : ""}
+            ${usageNotes.map((note) => `<p>${escapeHTML(note)}</p>`).join("")}
+          </details>
+        ` : ""}
+        <p class="connected-line">Connected tests: ${escapeHTML(tests)}${escapeHTML(moreTests)}</p>
       </article>
     `;
+  }
+
+  function speakVocabularyWord(word, locale) {
+    if (!("speechSynthesis" in window) || !word) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = locale || "en-US";
+    const matchingVoice = window.speechSynthesis.getVoices().find((voice) => voice.lang.toLowerCase().startsWith(utterance.lang.toLowerCase()));
+    if (matchingVoice) utterance.voice = matchingVoice;
+    window.speechSynthesis.speak(utterance);
   }
 
   function formulaCard(item, data) {
@@ -3478,6 +3605,8 @@
 
   function skillCard(skill, data, includeActions = false) {
     const tests = skill.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
+    const publishedQuestionCount = data.questions.filter((item) => item.skillId === skill.id && item.status === "published").length;
+    const vocabularyCount = skill.id === "vocabulary" ? data.vocabularyBank.length : 0;
     const firstTopic = skill.topicIds?.[0] || "";
     const topicLink = firstTopic ? `topic-study.html?topic=${firstTopic}` : `practice.html?skill=${skill.id}`;
     const firstTest = skill.connectedTestIds?.[0] || "";
@@ -3488,12 +3617,14 @@
         <h2>${escapeHTML(skill.name)}</h2>
         <p>${escapeHTML(skill.description)}</p>
         <p class="connected-line">Connected tests: ${escapeHTML(tests)}</p>
+        ${skill.id === "vocabulary" ? `<p class="skill-content-count"><strong>${vocabularyCount}</strong> study words • <strong>${publishedQuestionCount}</strong> published MCQs</p>` : ""}
         <div class="tag-row action-tags">
           ${skill.practiceModes.map((mode) => `<a href="${url(resolvePracticeModeLink(mode, skill, topicLink, mockLink))}">${escapeHTML(mode)}</a>`).join("")}
         </div>
         ${includeActions ? `<div class="button-row">
           <a class="btn primary small" href="${url(`practice.html?skill=${skill.id}`)}">Practice This Skill</a>
           <a class="btn secondary small" href="${url(topicLink)}">Study Topics</a>
+          ${skill.id === "vocabulary" ? `<a class="btn secondary small" href="${url("vocabulary-bank.html")}">Vocabulary Bank</a>` : ""}
           <a class="btn ghost small" href="${url(mockLink)}">Open Mock</a>
         </div>` : ""}
       </article>
@@ -3940,6 +4071,7 @@
     if (label.includes("explanation") || label.includes("وضاحت")) return label.includes("وضاحت") ? "languages" : "lightbulb";
     if (label.includes("copy")) return "copy";
     if (label.includes("share")) return "share";
+    if (label.includes("listen") || label.includes("pronounce")) return "volume";
     if (label.includes("download") || label.includes("print")) return "download";
     if (label.includes("reset") || label.includes("clear") || label.includes("try again")) return "refresh";
     if (label.includes("save") || label.includes("submit") || label.startsWith("send")) return "send";
@@ -3967,6 +4099,7 @@
       message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.7-5A8 8 0 1 1 21 15Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',
       copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
       share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/>',
+      volume: '<path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/>',
       download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>',
       refresh: '<path d="M20 11a8 8 0 1 0 1 5"/><path d="M20 4v7h-7"/>',
       send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',

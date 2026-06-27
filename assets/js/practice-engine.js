@@ -5,6 +5,9 @@
       testId: filters.testId || params.get("test") || "all",
       skillId: filters.skillId || params.get("skill") || "all",
       subjectId: filters.subjectId || params.get("subject") || "all",
+      vocabLevel: "all",
+      vocabQuery: "",
+      vocabPage: 1,
       responses: {}
     };
 
@@ -26,6 +29,7 @@
         <label>Subject <select id="practiceSubject">${subjectOptions}</select></label>
         <button class="btn primary" id="resetPractice" type="button">Reset Answers</button>
       </section>
+      <section id="practiceVocabularyBank" class="vocabulary-study-panel" hidden></section>
       <section class="split-layout">
         <aside class="side-panel">
           <h2>Practice Summary</h2>
@@ -57,6 +61,31 @@
       render();
     });
 
+    mount.addEventListener("input", (event) => {
+      if (event.target.id !== "practiceVocabSearch") return;
+      state.vocabQuery = event.target.value;
+      state.vocabPage = 1;
+      renderVocabularyStudyResults();
+    });
+
+    mount.addEventListener("change", (event) => {
+      if (event.target.id !== "practiceVocabLevel") return;
+      state.vocabLevel = event.target.value;
+      state.vocabPage = 1;
+      renderVocabularyStudyResults();
+    });
+
+    mount.addEventListener("click", (event) => {
+      const pageButton = event.target.closest("[data-study-vocab-page]");
+      if (pageButton && !pageButton.disabled) {
+        state.vocabPage = Number(pageButton.dataset.studyVocabPage);
+        renderVocabularyStudyResults();
+        return;
+      }
+      const speechButton = event.target.closest("[data-study-pronounce]");
+      if (speechButton) pronounceWord(speechButton.dataset.studyPronounce, speechButton.dataset.voiceLocale);
+    });
+
     function filteredQuestions() {
       return data.questions.filter((question) => {
         const testOk = state.testId === "all" || question.testIds.includes(state.testId);
@@ -72,9 +101,11 @@
       const correct = Object.values(state.responses).filter((item) => item.correct).length;
       mount.querySelector("#practiceStats").innerHTML = `
         ${metric("Questions", questions.length)}
+        ${state.skillId === "vocabulary" ? metric("Study words", data.vocabularyBank?.length || 0) : ""}
         ${metric("Attempted", attempted)}
         ${metric("Correct", correct)}
       `;
+      renderVocabularyStudyBank();
       mount.querySelector("#questionList").innerHTML = questions.length
         ? questions.map((question, index) => questionCard(question, questions[index + 1])).join("")
         : `<div class="empty-state"><h2>No questions found</h2><p>Add matching records in <code>data/questions.json</code> or clear the filters.</p></div>`;
@@ -108,6 +139,103 @@
           target?.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
+    }
+
+    function renderVocabularyStudyBank() {
+      const panel = mount.querySelector("#practiceVocabularyBank");
+      const show = state.skillId === "vocabulary" && Array.isArray(data.vocabularyBank) && data.vocabularyBank.length;
+      panel.hidden = !show;
+      if (!show) return;
+      if (!panel.dataset.ready) {
+        const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
+        panel.innerHTML = `
+          <div class="section-head vocabulary-study-heading">
+            <div>
+              <p class="eyebrow">Vocabulary Study Bank</p>
+              <h2>Study Words Before The MCQs</h2>
+              <p>The word bank and question bank are connected but counted separately. Three MCQs appear below because only three vocabulary questions are published.</p>
+            </div>
+            <a class="btn secondary small" href="${rootUrl("vocabulary-bank.html")}">Open Full Vocabulary Bank</a>
+          </div>
+          <div class="toolbar-panel vocabulary-study-toolbar">
+            <label>Level
+              <select id="practiceVocabLevel">
+                <option value="all">All levels</option>
+                ${levels.map((level) => `<option value="${escapeHTML(level)}">${escapeHTML(level)}</option>`).join("")}
+              </select>
+            </label>
+            <label class="search-field">Search
+              <input id="practiceVocabSearch" type="search" placeholder="Search word or meaning...">
+            </label>
+          </div>
+          <p id="practiceVocabCount" class="connected-line" aria-live="polite"></p>
+          <div id="practiceVocabResults" class="vocabulary-mini-grid"></div>
+          <nav id="practiceVocabPagination" class="pagination-bar" aria-label="Vocabulary study pages"></nav>
+        `;
+        panel.dataset.ready = "true";
+      }
+      renderVocabularyStudyResults();
+    }
+
+    function renderVocabularyStudyResults() {
+      const panel = mount.querySelector("#practiceVocabularyBank");
+      if (!panel || panel.hidden || !panel.dataset.ready) return;
+      const term = state.vocabQuery.trim().toLowerCase();
+      const filtered = data.vocabularyBank.filter((item) => {
+        const levelOk = state.vocabLevel === "all" || item.level === state.vocabLevel;
+        const testOk = state.testId === "all" || (item.connectedTestIds || []).includes(state.testId);
+        const subjectOk = state.subjectId === "all" || state.subjectId === "english";
+        const searchable = [item.word, item.meaning, item.urduMeaning, ...(item.synonyms || []), ...(item.antonyms || [])]
+          .filter(Boolean).join(" ").toLowerCase();
+        return levelOk && testOk && subjectOk && (!term || searchable.includes(term));
+      });
+      const pageSize = 6;
+      const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+      state.vocabPage = Math.min(state.vocabPage, totalPages);
+      const start = (state.vocabPage - 1) * pageSize;
+      const visible = filtered.slice(start, start + pageSize);
+      panel.querySelector("#practiceVocabCount").textContent = filtered.length
+        ? `Showing ${start + 1}–${start + visible.length} of ${filtered.length} study words`
+        : "No study words match these filters.";
+      panel.querySelector("#practiceVocabResults").innerHTML = visible.length
+        ? visible.map(vocabularyStudyCard).join("")
+        : `<div class="empty-state"><h2>No study words found</h2><p>Clear a filter or try another search.</p></div>`;
+      panel.querySelector("#practiceVocabPagination").innerHTML = filtered.length > pageSize ? `
+        <button class="btn ghost small" type="button" data-study-vocab-page="${state.vocabPage - 1}" ${state.vocabPage === 1 ? "disabled" : ""}>Previous</button>
+        <span>Page ${state.vocabPage} of ${totalPages}</span>
+        <button class="btn ghost small" type="button" data-study-vocab-page="${state.vocabPage + 1}" ${state.vocabPage === totalPages ? "disabled" : ""}>Next</button>
+      ` : "";
+    }
+
+    function vocabularyStudyCard(item) {
+      const pronunciation = item.pronunciation || {};
+      const synonyms = item.synonyms || [];
+      return `
+        <article class="feature-card vocabulary-study-card">
+          <p class="eyebrow">${escapeHTML(item.level)}${item.partOfSpeech ? ` • ${escapeHTML(item.partOfSpeech)}` : ""}</p>
+          <h3>${escapeHTML(item.word)}</h3>
+          <p>${escapeHTML(item.meaning)}</p>
+          ${item.urduMeaning ? `<p class="vocab-urdu" lang="ur" dir="rtl"><strong>اردو:</strong> ${escapeHTML(item.urduMeaning)}</p>` : ""}
+          ${synonyms.length ? `<p><strong>Synonyms:</strong> ${escapeHTML(synonyms.slice(0, 3).join(", "))}</p>` : ""}
+          ${(pronunciation.ipaUK || pronunciation.ipaUS) ? `
+            <div class="button-row">
+              <button class="btn ghost small" type="button" data-study-pronounce="${escapeHTML(item.word)}" data-voice-locale="en-GB">Listen UK</button>
+              <button class="btn ghost small" type="button" data-study-pronounce="${escapeHTML(item.word)}" data-voice-locale="en-US">Listen US</button>
+            </div>
+          ` : ""}
+          <a class="text-link" href="${rootUrl(`vocabulary-bank.html?q=${encodeURIComponent(item.word)}`)}">Open complete entry</a>
+        </article>
+      `;
+    }
+
+    function pronounceWord(word, locale) {
+      if (!("speechSynthesis" in window) || !word) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = locale || "en-US";
+      const voice = window.speechSynthesis.getVoices().find((item) => item.lang.toLowerCase().startsWith(utterance.lang.toLowerCase()));
+      if (voice) utterance.voice = voice;
+      window.speechSynthesis.speak(utterance);
     }
 
     function questionCard(question, nextQuestion) {

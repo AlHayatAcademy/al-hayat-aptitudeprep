@@ -1452,6 +1452,159 @@ th {
   font-weight: 800;
 }
 
+.vocabulary-summary,
+.vocabulary-card-heading,
+.vocabulary-study-heading,
+.pagination-bar,
+.vocab-pronunciation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.vocabulary-summary {
+  margin: 0 0 0.85rem;
+}
+
+.vocabulary-summary p {
+  margin: 0;
+}
+
+.vocabulary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.vocabulary-grid > .empty-state,
+.vocabulary-mini-grid > .empty-state {
+  grid-column: 1 / -1;
+}
+
+.vocabulary-card {
+  display: grid;
+  align-content: start;
+  gap: 0.55rem;
+}
+
+.vocabulary-card p,
+.vocabulary-study-card p {
+  margin: 0;
+}
+
+.vocabulary-card-heading {
+  align-items: start;
+}
+
+.review-pill {
+  display: inline-flex;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #e4f5ea;
+  color: #21613c;
+  padding: 0.22rem 0.48rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.vocab-pronunciation {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: #314860;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.vocab-pronunciation span {
+  border: 1px solid #d5e0ea;
+  border-radius: 6px;
+  background: #f7fafc;
+  padding: 0.35rem 0.5rem;
+}
+
+.vocab-audio-actions .btn {
+  min-height: 32px;
+  padding: 0.35rem 0.55rem;
+}
+
+.feature-card .vocab-meaning {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.feature-card .vocab-urdu {
+  border-right: 4px solid var(--teal);
+  border-radius: 6px;
+  background: #eef8f7;
+  color: #163f3b;
+  padding: 0.55rem 0.7rem;
+  font-family: "Noto Nastaliq Urdu", "Noto Sans Arabic", serif;
+  line-height: 1.8;
+}
+
+.vocab-urdu span {
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+}
+
+.feature-card .vocab-example {
+  border-left: 3px solid #b9cce1;
+  color: #314860;
+  padding-left: 0.65rem;
+}
+
+.pagination-bar {
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.pagination-bar span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.vocabulary-study-panel {
+  margin: 1.2rem 0 1.5rem;
+}
+
+.vocabulary-study-heading {
+  align-items: end;
+  margin: 0 0 0.8rem;
+}
+
+.vocabulary-study-heading h2,
+.vocabulary-study-card h3 {
+  margin: 0.1rem 0 0.45rem;
+}
+
+.vocabulary-study-heading p {
+  max-width: 760px;
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.vocabulary-study-toolbar {
+  margin-bottom: 0.75rem;
+}
+
+.vocabulary-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.vocabulary-study-card {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+.skill-content-count {
+  border-left: 4px solid var(--teal);
+  border-radius: 6px;
+  background: #eef8f7;
+  padding: 0.55rem 0.7rem;
+}
+
 .stars {
   color: var(--gold);
   font-size: 1.1rem;
@@ -1566,6 +1719,11 @@ th {
     grid-template-columns: 1fr;
   }
 
+  .vocabulary-grid,
+  .vocabulary-mini-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   #app.has-study-sidebar > :not(.study-sidebar),
   .study-sidebar {
     grid-column: 1;
@@ -1651,6 +1809,17 @@ th {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .vocabulary-summary,
+  .vocabulary-study-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .vocabulary-grid,
+  .vocabulary-mini-grid {
+    grid-template-columns: 1fr;
   }
 }
 
