@@ -32,6 +32,7 @@
       const data = await window.AHData.loadAllData();
       window.AH_SITE_DATA = data;
       renderPage(data);
+      startIconEnhancement();
     } catch (error) {
       console.error(error);
       if (app) {
@@ -48,9 +49,55 @@
 
     const menuButton = document.querySelector("#menuButton");
     const nav = document.querySelector("#primaryNav");
+    const menuState = menuButton?.querySelector(".menu-state");
     menuButton?.addEventListener("click", () => {
       const open = nav.classList.toggle("open");
       menuButton.setAttribute("aria-expanded", String(open));
+      if (menuState) menuState.textContent = open ? "−" : "+";
+    });
+
+    document.querySelectorAll(".mobile-nav-group").forEach((group) => {
+      group.addEventListener("toggle", () => {
+        if (!group.open) return;
+        document.querySelectorAll(".mobile-nav-group[open]").forEach((other) => {
+          if (other !== group) other.open = false;
+        });
+      });
+    });
+
+    document.querySelectorAll(".desktop-navigation > .nav-dropdown").forEach((dropdown) => {
+      dropdown.addEventListener("toggle", () => {
+        if (!dropdown.open) return;
+        document.querySelectorAll(".desktop-navigation > .nav-dropdown[open]").forEach((other) => {
+          if (other !== dropdown) other.open = false;
+        });
+      });
+    });
+
+    document.querySelectorAll(".nav-menu-group").forEach((group) => {
+      group.addEventListener("toggle", () => {
+        if (!group.open) return;
+        group.parentElement.querySelectorAll(".nav-menu-group[open]").forEach((other) => {
+          if (other !== group) other.open = false;
+        });
+      });
+    });
+
+    nav?.addEventListener("click", (event) => {
+      if (!event.target.closest("a") || window.innerWidth > 980) return;
+      nav.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
+      if (menuState) menuState.textContent = "+";
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      nav?.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
+      if (menuState) menuState.textContent = "+";
+      document.querySelectorAll(".nav-dropdown[open], .mobile-nav-group[open], .nav-menu-group[open]").forEach((details) => {
+        details.open = false;
+      });
     });
   }
 
@@ -142,75 +189,138 @@
           <img class="brand-logo" src="${url("assets/img/al-hayat-logo.png")}" alt="" width="56" height="56">
           <span><strong>Al-Hayat</strong><small>AptitudePrep</small></span>
         </a>
-        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav">
+          <span>Menu</span><span class="menu-state" aria-hidden="true">+</span>
+        </button>
         <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
-          ${navLink("Home", "index.html")}
-          ${navDropdown("Tests", [
-            ["Medical Entry Tests", "MDCAT, NMDCAT, NUMS, AMC", "tests.html#medical-entry-tests"],
-            ["Engineering & CS Tests", "FAST, NUST NET, ECAT, PIEAS", "tests.html#engineering-cs-tests"],
-            ["Graduate & International", "GAT, GRE, GMAT, SAT, IELTS", "tests.html"]
-          ])}
-          ${navDropdown("Skills", [
-            ["Verbal Skills", "Vocabulary, grammar, reading", "skills.html#vocabulary"],
-            ["Reasoning Skills", "Quantitative, analytical, logical", "skills.html#quantitative-reasoning"]
-          ])}
-          ${navLink("Subjects", "subjects.html")}
-          ${navLink("Practice", "practice.html")}
-          ${navLink("Mock Tests", "mock-tests.html")}
-          ${navLink("Resources", "resources.html")}
-          ${navDropdown("More", [
-            ["Choose My Test", "Find the right route", "choose-test.html"],
-            ["Diagnostic Test", "Find strengths and weak areas", "diagnostic.html"],
-            ["Flashcards", "Revise core items fast", "flashcards.html"],
-            ["Error Log", "Track repeated mistakes", "error-log.html"],
-            ["Premium Notes", "Preview and purchase notes", "premium-notes.html"],
-            ["Results Report", "Weak areas and next steps", "results-report.html"],
-            ["Lessons", "Concepts, examples and practice", "lessons.html"],
-            ["Teacher Toolkit", "Class plans and follow-up", "teacher-toolkit.html"],
-            ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
-            ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"],
-            ["Download Center", "Print packs and checklists", "download-center.html"],
-            ["Question Review", "Wrong-answer patterns", "question-review.html"],
-            ["Test Routes", "Connected preparation pathways", "test-routes.html"],
-            ["Dashboard", "Progress and next actions", "dashboard.html"],
-            ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
-            ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
-            ["Question Builder", "MCQ templates and checks", "question-builder.html"],
-            ["Question Import", "Batch import safety checks", "question-import.html"],
-            ["Topic Study", "Focused topic explanations", "topic-study.html"],
-            ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
-            ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
-            ["Student Notes", "Save topic and review notes", "student-notes.html"],
-            ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
-            ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"],
-            ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
-            ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
-            ["Class Remedial Plan", "Run weak-area class plans", "class-remedial-plan.html"],
-            ["Remedial Homework", "Student weak-area homework", "remedial-homework.html"],
-            ["Homework Review", "Review remedial completion", "homework-review.html"],
-            ["Compare Tests", "Formats, sections and strategies", "compare.html"],
-            ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
-            ["Strategies", "How to solve smarter", "strategies.html"],
-            ["Daily Plan", "Today’s study checklist", "daily-plan.html"],
-            ["Common Mistakes", "Avoid repeated errors", "mistakes.html"],
-            ["Worksheets", "Printable-style practice", "worksheets.html"],
-            ["Assignments", "Classwork and homework packs", "assignments.html"],
-            ["Score Guide", "Understand mock scores", "score-guide.html"],
-            ["Question Bank", "Expansion targets", "question-bank.html"],
-            ["Vocabulary Bank", "Words, synonyms and examples", "vocabulary-bank.html"],
-            ["Formula Bank", "Math and science formulas", "formula-bank.html"],
-            ["Question Sets", "Curated starter drills", "question-sets.html"],
-            ["Roadmap", "Version and content plan", "roadmap.html"],
-            ["Contributor Guide", "Content quality rules", "contributor-guide.html"],
-            ["Changelog", "Version history", "changelog.html"],
-            ["Book Trial Class", "Online or physical class lead form", "book-trial-class.html"],
-            ["Reviews", "Student feedback and success stories", "reviews.html"],
-            ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
-            ["Share", "Copy or send the website link", "share.html"],
-            ["FAQ", "Student questions and help", "faq.html"],
-            ["About & Contact", "Mission, trust and contact details", "about.html"]
-          ])}
-          <a class="nav-cta" href="${url("book-trial-class.html")}">Book Trial</a>
+          <div class="desktop-navigation">
+            ${navLink("Home", "index.html")}
+            ${navDropdown("Tests", [
+              ["Medical Entry Tests", "MDCAT, NMDCAT, NUMS, AMC", "tests.html#medical-entry-tests"],
+              ["Engineering & CS Tests", "FAST, NUST NET, ECAT, PIEAS", "tests.html#engineering-cs-tests"],
+              ["Graduate & International", "GAT, GRE, GMAT, SAT, IELTS", "tests.html"]
+            ])}
+            ${navDropdown("Skills", [
+              ["Verbal Skills", "Vocabulary, grammar, reading", "skills.html#vocabulary"],
+              ["Reasoning Skills", "Quantitative, analytical, logical", "skills.html#quantitative-reasoning"]
+            ])}
+            ${navLink("Subjects", "subjects.html")}
+            ${navLink("Practice", "practice.html")}
+            ${navLink("Mock Tests", "mock-tests.html")}
+            ${navLink("Resources", "resources.html")}
+            ${groupedNavDropdown("More", [
+              ["Start And Plan", [
+                ["Choose My Test", "Find the right route", "choose-test.html"],
+                ["Diagnostic Test", "Find strengths and weak areas", "diagnostic.html"],
+                ["Test Routes", "Connected preparation pathways", "test-routes.html"],
+                ["Daily Plan", "Today’s study checklist", "daily-plan.html"],
+                ["Admissions Timeline", "Plan test season phases", "admissions-timeline.html"]
+              ]],
+              ["Study And Revision", [
+                ["Lessons", "Concepts, examples and practice", "lessons.html"],
+                ["Topic Study", "Focused topic explanations", "topic-study.html"],
+                ["Flashcards", "Revise core items fast", "flashcards.html"],
+                ["Vocabulary Bank", "Words, synonyms and examples", "vocabulary-bank.html"],
+                ["Formula Bank", "Math and science formulas", "formula-bank.html"],
+                ["Question Sets", "Curated starter drills", "question-sets.html"]
+              ]],
+              ["Progress And Repair", [
+                ["Dashboard", "Progress and next actions", "dashboard.html"],
+                ["Results Report", "Weak areas and next steps", "results-report.html"],
+                ["Question Review", "Wrong-answer patterns", "question-review.html"],
+                ["Error Log", "Track repeated mistakes", "error-log.html"],
+                ["Common Mistakes", "Avoid repeated errors", "mistakes.html"],
+                ["Repair Paths", "Weak-topic recovery routes", "repair-paths.html"],
+                ["Revision Queue", "Review weak items in one list", "revision-queue.html"],
+                ["Weekly Summary", "Review weekly progress signals", "weekly-summary.html"]
+              ]],
+              ["Student Resources", [
+                ["Premium Notes", "Preview and purchase notes", "premium-notes.html"],
+                ["Download Center", "Print packs and checklists", "download-center.html"],
+                ["Worksheets", "Printable-style practice", "worksheets.html"],
+                ["Assignments", "Classwork and homework packs", "assignments.html"],
+                ["Student Notes", "Save topic and review notes", "student-notes.html"],
+                ["Score Guide", "Understand mock scores", "score-guide.html"],
+                ["Glossary", "Aptitude and mock-test terms", "glossary.html"],
+                ["Strategies", "How to solve smarter", "strategies.html"]
+              ]],
+              ["Parent And Teacher", [
+                ["Teacher Toolkit", "Class plans and follow-up", "teacher-toolkit.html"],
+                ["Parent Guide", "Progress and trial guidance", "parent-guide.html"],
+                ["Parent Weekly Report", "Share weekly progress", "parent-weekly-report.html"],
+                ["Teacher Weekly Report", "Plan remedial follow-up", "teacher-weekly-report.html"],
+                ["Class Remedial Plan", "Run weak-area class plans", "class-remedial-plan.html"],
+                ["Remedial Homework", "Student weak-area homework", "remedial-homework.html"],
+                ["Homework Review", "Review remedial completion", "homework-review.html"]
+              ]],
+              ["Test And Content Tools", [
+                ["Compare Tests", "Formats, sections and strategies", "compare.html"],
+                ["Test Pages", "Dedicated test deep pages", "test-pages.html"],
+                ["Chapter Maps", "Subject-wise chapter routes", "chapter-maps.html"],
+                ["Route Tasks", "Daily tasks by selected route", "route-tasks.html"],
+                ["Question Bank", "Expansion targets", "question-bank.html"],
+                ["Question Builder", "MCQ templates and checks", "question-builder.html"],
+                ["Question Import", "Batch import safety checks", "question-import.html"]
+              ]],
+              ["About And Updates", [
+                ["Book Trial Class", "Online or physical trial class", "book-trial-class.html"],
+                ["Reviews", "Student feedback and success stories", "reviews.html"],
+                ["Media", "YouTube, Facebook, Instagram, TikTok", "media.html"],
+                ["Share", "Copy or send the website link", "share.html"],
+                ["FAQ", "Student questions and help", "faq.html"],
+                ["About & Contact", "Mission, trust and contact details", "about.html"],
+                ["Roadmap", "Version and content plan", "roadmap.html"],
+                ["Contributor Guide", "Content quality rules", "contributor-guide.html"],
+                ["Changelog", "Version history", "changelog.html"]
+              ]]
+            ])}
+            <a class="nav-cta" href="${url("book-trial-class.html")}">Book Trial</a>
+          </div>
+          <div class="mobile-navigation" aria-label="Mobile navigation sections">
+            ${mobileNavGroup("Start", [
+              ["Home", "Main website page", "index.html"],
+              ["Choose My Test", "Find the right preparation route", "choose-test.html"],
+              ["Dashboard", "Progress and next actions", "dashboard.html"]
+            ])}
+            ${mobileNavGroup("Tests And Practice", [
+              ["All Tests", "Entry and aptitude test routes", "tests.html"],
+              ["Subjects", "Subject-based preparation", "subjects.html"],
+              ["Practice MCQs", "Instant-answer practice", "practice.html"],
+              ["Mock Tests", "Timed sample tests", "mock-tests.html"],
+              ["Question Sets", "Curated practice drills", "question-sets.html"]
+            ])}
+            ${mobileNavGroup("Study And Revision", [
+              ["Skills", "Verbal, quantitative and reasoning", "skills.html"],
+              ["Lessons", "Concepts and examples", "lessons.html"],
+              ["Topic Study", "Focused topic explanations", "topic-study.html"],
+              ["Flashcards", "Fast revision", "flashcards.html"],
+              ["Vocabulary Bank", "Exam words in context", "vocabulary-bank.html"],
+              ["Formula Bank", "Key formulas", "formula-bank.html"],
+              ["Revision Queue", "Items due for review", "revision-queue.html"]
+            ])}
+            ${mobileNavGroup("Progress And Review", [
+              ["Diagnostic", "Check strengths and weak areas", "diagnostic.html"],
+              ["Results Report", "Review performance", "results-report.html"],
+              ["Question Review", "Study wrong answers", "question-review.html"],
+              ["Error Log", "Track repeated mistakes", "error-log.html"],
+              ["Repair Paths", "Recover weak topics", "repair-paths.html"],
+              ["Weekly Summary", "Review weekly progress", "weekly-summary.html"]
+            ])}
+            ${mobileNavGroup("Resources", [
+              ["Resource Library", "Notes and preparation material", "resources.html"],
+              ["Premium Notes", "Preview premium content", "premium-notes.html"],
+              ["Worksheets", "Printable practice", "worksheets.html"],
+              ["Downloads", "Packs and checklists", "download-center.html"],
+              ["Book Trial Class", "Online or physical trial class", "book-trial-class.html"]
+            ])}
+            ${mobileNavGroup("Help And Information", [
+              ["Search", "Find website content", "search.html"],
+              ["FAQ", "Common questions", "faq.html"],
+              ["About", "Mission and learning model", "about.html"],
+              ["Contact", "WhatsApp and email", "contact.html"],
+              ["Share", "Share the website", "share.html"]
+            ])}
+          </div>
         </nav>
       </header>
     `;
@@ -297,7 +407,7 @@
           ["Mock Tests", "Run timed sample mocks and save progress.", "mock-tests.html"],
           ["Dashboard", "See progress and next actions.", "dashboard.html"],
           ["Book Trial", "Book online or physical class.", "book-trial-class.html"]
-        ], true)}
+        ])}
         ${homeActionGroup("Study And Revision", "Concepts, drills and weak-area repair", [
           ["Lessons", "Study concepts with examples and practice.", "lessons.html"],
           ["Topic Study", "Review focused topic cards.", "topic-study.html"],
@@ -383,7 +493,7 @@
     app.innerHTML = `
       ${pageHero("Tests", "Prepare By Test", "Open a group, choose a test, then move to overview, practice, resources or mock tests.")}
       <section class="accordion-list">
-        ${data.groups.map((group) => groupAccordion(group, data, true)).join("")}
+        ${data.groups.map((group) => groupAccordion(group, data)).join("")}
       </section>
     `;
   }
@@ -3782,7 +3892,7 @@
   }
 
   function wireAccordions() {
-    document.querySelectorAll(".accordion-card, .home-action-group, .study-sidebar-box").forEach((details) => {
+    document.querySelectorAll(".accordion-card, .home-action-group, .study-sidebar-box, .nav-dropdown, .mobile-nav-group").forEach((details) => {
       const icon = details.querySelector(".summary-icon");
       if (icon) icon.textContent = details.open ? "−" : "+";
       details.addEventListener("toggle", () => {
@@ -3790,6 +3900,87 @@
         if (icon) icon.textContent = details.open ? "−" : "+";
       });
     });
+  }
+
+  function startIconEnhancement() {
+    applyInterfaceIcons(document);
+    if (!app || app.dataset.iconObserverReady) return;
+    app.dataset.iconObserverReady = "true";
+    const observer = new MutationObserver((records) => {
+      records.forEach((record) => {
+        if (record.target instanceof Element) applyInterfaceIcons(record.target);
+        record.addedNodes.forEach((node) => {
+          if (node instanceof Element) applyInterfaceIcons(node);
+        });
+      });
+    });
+    observer.observe(app, { childList: true, subtree: true });
+  }
+
+  function applyInterfaceIcons(root) {
+    const selector = ".btn, .nav-cta, .study-nav-links a";
+    const controls = [];
+    if (root instanceof Element && root.matches(selector)) controls.push(root);
+    root.querySelectorAll?.(selector).forEach((control) => controls.push(control));
+    controls.forEach((control) => {
+      if (control.querySelector(":scope > .ui-icon")) return;
+      control.insertAdjacentHTML("afterbegin", interfaceIcon(iconNameForControl(control)));
+    });
+  }
+
+  function iconNameForControl(control) {
+    const label = control.textContent.trim().toLowerCase();
+    const href = control.getAttribute("href") || "";
+    if (href.includes("wa.me") || label.includes("whatsapp")) return "message";
+    if (label.includes("back to home") || label === "home") return "home";
+    if (label.includes("previous") || label.startsWith("back") || label.includes("return")) return "arrow-left";
+    if (label.includes("next") || label.startsWith("open") || label.includes("continue")) return "arrow-right";
+    if (label.includes("correct")) return "check";
+    if (label.includes("answer")) return "eye";
+    if (label.includes("explanation") || label.includes("وضاحت")) return label.includes("وضاحت") ? "languages" : "lightbulb";
+    if (label.includes("copy")) return "copy";
+    if (label.includes("share")) return "share";
+    if (label.includes("download") || label.includes("print")) return "download";
+    if (label.includes("reset") || label.includes("clear") || label.includes("try again")) return "refresh";
+    if (label.includes("save") || label.includes("submit") || label.startsWith("send")) return "send";
+    if (label.includes("trial") || label.includes("timeline")) return "calendar";
+    if (label.includes("mock")) return "timer";
+    if (label.includes("practice") || label.includes("practise") || label.includes("attempt")) return "pencil";
+    if (label.includes("test") || label.includes("diagnostic")) return "clipboard";
+    if (label.includes("skill")) return "brain";
+    if (label.includes("topic") || label.includes("lesson") || label.includes("notes") || label.includes("flashcard")) return "book";
+    if (label.includes("resource") || label.includes("worksheet") || label.includes("question bank")) return "library";
+    if (label.includes("report") || label.includes("result") || label.includes("progress") || label.includes("dashboard") || label.includes("score")) return "chart";
+    if (label.includes("contact") || label.includes("email")) return "mail";
+    return "arrow-right";
+  }
+
+  function interfaceIcon(name) {
+    const paths = {
+      "arrow-left": '<path d="m15 18-6-6 6-6"/><path d="M21 12H9"/>',
+      "arrow-right": '<path d="M5 12h12"/><path d="m13 6 6 6-6 6"/>',
+      home: '<path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/>',
+      check: '<circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/>',
+      eye: '<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/>',
+      lightbulb: '<path d="M9 18h6"/><path d="M10 22h4"/><path d="M8.5 14.5A6 6 0 1 1 15.5 14.5c-.9.7-1.5 1.6-1.5 2.5h-4c0-.9-.6-1.8-1.5-2.5Z"/>',
+      languages: '<path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m14 22 4-9 4 9"/><path d="M15.5 19h5"/>',
+      message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.7-5A8 8 0 1 1 21 15Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',
+      copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
+      share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/>',
+      download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>',
+      refresh: '<path d="M20 11a8 8 0 1 0 1 5"/><path d="M20 4v7h-7"/>',
+      send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+      calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>',
+      timer: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/>',
+      pencil: '<path d="m4 20 4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10Z"/><path d="m14 7 3 3"/>',
+      clipboard: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 14h6"/>',
+      brain: '<path d="M9.5 4A3 3 0 0 0 6 7a3 3 0 0 0-1 5.8A3.5 3.5 0 0 0 9.5 18V4ZM14.5 4A3 3 0 0 1 18 7a3 3 0 0 1 1 5.8 3.5 3.5 0 0 1-4.5 5.2V4ZM9.5 9H7M14.5 9H17M9.5 14H7.5M14.5 14h2"/>',
+      book: '<path d="M4 5a3 3 0 0 1 3-3h5v18H7a3 3 0 0 0-3 2Z"/><path d="M20 5a3 3 0 0 0-3-3h-5v18h5a3 3 0 0 1 3 2Z"/>',
+      library: '<path d="m3 8 9-5 9 5M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/>',
+      chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+      mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'
+    };
+    return `<svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${paths[name] || paths["arrow-right"]}</svg>`;
   }
 
   function injectStudySidebar(data) {
@@ -3803,13 +3994,13 @@
     const firstTopic = data.topics?.[0]?.id || "";
     const sidebar = `
       <aside class="study-sidebar" aria-label="Study navigator">
-        <details class="study-sidebar-box" open>
+        <details class="study-sidebar-box">
           <summary>
             <span>
               <strong>Study Navigator</strong>
               <small>Move through the learning route</small>
             </span>
-            <span class="summary-icon">−</span>
+            <span class="summary-icon">+</span>
           </summary>
           <nav class="study-nav-links">
             ${studyNavLink("Choose Test", "choose-test.html")}
@@ -3900,12 +4091,57 @@
   function navDropdown(label, items) {
     return `
       <details class="nav-dropdown">
-        <summary>${label}</summary>
+        <summary><span>${label}</span><span class="nav-summary-icon summary-icon" aria-hidden="true">+</span></summary>
         <div class="dropdown-panel">
           ${items.map(([title, copy, href]) => `
             <a href="${url(href)}">
               <strong>${escapeHTML(title)}</strong>
               <span>${escapeHTML(copy)}</span>
+            </a>
+          `).join("")}
+        </div>
+      </details>
+    `;
+  }
+
+  function groupedNavDropdown(label, groups) {
+    return `
+      <details class="nav-dropdown grouped-nav-dropdown">
+        <summary><span>${escapeHTML(label)}</span><span class="nav-summary-icon summary-icon" aria-hidden="true">+</span></summary>
+        <div class="dropdown-panel grouped-dropdown-panel">
+          ${groups.map(([groupLabel, items]) => `
+            <details class="nav-menu-group">
+              <summary>
+                <span>${escapeHTML(groupLabel)}</span>
+                <span class="nav-group-arrow" aria-hidden="true">›</span>
+              </summary>
+              <div class="nav-group-links">
+                ${items.map(([title, copy, href]) => `
+                  <a href="${url(href)}">
+                    <strong>${escapeHTML(title)}</strong>
+                    <span>${escapeHTML(copy)}</span>
+                  </a>
+                `).join("")}
+              </div>
+            </details>
+          `).join("")}
+        </div>
+      </details>
+    `;
+  }
+
+  function mobileNavGroup(label, items) {
+    return `
+      <details class="mobile-nav-group">
+        <summary>
+          <span>${escapeHTML(label)}</span>
+          <span class="summary-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="mobile-nav-links">
+          ${items.map(([title, copy, href]) => `
+            <a href="${url(href)}">
+              <strong>${escapeHTML(title)}</strong>
+              <small>${escapeHTML(copy)}</small>
             </a>
           `).join("")}
         </div>
