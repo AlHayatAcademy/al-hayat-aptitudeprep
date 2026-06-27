@@ -1,28 +1,27 @@
 {
-  "package": "Al-Hayat Vocabulary Batch 02",
+  "release": "vocabulary-batch-03",
   "generatedOn": "2026-06-27",
-  "deploymentFiles": [
+  "commitMessage": "Add reviewed vocabulary batch 03",
+  "filesToAdd": [
+    "data/questions-vocabulary-batch-03.json"
+  ],
+  "filesToReplace": [
     "assets/js/data-loader.js",
     "data/question-bank-index.json",
-    "data/questions-vocabulary-batch-02.json",
     "data/vocabulary-bank.json",
     "data/vocabulary-curriculum.json",
     "data/vocabulary-release.json"
   ],
-  "preserveExistingFiles": [
-    "data/questions.json"
+  "filesToPreserve": [
+    "data/questions.json",
+    "data/questions-vocabulary-batch-02.json"
   ],
-  "release": {
+  "releaseCounts": {
     "newWords": 100,
-    "readyToLearnAfterUpload": 154,
-    "newQuestions": 173,
-    "expectedVocabularyQuestionsAfterUpload": 429,
-    "masterCurriculum": 3000
-  },
-  "reviewGates": {
-    "englishEditorialComplete": 100,
-    "originalExamplesReviewed": 100,
-    "urduHumanApproved": 0,
-    "pronunciationHumanApproved": 0
+    "readyWordsAfterRelease": 254,
+    "newMCQs": 173,
+    "projectedLiveVocabularyMCQs": 602,
+    "practiceSetSize": 10,
+    "projectedPracticeSets": 61
   }
 }

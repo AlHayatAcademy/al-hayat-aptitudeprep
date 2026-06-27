@@ -1,46 +1,32 @@
-# Al-Hayat Vocabulary Batch 02
+# Al-Hayat Vocabulary Batch 03
 
-Batch 02 adds 100 English-reviewed vocabulary records and 173 original MCQs without replacing the existing `data/questions.json` file.
+This package adds 100 English-reviewed vocabulary records and 173 original MCQs without replacing the base question file or Batch 02 question file.
 
-## Release totals
+## Upload
 
-- Ready-to-learn words: 154 (54 existing + 100 new)
-- New Batch 02 MCQs: 173
-- Expected vocabulary MCQs after upload: 429 (256 existing + 173 new)
-- Master curriculum: 3,000 words
+1. Extract this ZIP.
+2. Copy `assets` and `data` into the main `al-hayat-aptitudeprep` repository folder.
+3. Choose **Replace files** when prompted. The new Batch 03 question file will be added; the listed shared files will be updated.
+4. In GitHub Desktop, commit with: `Add reviewed vocabulary batch 03`
+5. Push to origin, wait for GitHub Pages to deploy, then hard-refresh the site.
 
-## Batch difficulty
+## Expected result
 
-- Foundation: 10 words
-- Intermediate: 35 words
-- Advanced: 40 words
-- Challenge: 15 words
+- 254 ready-to-learn vocabulary records
+- 602 vocabulary MCQs on the current live site after the indexed files merge
+- 61 ten-question practice sets; the final set contains 2 questions
+- 3,000 words remain in the master curriculum
 
-## New MCQs
+## Important preservation rule
 
-- Direct Synonym: 50
-- Meaning in Context: 60
-- Antonym: 40
-- Word Roots and Families: 23
+Do not delete or replace these existing files:
 
-## Upload with GitHub Desktop
+- `data/questions.json`
+- `data/questions-vocabulary-batch-02.json`
 
-1. Extract the ZIP.
-2. Open the `al-hayat-aptitudeprep` repository in GitHub Desktop.
-3. Choose **Repository > Show in Explorer**.
-4. Copy the extracted `assets` and `data` folders into the repository root.
-5. Choose **Replace the files in the destination** when asked.
-6. Confirm these files:
-   - `assets/js/data-loader.js`
-   - `data/question-bank-index.json`
-   - `data/questions-vocabulary-batch-02.json`
-   - `data/vocabulary-bank.json`
-   - `data/vocabulary-curriculum.json`
-   - `data/vocabulary-release.json`
-7. Confirm that `data/questions.json` is not deleted or replaced.
-8. Commit with: `Add reviewed vocabulary batch 02`
-9. Click **Push origin**.
+`data/question-bank-index.json` loads both existing files plus the new `questions-vocabulary-batch-03.json`.
 
-## Review policy
+## Review status
 
-Definitions, senses, synonyms, antonyms and original examples received English editorial review against checked Cambridge Dictionary reference pages and the existing curriculum sources. Urdu meanings remain editorial drafts, and pronunciation remains review-gated. US IPA is present for all 100 records; UK IPA is included only where separately verified. Browser speech remains available for UK and US playback.
+English senses, synonyms, antonyms, word-family links, and original examples were editorially reviewed. Urdu meanings and pronunciation approval remain review-gated; they are not represented as human-approved.
+

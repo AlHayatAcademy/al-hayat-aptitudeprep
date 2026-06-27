@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "files": [
     "questions.json",
-    "questions-vocabulary-batch-02.json"
+    "questions-vocabulary-batch-02.json",
+    "questions-vocabulary-batch-03.json"
   ]
 }

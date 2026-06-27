@@ -1,0 +1,1856 @@
+[
+  {
+    "word": "climate",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/climate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/climate",
+      "avl-rank:388",
+      "textbook-english-10:table-row-5",
+      "textbook-english-11:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "development",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/development",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/development",
+      "avl-rank:14",
+      "textbook-english-10:table-row-26"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "knowledge",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/knowledge",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/knowledge",
+      "avl-rank:66",
+      "textbook-english-12:table-row-15"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "support",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/support",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/support",
+      "avl-rank:67",
+      "textbook-english-11:table-row-20"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "management",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/management",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/management",
+      "avl-rank:123",
+      "textbook-english-11:table-row-17"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "concern",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/concern",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/concern",
+      "avl-rank:128",
+      "textbook-english-10:table-row-19"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "pattern",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/pattern",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/pattern",
+      "avl-rank:132",
+      "textbook-english-12:table-row-6"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "increase",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/increase",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/increase",
+      "avl-rank:75",
+      "textbook-english-11-old:FYOLD-VOC-039"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "determine",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/determine",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/determine",
+      "avl-rank:95",
+      "textbook-english-11-old:FYOLD-VOC-008"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "observation",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/observation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/observation",
+      "avl-rank:294",
+      "textbook-english-10:table-row-20"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "agriculture",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/agriculture",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/agriculture",
+      "avl-rank:642",
+      "textbook-english-11:table-row-4"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "leisure",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/leisure",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/leisure",
+      "avl-rank:1164",
+      "textbook-english-11-old:FYOLD-VOC-166"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "platform",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/platform",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/platform",
+      "textbook-english-10:table-row-22",
+      "textbook-english-11-old:FYOLD-VOC-108",
+      "textbook-english-12:table-row-12"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "commerce",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/commerce",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/commerce",
+      "textbook-english-10:table-row-5",
+      "textbook-english-11:table-row-16"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "emission",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/emission",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/emission",
+      "textbook-english-10:table-row-14",
+      "textbook-english-11:table-row-24"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "greenhouse",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/greenhouse",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/greenhouse",
+      "textbook-english-10:table-row-6",
+      "textbook-english-11:table-row-23"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "immense",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/immense",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/immense",
+      "textbook-english-11:table-row-13",
+      "textbook-english-12:table-row-24"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "logical",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/logical",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/logical",
+      "textbook-english-10:table-row-24",
+      "textbook-english-12:table-row-16"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "conjecture",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/conjecture",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/conjecture",
+      "avl-rank:2298",
+      "textbook-english-11-old:FYOLD-VOC-158"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "ancient",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/ancient",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/ancient",
+      "textbook-english-11-old:FYOLD-VOC-162",
+      "textbook-english-12:table-row-18"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "audience",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/audience",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/audience",
+      "textbook-english-11-old:FYOLD-VOC-160",
+      "textbook-english-12:table-row-20"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "delicate",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/delicate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/delicate",
+      "textbook-english-11-old:FYOLD-VOC-191",
+      "textbook-english-11:table-row-6"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "harness",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/harness",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/harness",
+      "textbook-english-09:vr-vocab-9e-053 ",
+      "textbook-english-11-old:FYOLD-VOC-188"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "market",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/market",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/market",
+      "textbook-english-11-old:FYOLD-VOC-186",
+      "textbook-english-12:table-row-10"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "absorb",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/absorb",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/absorb",
+      "textbook-english-11:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acquire",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acquire",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acquire",
+      "textbook-english-12:table-row-14"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adapt",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adapt",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adapt",
+      "textbook-english-10:table-row-10"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "amateur",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/amateur",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/amateur",
+      "textbook-english-10:table-row-26"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "anxious",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/anxious",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/anxious",
+      "textbook-english-12:table-row-5"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "avenue",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/avenue",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/avenue",
+      "textbook-english-11:table-row-15"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "average",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/average",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/average",
+      "textbook-english-11:table-row-24"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "cautious",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/cautious",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/cautious",
+      "textbook-english-11:table-row-13"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "clarify",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/clarify",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/clarify",
+      "textbook-english-12:table-row-23"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "conscious",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/conscious",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/conscious",
+      "textbook-english-12:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "consult",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/consult",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/consult",
+      "textbook-english-10:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "creative",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/creative",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/creative",
+      "textbook-english-10:table-row-16"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "decay",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/decay",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/decay",
+      "textbook-english-10:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "digital",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/digital",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/digital",
+      "textbook-english-12:table-row-7"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "dispute",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/dispute",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/dispute",
+      "textbook-english-12:table-row-10"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "divert",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/divert",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/divert",
+      "textbook-english-11:table-row-9"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "evolve",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/evolve",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/evolve",
+      "textbook-english-10:table-row-7"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "excerpt",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/excerpt",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/excerpt",
+      "textbook-english-11:table-row-23"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "focused",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/focused",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/focused",
+      "textbook-english-10:table-row-7"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "footprint",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/footprint",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/footprint",
+      "textbook-english-10:table-row-13"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "fossil",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/fossil",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/fossil",
+      "textbook-english-10:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "transport",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/transport",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/transport",
+      "awl-coxhead",
+      "textbook-english-10:table-row-18"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "classical",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/classical",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/classical",
+      "awl-coxhead",
+      "textbook-chips-modern-prose:table-row-5"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "clause",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/clause",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/clause",
+      "awl-coxhead",
+      "textbook-english-11:table-row-11"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "equipment",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/equipment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/equipment",
+      "awl-coxhead",
+      "textbook-english-11-old:FYOLD-VOC-170"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "inferior",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/inferior",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/inferior",
+      "avl-rank:1243",
+      "textbook-chips-modern-prose:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "quotation",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/quotation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/quotation",
+      "awl-coxhead",
+      "textbook-chips-modern-prose:table-row-17"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "holistic",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/holistic",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/holistic",
+      "avl-rank:1404",
+      "textbook-english-09:vr-vocab-9e-056 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "endowment",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/endowment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/endowment",
+      "avl-rank:1406",
+      "textbook-chips-modern-prose:table-row-10"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "melancholy",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/melancholy",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-4",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/melancholy",
+      "nmdcat-list-4:table-row-25",
+      "textbook-english-11-old:FYOLD-VOC-145"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "responsibility",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/responsibility",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/responsibility",
+      "textbook-english-10:table-row-10",
+      "textbook-english-11:table-row-2",
+      "textbook-english-12:table-row-2"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "opportunity",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/opportunity",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/opportunity",
+      "textbook-english-11-old:FYOLD-VOC-006",
+      "textbook-english-11:table-row-16",
+      "textbook-english-12:table-row-26"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "attentive",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/attentive",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-10",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/attentive",
+      "textbook-chips-modern-prose:table-row-7",
+      "textbook-english-10:table-row-10",
+      "textbook-english-11-old:FYOLD-VOC-137"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "curiosity",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/curiosity",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/curiosity",
+      "textbook-english-10:table-row-15",
+      "textbook-english-11-old:FYOLD-VOC-157",
+      "textbook-english-12:table-row-23"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "atmosphere",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/atmosphere",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/atmosphere",
+      "textbook-english-10:table-row-7",
+      "textbook-english-11:table-row-25"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "cohesion",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/cohesion",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/cohesion",
+      "textbook-english-09:vr-vocab-9e-020 ",
+      "textbook-english-10:table-row-2"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "collaboration",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/collaboration",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/collaboration",
+      "textbook-english-11:table-row-24",
+      "textbook-english-12:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "comprehension",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/comprehension",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/comprehension",
+      "textbook-english-11:table-row-26",
+      "textbook-english-12:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "deforestation",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/deforestation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/deforestation",
+      "textbook-english-10:table-row-13",
+      "textbook-english-11:table-row-5"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "industrial",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/industrial",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/industrial",
+      "textbook-english-10:table-row-8",
+      "textbook-english-11:table-row-2"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "mission",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/mission",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/mission",
+      "textbook-chips-modern-prose:table-row-9",
+      "textbook-english-11:table-row-20"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "narrative",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/narrative",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/narrative",
+      "textbook-english-11:table-row-18",
+      "textbook-english-12:table-row-26"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "purposeful",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/purposeful",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/purposeful",
+      "textbook-english-11:table-row-6",
+      "textbook-english-12:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "resilience",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/resilience",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/resilience",
+      "textbook-english-09:vr-vocab-9e-047 ",
+      "textbook-english-11:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "vivid",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/vivid",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/vivid",
+      "textbook-chips-modern-prose:table-row-25",
+      "textbook-english-10:table-row-18"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "expression",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/expression",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/expression",
+      "textbook-english-10:table-row-10",
+      "textbook-english-11-old:FYOLD-VOC-131"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "identity",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/identity",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/identity",
+      "textbook-english-11-old:FYOLD-VOC-070",
+      "textbook-english-11:table-row-23"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "nuance",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/nuance",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/nuance",
+      "textbook-english-09:vr-vocab-9e-023 ",
+      "textbook-english-11:table-row-5"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "reveal",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/reveal",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/reveal",
+      "textbook-chips-modern-prose:table-row-14",
+      "textbook-english-12:table-row-11"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "suspicion",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/suspicion",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/suspicion",
+      "textbook-chips-modern-prose:table-row-25",
+      "textbook-english-11-old:FYOLD-VOC-142"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "extraordinary",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/extraordinary",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/extraordinary",
+      "textbook-english-11-old:FYOLD-VOC-020",
+      "textbook-english-11:table-row-16"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "magnificent",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/magnificent",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/magnificent",
+      "textbook-english-09:vr-vocab-9e-072 ",
+      "textbook-english-11-old:FYOLD-VOC-069"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "reputation",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/reputation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/reputation",
+      "textbook-english-11-old:FYOLD-VOC-144",
+      "textbook-english-12:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "interconnect",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/interconnect",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/interconnect",
+      "avl-rank:2605",
+      "textbook-english-09:vr-vocab-9e-051 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accountable",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accountable",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accountable",
+      "textbook-english-10:table-row-9"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "addiction",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/addiction",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/addiction",
+      "textbook-english-10:table-row-4"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "admirable",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/admirable",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/admirable",
+      "textbook-english-09:vr-vocab-9e-039 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aspiration",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aspiration",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aspiration",
+      "textbook-english-09:vr-vocab-9e-048 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "assiduous",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/assiduous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/assiduous",
+      "textbook-chips-modern-prose:table-row-24"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "awareness",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/awareness",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/awareness",
+      "textbook-english-10:table-row-9"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "complacency",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/complacency",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/complacency",
+      "textbook-english-11:table-row-21"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "revolution",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/revolution",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/revolution",
+      "avl-rank:450",
+      "awl-coxhead",
+      "textbook-english-11:table-row-3"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "insight",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/insight",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/insight",
+      "avl-rank:495",
+      "awl-coxhead",
+      "textbook-english-11:table-row-13"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "nonetheless",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/nonetheless",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/nonetheless",
+      "avl-rank:667",
+      "awl-coxhead",
+      "textbook-english-11-old:FYOLD-VOC-113"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "discipline",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/discipline",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-chips-modern-prose",
+      "textbook-english-11",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/discipline",
+      "avl-rank:395",
+      "textbook-chips-modern-prose:table-row-2",
+      "textbook-english-11:table-row-11",
+      "textbook-english-12:table-row-5"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "prevailing",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/prevailing",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/prevailing",
+      "avl-rank:1154",
+      "textbook-chips-modern-prose:table-row-10"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "complicate",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/complicate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/complicate",
+      "avl-rank:1167",
+      "textbook-chips-modern-prose:table-row-6"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "personification",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/personification",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-10",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/personification",
+      "textbook-english-09:vr-vocab-9e-026 ",
+      "textbook-english-10:table-row-5",
+      "textbook-english-11:table-row-2"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "transformative",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/transformative",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/transformative",
+      "textbook-english-09:vr-vocab-9e-060 ",
+      "textbook-english-12:table-row-25"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "catastrophic",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/catastrophic",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/catastrophic",
+      "textbook-chips-modern-prose:table-row-13"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "illustrious",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/illustrious",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/illustrious",
+      "textbook-chips-modern-prose:table-row-18"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "inadequacy",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/inadequacy",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/inadequacy",
+      "textbook-chips-modern-prose:table-row-19"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "misinformation",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/misinformation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/misinformation",
+      "textbook-english-09:vr-vocab-9e-052 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "superficiality",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/superficiality",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/superficiality",
+      "textbook-english-09:vr-vocab-9e-091 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "insubordination",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/insubordination",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/insubordination",
+      "textbook-chips-modern-prose:table-row-22"
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "interdependence",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/interdependence",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/interdependence",
+      "textbook-english-09:vr-vocab-9e-050 "
+    ],
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  }
+]
