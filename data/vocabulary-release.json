@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "generatedOn": "2026-06-27",
   "curriculumTotal": 3000,
-  "availableLearningRecords": 54,
-  "queuedEditorialReview": 2946,
-  "englishReviewedRecords": 50,
+  "availableLearningRecords": 154,
+  "queuedEditorialReview": 2846,
+  "englishReviewedRecords": 150,
   "fullyApprovedRecords": 0,
   "difficultyTargets": {
     "Foundation": 300,
@@ -380,5 +380,13 @@
   },
   "publicationRule": "A learning record requires a verified English sense and an original, sense-matched example. Urdu and pronunciation remain visibly review-gated until human approval.",
   "curriculumFile": "vocabulary-curriculum.json",
-  "learningFile": "vocabulary-bank.json"
+  "learningFile": "vocabulary-bank.json",
+  "latestRelease": {
+    "id": "vocabulary-batch-02",
+    "wordsAdded": 100,
+    "availableAfterRelease": 154,
+    "englishReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  }
 }

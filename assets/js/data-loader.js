@@ -9,7 +9,7 @@
     skills: "skills.json",
     subjects: "subjects.json",
     topics: "topics.json",
-    questions: "questions.json",
+    questions: { index: "question-bank-index.json" },
     mocks: "mocks.json",
     resources: "resources.json",
     studyPlans: "study-plans.json",
@@ -73,9 +73,16 @@
     return response.json();
   }
 
+  async function loadDataEntry(entry) {
+    if (typeof entry === "string") return loadJSON(entry);
+    const index = await loadJSON(entry.index);
+    const collections = await Promise.all(index.files.map((file) => loadJSON(file)));
+    return collections.flat();
+  }
+
   async function loadAllData() {
     const entries = await Promise.all(
-      Object.entries(files).map(async ([key, file]) => [key, await loadJSON(file)])
+      Object.entries(files).map(async ([key, file]) => [key, await loadDataEntry(file)])
     );
     return Object.fromEntries(entries);
   }

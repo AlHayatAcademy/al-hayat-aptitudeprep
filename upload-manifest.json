@@ -1,0 +1,28 @@
+{
+  "package": "Al-Hayat Vocabulary Batch 02",
+  "generatedOn": "2026-06-27",
+  "deploymentFiles": [
+    "assets/js/data-loader.js",
+    "data/question-bank-index.json",
+    "data/questions-vocabulary-batch-02.json",
+    "data/vocabulary-bank.json",
+    "data/vocabulary-curriculum.json",
+    "data/vocabulary-release.json"
+  ],
+  "preserveExistingFiles": [
+    "data/questions.json"
+  ],
+  "release": {
+    "newWords": 100,
+    "readyToLearnAfterUpload": 154,
+    "newQuestions": 173,
+    "expectedVocabularyQuestionsAfterUpload": 429,
+    "masterCurriculum": 3000
+  },
+  "reviewGates": {
+    "englishEditorialComplete": 100,
+    "originalExamplesReviewed": 100,
+    "urduHumanApproved": 0,
+    "pronunciationHumanApproved": 0
+  }
+}

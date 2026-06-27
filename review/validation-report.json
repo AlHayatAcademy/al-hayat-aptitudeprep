@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "summary": {
+    "newWords": 100,
+    "liveWordsAfterRelease": 154,
+    "newQuestions": 173,
+    "assessedWords": 100,
+    "recordLevels": {
+      "Foundation": 10,
+      "Intermediate": 35,
+      "Advanced": 40,
+      "Challenge": 15
+    },
+    "questionTypes": {
+      "Direct Synonym": 50,
+      "Meaning in Context": 60,
+      "Antonym": 40,
+      "Word Family": 23
+    },
+    "questionDifficulty": {
+      "easy": 17,
+      "medium": 61,
+      "hard": 69,
+      "challenge": 26
+    },
+    "answerPositions": [
+      44,
+      43,
+      43,
+      43
+    ]
+  },
+  "checks": {
+    "exactly100NewRecords": true,
+    "noDuplicateNewWords": true,
+    "noExistingWordOverwritten": true,
+    "bankHas154UniqueWords": true,
+    "targetDifficultyMix": true,
+    "completeEnglishTeachingFields": true,
+    "originalExamplesUnique": true,
+    "examplesUseHeadwords": true,
+    "sourceTraceability": true,
+    "reviewGatesHonest": true,
+    "usPronunciationCoverage": true,
+    "curriculumStill3000": true,
+    "curriculumAvailability154": true,
+    "releaseCountsCorrect": true,
+    "exactly173Questions": true,
+    "noDuplicateQuestionIds": true,
+    "noExistingQuestionCollision": true,
+    "everyNewWordAssessed": true,
+    "questionTypeTargets": true,
+    "questionDifficultyTargets": true,
+    "balancedAnswerPositions": true,
+    "validFourOptionMCQs": true,
+    "explanationsComplete": true,
+    "scalableQuestionIndex": true
+  },
+  "errors": [],
+  "reviewGates": {
+    "englishEditorialComplete": 100,
+    "originalExamplesReviewed": 100,
+    "urduHumanApproved": 0,
+    "pronunciationHumanApproved": 0
+  }
+}
