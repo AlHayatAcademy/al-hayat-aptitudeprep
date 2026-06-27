@@ -5,7 +5,7 @@
     "level": "Challenge",
     "productionBatch": 5,
     "levelSlotInBatch": 15,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -36,11 +36,12 @@
       "nmdcat-list-1:table-row-2"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-abandoned",
@@ -1113,7 +1114,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 17,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -1143,11 +1144,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-accessible",
@@ -1699,7 +1701,7 @@
     "level": "Challenge",
     "productionBatch": 5,
     "levelSlotInBatch": 14,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -1729,11 +1731,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-accuracy",
@@ -3081,7 +3084,7 @@
     "level": "Challenge",
     "productionBatch": 3,
     "levelSlotInBatch": 2,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -3114,11 +3117,12 @@
       "nmdcat-list-1:table-row-26"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-adjectival",
@@ -4929,7 +4933,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 24,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -4960,11 +4964,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-alteration",
@@ -7397,7 +7402,7 @@
     "level": "Challenge",
     "productionBatch": 2,
     "levelSlotInBatch": 10,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -7430,11 +7435,12 @@
       "nmdcat-list-1:table-row-53"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-arcane",
@@ -9148,7 +9154,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 14,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -9178,11 +9184,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-attractiveness",
@@ -9478,7 +9485,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 30,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -9508,11 +9515,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-authority",
@@ -9710,7 +9718,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 12,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -9741,11 +9749,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-avarice",
@@ -14703,7 +14712,7 @@
     "level": "Foundation",
     "productionBatch": 2,
     "levelSlotInBatch": 7,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms"
@@ -14732,11 +14741,12 @@
       "textbook-english-12:table-row-19"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-ceremonial",
@@ -16994,7 +17004,7 @@
     "level": "Challenge",
     "productionBatch": 5,
     "levelSlotInBatch": 13,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -17025,11 +17035,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-collaborate",
@@ -17367,7 +17378,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 4,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -17397,11 +17408,12 @@
       "textbook-english-10:table-row-12"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-colonial",
@@ -17409,7 +17421,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 17,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -17434,11 +17446,12 @@
       "textbook-english-12:table-row-6"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-colossal",
@@ -17822,7 +17835,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 27,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -17853,11 +17866,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-commodious",
@@ -18769,7 +18783,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -18800,11 +18814,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-complementary",
@@ -19733,7 +19748,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 8,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -19764,11 +19779,12 @@
       "textbook-english-10:table-row-17"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-conclusion",
@@ -20270,7 +20286,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 25,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -20300,11 +20316,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-conflicting",
@@ -23342,7 +23359,7 @@
     "level": "Challenge",
     "productionBatch": 5,
     "levelSlotInBatch": 12,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "word-roots-families"
@@ -23371,11 +23388,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-conversion",
@@ -23654,7 +23672,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 8,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -23684,11 +23702,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-copious",
@@ -23877,7 +23896,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 7,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -23908,11 +23927,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-correspondingly",
@@ -25581,7 +25601,7 @@
     "level": "Intermediate",
     "productionBatch": 1,
     "levelSlotInBatch": 31,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -25611,11 +25631,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-database",
@@ -27391,7 +27412,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -27418,11 +27439,12 @@
       "textbook-english-12:table-row-13"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-denote",
@@ -27430,7 +27452,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 4,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -27461,11 +27483,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-denounce",
@@ -29560,7 +29583,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 8,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -29590,11 +29613,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-differing",
@@ -30016,7 +30040,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 31,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -30046,11 +30070,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-diminished",
@@ -30938,7 +30963,7 @@
     "level": "Challenge",
     "productionBatch": 3,
     "levelSlotInBatch": 15,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -30969,11 +30994,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-discuss",
@@ -31588,7 +31614,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 18,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -31619,11 +31645,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-disposal",
@@ -31671,7 +31698,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 23,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -31702,11 +31729,12 @@
       "textbook-chips-modern-prose:table-row-15"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-disposition",
@@ -32285,7 +32313,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 7,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -32316,11 +32344,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-distribute",
@@ -32649,7 +32678,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 26,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -32680,11 +32709,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-documentation",
@@ -32762,7 +32792,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 26,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -32792,11 +32822,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-domestic",
@@ -32804,7 +32835,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 28,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -32835,11 +32866,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-domesticated",
@@ -33638,7 +33670,7 @@
     "level": "Intermediate",
     "productionBatch": 1,
     "levelSlotInBatch": 32,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -33669,11 +33701,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-economics",
@@ -34827,7 +34860,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 24,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -34858,11 +34891,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-emission",
@@ -35421,7 +35455,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -35452,11 +35486,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-enabling",
@@ -35606,7 +35641,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 5,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -35637,11 +35672,12 @@
       "textbook-english-10:table-row-12"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-encroach",
@@ -36013,7 +36049,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 4,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -36044,11 +36080,12 @@
       "textbook-english-10:table-row-8"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-engineer",
@@ -37220,7 +37257,7 @@
     "level": "Foundation",
     "productionBatch": 5,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -37250,11 +37287,12 @@
       "textbook-english-11:table-row-14"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-equation",
@@ -37262,7 +37300,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 23,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -37292,11 +37330,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-equipment",
@@ -38000,7 +38039,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 21,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -38031,11 +38070,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-ethnically",
@@ -38699,7 +38739,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 38,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -38730,11 +38770,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-exceptional",
@@ -38884,7 +38925,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 27,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -38915,11 +38956,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-exclusionary",
@@ -39603,7 +39645,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 10,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -39634,11 +39676,12 @@
       "textbook-english-11:table-row-17"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-experimentation",
@@ -39679,7 +39722,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 22,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -39710,11 +39753,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-explanation",
@@ -39876,7 +39920,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 2,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -39902,11 +39946,12 @@
       "textbook-english-12:table-row-22"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-explore",
@@ -39981,7 +40026,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -40012,11 +40057,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-exposure",
@@ -44284,7 +44330,7 @@
     "level": "Advanced",
     "productionBatch": 4,
     "levelSlotInBatch": 24,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms"
@@ -44311,11 +44357,12 @@
       "textbook-english-12:table-row-7"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-frightening",
@@ -45334,7 +45381,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 37,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -45365,11 +45412,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-generation",
@@ -45945,7 +45993,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 10,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -45976,11 +46024,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-government",
@@ -49692,7 +49741,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 13,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -49723,11 +49772,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-imagery",
@@ -52817,7 +52867,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 25,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -52848,11 +52898,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-indicate",
@@ -54977,7 +55028,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 37,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -55008,11 +55059,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-inquiry",
@@ -55551,7 +55603,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 4,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -55582,11 +55634,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-instruction",
@@ -55710,7 +55763,7 @@
     "level": "Challenge",
     "productionBatch": 3,
     "levelSlotInBatch": 3,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -55741,11 +55794,12 @@
       "textbook-chips-modern-prose:table-row-11"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-insular",
@@ -56793,7 +56847,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 23,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -56824,11 +56878,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-international",
@@ -58573,7 +58628,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 35,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -58604,11 +58659,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-journey",
@@ -59257,7 +59313,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 34,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -59288,11 +59344,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-labeled",
@@ -59438,7 +59495,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 25,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -59468,11 +59525,12 @@
       "textbook-english-11:table-row-12"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-lacerate",
@@ -60786,7 +60844,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 15,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -60817,11 +60875,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-linkage",
@@ -61138,7 +61197,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 30,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -61169,11 +61228,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-logical",
@@ -61918,7 +61978,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 24,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -61948,11 +62008,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-major",
@@ -64010,7 +64071,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 36,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -64041,11 +64102,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-mentality",
@@ -65000,7 +65062,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 16,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -65030,11 +65092,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-miraculous",
@@ -70850,7 +70913,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 17,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -70880,11 +70943,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-outreach",
@@ -72095,7 +72159,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 34,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -72125,11 +72189,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-participle",
@@ -72137,7 +72202,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 6,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms"
@@ -72162,11 +72227,12 @@
       "textbook-english-12:table-row-11"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-particularly",
@@ -72174,7 +72240,7 @@
     "level": "Advanced",
     "productionBatch": 5,
     "levelSlotInBatch": 7,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -72200,11 +72266,12 @@
       "textbook-english-12:table-row-19"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-partnership",
@@ -73166,7 +73233,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 4,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -73196,11 +73263,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-periodic",
@@ -74006,7 +74074,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 21,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -74036,11 +74104,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-physical",
@@ -75335,7 +75404,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 21,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -75366,11 +75435,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-positivist",
@@ -76233,7 +76303,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 29,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -76264,11 +76334,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-predictability",
@@ -77392,7 +77463,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 33,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -77423,11 +77494,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-primary",
@@ -77547,7 +77619,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 19,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -77578,11 +77650,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-principality",
@@ -77728,7 +77801,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 28,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -77759,11 +77832,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-prioritising",
@@ -78189,7 +78263,7 @@
     "level": "Intermediate",
     "productionBatch": 1,
     "levelSlotInBatch": 30,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -78219,11 +78293,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-processing",
@@ -79086,7 +79161,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 9,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -79116,11 +79191,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-proliferation",
@@ -79232,7 +79308,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 18,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -79263,11 +79339,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-promotion",
@@ -80268,7 +80345,7 @@
     "level": "Challenge",
     "productionBatch": 7,
     "levelSlotInBatch": 6,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -80299,11 +80376,12 @@
       "nmdcat-list-4:table-row-92"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-proximity",
@@ -80532,7 +80610,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 31,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -80562,11 +80640,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-publish",
@@ -80574,7 +80653,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 7,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -80605,11 +80684,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-published",
@@ -82082,7 +82162,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 5,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -82113,11 +82193,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-rapid",
@@ -83604,7 +83685,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 9,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -83634,11 +83715,12 @@
       "textbook-english-11:table-row-24"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-refine",
@@ -84877,7 +84959,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 11,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -84907,11 +84989,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-relinquish",
@@ -85918,7 +86001,7 @@
     "level": "Intermediate",
     "productionBatch": 1,
     "levelSlotInBatch": 33,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -85949,11 +86032,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-requirement",
@@ -87904,7 +87988,7 @@
     "level": "Intermediate",
     "productionBatch": 1,
     "levelSlotInBatch": 34,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -87934,11 +88018,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-role-play",
@@ -89252,7 +89337,7 @@
     "level": "Intermediate",
     "productionBatch": 3,
     "levelSlotInBatch": 30,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -89282,11 +89367,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-scholarly",
@@ -89818,7 +89904,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 10,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -89848,11 +89934,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-sector",
@@ -91539,7 +91626,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 9,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -91570,11 +91657,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-simulated",
@@ -92659,7 +92747,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 5,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -92689,11 +92777,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-southeastern",
@@ -94204,7 +94293,7 @@
     "level": "Advanced",
     "productionBatch": 2,
     "levelSlotInBatch": 15,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -94234,11 +94323,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-staunch",
@@ -94843,7 +94933,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 11,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -94874,11 +94964,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-stricture",
@@ -96381,7 +96472,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 15,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -96412,11 +96503,12 @@
       "textbook-english-11-old:FYOLD-VOC-085"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-superior",
@@ -97061,7 +97153,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 6,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -97092,11 +97184,12 @@
       "nmdcat-list-5:table-row-50"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-suspect",
@@ -98284,7 +98377,7 @@
     "level": "Intermediate",
     "productionBatch": 2,
     "levelSlotInBatch": 32,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -98314,11 +98407,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-team",
@@ -98890,7 +98984,7 @@
     "level": "Foundation",
     "productionBatch": 2,
     "levelSlotInBatch": 8,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -98920,11 +99014,12 @@
       "textbook-english-11:table-row-5"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-termination",
@@ -99482,7 +99577,7 @@
     "level": "Foundation",
     "productionBatch": 3,
     "levelSlotInBatch": 1,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms"
@@ -99511,11 +99606,12 @@
       "textbook-english-10:table-row-6"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-thesaurus",
@@ -100071,7 +100167,7 @@
     "level": "Foundation",
     "productionBatch": 5,
     "levelSlotInBatch": 2,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -100101,11 +100197,12 @@
       "textbook-english-12:table-row-3"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-tone",
@@ -103265,7 +103362,7 @@
     "level": "Advanced",
     "productionBatch": 3,
     "levelSlotInBatch": 20,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -103296,11 +103393,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-unity",
@@ -104934,7 +105032,7 @@
     "level": "Intermediate",
     "productionBatch": 4,
     "levelSlotInBatch": 3,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "direct-synonyms",
@@ -104965,11 +105063,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-variant",
@@ -107431,7 +107530,7 @@
     "level": "Challenge",
     "productionBatch": 6,
     "levelSlotInBatch": 9,
-    "learningAvailability": "queued-editorial-review",
+    "learningAvailability": "available-review-gated",
     "plannedQuestionTypes": [
       "synonyms-in-context",
       "word-roots-families"
@@ -107460,11 +107559,12 @@
       "awl-coxhead"
     ],
     "releaseGates": {
-      "englishSenseVerified": false,
-      "originalExampleVerified": false,
+      "englishSenseVerified": true,
+      "originalExampleVerified": true,
       "urduHumanApproved": false,
       "pronunciationHumanApproved": false
-    }
+    },
+    "releaseBatch": 5
   },
   {
     "id": "vocab-whiff",

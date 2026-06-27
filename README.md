@@ -1,42 +1,41 @@
-# Al-Hayat Vocabulary Batch 04
+# Al-Hayat Vocabulary Batch 05
 
-This release adds 100 English-reviewed learning records and 173 original MCQs. It preserves every question from the base bank and Batches 02–03.
+This release adds 100 reviewed learning records and 173 original MCQs while preserving the base question bank and Batches 02–04.
 
 ## Upload through GitHub Desktop
 
 1. Extract this ZIP.
 2. Copy the extracted `assets` and `data` folders into the main `al-hayat-aptitudeprep` repository folder.
-3. Choose **Replace files** when prompted. The Batch 04 question file will be added; the shared vocabulary and index files will be updated.
-4. Commit with: `Add reviewed vocabulary batch 04`
-5. Push to origin, wait for GitHub Pages to deploy, and hard-refresh the website.
+3. Choose **Replace files** when prompted.
+4. Commit with: `Add reviewed vocabulary batch 05`
+5. Push, wait for GitHub Pages deployment, and hard-refresh the website.
 
 ## Expected live result
 
-- 354 ready-to-learn vocabulary records
-- Approximately 775 vocabulary MCQs after all indexed files merge on the current live site
-- 78 ten-question sets; the final set contains 5 questions
+- 454 ready-to-learn vocabulary records
+- Approximately 948 vocabulary MCQs after all indexed files merge on the current live site
+- 95 ten-question sets; the final set contains 8 questions
 - 3,000 words remain in the master curriculum
 
-## Content model
+## Content quality
 
-- One clearly defined tested sense per word
-- Original, meaningful exemplar sentence in every learning record
-- Exemplar sentence repeated in MCQ explanations for situated learning
-- 16 textbook-informed examples with exact textbook source IDs
-- Textbook-informed sentences are newly written and sense-matched, not copied verbatim
-- Synonyms, defensible antonyms, word families, collocations, usage notes, Urdu support, and IPA
+- 100 unique, meaningful exemplar sentences
+- Exemplar sentence retained in every answer explanation
+- 21 textbook-informed examples with exact source IDs
+- Textbook-informed sentences are original, sense-matched adaptations, not copied text
+- Complete meanings, synonyms, defensible antonyms, word families, collocations, usage notes, Urdu support, and IPA
+- Exact 10% Foundation, 35% Intermediate, 40% Advanced, and 15% Challenge mix
 
 ## Preserve these existing files
-
-Do not delete or replace:
 
 - `data/questions.json`
 - `data/questions-vocabulary-batch-02.json`
 - `data/questions-vocabulary-batch-03.json`
+- `data/questions-vocabulary-batch-04.json`
 
-The updated `data/question-bank-index.json` merges all earlier files with `questions-vocabulary-batch-04.json`.
+The updated question index adds Batch 05 without replacing earlier question files.
 
 ## Review status
 
-English meanings, tested senses, examples, synonyms, antonyms, and question answers were editorially checked. Urdu meanings and pronunciation approval remain review-gated and are not represented as human-approved.
+English meanings, examples, tested senses, options, and answers were editorially checked. Urdu meanings and pronunciation approval remain review-gated and are not represented as human-approved.
 
