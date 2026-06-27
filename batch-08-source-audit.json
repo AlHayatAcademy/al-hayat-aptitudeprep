@@ -1,0 +1,2244 @@
+[
+  {
+    "word": "absence",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/absence",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/absence",
+      "avl-rank:469"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acceptance",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acceptance",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acceptance",
+      "avl-rank:608"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "account",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/account",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/account",
+      "avl-rank:335"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "act",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/act",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/act",
+      "avl-rank:139"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "active",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/active",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/active",
+      "avl-rank:270"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "activity",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/activity",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/activity",
+      "avl-rank:24"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "actual",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/actual",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/actual",
+      "avl-rank:334"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adaptive",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adaptive",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adaptive",
+      "avl-rank:1093"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "additional",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/additional",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/additional",
+      "avl-rank:241"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adopt",
+    "level": "Foundation",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adopt",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adopt",
+      "avl-rank:322"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abbreviate",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abbreviate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abbreviate",
+      "avl-rank:2926"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accepted",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accepted",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accepted",
+      "avl-rank:1161"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accursed",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accursed",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accursed",
+      "textbook-english-11-old:FYOLD-VOC-163"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acrobat",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acrobat",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acrobat",
+      "textbook-english-11-old:FYOLD-VOC-079"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "activate",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/activate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/activate",
+      "avl-rank:1192"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "activism",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/activism",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/activism",
+      "avl-rank:1331"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adequately",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adequately",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adequately",
+      "avl-rank:1002"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adherent",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adherent",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adherent",
+      "avl-rank:1811"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adulthood",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adulthood",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adulthood",
+      "avl-rank:1310"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "advisor",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/advisor",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/advisor",
+      "avl-rank:1176"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aforementioned",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aforementioned",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aforementioned",
+      "avl-rank:1792"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aggressor",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aggressor",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aggressor",
+      "avl-rank:2204"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aging",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aging",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aging",
+      "avl-rank:1148"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "agricultural",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/agricultural",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/agricultural",
+      "avl-rank:504"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "alfalfa",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/alfalfa",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/alfalfa",
+      "textbook-english-11-old:FYOLD-VOC-139"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "analogue",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/analogue",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/analogue",
+      "avl-rank:2341"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "append",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/append",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/append",
+      "avl-rank:2696"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appetite",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appetite",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appetite",
+      "textbook-english-11-old:FYOLD-VOC-197"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appropriately",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appropriately",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appropriately",
+      "avl-rank:1188"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appropriation",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appropriation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appropriation",
+      "avl-rank:1191"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "archive",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/archive",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/archive",
+      "avl-rank:2561"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "area",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/area",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/area",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "arguably",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/arguably",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/arguably",
+      "avl-rank:1307"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "associative",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/associative",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/associative",
+      "avl-rank:2556"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "assumed",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/assumed",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/assumed",
+      "avl-rank:2296"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "asymmetry",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/asymmetry",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/asymmetry",
+      "avl-rank:1828"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "attractiveness",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/attractiveness",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/attractiveness",
+      "avl-rank:1810"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "avail",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/avail",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/avail",
+      "avl-rank:2649"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "ax",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/ax",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/ax",
+      "textbook-english-11:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "basin",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/basin",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-10"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/basin",
+      "textbook-english-10:table-row-17"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-10"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "basket",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/basket",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-12"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/basket",
+      "textbook-english-12:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-12"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "bead",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/bead",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/bead",
+      "textbook-english-11:table-row-11"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "believe",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/believe",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/believe",
+      "textbook-english-11-old:FYOLD-VOC-077"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "believed",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/believed",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/believed",
+      "textbook-english-11-old:FYOLD-VOC-046"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "beneath",
+    "level": "Intermediate",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/beneath",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/beneath",
+      "textbook-english-11-old:FYOLD-VOC-196"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abandoned",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abandoned",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abandoned",
+      "textbook-english-11-old:FYOLD-VOC-178"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abnegation",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abnegation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abnegation",
+      "nmdcat-list-1:table-row-6"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abominate",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abominate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abominate",
+      "nmdcat-list-1:table-row-7"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abstract",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abstract",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abstract",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "academician",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/academician",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/academician",
+      "avl-rank:2651"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accelerating",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accelerating",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accelerating",
+      "avl-rank:2258"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accession",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accession",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accession",
+      "nmdcat-list-1:table-row-15"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accompany",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accompany",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accompany",
+      "textbook-english-11-old:FYOLD-VOC-140"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accomplish",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accomplish",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accomplish",
+      "nmdcat-list-1:table-row-17"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accredited",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accredited",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accredited",
+      "nmdcat-list-1:table-row-18"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acknowledge",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acknowledge",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acknowledge",
+      "nmdcat-list-1:table-row-20"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acknowledged",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acknowledged",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acknowledged",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acquaintance",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acquaintance",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acquaintance",
+      "nmdcat-list-1:table-row-21"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "addicted",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/addicted",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/addicted",
+      "nmdcat-list-1:table-row-25"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adjourn",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adjourn",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adjourn",
+      "nmdcat-list-1:table-row-27"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adjustment",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adjustment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adjustment",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "administration",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/administration",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/administration",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adoration",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adoration",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adoration",
+      "nmdcat-list-1:table-row-28"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adulterate",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adulterate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adulterate",
+      "nmdcat-list-1:table-row-29"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "affluent",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/affluent",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/affluent",
+      "nmdcat-list-1:table-row-31"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aid",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aid",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aid",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "amendment",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/amendment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/amendment",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "analytically",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/analytically",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/analytically",
+      "avl-rank:2609"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "angleworm",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/angleworm",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/angleworm",
+      "textbook-english-11:table-row-6"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "anguish",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/anguish",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/anguish",
+      "nmdcat-list-1:table-row-40"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "annihilate",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/annihilate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/annihilate",
+      "nmdcat-list-1:table-row-41"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "announcement",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/announcement",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/announcement",
+      "textbook-english-11-old:FYOLD-VOC-024"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "annual",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/annual",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/annual",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "anticipate",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/anticipate",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/anticipate",
+      "nmdcat-list-1:table-row-43"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "antique",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/antique",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/antique",
+      "nmdcat-list-1:table-row-45"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "antithesis",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/antithesis",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/antithesis",
+      "nmdcat-list-1:table-row-46"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appearance",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appearance",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appearance",
+      "textbook-english-11-old:FYOLD-VOC-161"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "applaud",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/applaud",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/applaud",
+      "nmdcat-list-1:table-row-48"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "applauded",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/applauded",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/applauded",
+      "textbook-english-11-old:FYOLD-VOC-177"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appointed",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appointed",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-english-11-old"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appointed",
+      "textbook-english-11-old:FYOLD-VOC-138"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-english-11-old"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "arbitrarily",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/arbitrarily",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/arbitrarily",
+      "avl-rank:2321"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "articulated",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/articulated",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/articulated",
+      "avl-rank:2278"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "ascendancy",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/ascendancy",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/ascendancy",
+      "nmdcat-list-1:table-row-57"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "assessment",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/assessment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/assessment",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "assigned",
+    "level": "Advanced",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/assigned",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/assigned",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "abandonment",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/abandonment",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose",
+      "textbook-english-09"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/abandonment",
+      "textbook-chips-modern-prose:table-row-21",
+      "textbook-english-09:vr-vocab-9e-015 "
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose",
+        "textbook-english-09"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "aboriginal",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/aboriginal",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/aboriginal",
+      "nmdcat-list-1:table-row-8"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accommodation",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accommodation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accommodation",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "accompanied",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/accompanied",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/accompanied",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acquiesce",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acquiesce",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "editorial-advanced-verbal-gap-fill"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acquiesce"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "acrimony",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/acrimony",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "editorial-advanced-verbal-gap-fill"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/acrimony"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "adventurously",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/adventurously",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "textbook-chips-modern-prose"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/adventurously",
+      "textbook-chips-modern-prose:table-row-22"
+    ],
+    "exampleMetadata": {
+      "type": "textbook-informed-original",
+      "sourceIds": [
+        "textbook-chips-modern-prose"
+      ],
+      "note": "Original, sense-matched sentence informed by the listed textbook vocabulary context; not copied verbatim."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "altercation",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/altercation",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/altercation",
+      "nmdcat-list-1:table-row-36"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "anachronistic",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/anachronistic",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "editorial-advanced-verbal-gap-fill"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/anachronistic"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "analogous",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/analogous",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/analogous",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "antagonistic",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/antagonistic",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "nmdcat-list-1"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/antagonistic",
+      "avl-rank:2225",
+      "nmdcat-list-1:table-row-42"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "anticipated",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/anticipated",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/anticipated",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "apocryphal",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/apocryphal",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "editorial-advanced-verbal-gap-fill"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/apocryphal"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appeasement",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appeasement",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "editorial-advanced-verbal-gap-fill"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appeasement"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  },
+  {
+    "word": "appendix",
+    "level": "Challenge",
+    "lexicalReference": "https://dictionary.cambridge.org/dictionary/english/appendix",
+    "sourceIds": [
+      "cambridge-dictionary",
+      "avl-gardner-davies-selection-signal",
+      "awl-coxhead"
+    ],
+    "sourceLocators": [
+      "https://dictionary.cambridge.org/dictionary/english/appendix",
+      "avl-rank:1319",
+      "awl-coxhead"
+    ],
+    "exampleMetadata": {
+      "type": "original-editorial",
+      "sourceIds": [],
+      "note": "Original, sense-matched editorial sentence written for aptitude preparation."
+    },
+    "englishSenseReviewed": true,
+    "originalExampleReviewed": true,
+    "urduHumanApproved": false,
+    "pronunciationHumanApproved": false
+  }
+]
