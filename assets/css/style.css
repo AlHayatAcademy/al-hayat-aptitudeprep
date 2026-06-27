@@ -2115,3 +2115,126 @@ th {
 .remedial-homework-card {
   border-top: 4px solid var(--green);
 }
+
+/* Practice pagination and quiz-mode upgrade */
+.practice-main-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.practice-mode-panel,
+.practice-pagination {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.practice-mode-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.practice-mode-panel h2,
+.practice-mode-panel p,
+.practice-pagination p {
+  margin: 0;
+}
+
+.segmented-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  border: 1px solid #cfe0f2;
+  border-radius: 999px;
+  background: #f4f8fd;
+  padding: 0.25rem;
+}
+
+.segment {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0.55rem 0.85rem;
+}
+
+.segment.active {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 8px 18px rgba(18, 93, 173, 0.18);
+}
+
+.practice-pagination {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.practice-pagination.bottom {
+  margin-top: 0.35rem;
+}
+
+.compact-pages {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.page-number {
+  min-width: 2.15rem;
+  border: 1px solid #c9d8e8;
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0.45rem 0.6rem;
+}
+
+.page-number.active {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: white;
+}
+
+.page-ellipsis {
+  color: var(--muted);
+  font-weight: 900;
+  padding: 0.35rem;
+}
+
+.quiz-pagination .pagination-bar {
+  justify-content: center;
+}
+
+.quiz-inline-actions {
+  justify-content: flex-end;
+}
+
+@media (max-width: 780px) {
+  .practice-mode-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .segmented-control {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .segment {
+    flex: 1 1 10rem;
+  }
+
+  .compact-pages .btn,
+  .compact-pages .page-number {
+    flex: 1 1 auto;
+  }
+}
