@@ -1,27 +1,27 @@
-# Al-Hayat Vocabulary Batch 08
+# Al-Hayat Vocabulary Batch 09
 
-This release adds 100 reviewed learning records and 173 original MCQs while preserving the base question bank and Batches 02-07.
+This release adds 100 reviewed learning records and 173 original MCQs while preserving the base question bank and Batches 02-08.
 
 ## Upload through GitHub Desktop
 
 1. Extract this ZIP.
 2. Copy the extracted `assets` and `data` folders into the main `al-hayat-aptitudeprep` repository folder.
 3. Choose **Replace files** when prompted.
-4. Commit with: `Add reviewed vocabulary batch 08`
+4. Commit with: `Add reviewed vocabulary batch 09`
 5. Push, wait for GitHub Pages deployment, and hard-refresh the website.
 
 ## Expected live result
 
-- 754 ready-to-learn vocabulary records
-- Approximately 1,467 vocabulary MCQs after all indexed files merge on the current live site
-- 147 ten-question sets; the final set contains 7 questions
+- 854 ready-to-learn vocabulary records
+- Approximately 1,640 vocabulary MCQs after all indexed files merge on the current live site
+- 164 complete ten-question sets
 - 3,000 words remain in the master curriculum
 
 ## Content quality
 
 - 100 unique, meaningful exemplar sentences
 - Exemplar sentence retained in every answer explanation
-- 20 textbook-informed examples with exact source IDs
+- 24 textbook-informed examples with exact source IDs
 - All remaining examples are original aptitude-preparation sentences
 - Textbook-informed sentences are original, sense-matched adaptations, not copied text
 - Complete meanings, synonyms, defensible antonyms, word families, collocations, usage notes, Urdu support, and IPA
@@ -37,8 +37,9 @@ This release adds 100 reviewed learning records and 173 original MCQs while pres
 - `data/questions-vocabulary-batch-05.json`
 - `data/questions-vocabulary-batch-06.json`
 - `data/questions-vocabulary-batch-07.json`
+- `data/questions-vocabulary-batch-08.json`
 
-The updated question index adds Batch 08 without replacing earlier question files.
+The updated question index adds Batch 09 without replacing earlier question files.
 
 ## Review status
 
