@@ -24,7 +24,7 @@
         <div>
           <p class="eyebrow">Adaptive Vocabulary Trainer</p>
           <h2 id="vocabularyTrainerTitle">Recall, Apply, Review</h2>
-          <p>Retrieve the answer before revealing it. Ratings schedule the next review in this browser.</p>
+          <p>Retrieve the answer before revealing it. Ratings schedule the next review in this browser. ${items.length.toLocaleString()} reviewed records are available from the ${Number(options.curriculumTotal || items.length).toLocaleString()}-word curriculum.</p>
         </div>
         <div class="trainer-launch-actions">
           <button class="btn primary" type="button" data-trainer-start="daily">Start Daily Session</button>

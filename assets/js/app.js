@@ -1409,6 +1409,8 @@
   }
 
   function renderVocabularyBank(data) {
+    const release = data.vocabularyRelease || {};
+    const curriculumTotal = release.curriculumTotal || data.vocabularyBank.length;
     const levels = [...new Set(data.vocabularyBank.map((item) => item.level))].sort();
     const params = new URLSearchParams(window.location.search);
     const connectedTestIds = [...new Set(data.vocabularyBank.flatMap((item) => item.connectedTestIds || []))];
@@ -1420,7 +1422,7 @@
       pageSize: 18
     };
     app.innerHTML = `
-      ${pageHero("Vocabulary Bank", "Exam Words With Context", "Study meanings, synonyms, antonyms and example sentences connected to target tests.")}
+      ${pageHero("Vocabulary Bank", "Exam Words With Context", `${data.vocabularyBank.length} reviewed learning records are available within a quality-gated ${curriculumTotal.toLocaleString()}-word curriculum.`)}
       <section id="vocabularyTrainer" class="vocabulary-trainer-mount"></section>
       <section class="toolbar-panel vocabulary-toolbar" aria-label="Vocabulary filters">
         <label>Level
@@ -1440,7 +1442,11 @@
         </label>
       </section>
       <section class="vocabulary-summary" aria-live="polite">
-        <p id="vocabResultCount"></p>
+        <div>
+          <p id="vocabResultCount"></p>
+          <p class="curriculum-progress-label"><strong>${data.vocabularyBank.length.toLocaleString()}</strong> available now • <strong>${curriculumTotal.toLocaleString()}</strong> selected curriculum words</p>
+          <progress class="curriculum-progress" max="${curriculumTotal}" value="${data.vocabularyBank.length}">${data.vocabularyBank.length} of ${curriculumTotal}</progress>
+        </div>
         <p class="hint">Urdu and pronunciation fields remain review-gated until specialist approval.</p>
       </section>
       <section id="vocabResults" class="card-grid vocabulary-grid"></section>
@@ -1452,7 +1458,8 @@
     const searchInput = app.querySelector("#vocabSearch");
     searchInput.value = state.query;
     window.AHVocabularyTrainer?.init(data.vocabularyBank, app.querySelector("#vocabularyTrainer"), {
-      autoStart: params.get("mode") === "learn"
+      autoStart: params.get("mode") === "learn",
+      curriculumTotal
     });
 
     function filteredVocabulary() {
@@ -3611,6 +3618,7 @@
     const tests = skill.connectedTestIds.map((id) => findName(data.tests, id)).join(", ");
     const publishedQuestionCount = data.questions.filter((item) => item.skillId === skill.id && item.status === "published").length;
     const vocabularyCount = skill.id === "vocabulary" ? data.vocabularyBank.length : 0;
+    const vocabularyTarget = data.vocabularyRelease?.curriculumTotal || vocabularyCount;
     const firstTopic = skill.topicIds?.[0] || "";
     const topicLink = firstTopic ? `topic-study.html?topic=${firstTopic}` : `practice.html?skill=${skill.id}`;
     const firstTest = skill.connectedTestIds?.[0] || "";
@@ -3621,7 +3629,7 @@
         <h2>${escapeHTML(skill.name)}</h2>
         <p>${escapeHTML(skill.description)}</p>
         <p class="connected-line">Connected tests: ${escapeHTML(tests)}</p>
-        ${skill.id === "vocabulary" ? `<p class="skill-content-count"><strong>${vocabularyCount}</strong> study words • <strong>${publishedQuestionCount}</strong> published MCQs</p>` : ""}
+        ${skill.id === "vocabulary" ? `<p class="skill-content-count"><strong>${vocabularyCount}</strong> reviewed study words • <strong>${vocabularyTarget.toLocaleString()}</strong>-word curriculum • <strong>${publishedQuestionCount}</strong> published MCQs</p>` : ""}
         <div class="tag-row action-tags">
           ${skill.practiceModes.map((mode) => `<a href="${url(resolvePracticeModeLink(mode, skill, topicLink, mockLink))}">${escapeHTML(mode)}</a>`).join("")}
         </div>

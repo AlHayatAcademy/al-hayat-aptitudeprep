@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-06-27",
+  "curriculumTotal": 3000,
+  "availableLearningRecords": 54,
+  "queuedEditorialReview": 2946,
+  "englishReviewedRecords": 50,
+  "fullyApprovedRecords": 0,
+  "difficultyTargets": {
+    "Foundation": 300,
+    "Intermediate": 1050,
+    "Advanced": 1200,
+    "Challenge": 450
+  },
+  "releaseModel": {
+    "batchCount": 30,
+    "wordsPerBatch": 100,
+    "batches": [
+      {
+        "batch": 1,
+        "selected": 100,
+        "available": 51,
+        "queued": 49,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 2,
+        "selected": 100,
+        "available": 3,
+        "queued": 97,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 3,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 4,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 5,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 6,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 7,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 8,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 9,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 10,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 11,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 12,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 13,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 14,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 15,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 16,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 17,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 18,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 19,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 20,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 21,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 22,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 23,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 24,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 25,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 26,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 27,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 28,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 29,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      },
+      {
+        "batch": 30,
+        "selected": 100,
+        "available": 0,
+        "queued": 100,
+        "levelTargets": {
+          "Foundation": 10,
+          "Intermediate": 35,
+          "Advanced": 40,
+          "Challenge": 15
+        }
+      }
+    ]
+  },
+  "publicationRule": "A learning record requires a verified English sense and an original, sense-matched example. Urdu and pronunciation remain visibly review-gated until human approval.",
+  "curriculumFile": "vocabulary-curriculum.json",
+  "learningFile": "vocabulary-bank.json"
+}

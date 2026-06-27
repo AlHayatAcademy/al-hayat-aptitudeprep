@@ -1,4 +1,4 @@
-# Al-Hayat Vocabulary Learning System
+# Al-Hayat 3,000-Word Vocabulary Learning System
 
 This package contains complete replacement files using their repository paths.
 
@@ -9,13 +9,16 @@ This package contains complete replacement files using their repository paths.
 3. Choose **Repository > Show in Explorer**.
 4. Copy the extracted `assets` and `data` folders into the repository root.
 5. Choose **Replace the files in the destination**.
-6. Return to GitHub Desktop and confirm these seven changed files:
+6. Return to GitHub Desktop and confirm these ten changed files:
    - `assets/css/style.css`
+   - `assets/js/data-loader.js`
    - `assets/js/app.js`
    - `assets/js/practice-engine.js`
    - `assets/js/search-engine.js`
    - `assets/js/vocabulary-trainer.js`
    - `data/vocabulary-bank.json`
+   - `data/vocabulary-curriculum.json`
+   - `data/vocabulary-release.json`
    - `vocabulary-bank.html`
 7. Commit with: `Add adaptive vocabulary learning system`
 8. Click **Push origin**.
@@ -33,5 +36,8 @@ This package contains complete replacement files using their repository paths.
 - Typed answers, reveal-first self-rating and Again/Hard/Good/Easy controls improve retrieval practice.
 - Spaced review intervals, lapse handling and a clear mastery threshold are saved in the browser.
 - The vocabulary skill and practice page both link directly to the daily review.
+- The complete 3,000-headword curriculum is registered in 30 balanced production batches.
+- The site distinguishes selected curriculum words from complete learning records.
+- Current release status is 54 available learning records and 2,946 queued for editorial review.
 
-Urdu and pronunciation remain visibly review-gated. The practice route still contains three MCQs because this upgrade connects the study bank; it does not manufacture new assessment questions.
+The 3,000-word selection is not misrepresented as 3,000 completed entries. Only records with a verified English sense and original, sense-matched example enter the trainer. Urdu and pronunciation remain visibly review-gated. The practice route still contains three MCQs because this upgrade connects the study bank; it does not manufacture new assessment questions.

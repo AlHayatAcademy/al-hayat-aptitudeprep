@@ -101,7 +101,8 @@
       const correct = Object.values(state.responses).filter((item) => item.correct).length;
       mount.querySelector("#practiceStats").innerHTML = `
         ${metric("Questions", questions.length)}
-        ${state.skillId === "vocabulary" ? metric("Study words", data.vocabularyBank?.length || 0) : ""}
+        ${state.skillId === "vocabulary" ? metric("Reviewed words", data.vocabularyBank?.length || 0) : ""}
+        ${state.skillId === "vocabulary" ? metric("Curriculum", data.vocabularyRelease?.curriculumTotal || data.vocabularyBank?.length || 0) : ""}
         ${metric("Attempted", attempted)}
         ${metric("Correct", correct)}
       `;
@@ -153,7 +154,7 @@
             <div>
               <p class="eyebrow">Vocabulary Study Bank</p>
               <h2>Study Words Before The MCQs</h2>
-              <p>The word bank and question bank are connected but counted separately. Three MCQs appear below because only three vocabulary questions are published.</p>
+              <p>${data.vocabularyBank.length.toLocaleString()} reviewed learning records are available from the ${Number(data.vocabularyRelease?.curriculumTotal || data.vocabularyBank.length).toLocaleString()}-word curriculum. The question bank is counted separately.</p>
             </div>
             <div class="button-row">
               <a class="btn primary small" href="${rootUrl("vocabulary-bank.html?mode=learn")}">Start Daily Review</a>

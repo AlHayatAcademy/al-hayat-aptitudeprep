@@ -21,7 +21,13 @@
     "masteryRule": true,
     "trainerApi": true,
     "dailyReviewLinks": true,
-    "responsiveTrainerCSS": true
+    "responsiveTrainerCSS": true,
+    "curriculumRegistered": true,
+    "curriculumUnique": true,
+    "curriculumDifficultyMix": true,
+    "curriculumBatches": true,
+    "liveRecordsIndexed": true,
+    "honestAvailabilityCopy": true
   },
   "errors": []
 }

@@ -32,6 +32,7 @@
     contributorGuide: "contributor-guide.json",
     questionBankTargets: "question-bank-targets.json",
     vocabularyBank: "vocabulary-bank.json",
+    vocabularyRelease: "vocabulary-release.json",
     formulaBank: "formula-bank.json",
     questionSets: "question-sets.json",
     diagnosticQuiz: "diagnostic-quiz.json",
