@@ -1,10 +1,10 @@
 {
-  "release": "vocabulary-batch-12",
+  "release": "vocabulary-batch-13",
   "generatedOn": "2026-06-28",
-  "commitMessage": "Add reviewed vocabulary batch 12",
-  "filesToAdd": ["data/questions-vocabulary-batch-12.json"],
+  "commitMessage": "Add reviewed vocabulary batch 13",
+  "filesToAdd": ["data/questions-vocabulary-batch-13.json"],
   "filesToReplace": ["assets/js/data-loader.js", "data/question-bank-index.json", "data/vocabulary-bank.json", "data/vocabulary-curriculum.json", "data/vocabulary-release.json"],
-  "filesToPreserve": ["data/questions.json", "data/questions-vocabulary-batch-02.json", "data/questions-vocabulary-batch-03.json", "data/questions-vocabulary-batch-04.json", "data/questions-vocabulary-batch-05.json", "data/questions-vocabulary-batch-06.json", "data/questions-vocabulary-batch-07.json", "data/questions-vocabulary-batch-08.json", "data/questions-vocabulary-batch-09.json", "data/questions-vocabulary-batch-10.json", "data/questions-vocabulary-batch-11.json"],
+  "filesToPreserve": ["data/questions.json", "data/questions-vocabulary-batch-02.json", "data/questions-vocabulary-batch-03.json", "data/questions-vocabulary-batch-04.json", "data/questions-vocabulary-batch-05.json", "data/questions-vocabulary-batch-06.json", "data/questions-vocabulary-batch-07.json", "data/questions-vocabulary-batch-08.json", "data/questions-vocabulary-batch-09.json", "data/questions-vocabulary-batch-10.json", "data/questions-vocabulary-batch-11.json", "data/questions-vocabulary-batch-12.json"],
   "quarantinedCurriculumEntries": [{"word": "bia", "reason": "Invalid truncated duplicate of the already released headword bias"}],
-  "releaseCounts": {"newWords": 100, "readyWordsAfterRelease": 1154, "newMCQs": 173, "textbookInformedOriginalExamples": 16, "projectedLiveVocabularyMCQs": 2159, "practiceSetSize": 10, "projectedPracticeSets": 216}
+  "releaseCounts": {"newWords": 100, "readyWordsAfterRelease": 1254, "newMCQs": 173, "textbookInformedOriginalExamples": 20, "projectedLiveVocabularyMCQs": 2332, "practiceSetSize": 10, "projectedPracticeSets": 234}
 }
